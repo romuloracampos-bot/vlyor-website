@@ -1,902 +1,1096 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VLYOR SHIELD — UV Filter Architecture | VLYOR Science</title>
-  <meta name="description" content="VLYOR SHIELD — 13 high-purity organic UV filters for photostability, broad-spectrum protection and sensory elegance. Technical dossiers and formulation guidance for professional cosmetic formulators."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;500;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css"/>
-  <style>
-    /* ── SHIELD PAGE SPECIFIC ── */
-    :root { --line: #1A1F2E; --line-acc: #93C5FD; --line-light: rgba(26,31,46,.2); }
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>VLYOR SHIELD — UV Filter Architecture | VLYOR Science</title>
+<meta name="description" content="VLYOR SHIELD — 13 high-purity organic UV filters. Complete technical and commercial profiles for professional cosmetic formulators."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;500;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+:root{--acc:#93C5FD;--acc-bg:rgba(147,197,253,.08);--acc-border:rgba(147,197,253,.2);--line-dark:#1A1F2E}
+.sh-hero{min-height:78vh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;padding:0 40px 64px}
+.sh-bg{position:absolute;inset:0;background-image:url('images/shield.jpg');background-size:cover;background-position:center}
+.sh-ov{position:absolute;inset:0;background:linear-gradient(to top,#0D0D0D 0%,rgba(13,13,13,.72) 40%,rgba(26,31,46,.35) 100%)}
+.sh-grid{position:absolute;inset:0;display:flex;justify-content:space-around}
+.sh-grid span{width:1px;background:rgba(255,255,255,.035)}
+.sh-cnt{position:relative;z-index:2;max-width:860px}
+.sh-bc{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#6B7280;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.sh-bc a{color:#6B7280;transition:color .2s}.sh-bc a:hover{color:#fff}
+.sh-tag{display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc-border);padding:5px 12px;margin-bottom:18px}
+.sh-dot{width:6px;height:6px;border-radius:50%;background:var(--acc);flex-shrink:0}
+.sh-h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(52px,9vw,96px);font-weight:700;line-height:.92;letter-spacing:-.025em;margin-bottom:8px}
+.sh-h1 em{font-style:italic;font-weight:300;color:var(--acc)}
+.sh-sub{font-size:15px;line-height:1.72;color:#D1D5DB;max-width:62ch;margin-bottom:32px}
+.sh-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+.sh-stats{display:flex;gap:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
+.sh-stat{display:flex;flex-direction:column;gap:3px}
+.sh-stat-n{font-family:'Barlow Condensed',sans-serif;font-size:30px;font-weight:700;letter-spacing:-.02em}
+.sh-stat-l{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280}
 
-    .line-hero {
-      min-height: 80vh; display: flex; flex-direction: column;
-      justify-content: flex-end; position: relative; overflow: hidden;
-      padding: 0 40px 64px;
-    }
-    .line-hero-bg {
-      position: absolute; inset: 0;
-      background-image: url('images/shield.jpg');
-      background-size: cover; background-position: center;
-    }
-    .line-hero-ov {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(13,13,13,1) 0%, rgba(13,13,13,.7) 40%, rgba(26,31,46,.4) 100%);
-    }
-    .line-hero-cnt { position: relative; z-index: 2; max-width: 780px; }
-    .line-breadcrumb {
-      font-family: 'DM Mono', monospace; font-size: 10px;
-      letter-spacing: .18em; text-transform: uppercase;
-      color: var(--grey-500); margin-bottom: 20px;
-      display: flex; align-items: center; gap: 10px;
-    }
-    .line-breadcrumb a { color: var(--grey-500); transition: color .2s; }
-    .line-breadcrumb a:hover { color: #fff; }
-    .line-breadcrumb span { opacity: .4; }
-    .line-tag {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-family: 'DM Mono', monospace; font-size: 9px;
-      letter-spacing: .16em; text-transform: uppercase;
-      color: var(--line-acc); border: 1px solid rgba(147,197,253,.25);
-      padding: 5px 12px; margin-bottom: 20px;
-    }
-    .line-tag-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--line-acc); }
-    .line-hero-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(48px, 9vw, 88px); font-weight: 700;
-      line-height: .92; letter-spacing: -.02em; margin-bottom: 8px;
-    }
-    .line-hero-title em { font-style: italic; font-weight: 300; color: var(--line-acc); }
-    .line-hero-sub {
-      font-size: 16px; line-height: 1.7; color: var(--grey-300);
-      max-width: 60ch; margin-bottom: 32px;
-    }
-    .line-hero-stats {
-      display: flex; gap: 40px; padding-top: 28px;
-      border-top: 1px solid rgba(255,255,255,.1);
-    }
-    .lhs { display: flex; flex-direction: column; gap: 3px; }
-    .lhs-n {
-      font-family: 'Barlow Condensed', sans-serif; font-size: 28px;
-      font-weight: 700; letter-spacing: -.02em; color: #fff;
-    }
-    .lhs-l {
-      font-family: 'DM Mono', monospace; font-size: 9px;
-      letter-spacing: .1em; text-transform: uppercase; color: var(--grey-500);
-    }
+/* INTRO NUMBERS */
+.sh-intro{background:var(--line-dark);display:grid;grid-template-columns:repeat(3,1fr);gap:1px}
+.sh-in{background:rgba(255,255,255,.04);padding:32px;border-left:1px solid rgba(255,255,255,.05)}
+.sh-in:first-child{border-left:none}
+.sh-in-n{font-family:'Barlow Condensed',sans-serif;font-size:44px;font-weight:700;letter-spacing:-.02em;color:var(--acc);display:block;margin-bottom:6px}
+.sh-in-h{font-size:13px;font-weight:600;margin-bottom:7px}
+.sh-in-b{font-size:12px;line-height:1.7;color:#6B7280}
 
-    /* ── INTRO STRIP ── */
-    .intro-strip {
-      background: var(--line); padding: 48px 40px;
-      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px;
-    }
-    .intro-strip-inner { display: contents; }
-    .is-block {
-      background: rgba(255,255,255,.04); padding: 32px;
-      border-left: 1px solid rgba(255,255,255,.06);
-    }
-    .is-block:first-child { border-left: none; }
-    .is-num {
-      font-family: 'Barlow Condensed', sans-serif; font-size: 40px;
-      font-weight: 700; letter-spacing: -.02em; color: var(--line-acc);
-      display: block; margin-bottom: 6px;
-    }
-    .is-title { font-size: 13px; font-weight: 600; margin-bottom: 8px; }
-    .is-body { font-size: 12px; line-height: 1.7; color: var(--grey-500); }
+/* COMMERCIAL SECTION */
+.sh-comm{padding:88px 40px;display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:start}
+.sh-comm-body{font-size:14px;line-height:1.82;color:#D1D5DB;margin-bottom:16px}
+.sh-comm-body strong{color:#fff;font-weight:600}
+.sh-quote{border-left:3px solid var(--acc);padding:14px 20px;margin:24px 0;background:var(--acc-bg)}
+.sh-quote p{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:500;line-height:1.35;font-style:italic}
+.sh-quote cite{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;display:block;margin-top:9px;font-style:normal}
 
-    /* ── COMMERCIAL SECTION ── */
-    .commercial-sec { padding: 88px 40px; }
-    .commercial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-    .comm-left {}
-    .comm-right {}
-    .comm-body { font-size: 15px; line-height: 1.85; color: var(--grey-300); margin-bottom: 18px; }
-    .comm-body strong { font-weight: 600; color: #fff; }
-    .comm-quote {
-      border-left: 3px solid var(--line-acc); padding: 16px 24px;
-      margin: 28px 0; background: rgba(147,197,253,.05);
-    }
-    .comm-quote p {
-      font-family: 'Barlow Condensed', sans-serif; font-size: 20px;
-      font-weight: 500; line-height: 1.3; letter-spacing: -.01em;
-      color: #fff; font-style: italic;
-    }
-    .comm-quote span {
-      font-family: 'DM Mono', monospace; font-size: 9px;
-      letter-spacing: .1em; text-transform: uppercase; color: var(--grey-500);
-      display: block; margin-top: 10px;
-    }
-    .spectrum-chart { margin-top: 0; }
-    .sc-title {
-      font-family: 'DM Mono', monospace; font-size: 10px;
-      letter-spacing: .15em; text-transform: uppercase; color: var(--grey-500);
-      margin-bottom: 20px;
-    }
-    .sc-bar-wrap { display: flex; flex-direction: column; gap: 10px; }
-    .sc-row { display: flex; align-items: center; gap: 12px; }
-    .sc-label {
-      font-family: 'DM Mono', monospace; font-size: 9px;
-      color: var(--grey-500); width: 68px; flex-shrink: 0; text-align: right;
-    }
-    .sc-track {
-      flex: 1; height: 6px; background: rgba(255,255,255,.06);
-      border-radius: 3px; overflow: hidden;
-    }
-    .sc-fill {
-      height: 100%; border-radius: 3px;
-      background: linear-gradient(to right, rgba(147,197,253,.3), var(--line-acc));
-      transition: width 1s cubic-bezier(0,.8,.2,1);
-    }
-    .sc-val {
-      font-family: 'DM Mono', monospace; font-size: 9px;
-      color: var(--line-acc); width: 32px; flex-shrink: 0;
-    }
-    .uv-range-diagram { margin-top: 32px; }
-    .uvrd-label {
-      font-family: 'DM Mono', monospace; font-size: 9px;
-      letter-spacing: .12em; text-transform: uppercase; color: var(--grey-500);
-      margin-bottom: 12px;
-    }
-    .uvrd-track {
-      position: relative; height: 28px; border-radius: 2px; overflow: hidden;
-      background: rgba(255,255,255,.04); margin-bottom: 8px;
-    }
-    .uvrd-uvb { position: absolute; left: 0; width: 43%; height: 100%; background: rgba(147,197,253,.15); }
-    .uvrd-uva2 { position: absolute; left: 43%; width: 15%; height: 100%; background: rgba(147,197,253,.25); }
-    .uvrd-uva1 { position: absolute; left: 58%; width: 42%; height: 100%; background: rgba(147,197,253,.35); }
-    .uvrd-seg {
-      position: absolute; top: 0; height: 100%;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: .08em;
-      color: rgba(255,255,255,.6); text-transform: uppercase;
-    }
-    .uvrd-ticks { display: flex; justify-content: space-between; }
-    .uvrd-tick {
-      font-family: 'DM Mono', monospace; font-size: 8px; color: var(--grey-500);
-    }
+/* SPECTRUM CHART */
+.chart-title{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;margin-bottom:18px}
+.bar-row{display:flex;align-items:center;gap:11px;margin-bottom:9px}
+.bar-lbl{font-family:'DM Mono',monospace;font-size:9px;color:#6B7280;width:76px;flex-shrink:0;text-align:right}
+.bar-track{flex:1;height:5px;background:rgba(255,255,255,.07)}
+.bar-fill{height:100%;background:var(--acc);opacity:.75;width:0;transition:width 1.1s cubic-bezier(0,.8,.2,1)}
+.bar-val{font-family:'DM Mono',monospace;font-size:9px;color:var(--acc);width:28px;flex-shrink:0}
+.uv-track-wrap{margin-top:30px}
+.uv-track{height:26px;display:flex;margin-bottom:7px}
+.uv-b{flex:43;background:rgba(147,197,253,.12);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:8px;color:rgba(255,255,255,.5);letter-spacing:.06em}
+.uv-a2{flex:15;background:rgba(147,197,253,.22);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:7px;color:rgba(255,255,255,.5)}
+.uv-a1{flex:42;background:rgba(147,197,253,.34);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:8px;color:rgba(255,255,255,.65);letter-spacing:.06em}
+.uv-ticks{display:flex;justify-content:space-between}
+.uv-tick{font-family:'DM Mono',monospace;font-size:8px;color:#4B5563}
 
-    /* ── PRODUCT TABS ── */
-    .products-sec { padding: 0 40px 88px; }
-    .prod-sec-header { margin-bottom: 48px; }
-    .prod-nav {
-      display: flex; gap: 1px; background: rgba(255,255,255,.07);
-      margin-bottom: 1px; overflow-x: auto; scrollbar-width: none;
-    }
-    .prod-nav::-webkit-scrollbar { display: none; }
-    .pn-btn {
-      flex: 0 0 auto; padding: 14px 20px; font-family: 'DM Mono', monospace;
-      font-size: 9px; letter-spacing: .1em; text-transform: uppercase;
-      background: rgba(255,255,255,.02); border: none; color: var(--grey-500);
-      cursor: pointer; transition: all .2s; white-space: nowrap; border-bottom: 2px solid transparent;
-    }
-    .pn-btn:hover { color: #fff; background: rgba(255,255,255,.04); }
-    .pn-btn.active { color: var(--line-acc); background: rgba(26,31,46,.3); border-bottom-color: var(--line-acc); }
+/* PRODUCT EXPLORER */
+.sh-explorer{padding:0 0 88px}
+.sh-exp-hdr{padding:0 40px 40px}
+.sh-exp-layout{display:grid;grid-template-columns:280px 1fr;min-height:680px}
+.sh-sidebar{background:#111;border-right:1px solid rgba(255,255,255,.07);padding:0}
+.sh-sb-grp{border-bottom:1px solid rgba(255,255,255,.06)}
+.sh-sb-grp-hd{padding:14px 22px;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#4B5563}
+.sh-sb-btn{display:flex;align-items:center;gap:11px;width:100%;padding:13px 22px;background:none;border:none;color:#9CA3AF;font-family:'Barlow',sans-serif;font-size:13px;cursor:pointer;transition:all .2s;text-align:left;border-left:2px solid transparent;position:relative}
+.sh-sb-btn:hover{color:#fff;background:rgba(255,255,255,.03)}
+.sh-sb-btn.active{color:#fff;background:rgba(147,197,253,.07);border-left-color:var(--acc)}
+.sh-sb-spectrum{display:flex;align-items:center;gap:5px;margin-left:auto}
+.sh-sb-sp{font-family:'DM Mono',monospace;font-size:8px;padding:2px 5px}
+.sp-uva{background:rgba(147,197,253,.15);color:var(--acc)}
+.sp-uvb{background:rgba(167,243,208,.12);color:#A7F3D0}
+.sp-broad{background:rgba(196,181,253,.12);color:#C4B5FD}
 
-    /* product panels */
-    .prod-panel { display: none; }
-    .prod-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,.07); }
-    .pp-left { background: #111; padding: 40px; }
-    .pp-right { background: #0F0F0F; padding: 40px; display: flex; flex-direction: column; gap: 28px; }
-    .pp-line-tag {
-      font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: .14em;
-      text-transform: uppercase; color: var(--line-acc);
-      display: flex; align-items: center; gap: 6px; margin-bottom: 12px;
-    }
-    .pp-name {
-      font-family: 'Barlow Condensed', sans-serif; font-size: 36px;
-      font-weight: 700; letter-spacing: -.02em; margin-bottom: 4px;
-    }
-    .pp-inci {
-      font-family: 'DM Mono', monospace; font-size: 10px;
-      color: var(--grey-500); letter-spacing: .04em; margin-bottom: 20px;
-      font-style: italic;
-    }
-    .pp-tagline {
-      font-size: 15px; line-height: 1.75; color: var(--grey-300);
-      margin-bottom: 24px; font-style: italic;
-    }
-    .pp-body { font-size: 13px; line-height: 1.8; color: #9CA3AF; margin-bottom: 24px; }
-    .pp-body strong { color: #fff; font-weight: 600; }
-    .pp-applications { margin-bottom: 24px; }
-    .pp-app-title {
-      font-family: 'DM Mono', monospace; font-size: 9px;
-      letter-spacing: .14em; text-transform: uppercase; color: var(--grey-500);
-      margin-bottom: 12px;
-    }
-    .pp-app-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .pp-tag {
-      font-family: 'DM Mono', monospace; font-size: 9px;
-      padding: 4px 10px; background: rgba(255,255,255,.05);
-      color: var(--grey-300); letter-spacing: .04em;
-    }
-    .pp-spec-block {}
-    .pp-spec-title {
-      font-family: 'DM Mono', monospace; font-size: 9px;
-      letter-spacing: .14em; text-transform: uppercase; color: var(--grey-500);
-      margin-bottom: 12px; padding-bottom: 8px;
-      border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-    .pp-spec-row {
-      display: flex; justify-content: space-between; align-items: baseline;
-      padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.04);
-      font-size: 12px;
-    }
-    .pp-spec-row:last-child { border-bottom: none; }
-    .pp-spec-k { color: var(--grey-500); }
-    .pp-spec-v { font-family: 'DM Mono', monospace; font-size: 11px; color: #fff; text-align: right; }
-    .pp-spectrum-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 6px 14px; margin-bottom: 8px;
-      font-family: 'DM Mono', monospace; font-size: 9px;
-      letter-spacing: .08em; text-transform: uppercase;
-    }
-    .pp-spectrum-badge.uva { background: rgba(147,197,253,.1); color: var(--line-acc); }
-    .pp-spectrum-badge.uvb { background: rgba(167,243,208,.1); color: #A7F3D0; }
-    .pp-spectrum-badge.broad { background: rgba(196,181,253,.1); color: #C4B5FD; }
-    .pp-synergy { margin-top: 8px; }
-    .pp-syn-title {
-      font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .12em;
-      text-transform: uppercase; color: var(--grey-500); margin-bottom: 10px;
-    }
-    .pp-syn-list { display: flex; flex-direction: column; gap: 6px; }
-    .pp-syn-item {
-      display: flex; align-items: center; gap: 10px;
-      font-size: 12px; color: var(--grey-300); padding: 7px 10px;
-      background: rgba(255,255,255,.02); border-left: 2px solid rgba(147,197,253,.3);
-    }
-    .pp-syn-code { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--line-acc); flex-shrink: 0; }
-    .pp-request-btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 12px 24px; background: var(--line); color: var(--line-acc);
-      border: 1px solid rgba(147,197,253,.25); font-family: 'DM Mono', monospace;
-      font-size: 10px; letter-spacing: .1em; text-transform: uppercase;
-      cursor: pointer; transition: all .25s; text-decoration: none;
-      margin-top: 8px;
-    }
-    .pp-request-btn:hover { background: rgba(147,197,253,.1); border-color: var(--line-acc); }
+/* PRODUCT PANEL */
+.sh-panel{display:none;animation:fadeIn .25s ease}
+.sh-panel.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.sh-panel-inner{display:grid;grid-template-columns:1fr 380px;min-height:680px}
+.sh-pl{padding:40px 40px 40px 36px;overflow-y:auto}
+.sh-pr{background:#0D0D0D;padding:36px 32px;display:flex;flex-direction:column;gap:28px;border-left:1px solid rgba(255,255,255,.06)}
+.sh-panel-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:6px;margin-bottom:12px}
+.sh-panel-name{font-family:'Barlow Condensed',sans-serif;font-size:44px;font-weight:700;letter-spacing:-.025em;line-height:.95;margin-bottom:6px}
+.sh-panel-inci{font-family:'DM Mono',monospace;font-size:10px;color:#6B7280;letter-spacing:.04em;margin-bottom:18px;font-style:italic}
+.sh-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px}
+.sh-badge{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.04em;padding:4px 9px}
+.b-uva{background:rgba(147,197,253,.1);color:var(--acc)}
+.b-uvb{background:rgba(167,243,208,.1);color:#A7F3D0}
+.b-broad{background:rgba(196,181,253,.1);color:#C4B5FD}
+.b-stable{background:rgba(6,95,70,.15);color:#A7F3D0}
+.b-req{background:rgba(217,119,6,.1);color:#FCD34D}
+.sh-tagline{font-size:16px;line-height:1.65;color:#E5E7EB;margin-bottom:22px;font-style:italic;border-left:2px solid var(--acc);padding-left:16px}
+.sh-body{font-size:13px;line-height:1.82;color:#9CA3AF;margin-bottom:16px}
+.sh-body strong{color:#E5E7EB;font-weight:600}
+.sh-section-h{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;margin-bottom:13px;margin-top:28px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06)}
+.sh-app-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+.sh-app-tag{font-family:'DM Mono',monospace;font-size:9px;padding:4px 10px;background:rgba(255,255,255,.05);color:#D1D5DB;letter-spacing:.03em}
+.sh-syn-list{display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
+.sh-syn{display:flex;align-items:baseline;gap:10px;padding:8px 12px;background:rgba(255,255,255,.025);border-left:2px solid rgba(147,197,253,.3)}
+.sh-syn-code{font-family:'DM Mono',monospace;font-size:10px;color:var(--acc);flex-shrink:0;white-space:nowrap}
+.sh-syn-desc{font-size:12px;color:#9CA3AF}
+.sh-perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.sh-perf-card{background:rgba(255,255,255,.03);padding:14px;border:1px solid rgba(255,255,255,.06)}
+.sh-perf-val{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:700;letter-spacing:-.02em;display:block;margin-bottom:3px}
+.sh-perf-lbl{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280}
+/* specs */
+.sh-spec-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#6B7280;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:4px}
+.sh-spec-row{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px}
+.sh-spec-row:last-child{border-bottom:none}
+.sh-spec-k{color:#6B7280}
+.sh-spec-v{font-family:'DM Mono',monospace;font-size:11px;color:#fff;text-align:right;max-width:180px;word-break:break-word}
+.sh-reg-block{background:rgba(255,255,255,.025);padding:16px}
+.sh-reg-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;margin-bottom:10px}
+.sh-reg-row{display:flex;justify-content:space-between;font-size:11px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.sh-reg-row:last-child{border-bottom:none}
+.sh-reg-k{color:#6B7280}
+.sh-reg-v{font-family:'DM Mono',monospace;font-size:10px;color:#fff}
+.sh-alert{padding:14px 16px;background:rgba(217,119,6,.08);border:1px solid rgba(217,119,6,.2);margin-bottom:8px}
+.sh-alert-t{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#FCD34D;margin-bottom:7px}
+.sh-alert-b{font-size:12px;line-height:1.65;color:#D1D5DB}
+.sh-cta-btn{display:flex;align-items:center;justify-content:space-between;padding:13px 18px;background:var(--line-dark);color:var(--acc);border:1px solid var(--acc-border);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .25s;width:100%}
+.sh-cta-btn:hover{background:var(--acc-bg);border-color:var(--acc)}
+.sh-cta-btn svg{width:14px;height:14px;flex-shrink:0}
 
-    /* ── FORMULATION SECTION ── */
-    .formulation-sec { padding: 88px 40px; background: #111; }
-    .form-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,.07); margin-top: 48px; }
-    .form-card { background: #111; padding: 32px; transition: background .3s; }
-    .form-card:hover { background: #161616; }
-    .fc-num { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--line-acc); letter-spacing: .1em; margin-bottom: 16px; }
-    .fc-title { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 700; letter-spacing: -.01em; margin-bottom: 10px; }
-    .fc-body { font-size: 13px; line-height: 1.7; color: var(--grey-500); margin-bottom: 16px; }
-    .fc-products { display: flex; flex-direction: column; gap: 5px; }
-    .fc-prod { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--grey-300); padding: 5px 8px; background: rgba(255,255,255,.03); display: flex; align-items: center; gap: 8px; }
-    .fc-prod::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--line-acc); flex-shrink: 0; }
+/* FORMULATION SYSTEMS */
+.sh-form-sec{padding:88px 40px;background:#111}
+.sh-form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07);margin-top:48px}
+.sh-form-card{background:#111;padding:32px;transition:background .3s}
+.sh-form-card:hover{background:#161616}
+.sh-fc-num{font-family:'DM Mono',monospace;font-size:10px;color:var(--acc);letter-spacing:.08em;margin-bottom:14px;display:block}
+.sh-fc-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px;line-height:1.2}
+.sh-fc-body{font-size:12px;line-height:1.72;color:#6B7280;margin-bottom:16px}
+.sh-fc-prods{display:flex;flex-direction:column;gap:4px}
+.sh-fc-prod{font-family:'DM Mono',monospace;font-size:10px;color:#D1D5DB;padding:5px 8px;background:rgba(255,255,255,.03);display:flex;align-items:center;gap:7px}
+.sh-fc-prod::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--acc);flex-shrink:0}
+.sh-fc-spf{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:700;color:var(--acc);margin-top:12px;display:block}
 
-    /* ── REGULATORY SECTION ── */
-    .regulatory-sec { padding: 88px 40px; }
-    .reg-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: rgba(255,255,255,.07); margin-top: 48px; }
-    .reg-block { background: #0D0D0D; padding: 28px 24px; }
-    .reg-icon { width: 28px; height: 28px; color: var(--grey-500); margin-bottom: 12px; transition: color .3s; }
-    .reg-block:hover .reg-icon { color: var(--line-acc); }
-    .reg-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
-    .reg-body { font-size: 12px; line-height: 1.65; color: var(--grey-500); }
+/* REGULATORY GRID */
+.sh-reg-sec{padding:88px 40px}
+.sh-reg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);margin-top:48px}
+.sh-reg-card{background:#0D0D0D;padding:24px;transition:background .3s}
+.sh-reg-card:hover{background:#111}
+.sh-rc-flag{font-size:20px;margin-bottom:12px;display:block}
+.sh-rc-title{font-size:13px;font-weight:600;margin-bottom:7px}
+.sh-rc-body{font-size:12px;line-height:1.65;color:#6B7280}
 
-    /* ── CTA STRIP ── */
-    .cta-strip { background: var(--line); padding: 64px 40px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
-    .cta-strip h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(28px,4vw,44px); font-weight: 700; letter-spacing: -.02em; margin-bottom: 10px; }
-    .cta-strip p { font-size: 14px; color: rgba(255,255,255,.6); max-width: 52ch; }
-    .cta-actions { display: flex; gap: 12px; flex-shrink: 0; }
+/* CTA */
+.sh-cta-sec{background:var(--line-dark);padding:72px 40px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.sh-cta-sec h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(30px,4vw,48px);font-weight:700;letter-spacing:-.02em;line-height:1.05;margin-bottom:10px}
+.sh-cta-sec p{font-size:14px;color:rgba(255,255,255,.6);max-width:52ch}
+.sh-cta-btns{display:flex;gap:12px;flex-shrink:0;flex-wrap:wrap}
 
-    /* ── RESPONSIVE ── */
-    @media(max-width:900px) {
-      .commercial-grid { grid-template-columns: 1fr; gap: 40px; }
-      .prod-panel.active { grid-template-columns: 1fr; }
-      .form-cards { grid-template-columns: 1fr; }
-      .reg-grid { grid-template-columns: 1fr 1fr; }
-      .cta-strip { grid-template-columns: 1fr; }
-      .intro-strip { grid-template-columns: 1fr; }
-      .line-hero { padding: 0 20px 48px; }
-      .commercial-sec, .products-sec, .formulation-sec, .regulatory-sec { padding-left: 20px; padding-right: 20px; }
-    }
-    @media(max-width:600px) {
-      .reg-grid { grid-template-columns: 1fr; }
-      .line-hero-stats { flex-wrap: wrap; gap: 24px; }
-    }
-  </style>
+@media(max-width:1100px){.sh-exp-layout{grid-template-columns:240px 1fr}.sh-panel-inner{grid-template-columns:1fr 320px}}
+@media(max-width:900px){
+  .sh-hero{padding:0 20px 48px}.sh-comm{grid-template-columns:1fr;gap:40px;padding:56px 20px}
+  .sh-exp-layout{grid-template-columns:1fr}.sh-sidebar{display:none}
+  .sh-panel-inner{grid-template-columns:1fr}.sh-pr{display:none}
+  .sh-form-grid{grid-template-columns:1fr}.sh-reg-grid{grid-template-columns:1fr 1fr}
+  .sh-cta-sec{grid-template-columns:1fr}.sh-explorer,.sh-form-sec,.sh-reg-sec{padding-left:20px;padding-right:20px}
+  .sh-exp-hdr{padding-left:20px;padding-right:20px}
+}
+@media(max-width:600px){.sh-reg-grid{grid-template-columns:1fr}.sh-intro{grid-template-columns:1fr}.sh-stats{gap:24px}}
+</style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav id="mainnav">
-    <a class="logo" href="index.html">
-      <span class="logo-m">VLYOR</span>
-      <span class="logo-s">Science <span class="logo-p">|</span> Global Bioactives Hub</span>
-    </a>
-    <div class="nav-links">
-      <a href="index.html#lines">Portfolio</a>
-      <a href="index.html#about">Philosophy</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="portal.html" class="nav-portal">Technical Portal →</a>
-    </div>
-  </nav>
+<nav id="mainnav">
+  <a class="logo" href="index.html">
+    <span class="logo-m">VLYOR</span>
+    <span class="logo-s">Science <span class="logo-p">|</span> Global Bioactives Hub</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#lines">Portfolio</a>
+    <a href="index.html#about">Philosophy</a>
+    <a href="index.html#standards">Standards</a>
+    <a href="portal.html" class="nav-portal">Technical Portal →</a>
+  </div>
+</nav>
 
-  <!-- HERO -->
-  <section class="line-hero">
-    <div class="line-hero-bg"></div>
-    <div class="line-hero-ov"></div>
-    <div class="line-hero-cnt">
-      <div class="line-breadcrumb">
-        <a href="index.html">VLYOR Science</a>
-        <span>→</span>
-        <a href="index.html#lines">Portfolio</a>
-        <span>→</span>
-        SHIELD
-      </div>
-      <div class="line-tag"><div class="line-tag-dot"></div>UV Filters · Organic Sunscreen Actives</div>
-      <h1 class="line-hero-title">Photostability<br/><em>Architecture.</em></h1>
-      <p class="line-hero-sub">Thirteen high-purity organic UV filters — engineered for maximum photostability, sensory elegance and broad-spectrum protection. The complete toolkit for every sun care formulation, from daily moisturisers to clinical SPF 100.</p>
-      <div class="hero-actions">
-        <a href="#products" class="btn-p">Explore the 13 Actives</a>
-        <a href="portal.html#shield" class="btn-g">Request Technical Dossier</a>
-      </div>
-      <div class="line-hero-stats">
-        <div class="lhs"><span class="lhs-n">13</span><span class="lhs-l">UV Actives</span></div>
-        <div class="lhs"><span class="lhs-n">290–400</span><span class="lhs-l">nm Coverage</span></div>
-        <div class="lhs"><span class="lhs-n">≥99.0%</span><span class="lhs-l">Purity</span></div>
-        <div class="lhs"><span class="lhs-n">SPF 100+</span><span class="lhs-l">Formulation Ready</span></div>
-      </div>
+<!-- HERO -->
+<section class="sh-hero">
+  <div class="sh-bg"></div>
+  <div class="sh-ov"></div>
+  <div class="sh-grid"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="sh-cnt">
+    <div class="sh-bc">
+      <a href="index.html">VLYOR Science</a><span>→</span>
+      <a href="index.html#lines">Portfolio</a><span>→</span>
+      <span style="color:#fff">VLYOR SHIELD</span>
     </div>
-  </section>
-
-  <!-- INTRO STRIP -->
-  <div class="intro-strip">
-    <div class="is-block">
-      <span class="is-num">290–400</span>
-      <p class="is-title">Full UV Spectrum Coverage</p>
-      <p class="is-body">VLYOR SHIELD covers the entire UV range — UVB (290–320 nm), UVA-II (320–340 nm) and UVA-I (340–400 nm). Single actives or multi-filter systems designed for any regulatory market.</p>
+    <div class="sh-tag"><div class="sh-dot"></div>UV Filters · 13 Organic Sunscreen Actives</div>
+    <h1 class="sh-h1">Photostability<br/><em>Architecture.</em></h1>
+    <p class="sh-sub">Thirteen high-purity organic UV filters — engineered for maximum photostability, sensory elegance and broad-spectrum protection. The complete formulation toolkit for every sun care product, from daily moisturisers to clinical SPF 100.</p>
+    <div class="sh-actions">
+      <a href="#explorer" class="btn-p">Explore 13 UV Actives ↓</a>
+      <a href="index.html#contact" class="btn-g">Request Technical Dossier</a>
     </div>
-    <div class="is-block">
-      <span class="is-num">0%</span>
-      <p class="is-title">Photodegradation on Key Actives</p>
-      <p class="is-body">Selected Shield actives such as Shield-BEMT and Shield-DHHB deliver near-zero photodegradation under extended UV exposure — the benchmark for next-generation sun care.</p>
-    </div>
-    <div class="is-block">
-      <span class="is-num">6</span>
-      <p class="is-title">Regulatory Markets Covered</p>
-      <p class="is-body">All Shield actives are listed under China IECIC and approved for use in EU, US, Brazil (ANVISA), Colombia (INVIMA), Peru and across the Latin American market.</p>
+    <div class="sh-stats">
+      <div class="sh-stat"><span class="sh-stat-n">13</span><span class="sh-stat-l">UV Actives</span></div>
+      <div class="sh-stat"><span class="sh-stat-n">290–400</span><span class="sh-stat-l">nm Full Coverage</span></div>
+      <div class="sh-stat"><span class="sh-stat-n">≥99.0%</span><span class="sh-stat-l">Purity Standard</span></div>
+      <div class="sh-stat"><span class="sh-stat-n">SPF 100+</span><span class="sh-stat-l">System Capable</span></div>
+      <div class="sh-stat"><span class="sh-stat-n">6+</span><span class="sh-stat-l">Regulated Markets</span></div>
     </div>
   </div>
+</section>
 
-  <!-- COMMERCIAL SECTION -->
-  <section class="commercial-sec">
-    <div class="commercial-grid">
-      <div class="comm-left">
-        <p class="eyebrow">Why UV Filters Matter</p>
-        <h2 class="sec-title">The invisible ingredient<br/>that defines everything.</h2>
-        <p class="comm-body">In premium sun care, the UV filter system is not a commodity decision — it is the <strong>central technical argument</strong> of the product. It determines SPF, UVA-PF, sensory profile, stability, compatibility and ultimately whether the formula performs after six months on a shelf in Bogotá at 35°C.</p>
-        <p class="comm-body">Every major cosmetic house — from Belcorp's sun care portfolio to clinical pharmacy brands — faces the same formulation problem: <strong>achieving high SPF with low filter load, maximum photostability and an elegant skin feel.</strong> These three demands are technically contradictory. Resolving them is the art of UV filter architecture.</p>
-        <div class="comm-quote">
-          <p>"The most effective sunscreen is the one that stays effective — through heat, sweat and light. Photostability is not a feature. It is the only specification that matters after the first hour."</p>
-          <span>VLYOR Science — Technical Position</span>
-        </div>
-        <p class="comm-body">VLYOR SHIELD was built to give formulators access to the <strong>full photostability toolkit</strong> — including next-generation triazine filters that were previously accessible only through European specialty suppliers at premium pricing. Same molecule. Same purity specification. VLYOR precision.</p>
-      </div>
-      <div class="comm-right">
-        <div class="spectrum-chart">
-          <p class="sc-title">UV Spectrum — Coverage by Shield Active</p>
-          <div class="sc-bar-wrap" id="spectrum-bars">
-            <div class="sc-row"><span class="sc-label">Shield-BEMT</span><div class="sc-track"><div class="sc-fill" data-w="95" style="width:0%"></div></div><span class="sc-val">95%</span></div>
-            <div class="sc-row"><span class="sc-label">Shield-MBBT</span><div class="sc-track"><div class="sc-fill" data-w="90" style="width:0%"></div></div><span class="sc-val">90%</span></div>
-            <div class="sc-row"><span class="sc-label">Shield-DHHB</span><div class="sc-track"><div class="sc-fill" data-w="82" style="width:0%"></div></div><span class="sc-val">82%</span></div>
-            <div class="sc-row"><span class="sc-label">Shield-AVB</span><div class="sc-track"><div class="sc-fill" data-w="78" style="width:0%"></div></div><span class="sc-val">78%</span></div>
-            <div class="sc-row"><span class="sc-label">Shield-EHT</span><div class="sc-track"><div class="sc-fill" data-w="70" style="width:0%"></div></div><span class="sc-val">70%</span></div>
-            <div class="sc-row"><span class="sc-label">Shield-OMC</span><div class="sc-track"><div class="sc-fill" data-w="65" style="width:0%"></div></div><span class="sc-val">65%</span></div>
-            <div class="sc-row"><span class="sc-label">Shield-DBT</span><div class="sc-track"><div class="sc-fill" data-w="60" style="width:0%"></div></div><span class="sc-val">60%</span></div>
-          </div>
-          <p style="font-size:10px;color:var(--grey-500);margin-top:10px;font-family:'DM Mono',monospace;">SPF contribution index — formulation guide reference</p>
-        </div>
-        <div class="uv-range-diagram" style="margin-top:36px">
-          <p class="uvrd-label">UV Spectrum Coverage Map</p>
-          <div class="uvrd-track">
-            <div class="uvrd-uvb"></div>
-            <div class="uvrd-uva2"></div>
-            <div class="uvrd-uva1"></div>
-            <div class="uvrd-seg" style="left:0;width:43%;font-size:8px">UVB</div>
-            <div class="uvrd-seg" style="left:43%;width:15%;font-size:8px">UVA-II</div>
-            <div class="uvrd-seg" style="left:58%;width:42%;font-size:8px">UVA-I</div>
-          </div>
-          <div class="uvrd-ticks">
-            <span class="uvrd-tick">290 nm</span>
-            <span class="uvrd-tick">320 nm</span>
-            <span class="uvrd-tick">340 nm</span>
-            <span class="uvrd-tick">400 nm</span>
-          </div>
-        </div>
-      </div>
+<!-- INTRO NUMBERS -->
+<div class="sh-intro">
+  <div class="sh-in">
+    <span class="sh-in-n">290–400</span>
+    <p class="sh-in-h">Full UV Spectrum Coverage</p>
+    <p class="sh-in-b">UVB (290–320 nm), UVA-II (320–340 nm) and UVA-I (340–400 nm) — single actives or multi-filter systems for any regulatory framework.</p>
+  </div>
+  <div class="sh-in">
+    <span class="sh-in-n">0%</span>
+    <p class="sh-in-h">Photodegradation on Premium Actives</p>
+    <p class="sh-in-b">Shield-BEMT and Shield-DHHB deliver near-zero photodegradation under extended UV exposure — the benchmark for next-generation sun care.</p>
+  </div>
+  <div class="sh-in">
+    <span class="sh-in-n">6</span>
+    <p class="sh-in-h">Regulatory Markets Covered</p>
+    <p class="sh-in-b">EU Annex VI, China IECIC, Brazil ANVISA, Colombia INVIMA, Peru DIGEMID and Mercosur framework — with full concentration and documentation support.</p>
+  </div>
+</div>
+
+<!-- COMMERCIAL -->
+<section class="sh-comm">
+  <div>
+    <p class="eyebrow">The Technical Argument</p>
+    <h2 class="sec-title">The invisible ingredient<br/>that defines everything.</h2>
+    <p class="sh-comm-body">In premium sun care, the UV filter system is not a commodity decision — it is the <strong>central technical argument of the product</strong>. It determines SPF, UVA-PF, sensory profile, stability, compatibility and ultimately whether the formula performs after six months on a shelf in Bogotá at 35°C.</p>
+    <p class="sh-comm-body">Every major cosmetic manufacturer faces the same formulation challenge: <strong>achieving high SPF with low filter load, maximum photostability and an elegant skin feel.</strong> These three demands are technically contradictory. Resolving them is the science of UV filter architecture — and precisely what VLYOR SHIELD was built for.</p>
+    <div class="sh-quote">
+      <p>"The most effective sunscreen is the one that stays effective — through heat, sweat and prolonged light exposure. Photostability is not a feature. It is the only specification that matters after the first hour of use."</p>
+      <cite>VLYOR Science — UV Architecture Technical Position</cite>
     </div>
-  </section>
-
-  <!-- PRODUCTS SECTION -->
-  <section class="products-sec" id="products">
-    <div class="prod-sec-header">
-      <p class="eyebrow">The SHIELD Portfolio</p>
-      <h2 class="sec-title">13 actives.<br/>One architecture.</h2>
+    <p class="sh-comm-body">VLYOR SHIELD gives formulators access to the <strong>full photostability toolkit</strong> — including next-generation triazine filters previously accessible only through European specialty suppliers at a significant cost premium. The same molecular precision. VLYOR purity standards. Fully documented.</p>
+  </div>
+  <div>
+    <p class="chart-title">SPF Contribution Index — per Shield Active</p>
+    <div id="sbars">
+      <div class="bar-row"><span class="bar-lbl">Shield-BEMT</span><div class="bar-track"><div class="bar-fill" data-w="95"></div></div><span class="bar-val">95</span></div>
+      <div class="bar-row"><span class="bar-lbl">Shield-MBBT</span><div class="bar-track"><div class="bar-fill" data-w="90"></div></div><span class="bar-val">90</span></div>
+      <div class="bar-row"><span class="bar-lbl">Shield-DHHB</span><div class="bar-track"><div class="bar-fill" data-w="82"></div></div><span class="bar-val">82</span></div>
+      <div class="bar-row"><span class="bar-lbl">Shield-EHT</span><div class="bar-track"><div class="bar-fill" data-w="78"></div></div><span class="bar-val">78</span></div>
+      <div class="bar-row"><span class="bar-lbl">Shield-AVB</span><div class="bar-track"><div class="bar-fill" data-w="72"></div></div><span class="bar-val">72</span></div>
+      <div class="bar-row"><span class="bar-lbl">Shield-OMC</span><div class="bar-track"><div class="bar-fill" data-w="65"></div></div><span class="bar-val">65</span></div>
+      <div class="bar-row"><span class="bar-lbl">Shield-OCT</span><div class="bar-track"><div class="bar-fill" data-w="58"></div></div><span class="bar-val">58</span></div>
     </div>
-
-    <div class="prod-nav" id="prod-nav">
-      <button class="pn-btn active" data-panel="dhhb">Shield-DHHB</button>
-      <button class="pn-btn" data-panel="bemt">Shield-BEMT</button>
-      <button class="pn-btn" data-panel="mbbt">Shield-MBBT</button>
-      <button class="pn-btn" data-panel="avb">Shield-AVB</button>
-      <button class="pn-btn" data-panel="oct">Shield-OCT</button>
-      <button class="pn-btn" data-panel="eht">Shield-EHT</button>
-      <button class="pn-btn" data-panel="dbt">Shield-DBT</button>
-      <button class="pn-btn" data-panel="omc">Shield-OMC</button>
-      <button class="pn-btn" data-panel="pbsa">Shield-PBSA</button>
-      <button class="pn-btn" data-panel="hms">Shield-HMS</button>
-      <button class="pn-btn" data-panel="os">Shield-OS</button>
-      <button class="pn-btn" data-panel="bp3">Shield-BP3</button>
-      <button class="pn-btn" data-panel="bp4">Shield-BP4</button>
-    </div>
-
-    <!-- DHHB -->
-    <div class="prod-panel active" id="panel-dhhb">
-      <div class="pp-left">
-        <div class="pp-line-tag"><div class="line-tag-dot" style="width:5px;height:5px"></div>VLYOR SHIELD</div>
-        <h2 class="pp-name">Shield-DHHB</h2>
-        <p class="pp-inci">Diethylamino Hydroxybenzoyl Hexyl Benzoate</p>
-        <div style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap">
-          <span class="pp-spectrum-badge uva">● UV-A Filter</span>
-          <span class="pp-spectrum-badge broad">● Photostabilizer</span>
-        </div>
-        <p class="pp-tagline">"The most efficient UVA filter available — and the molecule that rescues every avobenzone formulation."</p>
-        <p class="pp-body">Shield-DHHB is the <strong>gold standard for UVA-I protection</strong> in next-generation sun care. Its absorption maximum at 354 nm places it precisely at the peak of UVA-I, where cumulative skin damage accumulates despite causing no immediate visible burn — the most clinically significant portion of the solar spectrum for photoageing and melanoma risk.</p>
-        <p class="pp-body">What distinguishes Shield-DHHB commercially is its dual function: it delivers <strong>exceptional UVA absorption in its own right</strong>, and simultaneously acts as a <strong>molecular photostabiliser for avobenzone (Shield-AVB)</strong>, reversing the photodegradation that makes pure avobenzone systems unreliable after three hours of sun exposure. Premium SPF 50+ formulations rarely use one without the other.</p>
-        <p class="pp-body">Oil-soluble and highly compatible with organic solvents and silicone fluids, Shield-DHHB integrates into oil phases, anhydrous formulas and waterproof systems without phase separation or crystallisation at standard loading levels.</p>
-        <div class="pp-applications">
-          <p class="pp-app-title">Formulation Applications</p>
-          <div class="pp-app-tags">
-            <span class="pp-tag">SPF 30–100+ Sunscreens</span>
-            <span class="pp-tag">Daily UV Moisturisers</span>
-            <span class="pp-tag">Water-resistant Sport Formulas</span>
-            <span class="pp-tag">Anti-ageing UV Protection</span>
-            <span class="pp-tag">Tinted SPF Foundations</span>
-            <span class="pp-tag">Lip Sun Care</span>
-          </div>
-        </div>
-        <div class="pp-synergy">
-          <p class="pp-syn-title">Synergistic Combinations</p>
-          <div class="pp-syn-list">
-            <div class="pp-syn-item"><span class="pp-syn-code">+ Shield-AVB</span>Photostabilises avobenzone, preventing UVA decay under exposure</div>
-            <div class="pp-syn-item"><span class="pp-syn-code">+ Shield-OCT</span>Broad UVB complement — classic high-SPF combination</div>
-            <div class="pp-syn-item"><span class="pp-syn-code">+ Shield-BEMT</span>Maximum broad-spectrum with dual triazine + DHHB architecture</div>
-          </div>
-        </div>
+    <div style="font-size:10px;color:#4B5563;font-family:'DM Mono',monospace;margin-top:9px">Relative SPF contribution index — formulation guide reference only</div>
+    <div style="margin-top:32px">
+      <p class="chart-title">UV Spectrum — Regional Coverage Map</p>
+      <div class="uv-track">
+        <div class="uv-b">UVB</div><div class="uv-a2">UVA-II</div><div class="uv-a1">UVA-I</div>
       </div>
-      <div class="pp-right">
-        <div class="pp-spec-block">
-          <p class="pp-spec-title">Technical Specifications</p>
-          <div class="pp-spec-row"><span class="pp-spec-k">CAS Number</span><span class="pp-spec-v">302776-68-7</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Assay (HPLC)</span><span class="pp-spec-v">≥ 99.0%</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Absorption max (λ)</span><span class="pp-spec-v">354 nm</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Appearance</span><span class="pp-spec-v">Yellow viscous liquid</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Solubility</span><span class="pp-spec-v">Oil-soluble</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Recommended dosage</span><span class="pp-spec-v">1.0 – 3.0%</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Max. concentration (EU)</span><span class="pp-spec-v">10.0%</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Max. concentration (BR/ANVISA)</span><span class="pp-spec-v">10.0%</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Phase incorporation</span><span class="pp-spec-v">Oil phase · ≥ 75°C</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Photostability</span><span class="pp-spec-v">Excellent (self-stable)</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">IECIC Listed</span><span class="pp-spec-v">Yes</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">REACH Status</span><span class="pp-spec-v">Pre-registered</span></div>
-        </div>
-        <div class="pp-spec-block">
-          <p class="pp-spec-title">Formulation Notes</p>
-          <div class="pp-spec-row"><span class="pp-spec-k">Emollient solubility</span><span class="pp-spec-v">C12-15 Alkyl Benzoate</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Silicone compatibility</span><span class="pp-spec-v">Full</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Aqueous phase stability</span><span class="pp-spec-v">Not soluble — oil phase only</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">pH sensitivity</span><span class="pp-spec-v">Stable pH 4–8</span></div>
-        </div>
-        <a href="index.html#contact" class="pp-request-btn">Request Full TDS + SDS →</a>
+      <div class="uv-ticks">
+        <span class="uv-tick">290 nm</span><span class="uv-tick">320 nm</span>
+        <span class="uv-tick">340 nm</span><span class="uv-tick">400 nm</span>
       </div>
-    </div>
-
-    <!-- BEMT -->
-    <div class="prod-panel" id="panel-bemt">
-      <div class="pp-left">
-        <div class="pp-line-tag"><div class="line-tag-dot" style="width:5px;height:5px"></div>VLYOR SHIELD</div>
-        <h2 class="pp-name">Shield-BEMT</h2>
-        <p class="pp-inci">Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine</p>
-        <div style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap">
-          <span class="pp-spectrum-badge broad">● Broad Spectrum UV-A/B</span>
-          <span class="pp-spectrum-badge broad">● Self-Photostable</span>
-        </div>
-        <p class="pp-tagline">"The only filter that covers both UV-A and UV-B — and needs no stabiliser to do it."</p>
-        <p class="pp-body">Shield-BEMT is the <strong>most versatile broad-spectrum filter</strong> in the VLYOR SHIELD portfolio and arguably in the global cosmetic sunscreen market. Its triazine molecular architecture delivers simultaneous absorption at 310 nm (UVB) and 343 nm (UVA) — a dual peak that no other single organic filter achieves at comparable efficiency.</p>
-        <p class="pp-body">The defining commercial advantage of Shield-BEMT is <strong>intrinsic photostability</strong>. Unlike avobenzone, which degrades under UV exposure and must be stabilised with complementary actives, Shield-BEMT returns to its ground state after excitation without chemical decomposition. This simplifies formulation architecture significantly and reduces total filter load — a critical factor for skin feel and cost management in high-SPF products.</p>
-        <p class="pp-body">Its <strong>dual lipophilic/hydrophilic character</strong> is unique: Shield-BEMT is soluble in both oil phases and in water-dilutable systems, giving formulators flexibility that most organic filters cannot offer. It performs in classic O/W emulsions, anhydrous sunscreen sticks and waterproof sport formulations equally well.</p>
-        <div class="pp-applications">
-          <p class="pp-app-title">Formulation Applications</p>
-          <div class="pp-app-tags">
-            <span class="pp-tag">Premium SPF 50+ Emulsions</span>
-            <span class="pp-tag">Sunscreen Sticks</span>
-            <span class="pp-tag">Photostable Moisturisers</span>
-            <span class="pp-tag">Children's Sun Care</span>
-            <span class="pp-tag">Sport Formulas</span>
-            <span class="pp-tag">Simplified Filter Systems</span>
-          </div>
-        </div>
-        <div class="pp-synergy">
-          <p class="pp-syn-title">Synergistic Combinations</p>
-          <div class="pp-syn-list">
-            <div class="pp-syn-item"><span class="pp-syn-code">+ Shield-DHHB</span>Double UVA coverage — maximum critical wavelength for ISO 24443</div>
-            <div class="pp-syn-item"><span class="pp-syn-code">+ Shield-EHT</span>UVB boost to achieve SPF 50+ at minimum total filter load</div>
-            <div class="pp-syn-item"><span class="pp-syn-code">+ Shield-OMC</span>Classic EU-approved high-SPF system — fully photostable</div>
-          </div>
-        </div>
-      </div>
-      <div class="pp-right">
-        <div class="pp-spec-block">
-          <p class="pp-spec-title">Technical Specifications</p>
-          <div class="pp-spec-row"><span class="pp-spec-k">CAS Number</span><span class="pp-spec-v">187393-00-6</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Assay (HPLC)</span><span class="pp-spec-v">≥ 99.0%</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Absorption peaks (λ)</span><span class="pp-spec-v">310 nm · 343 nm</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Appearance</span><span class="pp-spec-v">White to off-white powder</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Solubility</span><span class="pp-spec-v">Oil-soluble · Water-dispersible</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Recommended dosage</span><span class="pp-spec-v">1.0 – 5.0%</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Max. concentration (EU)</span><span class="pp-spec-v">10.0%</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Max. concentration (BR)</span><span class="pp-spec-v">5.0%</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Photostability</span><span class="pp-spec-v">Self-stable — no stabiliser needed</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Phase incorporation</span><span class="pp-spec-v">Oil phase · ≥ 75°C</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">IECIC Listed</span><span class="pp-spec-v">Yes</span></div>
-        </div>
-        <div class="pp-spec-block">
-          <p class="pp-spec-title">Regulatory Status by Market</p>
-          <div class="pp-spec-row"><span class="pp-spec-k">European Union (Annex VI)</span><span class="pp-spec-v">10% max · Approved</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Brazil (ANVISA)</span><span class="pp-spec-v">5% max · Approved</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Colombia / Peru / Ecuador</span><span class="pp-spec-v">EU reference · 10%</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">USA (FDA)</span><span class="pp-spec-v">Not yet approved (NDA pending)</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">China IECIC</span><span class="pp-spec-v">Listed</span></div>
-        </div>
-        <a href="index.html#contact" class="pp-request-btn">Request Full TDS + SDS →</a>
-      </div>
-    </div>
-
-    <!-- AVB -->
-    <div class="prod-panel" id="panel-avb">
-      <div class="pp-left">
-        <div class="pp-line-tag"><div class="line-tag-dot" style="width:5px;height:5px"></div>VLYOR SHIELD</div>
-        <h2 class="pp-name">Shield-AVB</h2>
-        <p class="pp-inci">Butyl Methoxydibenzoylmethane (Avobenzone)</p>
-        <div style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap">
-          <span class="pp-spectrum-badge uva">● UV-A I Filter</span>
-        </div>
-        <p class="pp-tagline">"The most widely used UVA filter in the world — and the most misunderstood."</p>
-        <p class="pp-body">Shield-AVB is the <strong>global benchmark for UVA-I filtration</strong>. Its absorption maximum at 357 nm provides the deepest UVA-I protection achievable with a single organic molecule, making it the most used UVA filter across regulated markets worldwide — from EU Directive 76/768 to the majority of LATAM sun care labels.</p>
-        <p class="pp-body">The formulation challenge Shield-AVB presents is well documented: <strong>it degrades under UV exposure</strong>, losing up to 50% of its UVA efficacy within 60–90 minutes without photostabilisation. The solution is systematic filter architecture — pairing Shield-AVB with Shield-DHHB or Shield-OCT, which act as triplet energy quenchers that prevent photoexcited avobenzone from degrading. This system is the foundation of every serious high-SPF product globally.</p>
-        <p class="pp-body">Shield-AVB is <strong>listed under ANVISA, INVIMA and all major LATAM regulatory frameworks</strong> at up to 5%, making it the logical first-choice UVA filter for brands entering or scaling in South America.</p>
-        <div class="pp-applications">
-          <p class="pp-app-title">Formulation Applications</p>
-          <div class="pp-app-tags">
-            <span class="pp-tag">All SPF Levels</span>
-            <span class="pp-tag">UVA-labelled Products</span>
-            <span class="pp-tag">LATAM Regulatory Compliance</span>
-            <span class="pp-tag">Broad-spectrum Emulsions</span>
-            <span class="pp-tag">Facial Sunscreens</span>
-          </div>
-        </div>
-        <div class="pp-synergy">
-          <p class="pp-syn-title">Essential Photostabilisation</p>
-          <div class="pp-syn-list">
-            <div class="pp-syn-item"><span class="pp-syn-code">+ Shield-DHHB</span>Primary photostabiliser — prevents UVA decay under exposure</div>
-            <div class="pp-syn-item"><span class="pp-syn-code">+ Shield-OCT</span>Secondary quencher — extends photostability in waterproof formulas</div>
-            <div class="pp-syn-item"><span class="pp-syn-code">+ Shield-BEMT</span>Self-stable broad-spectrum complement</div>
-          </div>
-        </div>
-      </div>
-      <div class="pp-right">
-        <div class="pp-spec-block">
-          <p class="pp-spec-title">Technical Specifications</p>
-          <div class="pp-spec-row"><span class="pp-spec-k">CAS Number</span><span class="pp-spec-v">70356-09-1</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Assay (HPLC)</span><span class="pp-spec-v">98.0 – 105.0%</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Absorption max (λ)</span><span class="pp-spec-v">357 nm</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Appearance</span><span class="pp-spec-v">White to pale yellow powder</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Melting point</span><span class="pp-spec-v">81–86°C</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Solubility</span><span class="pp-spec-v">Oil-soluble</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Recommended dosage</span><span class="pp-spec-v">2.0 – 5.0%</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Max. EU</span><span class="pp-spec-v">5.0%</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Max. BR / LATAM</span><span class="pp-spec-v">5.0%</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Photostability</span><span class="pp-spec-v">Requires photostabiliser</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">IECIC / REACH</span><span class="pp-spec-v">Listed / Pre-registered</span></div>
-        </div>
-        <div style="padding:16px;background:rgba(147,197,253,.06);border:1px solid rgba(147,197,253,.15);margin-top:4px">
-          <p style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--line-acc);margin-bottom:8px">Formulation Critical Note</p>
-          <p style="font-size:12px;line-height:1.65;color:var(--grey-300)">Shield-AVB must always be used with a photostabiliser. Avoid metal ions (iron, copper) — complex formation causes discolouration. Add in oil phase at 75–80°C.</p>
-        </div>
-        <a href="index.html#contact" class="pp-request-btn">Request Full TDS + SDS →</a>
-      </div>
-    </div>
-
-    <!-- OCT -->
-    <div class="prod-panel" id="panel-oct">
-      <div class="pp-left">
-        <div class="pp-line-tag"><div class="line-tag-dot" style="width:5px;height:5px"></div>VLYOR SHIELD</div>
-        <h2 class="pp-name">Shield-OCT</h2>
-        <p class="pp-inci">Octocrylene</p>
-        <div style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap">
-          <span class="pp-spectrum-badge uvb">● UV-B Filter</span>
-          <span class="pp-spectrum-badge broad">● Photostabilizer</span>
-        </div>
-        <p class="pp-tagline">"The workhorse that keeps your UVA filter alive."</p>
-        <p class="pp-body">Shield-OCT is <strong>the most versatile UVB filter in the Shield portfolio</strong>. It absorbs efficiently at 303 nm, contributing meaningfully to SPF. But its primary commercial value lies in its second function: <strong>acting as a triplet-state quencher for avobenzone</strong>, absorbing the excited-state energy that would otherwise cause Shield-AVB to degrade under solar exposure.</p>
-        <p class="pp-body">This dual role makes Shield-OCT a near-universal component in high-SPF formulations — it contributes to SPF while simultaneously protecting the UVA filter that provides critical sun damage prevention. Its liquid form at room temperature also acts as a <strong>co-solvent for other solid UV filters</strong>, reducing the total number of processing steps and enabling higher filter loading without crystallisation.</p>
-        <div class="pp-applications">
-          <p class="pp-app-title">Formulation Applications</p>
-          <div class="pp-app-tags">
-            <span class="pp-tag">High-SPF Emulsions</span><span class="pp-tag">Avobenzone Stabilisation</span>
-            <span class="pp-tag">Spray Sunscreens</span><span class="pp-tag">Hair UV Protection</span><span class="pp-tag">Sport Formulas</span>
-          </div>
-        </div>
-        <div class="pp-synergy">
-          <p class="pp-syn-title">Synergistic Combinations</p>
-          <div class="pp-syn-list">
-            <div class="pp-syn-item"><span class="pp-syn-code">+ Shield-AVB</span>Essential photostabilisation pair — global standard combination</div>
-            <div class="pp-syn-item"><span class="pp-syn-code">+ Shield-EHT</span>Maximum UVB contribution with triazine booster</div>
-            <div class="pp-syn-item"><span class="pp-syn-code">+ Shield-DHHB</span>Premium UVA system with dual photostabilisation</div>
-          </div>
-        </div>
-      </div>
-      <div class="pp-right">
-        <div class="pp-spec-block">
-          <p class="pp-spec-title">Technical Specifications</p>
-          <div class="pp-spec-row"><span class="pp-spec-k">CAS Number</span><span class="pp-spec-v">6197-30-4</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Assay (HPLC)</span><span class="pp-spec-v">≥ 98.0%</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Absorption max (λ)</span><span class="pp-spec-v">303 nm</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Appearance</span><span class="pp-spec-v">Clear oily liquid</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Solubility</span><span class="pp-spec-v">Oil-soluble · Co-solvent for solid filters</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Recommended dosage</span><span class="pp-spec-v">2.0 – 10.0%</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Max. EU / BR / LATAM</span><span class="pp-spec-v">10.0%</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Photostability</span><span class="pp-spec-v">Excellent (self-stable)</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">IECIC / REACH</span><span class="pp-spec-v">Listed / Pre-registered</span></div>
-        </div>
-        <a href="index.html#contact" class="pp-request-btn">Request Full TDS + SDS →</a>
-      </div>
-    </div>
-
-    <!-- Remaining panels — compact format -->
-    <div class="prod-panel" id="panel-eht">
-      <div class="pp-left">
-        <div class="pp-line-tag"><div class="line-tag-dot" style="width:5px;height:5px"></div>VLYOR SHIELD</div>
-        <h2 class="pp-name">Shield-EHT</h2>
-        <p class="pp-inci">Ethylhexyl Triazone</p>
-        <div style="display:flex;gap:8px;margin-bottom:20px"><span class="pp-spectrum-badge uvb">● UV-B Filter</span></div>
-        <p class="pp-tagline">"The highest UVB molar absorptivity of any approved filter — extraordinary SPF contribution at minimal load."</p>
-        <p class="pp-body">Shield-EHT delivers <strong>the most efficient UVB absorption per gram</strong> of any organic filter — its molar absorptivity coefficient exceeds that of all classical UVB actives. This means formulators can achieve equivalent SPF values at significantly lower concentrations, freeing capacity for UVA filters, sensory ingredients or cost reduction without compromising protection.</p>
-        <p class="pp-body">It is <strong>completely photostable</strong>, oil-soluble and compatible with the full range of Shield UV-A filters. Particularly valuable in high-SPF minimalist formulations where total filter load must be kept below 15% for sensory and regulatory reasons.</p>
-        <div class="pp-applications"><p class="pp-app-title">Applications</p><div class="pp-app-tags"><span class="pp-tag">High-efficiency SPF</span><span class="pp-tag">Minimalist Filter Systems</span><span class="pp-tag">Premium Daily UV</span><span class="pp-tag">Tinted SPF</span></div></div>
-      </div>
-      <div class="pp-right">
-        <div class="pp-spec-block">
-          <p class="pp-spec-title">Technical Specifications</p>
-          <div class="pp-spec-row"><span class="pp-spec-k">CAS Number</span><span class="pp-spec-v">88122-99-0</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Assay</span><span class="pp-spec-v">≥ 98.0%</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Absorption max (λ)</span><span class="pp-spec-v">314 nm</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Solubility</span><span class="pp-spec-v">Oil-soluble</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Recommended dosage</span><span class="pp-spec-v">1.0 – 5.0%</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Max. EU / LATAM</span><span class="pp-spec-v">5.0%</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Photostability</span><span class="pp-spec-v">Self-stable</span></div>
-        </div>
-        <a href="index.html#contact" class="pp-request-btn">Request Full TDS + SDS →</a>
-      </div>
-    </div>
-
-    <div class="prod-panel" id="panel-mbbt">
-      <div class="pp-left">
-        <div class="pp-line-tag"><div class="line-tag-dot" style="width:5px;height:5px"></div>VLYOR SHIELD</div>
-        <h2 class="pp-name">Shield-MBBT</h2>
-        <p class="pp-inci">Methylene Bis-Benzotriazolyl Tetramethylbutylphenol</p>
-        <div style="display:flex;gap:8px;margin-bottom:20px"><span class="pp-spectrum-badge broad">● UV-A/B Broad Spectrum</span></div>
-        <p class="pp-tagline">"Broad-spectrum protection in an aqueous dispersion — the filter of choice for lightweight, water-based formulas."</p>
-        <p class="pp-body">Shield-MBBT is a <strong>micronised polymer dispersion</strong> with dual UV-A/B absorption peaks — the only commercially available broad-spectrum filter available in an aqueous format. This makes it the ideal choice for <strong>water-based serums, gel sunscreens and spray emulsions</strong> where oil-soluble filter loading is limited.</p>
-        <p class="pp-body">Its polymeric, high-molecular-weight structure means <strong>negligible skin penetration</strong> — a significant regulatory and marketing advantage in markets with growing concern around filter bioaccumulation. Completely photostable.</p>
-        <div class="pp-applications"><p class="pp-app-title">Applications</p><div class="pp-app-tags"><span class="pp-tag">Aqueous Gel Sunscreens</span><span class="pp-tag">Spray SPF</span><span class="pp-tag">Children's Formulas</span><span class="pp-tag">Low-penetration Systems</span></div></div>
-      </div>
-      <div class="pp-right">
-        <div class="pp-spec-block">
-          <p class="pp-spec-title">Technical Specifications</p>
-          <div class="pp-spec-row"><span class="pp-spec-k">CAS Number</span><span class="pp-spec-v">103597-45-1</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Form</span><span class="pp-spec-v">Aqueous dispersion (50% active)</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Absorption peaks</span><span class="pp-spec-v">305 nm · 360 nm</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Solubility</span><span class="pp-spec-v">Water-dispersible</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Recommended dosage</span><span class="pp-spec-v">2.0 – 10.0% (active)</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Max. EU</span><span class="pp-spec-v">10.0%</span></div>
-          <div class="pp-spec-row"><span class="pp-spec-k">Photostability</span><span class="pp-spec-v">Self-stable</span></div>
-        </div>
-        <a href="index.html#contact" class="pp-request-btn">Request Full TDS + SDS →</a>
-      </div>
-    </div>
-
-    <!-- Simplified panels for remaining actives -->
-    <div class="prod-panel" id="panel-dbt"><div class="pp-left"><div class="pp-line-tag"><div class="line-tag-dot" style="width:5px;height:5px"></div>VLYOR SHIELD</div><h2 class="pp-name">Shield-DBT</h2><p class="pp-inci">Diethylhexyl Butamido Triazone</p><div style="display:flex;gap:8px;margin-bottom:20px"><span class="pp-spectrum-badge uvb">● UV-B Filter</span></div><p class="pp-tagline">"A photostable UVB triazine — the clean alternative to classic octinoxate in reformulation projects."</p><p class="pp-body">Shield-DBT is a <strong>second-generation UVB triazine filter</strong> offering excellent molar absorptivity at 312 nm and outstanding photostability — properties that make it a compelling alternative or complement to traditional UVB filters in reformulation projects. Particularly relevant for brands moving away from octinoxate under retailer or consumer pressure.</p><p class="pp-body">Oil-soluble, compatible with the full Shield system, and registered across EU and LATAM markets. Its solid form provides ease of handling at scale and precise dosing.</p><div class="pp-applications"><p class="pp-app-title">Applications</p><div class="pp-app-tags"><span class="pp-tag">Octinoxate Reformulation</span><span class="pp-tag">High-SPF Systems</span><span class="pp-tag">Clean Beauty SPF</span></div></div></div><div class="pp-right"><div class="pp-spec-block"><p class="pp-spec-title">Technical Specifications</p><div class="pp-spec-row"><span class="pp-spec-k">CAS Number</span><span class="pp-spec-v">154702-15-5</span></div><div class="pp-spec-row"><span class="pp-spec-k">Assay</span><span class="pp-spec-v">≥ 98.0%</span></div><div class="pp-spec-row"><span class="pp-spec-k">Absorption max</span><span class="pp-spec-v">312 nm</span></div><div class="pp-spec-row"><span class="pp-spec-k">Solubility</span><span class="pp-spec-v">Oil-soluble</span></div><div class="pp-spec-row"><span class="pp-spec-k">Dosage / Max.</span><span class="pp-spec-v">1–5% / 5% EU</span></div><div class="pp-spec-row"><span class="pp-spec-k">Photostability</span><span class="pp-spec-v">Self-stable</span></div></div><a href="index.html#contact" class="pp-request-btn">Request Full TDS + SDS →</a></div></div>
-
-    <div class="prod-panel" id="panel-omc"><div class="pp-left"><div class="pp-line-tag"><div class="line-tag-dot" style="width:5px;height:5px"></div>VLYOR SHIELD</div><h2 class="pp-name">Shield-OMC</h2><p class="pp-inci">Ethylhexyl Methoxycinnamate (Octinoxate)</p><div style="display:flex;gap:8px;margin-bottom:20px"><span class="pp-spectrum-badge uvb">● UV-B Filter</span></div><p class="pp-tagline">"The most used UVB filter in history — and still the global volume standard."</p><p class="pp-body">Shield-OMC (octinoxate) is the <strong>most widely used UV filter globally by volume</strong>. Its combination of high UVB efficacy at 311 nm, excellent cosmetic compatibility, proven skin safety profile and competitive pricing has made it the default UVB filter in mass-market and professional sun care for decades.</p><p class="pp-body">Formulators use Shield-OMC as a <strong>foundation filter</strong> — the UVB workhorse that is then complemented with UVA actives and photostabilisers. Must be combined with a photostabiliser (Shield-OCT or Shield-DHHB) when paired with avobenzone.</p><div class="pp-applications"><p class="pp-app-title">Applications</p><div class="pp-app-tags"><span class="pp-tag">Mass-market SPF</span><span class="pp-tag">Foundation Filter</span><span class="pp-tag">Body Sunscreens</span><span class="pp-tag">After-sun</span></div></div></div><div class="pp-right"><div class="pp-spec-block"><p class="pp-spec-title">Technical Specifications</p><div class="pp-spec-row"><span class="pp-spec-k">CAS Number</span><span class="pp-spec-v">5466-77-3</span></div><div class="pp-spec-row"><span class="pp-spec-k">Assay</span><span class="pp-spec-v">≥ 98.0%</span></div><div class="pp-spec-row"><span class="pp-spec-k">Absorption max</span><span class="pp-spec-v">311 nm</span></div><div class="pp-spec-row"><span class="pp-spec-k">Form</span><span class="pp-spec-v">Clear oily liquid</span></div><div class="pp-spec-row"><span class="pp-spec-k">Dosage / Max.</span><span class="pp-spec-v">2–10% / 10% EU · 7.5% BR</span></div><div class="pp-spec-row"><span class="pp-spec-k">Photostability</span><span class="pp-spec-v">Moderate — photostabiliser recommended</span></div></div><a href="index.html#contact" class="pp-request-btn">Request Full TDS + SDS →</a></div></div>
-
-    <div class="prod-panel" id="panel-pbsa"><div class="pp-left"><div class="pp-line-tag"><div class="line-tag-dot" style="width:5px;height:5px"></div>VLYOR SHIELD</div><h2 class="pp-name">Shield-PBSA</h2><p class="pp-inci">Phenylbenzimidazole Sulfonic Acid (Ensulizole)</p><div style="display:flex;gap:8px;margin-bottom:20px"><span class="pp-spectrum-badge uvb">● UV-B · Water-Soluble</span></div><p class="pp-tagline">"The only water-soluble UVB filter — for clear, aqueous SPF formulations."</p><p class="pp-body">Shield-PBSA is the <strong>sole water-soluble UVB organic filter</strong> approved globally. This unique property makes it indispensable for clear aqueous gels, hydrating tonics with SPF and any formulation where oil-phase filter loading must be minimised.</p><p class="pp-body">Its water solubility also enables formulators to build SPF without adding to the oil phase — critical for very lightweight moisturisers, after-sun sprays and scalp SPF products where a greasy feel is unacceptable. Add to aqueous phase at pH 7–8 (neutralise with NaOH or TEA).</p><div class="pp-applications"><p class="pp-app-title">Applications</p><div class="pp-app-tags"><span class="pp-tag">Clear Aqueous SPF</span><span class="pp-tag">SPF Toners</span><span class="pp-tag">Scalp Protection</span><span class="pp-tag">After-sun Gels</span></div></div></div><div class="pp-right"><div class="pp-spec-block"><p class="pp-spec-title">Technical Specifications</p><div class="pp-spec-row"><span class="pp-spec-k">CAS Number</span><span class="pp-spec-v">27503-81-7</span></div><div class="pp-spec-row"><span class="pp-spec-k">Assay</span><span class="pp-spec-v">≥ 98.0%</span></div><div class="pp-spec-row"><span class="pp-spec-k">Absorption max</span><span class="pp-spec-v">310 nm</span></div><div class="pp-spec-row"><span class="pp-spec-k">Solubility</span><span class="pp-spec-v">Water-soluble (pH ≥ 7)</span></div><div class="pp-spec-row"><span class="pp-spec-k">Form</span><span class="pp-spec-v">White powder · sodium salt</span></div><div class="pp-spec-row"><span class="pp-spec-k">Dosage / Max.</span><span class="pp-spec-v">1–4% / 4% EU · 3% BR</span></div></div><a href="index.html#contact" class="pp-request-btn">Request Full TDS + SDS →</a></div></div>
-
-    <div class="prod-panel" id="panel-hms"><div class="pp-left"><div class="pp-line-tag"><div class="line-tag-dot" style="width:5px;height:5px"></div>VLYOR SHIELD</div><h2 class="pp-name">Shield-HMS</h2><p class="pp-inci">Homosalate</p><div style="display:flex;gap:8px;margin-bottom:20px"><span class="pp-spectrum-badge uvb">● UV-B Filter</span></div><p class="pp-tagline">"The co-solvent filter — it dissolves other UV actives while contributing its own SPF."</p><p class="pp-body">Shield-HMS is valued for its <strong>excellent solvent properties</strong> for other UV filters — particularly for solid actives such as Shield-EHT and Shield-DHHB that require liquid co-solvents for dissolution at commercially viable loading levels. It simultaneously contributes UVB absorption, making it an efficient multifunctional component in complex filter systems.</p><p class="pp-body">Particularly common in the <strong>US market</strong>, where it is FDA-monograph approved. Liquid at room temperature, excellent compatibility with silicones and esters.</p><div class="pp-applications"><p class="pp-app-title">Applications</p><div class="pp-app-tags"><span class="pp-tag">US-market Sunscreens</span><span class="pp-tag">Complex Filter Co-solvent</span><span class="pp-tag">Sport Formulas</span></div></div></div><div class="pp-right"><div class="pp-spec-block"><p class="pp-spec-title">Technical Specifications</p><div class="pp-spec-row"><span class="pp-spec-k">CAS Number</span><span class="pp-spec-v">118-56-9</span></div><div class="pp-spec-row"><span class="pp-spec-k">Assay</span><span class="pp-spec-v">≥ 98.0%</span></div><div class="pp-spec-row"><span class="pp-spec-k">Absorption max</span><span class="pp-spec-v">306 nm</span></div><div class="pp-spec-row"><span class="pp-spec-k">Form</span><span class="pp-spec-v">Clear oily liquid</span></div><div class="pp-spec-row"><span class="pp-spec-k">Max. US (FDA)</span><span class="pp-spec-v">15.0%</span></div><div class="pp-spec-row"><span class="pp-spec-k">Max. EU</span><span class="pp-spec-v">10.0%</span></div></div><a href="index.html#contact" class="pp-request-btn">Request Full TDS + SDS →</a></div></div>
-
-    <div class="prod-panel" id="panel-os"><div class="pp-left"><div class="pp-line-tag"><div class="line-tag-dot" style="width:5px;height:5px"></div>VLYOR SHIELD</div><h2 class="pp-name">Shield-OS</h2><p class="pp-inci">Ethylhexyl Salicylate (Octisalate)</p><div style="display:flex;gap:8px;margin-bottom:20px"><span class="pp-spectrum-badge uvb">● UV-B Filter</span></div><p class="pp-tagline">"Lightweight UVB contribution with genuine emollient benefits — the filter that improves skin feel."</p><p class="pp-body">Shield-OS is unique among UVB filters in offering a <strong>genuine skin feel benefit</strong> alongside UV protection. As an ester-based molecule, it acts as a light emollient in addition to absorbing at 307 nm — improving the overall sensory profile of oil phases in which it is incorporated.</p><p class="pp-body">Frequently used as a <strong>solubiliser for other solid UV actives</strong> and as a sensory modifier in high-filter-load formulations where feel tends to deteriorate. FDA-approved and widely used in the US OTC sunscreen market.</p><div class="pp-applications"><p class="pp-app-title">Applications</p><div class="pp-app-tags"><span class="pp-tag">Sensory-optimised SPF</span><span class="pp-tag">Emollient-boosted Sunscreens</span><span class="pp-tag">US/LATAM Markets</span></div></div></div><div class="pp-right"><div class="pp-spec-block"><p class="pp-spec-title">Technical Specifications</p><div class="pp-spec-row"><span class="pp-spec-k">CAS Number</span><span class="pp-spec-v">118-60-5</span></div><div class="pp-spec-row"><span class="pp-spec-k">Assay</span><span class="pp-spec-v">≥ 98.0%</span></div><div class="pp-spec-row"><span class="pp-spec-k">Absorption max</span><span class="pp-spec-v">307 nm</span></div><div class="pp-spec-row"><span class="pp-spec-k">Form</span><span class="pp-spec-v">Clear oily liquid</span></div><div class="pp-spec-row"><span class="pp-spec-k">Max. US</span><span class="pp-spec-v">5.0%</span></div><div class="pp-spec-row"><span class="pp-spec-k">Max. EU</span><span class="pp-spec-v">5.0%</span></div></div><a href="index.html#contact" class="pp-request-btn">Request Full TDS + SDS →</a></div></div>
-
-    <div class="prod-panel" id="panel-bp3"><div class="pp-left"><div class="pp-line-tag"><div class="line-tag-dot" style="width:5px;height:5px"></div>VLYOR SHIELD</div><h2 class="pp-name">Shield-BP3</h2><p class="pp-inci">Benzophenone-3 (Oxybenzone)</p><div style="display:flex;gap:8px;margin-bottom:20px"><span class="pp-spectrum-badge broad">● UV-A/B Filter</span></div><p class="pp-tagline">"Broad-spectrum coverage in a single economical molecule — the volume filter in LATAM mass-market."</p><p class="pp-body">Shield-BP3 is the <strong>dominant UV filter in Latin American mass-market formulations</strong> by volume. Its broad-spectrum UV-A/B absorption, regulatory approval across all LATAM markets at up to 10%, and cost competitiveness make it the standard filter in body lotions, daily moisturisers and after-sun products produced regionally by manufacturers such as Yanbal, Belcorp and independents.</p><p class="pp-body">Available in both oil-soluble and water-soluble (BP-4) forms. Provides immediate formulation versatility across different vehicle types.</p><div class="pp-applications"><p class="pp-app-title">Applications</p><div class="pp-app-tags"><span class="pp-tag">LATAM Mass-Market</span><span class="pp-tag">Body Sunscreens</span><span class="pp-tag">Daily Moisturisers</span><span class="pp-tag">After-sun</span></div></div></div><div class="pp-right"><div class="pp-spec-block"><p class="pp-spec-title">Technical Specifications</p><div class="pp-spec-row"><span class="pp-spec-k">CAS Number</span><span class="pp-spec-v">131-57-7</span></div><div class="pp-spec-row"><span class="pp-spec-k">Assay</span><span class="pp-spec-v">≥ 98.0%</span></div><div class="pp-spec-row"><span class="pp-spec-k">Absorption max</span><span class="pp-spec-v">288 nm · 325 nm</span></div><div class="pp-spec-row"><span class="pp-spec-k">Solubility</span><span class="pp-spec-v">Oil-soluble</span></div><div class="pp-spec-row"><span class="pp-spec-k">Max. EU / LATAM</span><span class="pp-spec-v">6.0%</span></div></div><a href="index.html#contact" class="pp-request-btn">Request Full TDS + SDS →</a></div></div>
-
-    <div class="prod-panel" id="panel-bp4"><div class="pp-left"><div class="pp-line-tag"><div class="line-tag-dot" style="width:5px;height:5px"></div>VLYOR SHIELD</div><h2 class="pp-name">Shield-BP4</h2><p class="pp-inci">Benzophenone-4 (Sulisobenzone)</p><div style="display:flex;gap:8px;margin-bottom:20px"><span class="pp-spectrum-badge broad">● UV-A/B · Water-Soluble</span></div><p class="pp-tagline">"The water-soluble broad-spectrum filter — BP-3's aqueous counterpart for gel and serum formulations."</p><p class="pp-body">Shield-BP4 is the <strong>sodium sulfonate salt of benzophenone-3</strong> — sharing the same broad-spectrum UV-A/B absorption profile but soluble in water rather than oil. This makes it the natural choice for aqueous SPF systems, transparent gel sunscreens and any formulation where the oil phase is insufficient to dissolve the required filter load.</p><p class="pp-body">Particularly useful in <strong>serums with incidental UV protection</strong>, scalp sprays and multi-function products where SPF is a secondary benefit and sensory lightness is the primary requirement.</p><div class="pp-applications"><p class="pp-app-title">Applications</p><div class="pp-app-tags"><span class="pp-tag">Aqueous SPF Systems</span><span class="pp-tag">SPF Serums</span><span class="pp-tag">Hair/Scalp UV</span><span class="pp-tag">Clear Gels</span></div></div></div><div class="pp-right"><div class="pp-spec-block"><p class="pp-spec-title">Technical Specifications</p><div class="pp-spec-row"><span class="pp-spec-k">CAS Number</span><span class="pp-spec-v">4065-45-6</span></div><div class="pp-spec-row"><span class="pp-spec-k">Assay</span><span class="pp-spec-v">≥ 97.0%</span></div><div class="pp-spec-row"><span class="pp-spec-k">Absorption max</span><span class="pp-spec-v">290 nm · 325 nm</span></div><div class="pp-spec-row"><span class="pp-spec-k">Solubility</span><span class="pp-spec-v">Water-soluble</span></div><div class="pp-spec-row"><span class="pp-spec-k">Max. EU</span><span class="pp-spec-v">5.0%</span></div></div><a href="index.html#contact" class="pp-request-btn">Request Full TDS + SDS →</a></div></div>
-
-  </section>
-
-  <!-- FORMULATION SYSTEMS -->
-  <section class="formulation-sec">
-    <div class="prod-sec-header">
-      <p class="eyebrow">Formulation Systems</p>
-      <h2 class="sec-title">Proven filter architectures<br/>for every SPF challenge.</h2>
-    </div>
-    <div class="form-cards">
-      <div class="form-card">
-        <p class="fc-num">System 01</p>
-        <h3 class="fc-title">Classic High-SPF<br/>LATAM Standard</h3>
-        <p class="fc-body">The most widely used sun care architecture across Colombia, Peru, Brazil and Ecuador. Combines the highest-volume UVB filter with photostabilised UVA coverage — the formula profile behind most Yanbal and Belcorp sun care products.</p>
-        <div class="fc-products">
-          <div class="fc-prod">Shield-OMC · 7.0–7.5%</div>
-          <div class="fc-prod">Shield-AVB · 3.0–5.0%</div>
-          <div class="fc-prod">Shield-OCT · 5.0–8.0%</div>
-          <div class="fc-prod">Shield-BP3 · 2.0–4.0%</div>
-        </div>
-      </div>
-      <div class="form-card">
-        <p class="fc-num">System 02</p>
-        <h3 class="fc-title">Next-Generation<br/>Premium SPF 50+</h3>
-        <p class="fc-body">Achieves SPF 50+ with superior photostability and an elegant skin feel. Designed for premium facial sunscreens, tinted SPF foundations and clinical photodamage prevention products targeting upmarket consumers in Bogotá, Lima and São Paulo.</p>
-        <div class="fc-products">
-          <div class="fc-prod">Shield-BEMT · 4.0–5.0%</div>
-          <div class="fc-prod">Shield-DHHB · 2.0–3.0%</div>
-          <div class="fc-prod">Shield-EHT · 2.0–3.0%</div>
-          <div class="fc-prod">Shield-AVB · 3.0%</div>
-        </div>
-      </div>
-      <div class="form-card">
-        <p class="fc-num">System 03</p>
-        <h3 class="fc-title">Minimalist Aqueous<br/>Daily UV Protection</h3>
-        <p class="fc-body">For transparent gels, SPF toners and lightweight moisturisers where total filter load must remain below 8% for sensory and formulation reasons. Water-soluble filters carry the SPF without affecting the clarity or feel of aqueous systems.</p>
-        <div class="fc-products">
-          <div class="fc-prod">Shield-PBSA · 3.0–4.0%</div>
-          <div class="fc-prod">Shield-BP4 · 3.0–4.0%</div>
-          <div class="fc-prod">Shield-BEMT · 2.0–3.0%</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- REGULATORY -->
-  <section class="regulatory-sec">
-    <div class="prod-sec-header">
-      <p class="eyebrow">Global Compliance</p>
-      <h2 class="sec-title">Every market.<br/>Every standard.</h2>
-    </div>
-    <div class="reg-grid">
-      <div class="reg-block">
-        <svg class="reg-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="26" height="26" rx="1"/><path d="M9 16l5 5 9-10" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <h4 class="reg-title">EU Annex VI Compliance</h4>
-        <p class="reg-body">All Shield actives are approved under EU Cosmetics Regulation 1223/2009 Annex VI. Concentrations, documentation and compliance dossiers available on request.</p>
-      </div>
-      <div class="reg-block">
-        <svg class="reg-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="16" r="12"/><circle cx="16" cy="16" r="6"/><line x1="16" y1="4" x2="16" y2="10"/><line x1="16" y1="22" x2="16" y2="28"/></svg>
-        <h4 class="reg-title">ANVISA (Brazil)</h4>
-        <p class="reg-body">All applicable Shield actives registered under ANVISA RDC 35/2023. Full concentration limits and approved combinations documented per Brazilian regulation.</p>
-      </div>
-      <div class="reg-block">
-        <svg class="reg-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 3L29 10V22L16 29L3 22V10Z"/></svg>
-        <h4 class="reg-title">INVIMA / DIGEMID</h4>
-        <p class="reg-body">Colombia and Peru follow EU Mercosur reference framework. Shield filter documentation package supports INVIMA and DIGEMID notification and registration procedures.</p>
-      </div>
-      <div class="reg-block">
-        <svg class="reg-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="6" width="24" height="20" rx="1"/><line x1="4" y1="13" x2="28" y2="13" stroke-width="1"/><line x1="12" y1="6" x2="12" y2="26" stroke-width="1"/></svg>
-        <h4 class="reg-title">China IECIC</h4>
-        <p class="reg-body">All SHIELD actives listed in China's Inventory of Existing Cosmetic Ingredients (IECIC). Full documentation for Chinese market registration available.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <div class="cta-strip">
-    <div>
-      <h2>Ready to build your<br/>next SPF formulation?</h2>
-      <p>Our technical team responds with targeted dossiers — filter recommendations, system architecture and regulatory documentation for your specific market and product brief.</p>
-    </div>
-    <div class="cta-actions">
-      <a href="portal.html#shield" class="btn-g">Full Technical Portal →</a>
-      <a href="index.html#contact" class="btn-p">Request Samples →</a>
     </div>
   </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <span class="logo-m">VLYOR</span><br/>
-        <span class="logo-s">Science</span>
-        <p class="footer-tag">Molecular Integrity. Aesthetic Performance.</p>
+<!-- PRODUCT EXPLORER -->
+<section id="explorer" class="sh-explorer">
+  <div class="sh-exp-hdr">
+    <p class="eyebrow">The SHIELD Portfolio</p>
+    <h2 class="sec-title">13 actives.<br/>One architecture.</h2>
+    <p class="sec-sub">Select any active to access full commercial profile, technical specifications, performance data and formulation guidance.</p>
+  </div>
+  <div class="sh-exp-layout">
+
+    <aside class="sh-sidebar">
+      <div class="sh-sb-grp">
+        <div class="sh-sb-grp-hd">Broad Spectrum</div>
+        <button class="sh-sb-btn active" data-prod="dhhb">Shield-DHHB<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-uva">UV-A</span><span class="sh-sb-sp sp-stable">Stabiliser</span></div></button>
+        <button class="sh-sb-btn" data-prod="bemt">Shield-BEMT<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-broad">A/B</span></div></button>
+        <button class="sh-sb-btn" data-prod="mbbt">Shield-MBBT<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-broad">A/B</span></div></button>
       </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <h5>SHIELD Portfolio</h5>
-          <ul>
-            <li>Shield-DHHB · UV-A</li>
-            <li>Shield-BEMT · Broad Spectrum</li>
-            <li>Shield-AVB · UV-A Classic</li>
-            <li>Shield-OCT · UV-B + Stabiliser</li>
-            <li>Shield-EHT · High-efficiency UVB</li>
-            <li>+ 8 more actives</li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Other Lines</h5>
-          <ul>
-            <li><a href="index.html#lines">VLYOR VITAL</a></li>
-            <li><a href="index.html#lines">VLYOR PURE</a></li>
-            <li><a href="index.html#lines">VLYOR FUNC</a></li>
-            <li><a href="index.html#lines">VLYOR COND</a></li>
-            <li><a href="index.html#lines">VLYOR SILK · FORM · HYDRA</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Contact</h5>
-          <ul>
-            <li><a href="mailto:science@vlyor.com">science@vlyor.com</a></li>
-            <li>Global Bioactives Hub</li>
-            <li>Suzhou, China</li>
-          </ul>
-        </div>
+      <div class="sh-sb-grp">
+        <div class="sh-sb-grp-hd">UVA Filters</div>
+        <button class="sh-sb-btn" data-prod="avb">Shield-AVB<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-uva">UV-A</span></div></button>
+        <button class="sh-sb-btn" data-prod="bp3">Shield-BP3<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-broad">A/B</span></div></button>
+        <button class="sh-sb-btn" data-prod="bp4">Shield-BP4<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-broad">A/B aq.</span></div></button>
       </div>
+      <div class="sh-sb-grp">
+        <div class="sh-sb-grp-hd">UVB Filters</div>
+        <button class="sh-sb-btn" data-prod="eht">Shield-EHT<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-uvb">UV-B</span></div></button>
+        <button class="sh-sb-btn" data-prod="dbt">Shield-DBT<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-uvb">UV-B</span></div></button>
+        <button class="sh-sb-btn" data-prod="omc">Shield-OMC<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-uvb">UV-B</span></div></button>
+        <button class="sh-sb-btn" data-prod="oct">Shield-OCT<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-uvb">UV-B</span><span class="sh-sb-sp sp-stable">Stab.</span></div></button>
+        <button class="sh-sb-btn" data-prod="pbsa">Shield-PBSA<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-uvb">UV-B aq.</span></div></button>
+        <button class="sh-sb-btn" data-prod="hms">Shield-HMS<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-uvb">UV-B</span></div></button>
+        <button class="sh-sb-btn" data-prod="os">Shield-OS<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-uvb">UV-B</span></div></button>
+      </div>
+    </aside>
+
+    <div class="sh-panels">
+
+<!-- DHHB -->
+<div class="sh-panel active" id="prod-dhhb">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SHIELD — UV-A Filter / Photostabiliser</div>
+  <h2 class="sh-panel-name">Shield-DHHB</h2>
+  <p class="sh-panel-inci">Diethylamino Hydroxybenzoyl Hexyl Benzoate</p>
+  <div class="sh-badges"><span class="sh-badge b-uva">UV-A Filter</span><span class="sh-badge b-broad">Photostabiliser</span><span class="sh-badge b-stable">Self-Photostable</span></div>
+  <p class="sh-tagline">"The most efficient UVA filter available — and the molecule that rescues every avobenzone formulation."</p>
+  <p class="sh-body">Shield-DHHB is the <strong>gold-standard UVA-I filter for next-generation sun care</strong>. Its absorption maximum at 354 nm places it precisely at the peak of UVA-I — the portion of the solar spectrum most responsible for photoageing, indirect DNA damage and melanoma risk, yet least addressed by classical filter systems built around UVB-dominant actives.</p>
+  <p class="sh-body">What makes Shield-DHHB commercially exceptional is its <strong>dual functionality</strong>: it delivers outstanding UVA absorption in its own right, while simultaneously acting as a <strong>molecular photostabiliser for avobenzone (Shield-AVB)</strong>, quenching the triplet-excited state that would otherwise cause avobenzone to degrade photochemically. This dual role makes Shield-DHHB the architectural cornerstone of every serious high-SPF formulation on the market — premium facial sunscreens, clinical photodamage prevention products and professional sport sun care all rely on this mechanism.</p>
+  <p class="sh-body">Oil-soluble, compatible with esters, silicones and non-polar solvents, <strong>Shield-DHHB integrates cleanly into standard O/W and W/O oil phases</strong> without crystallisation or phase separation at commercially relevant loading levels up to 5%. Its viscous liquid form aids processing and enables co-dissolution of solid UV actives.</p>
+
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">354 nm</span><span class="sh-perf-lbl">Absorption Maximum</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">≥99.0%</span><span class="sh-perf-lbl">Assay (HPLC)</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Self-stable</span><span class="sh-perf-lbl">Photostability Profile</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">10.0%</span><span class="sh-perf-lbl">Max. Concentration EU</span></div>
+  </div>
+
+  <p class="sh-section-h">Performance Highlights</p>
+  <p class="sh-body"><strong>Critical wavelength (&gt;370 nm):</strong> Shield-DHHB extends the critical wavelength of filter systems into the UVA-I range, enabling formulations to achieve ISO 24443 broad-spectrum compliance at lower total filter loads compared to classic avobenzone-only UVA systems.</p>
+  <p class="sh-body"><strong>Photostabilisation mechanism:</strong> Shield-DHHB quenches the triplet excited state of avobenzone via an energy-transfer mechanism, preventing the irreversible photoisomerisation that degrades avobenzone under UV exposure. A 1:1 molar ratio provides effective stabilisation at practical loading levels.</p>
+  <p class="sh-body"><strong>Sensory profile:</strong> As a viscous liquid, Shield-DHHB contributes a slightly emollient character to the oil phase. At doses up to 3%, sensory contribution is neutral; at higher doses it imparts mild lubricity. Compatible with all major cosmetic silicone grades and ester emollients.</p>
+
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags">
+    <span class="sh-app-tag">SPF 30–100+ Sunscreens</span><span class="sh-app-tag">Daily UV Moisturisers</span>
+    <span class="sh-app-tag">Water-Resistant Sport Formulas</span><span class="sh-app-tag">Anti-Ageing UV Protection</span>
+    <span class="sh-app-tag">Tinted SPF Foundations</span><span class="sh-app-tag">Lip Sun Care</span>
+    <span class="sh-app-tag">Clinical Photodamage Prevention</span><span class="sh-app-tag">SPF Hair Products</span>
+  </div>
+
+  <p class="sh-section-h">Synergistic Combinations</p>
+  <div class="sh-syn-list">
+    <div class="sh-syn"><span class="sh-syn-code">+ Shield-AVB</span><span class="sh-syn-desc">Primary photostabilisation pair — prevents UVA decay through the full use period. Essential combination for any avobenzone-based system.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+ Shield-OCT</span><span class="sh-syn-desc">Secondary quencher — enhances photostabilisation in water-resistant and sport formulations where longer exposure is expected.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+ Shield-BEMT</span><span class="sh-syn-desc">Premium broad-spectrum architecture — dual triazine + DHHB system achieves the highest critical wavelength values available.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+ Shield-EHT</span><span class="sh-syn-desc">High-efficiency SPF 50+ system with minimal total filter load — the benchmark combination for premium facial sun care.</span></div>
+  </div>
+
+  <p class="sh-section-h">Formulation Notes</p>
+  <p class="sh-body">Incorporate into the <strong>oil phase at 75–80°C</strong>. Fully compatible with all standard cosmetic solvents, esters and silicones. Solubility in isopropyl myristate exceeds 20%, allowing high-load formulations. Avoid direct contact with strong oxidising agents. Compatible pH range: 4–8. No significant interaction with pigments or mineral UV filters at standard doses.</p>
+</div>
+<div class="sh-pr">
+  <div>
+    <p class="sh-spec-title">Technical Specifications</p>
+    <div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">302776-68-7</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">INCI Name</span><span class="sh-spec-v">Diethylamino Hydroxybenzoyl Hexyl Benzoate</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Assay (HPLC)</span><span class="sh-spec-v">≥ 99.0%</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Absorption max (λ)</span><span class="sh-spec-v">354 nm (MeOH)</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Specific absorbance (E1%)</span><span class="sh-spec-v">≥ 500 (354 nm)</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Yellow viscous liquid</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Molecular weight</span><span class="sh-spec-v">397.5 g/mol</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Refractive index (20°C)</span><span class="sh-spec-v">1.565–1.575</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Oil-soluble · Insoluble in water</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Incorporation phase</span><span class="sh-spec-v">Oil phase · ≥ 75°C</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">1.0 – 3.0%</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Photostability</span><span class="sh-spec-v">Excellent (self-stable)</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">REACH Status</span><span class="sh-spec-v">Pre-registered</span></div>
+  </div>
+  <div class="sh-reg-block">
+    <p class="sh-reg-title">Regulatory Concentration Limits</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU (Annex VI)</span><span class="sh-reg-v">10.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Brazil (ANVISA)</span><span class="sh-reg-v">10.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Colombia / Peru</span><span class="sh-reg-v">10.0% (EU ref.)</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">USA (FDA OTC)</span><span class="sh-reg-v">Not approved</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">China IECIC</span><span class="sh-reg-v">Listed</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- BEMT -->
+<div class="sh-panel" id="prod-bemt">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SHIELD — Broad Spectrum UV-A/B</div>
+  <h2 class="sh-panel-name">Shield-BEMT</h2>
+  <p class="sh-panel-inci">Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine</p>
+  <div class="sh-badges"><span class="sh-badge b-broad">Broad Spectrum UV-A/B</span><span class="sh-badge b-stable">Self-Photostable</span></div>
+  <p class="sh-tagline">"The only organic filter that absorbs both UVA and UVB intrinsically — and requires no photostabiliser to maintain it."</p>
+  <p class="sh-body">Shield-BEMT is <strong>the most versatile broad-spectrum organic UV filter commercially available</strong>. Its symmetrical triazine molecular architecture delivers simultaneous strong absorption at 310 nm (UVB) and 343 nm (UVA-II/UVA-I) — a dual-peak profile that no other single organic active achieves at comparable efficiency. This is not a compromise: both absorptions are strong and independent, meaning Shield-BEMT provides genuine broad-spectrum protection, not merely edge coverage at one end of the spectrum.</p>
+  <p class="sh-body">The defining commercial advantage is <strong>intrinsic photostability</strong>. Unlike avobenzone — which degrades under UV exposure and requires photostabilisation by secondary actives — Shield-BEMT returns to its ground state after photoexcitation without chemical decomposition. This dramatically simplifies formulation architecture: formulators can build a photostable broad-spectrum system using Shield-BEMT as the single primary filter, complemented only by UVB boosters, eliminating the photostabiliser dependency that adds complexity and cost to avobenzone systems.</p>
+  <p class="sh-body">Its <strong>dual-solubility character</strong> is unique among organic UV filters: Shield-BEMT is soluble in oil phases and simultaneously dispersible in aqueous systems with appropriate processing, enabling it to function effectively in classic O/W emulsions, anhydrous sticks, waterproof sport sunscreens and certain aqueous gel architectures.</p>
+
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">310 + 343</span><span class="sh-perf-lbl">Dual Absorption (nm)</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">≥99.0%</span><span class="sh-perf-lbl">Assay (HPLC)</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">0%</span><span class="sh-perf-lbl">Photodegradation</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">10.0%</span><span class="sh-perf-lbl">Max. EU</span></div>
+  </div>
+
+  <p class="sh-section-h">Performance Highlights</p>
+  <p class="sh-body"><strong>Photostability under continuous exposure:</strong> Shield-BEMT maintains &gt;95% of initial UV absorption after 8 hours of simulated solar radiation — the highest photostability rating achievable with an organic UV filter. This means the SPF and UVA-PF values measured at production remain essentially unchanged throughout the product use period.</p>
+  <p class="sh-body"><strong>Critical wavelength:</strong> As a filter with strong UVA-I absorption, Shield-BEMT consistently contributes to critical wavelengths above 370 nm, supporting ISO 24443 broad-spectrum compliance without requiring additional UVA actives at standard dosing.</p>
+  <p class="sh-body"><strong>Formulation flexibility:</strong> Shield-BEMT dissolves in standard cosmetic oil phases (esters, triglycerides, silicones) and can also be dispersed in aqueous phases via hot-process emulsification. This makes it one of the few UV actives that functions across oil-based anhydrous formulas, classic emulsions and water-dominant gel systems.</p>
+
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags">
+    <span class="sh-app-tag">Premium SPF 50+ Emulsions</span><span class="sh-app-tag">Photostable Daily Moisturisers</span>
+    <span class="sh-app-tag">Sunscreen Sticks</span><span class="sh-app-tag">Children's Sun Care</span>
+    <span class="sh-app-tag">Sport &amp; Water-Resistant Formulas</span><span class="sh-app-tag">Simplified Filter Systems</span>
+    <span class="sh-app-tag">Mineral Hybrid Formulas</span>
+  </div>
+
+  <p class="sh-section-h">Synergistic Combinations</p>
+  <div class="sh-syn-list">
+    <div class="sh-syn"><span class="sh-syn-code">+ Shield-DHHB</span><span class="sh-syn-desc">Dual UVA coverage — maximises critical wavelength and UVA-PF. The preferred premium broad-spectrum architecture for SPF 50+ facial products.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+ Shield-EHT</span><span class="sh-syn-desc">UVB efficiency boost to achieve SPF 50+ at minimum total filter load — key combination for elegant lightweight textures.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+ Shield-OMC</span><span class="sh-syn-desc">EU-approved high-SPF volume system — fully photostable, cost-effective for body and general-use sunscreens.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+ Shield-MBBT</span><span class="sh-syn-desc">Aqueous phase broad-spectrum complement — enables high UVA-PF in aqueous gel systems where oil-phase filter load is constrained.</span></div>
+  </div>
+</div>
+<div class="sh-pr">
+  <div>
+    <p class="sh-spec-title">Technical Specifications</p>
+    <div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">187393-00-6</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Assay (HPLC)</span><span class="sh-spec-v">≥ 99.0%</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Absorption peaks</span><span class="sh-spec-v">310 nm · 343 nm</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">White to off-white powder</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Molecular weight</span><span class="sh-spec-v">628.8 g/mol</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Melting point</span><span class="sh-spec-v">57–63°C</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Oil-soluble · Water-dispersible</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">1.0 – 5.0%</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Incorporation phase</span><span class="sh-spec-v">Oil phase · ≥ 75°C</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Photostability</span><span class="sh-spec-v">Intrinsic — no stabiliser needed</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  </div>
+  <div class="sh-reg-block">
+    <p class="sh-reg-title">Regulatory Concentration Limits</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU (Annex VI)</span><span class="sh-reg-v">10.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Brazil (ANVISA)</span><span class="sh-reg-v">5.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Colombia / Peru</span><span class="sh-reg-v">10.0% (EU ref.)</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">USA (FDA OTC)</span><span class="sh-reg-v">Not yet approved</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">China IECIC</span><span class="sh-reg-v">Listed</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- MBBT -->
+<div class="sh-panel" id="prod-mbbt">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SHIELD — Broad Spectrum · Aqueous Dispersion</div>
+  <h2 class="sh-panel-name">Shield-MBBT</h2>
+  <p class="sh-panel-inci">Methylene Bis-Benzotriazolyl Tetramethylbutylphenol</p>
+  <div class="sh-badges"><span class="sh-badge b-broad">Broad Spectrum UV-A/B</span><span class="sh-badge b-stable">Self-Photostable</span><span class="sh-badge b-uva">Water-Dispersible</span></div>
+  <p class="sh-tagline">"Broad-spectrum protection in an aqueous format — the filter of choice for lightweight water-based sunscreen systems."</p>
+  <p class="sh-body">Shield-MBBT is a <strong>micronised polymeric UV filter available as an aqueous dispersion</strong> with dual UV-A/B absorption peaks at 305 nm and 360 nm. It is the only commercially available broad-spectrum organic filter in an aqueous delivery system, which makes it uniquely valuable for formulators working in water-dominant systems where oil-phase filter loading must be minimised or where film texture is critical.</p>
+  <p class="sh-body">Its <strong>polymeric high-molecular-weight structure</strong> — formed by the micronisation of solid MBBT particles to sub-micron size — means negligible dermal penetration under normal use conditions. This property has become a significant marketing and regulatory advantage in markets with increasing consumer and legislative attention to UV filter safety, making Shield-MBBT the preferred choice for children's sun care formulations, sensitive-skin products and brands communicating "low skin penetration" claims.</p>
+  <p class="sh-body">Shield-MBBT is <strong>intrinsically photostable</strong>: its polymeric structure prevents the photoisomerisation pathways that cause molecular UV filters to degrade, meaning the filter system maintains full efficacy throughout the product use period without requiring photostabiliser actives.</p>
+
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">305 + 360</span><span class="sh-perf-lbl">Dual Absorption (nm)</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-v" style="font-size:14px;display:block;margin-bottom:4px">Aqueous</span><span class="sh-perf-lbl">Dispersion Format</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">~0%</span><span class="sh-perf-lbl">Dermal Penetration</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">10.0%</span><span class="sh-perf-lbl">Max. Concentration EU</span></div>
+  </div>
+
+  <p class="sh-section-h">Performance Highlights</p>
+  <p class="sh-body"><strong>Water-phase UV contribution:</strong> Shield-MBBT is incorporated into the aqueous phase, enabling formulators to build UVA coverage independently of the oil phase filter system. This allows finer control over the UVA/UVB ratio and enables higher UVA-PF at lower total filter loads in emulsion systems.</p>
+  <p class="sh-body"><strong>Synergy with TiO₂ and ZnO:</strong> Shield-MBBT combines exceptionally well with mineral UV filters, contributing organic broad-spectrum coverage that mineral actives lack in the UVA-I range without increasing the white-cast effect. This makes it the primary organic UV filter in hybrid mineral/organic formulations.</p>
+  <p class="sh-body"><strong>Consumer and regulatory positioning:</strong> The "no significant skin penetration" profile supports claims such as "outer-layer UV protection" and aligns with the preferences of clean beauty retailers and formulators developing products for children and sensitive skin.</p>
+
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags">
+    <span class="sh-app-tag">Aqueous Gel Sunscreens</span><span class="sh-app-tag">Spray SPF Formats</span>
+    <span class="sh-app-tag">Children's Sun Care</span><span class="sh-app-tag">Mineral Hybrid Systems</span>
+    <span class="sh-app-tag">Sensitive Skin SPF</span><span class="sh-app-tag">Lightweight SPF Moisturisers</span>
+  </div>
+
+  <p class="sh-section-h">Formulation Notes</p>
+  <p class="sh-body">Supplied as a <strong>50% aqueous dispersion</strong> — account for water content in formulation calculations. Add to aqueous phase during cool-down (&lt;45°C) after emulsification to preserve particle integrity. Requires gentle stirring — avoid high-shear mixing post-addition. Ensure pH 5–8 for stability. Not compatible with high electrolyte concentrations.</p>
+</div>
+<div class="sh-pr">
+  <div>
+    <p class="sh-spec-title">Technical Specifications</p>
+    <div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">103597-45-1</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Active content</span><span class="sh-spec-v">50% in water</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Absorption peaks</span><span class="sh-spec-v">305 nm · 360 nm</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">White aqueous dispersion</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Particle size (D50)</span><span class="sh-spec-v">&lt; 200 nm</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Water-dispersible</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Incorporation phase</span><span class="sh-spec-v">Aqueous · &lt;45°C cool-down</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">2.0 – 10.0% (active basis)</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Photostability</span><span class="sh-spec-v">Intrinsically photostable</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Skin penetration</span><span class="sh-spec-v">Negligible (polymeric barrier)</span></div>
+  </div>
+  <div class="sh-reg-block">
+    <p class="sh-reg-title">Regulatory Limits</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU (Annex VI)</span><span class="sh-reg-v">10.0% (active)</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Brazil (ANVISA)</span><span class="sh-reg-v">10.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Colombia / Peru</span><span class="sh-reg-v">10.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">China IECIC</span><span class="sh-reg-v">Listed</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- AVB -->
+<div class="sh-panel" id="prod-avb">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SHIELD — UV-A I Filter</div>
+  <h2 class="sh-panel-name">Shield-AVB</h2>
+  <p class="sh-panel-inci">Butyl Methoxydibenzoylmethane (Avobenzone)</p>
+  <div class="sh-badges"><span class="sh-badge b-uva">UV-A I Filter</span><span class="sh-badge b-req">Requires Photostabilisation</span></div>
+  <p class="sh-tagline">"The most widely used UVA filter in the world — and the most commercially misunderstood."</p>
+  <p class="sh-body">Shield-AVB (avobenzone) is the <strong>global benchmark for UVA-I filtration</strong>. Its absorption maximum at 357 nm delivers the deepest UVA-I protection available from a single organic molecule, making it the most used UVA filter in regulated markets worldwide — present in the majority of EU, LATAM and global sun care formulations requiring UVA labelling.</p>
+  <p class="sh-body">The formulation challenge that Shield-AVB presents is well-documented in the literature: <strong>it undergoes photoisomerisation under UV exposure</strong>, converting from its UV-absorbing enol form to a non-absorbing keto form that does not revert spontaneously. Without intervention, a system relying solely on Shield-AVB can lose 30–50% of its UVA efficacy within 60–90 minutes of continuous solar exposure — a significant product performance failure that is invisible to the consumer but measurable under standard photostability testing.</p>
+  <p class="sh-body">The solution is systematic filter architecture: pairing Shield-AVB with <strong>Shield-DHHB or Shield-OCT as triplet-energy quenchers</strong> that intercept the excited-state avobenzone molecule before photoisomerisation can occur. This system — in various configurations — is the foundation of every serious high-SPF product on the global market. VLYOR SHIELD provides both the avobenzone and all the photostabilisers needed in one portfolio.</p>
+
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">357 nm</span><span class="sh-perf-lbl">Absorption Maximum</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">98–105%</span><span class="sh-perf-lbl">Assay Range</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">81–86°C</span><span class="sh-perf-lbl">Melting Point</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">5.0%</span><span class="sh-perf-lbl">Max. EU / LATAM</span></div>
+  </div>
+
+  <p class="sh-section-h">Critical Formulation Requirement</p>
+  <div class="sh-alert">
+    <p class="sh-alert-t">Photostabilisation Is Mandatory</p>
+    <p class="sh-alert-b">Shield-AVB must always be formulated with a photostabiliser. Use Shield-DHHB (preferred for premium formulations) or Shield-OCT (for waterproof systems). Avoid metal ions (Fe²⁺, Cu²⁺) — complex formation causes yellowing. Incorporate into oil phase at 75–80°C. Do not allow contact with aqueous phase before complete dissolution.</p>
+  </div>
+
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags">
+    <span class="sh-app-tag">All SPF Levels</span><span class="sh-app-tag">UVA-Labelled Products</span>
+    <span class="sh-app-tag">LATAM Regulatory Compliance</span><span class="sh-app-tag">Broad-Spectrum Emulsions</span>
+    <span class="sh-app-tag">Daily UV Moisturisers</span>
+  </div>
+
+  <p class="sh-section-h">Synergistic Combinations</p>
+  <div class="sh-syn-list">
+    <div class="sh-syn"><span class="sh-syn-code">+ Shield-DHHB</span><span class="sh-syn-desc">Primary photostabiliser — prevents UVA efficacy decay throughout the use period. Recommended for all premium formulations.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+ Shield-OCT</span><span class="sh-syn-desc">Triplet quencher — effective photostabilisation for water-resistant and sport formulas.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+ Shield-BEMT</span><span class="sh-syn-desc">Replaces or complements avobenzone with self-stable broad-spectrum coverage — use where simplified filter systems are required.</span></div>
+  </div>
+</div>
+<div class="sh-pr">
+  <div>
+    <p class="sh-spec-title">Technical Specifications</p>
+    <div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">70356-09-1</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Assay</span><span class="sh-spec-v">98.0 – 105.0%</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Absorption max (λ)</span><span class="sh-spec-v">357 nm (enol form)</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">White to pale yellow powder</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Melting point</span><span class="sh-spec-v">81–86°C</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Molecular weight</span><span class="sh-spec-v">310.4 g/mol</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Oil-soluble</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">2.0 – 5.0%</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Photostability</span><span class="sh-spec-v">Requires photostabiliser</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">IECIC / REACH</span><span class="sh-spec-v">Listed / Pre-registered</span></div>
+  </div>
+  <div class="sh-reg-block">
+    <p class="sh-reg-title">Regulatory Limits</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU (Annex VI)</span><span class="sh-reg-v">5.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Brazil (ANVISA)</span><span class="sh-reg-v">5.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Colombia / Peru</span><span class="sh-reg-v">5.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">USA (FDA OTC)</span><span class="sh-reg-v">3.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">China IECIC</span><span class="sh-reg-v">Listed</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- EHT -->
+<div class="sh-panel" id="prod-eht">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SHIELD — High-Efficiency UVB Filter</div>
+  <h2 class="sh-panel-name">Shield-EHT</h2>
+  <p class="sh-panel-inci">Ethylhexyl Triazone</p>
+  <div class="sh-badges"><span class="sh-badge b-uvb">UV-B Filter</span><span class="sh-badge b-stable">Self-Photostable</span></div>
+  <p class="sh-tagline">"The highest molar absorptivity of any approved UVB filter — exceptional SPF contribution at a fraction of the load."</p>
+  <p class="sh-body">Shield-EHT delivers <strong>the most efficient UVB absorption per gram of any approved organic UV filter</strong>. Its triazine-based molecular structure — three cinnamate chromophores arranged around a central triazine ring — achieves a molar absorptivity coefficient that exceeds every classical UVB active by a significant margin. In practical terms, this means formulators can achieve the same SPF contribution at approximately half the concentration of octinoxate or octisalate, freeing formulation capacity for UVA filters, sensory ingredients or simply reducing total filter load.</p>
+  <p class="sh-body">Shield-EHT is <strong>completely photostable</strong>: its triazine architecture provides intrinsic resistance to photoisomerisation, maintaining full absorption efficiency throughout the product use period without degradation. This photostability, combined with exceptional molar absorptivity, makes Shield-EHT the preferred UVB efficiency booster in premium high-SPF products where total filter load must be controlled for sensory and cost reasons.</p>
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">314 nm</span><span class="sh-perf-lbl">Absorption Maximum</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Highest</span><span class="sh-perf-lbl">Molar Absorptivity UVB</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Self-stable</span><span class="sh-perf-lbl">Photostability</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">5.0%</span><span class="sh-perf-lbl">Max. EU / ANVISA</span></div>
+  </div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Premium SPF 50+</span><span class="sh-app-tag">Minimalist Filter Systems</span><span class="sh-app-tag">Luxury Daily UV</span><span class="sh-app-tag">Tinted SPF Bases</span><span class="sh-app-tag">Low Filter-Load Formulas</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p>
+  <div class="sh-syn-list">
+    <div class="sh-syn"><span class="sh-syn-code">+ Shield-BEMT</span><span class="sh-syn-desc">Premier premium combination — broad-spectrum + UVB efficiency boost at minimal total filter load.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+ Shield-DHHB</span><span class="sh-syn-desc">High-performance UVA complement — together achieves SPF 50+ with an exceptionally clean sensory profile.</span></div>
+  </div>
+</div>
+<div class="sh-pr">
+  <div>
+    <p class="sh-spec-title">Technical Specifications</p>
+    <div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">88122-99-0</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Assay</span><span class="sh-spec-v">≥ 98.0%</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Absorption max</span><span class="sh-spec-v">314 nm</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">White to off-white powder</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Molecular weight</span><span class="sh-spec-v">823.0 g/mol</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Oil-soluble</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">1.0 – 5.0%</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Photostability</span><span class="sh-spec-v">Excellent (self-stable)</span></div>
+  </div>
+  <div class="sh-reg-block">
+    <p class="sh-reg-title">Regulatory Limits</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">5.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Brazil (ANVISA)</span><span class="sh-reg-v">5.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Colombia / Peru</span><span class="sh-reg-v">5.0%</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- OCT -->
+<div class="sh-panel" id="prod-oct">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SHIELD — UVB Filter / Photostabiliser</div>
+  <h2 class="sh-panel-name">Shield-OCT</h2>
+  <p class="sh-panel-inci">Octocrylene</p>
+  <div class="sh-badges"><span class="sh-badge b-uvb">UV-B Filter</span><span class="sh-badge b-broad">Photostabiliser</span><span class="sh-badge b-stable">Self-Photostable</span></div>
+  <p class="sh-tagline">"The UVB workhorse that extends the life of your entire UVA system."</p>
+  <p class="sh-body">Shield-OCT is one of the most commercially important actives in the Shield portfolio precisely because of its <strong>dual functionality</strong>: it absorbs UVB at 303 nm, contributing meaningfully to SPF, while simultaneously acting as a <strong>triplet-energy quencher for avobenzone (Shield-AVB)</strong> — intercepting the excited-state energy that would otherwise cause photodegradation of the UVA system. This dual role means Shield-OCT earns its place in the formula twice over.</p>
+  <p class="sh-body">Its <strong>liquid form at ambient temperature</strong> provides a further formulation advantage: Shield-OCT acts as a co-solvent for solid UV actives such as Shield-EHT, Shield-DHHB and Shield-BEMT, dissolving them at elevated temperature and enabling higher loading of these solid filters without crystallisation or separation in the final formula. This solvent functionality reduces processing complexity and increases formulation robustness.</p>
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">303 nm</span><span class="sh-perf-lbl">Absorption Maximum</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Liquid</span><span class="sh-perf-lbl">Form (25°C)</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Self-stable</span><span class="sh-perf-lbl">Photostability</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">10.0%</span><span class="sh-perf-lbl">Max. EU / LATAM</span></div>
+  </div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">High-SPF Emulsions</span><span class="sh-app-tag">Avobenzone Photostabilisation</span><span class="sh-app-tag">Spray Sunscreens</span><span class="sh-app-tag">Hair UV Protection</span><span class="sh-app-tag">Sport Formulas</span><span class="sh-app-tag">Solid Filter Co-solvent</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p>
+  <div class="sh-syn-list">
+    <div class="sh-syn"><span class="sh-syn-code">+ Shield-AVB</span><span class="sh-syn-desc">The global standard photostabilisation pair — present in the vast majority of high-SPF formulations worldwide.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+ Shield-EHT</span><span class="sh-syn-desc">Co-solvent function: dissolves EHT for higher loading while contributing its own SPF boost.</span></div>
+  </div>
+</div>
+<div class="sh-pr">
+  <div>
+    <p class="sh-spec-title">Technical Specifications</p>
+    <div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">6197-30-4</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Assay</span><span class="sh-spec-v">≥ 98.0%</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Absorption max</span><span class="sh-spec-v">303 nm</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear oily liquid</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Oil-soluble · Co-solvent</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">2.0 – 10.0%</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Photostability</span><span class="sh-spec-v">Excellent (self-stable)</span></div>
+  </div>
+  <div class="sh-reg-block">
+    <p class="sh-reg-title">Regulatory Limits</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU / BR / LATAM</span><span class="sh-reg-v">10.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">USA (FDA OTC)</span><span class="sh-reg-v">10.0%</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- DBT -->
+<div class="sh-panel" id="prod-dbt">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SHIELD — UVB Triazine Filter</div>
+  <h2 class="sh-panel-name">Shield-DBT</h2>
+  <p class="sh-panel-inci">Diethylhexyl Butamido Triazone</p>
+  <div class="sh-badges"><span class="sh-badge b-uvb">UV-B Filter</span><span class="sh-badge b-stable">Self-Photostable</span></div>
+  <p class="sh-tagline">"A second-generation UVB triazine — the photostable alternative for octinoxate reformulation projects."</p>
+  <p class="sh-body">Shield-DBT is a <strong>second-generation UVB triazine filter</strong> with absorption at 312 nm, excellent molar absorptivity and outstanding photostability. It represents the preferred alternative for formulators engaged in octinoxate (Shield-OMC) reformulation — whether driven by retail restrictions, regulatory pressure or sustainability positioning — offering comparable UVB efficacy with a significantly better photostability profile.</p>
+  <p class="sh-body">Like Shield-EHT, its triazine architecture provides <strong>intrinsic photostability</strong> without requiring secondary stabilisers. Oil-soluble, compatible with the full Shield system, and approved across EU and LATAM markets. Its solid powder form allows precise dosing at scale.</p>
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">312 nm</span><span class="sh-perf-lbl">Absorption Maximum</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Self-stable</span><span class="sh-perf-lbl">Photostability</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">5.0%</span><span class="sh-perf-lbl">Max. EU</span></div>
+  </div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Octinoxate Reformulation</span><span class="sh-app-tag">High-SPF Premium Systems</span><span class="sh-app-tag">Reef-Safe Positioning</span><span class="sh-app-tag">Clean Beauty SPF</span></div>
+</div>
+<div class="sh-pr">
+  <div>
+    <p class="sh-spec-title">Technical Specifications</p>
+    <div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">154702-15-5</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Assay</span><span class="sh-spec-v">≥ 98.0%</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Absorption max</span><span class="sh-spec-v">312 nm</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Form</span><span class="sh-spec-v">White powder</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Dosage / Max.</span><span class="sh-spec-v">1–5% / 5% EU</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Photostability</span><span class="sh-spec-v">Self-stable</span></div>
+  </div>
+  <div class="sh-reg-block">
+    <p class="sh-reg-title">Regulatory Limits</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">5.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Brazil / LATAM</span><span class="sh-reg-v">5.0%</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- OMC -->
+<div class="sh-panel" id="prod-omc">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SHIELD — Classic UVB Filter</div>
+  <h2 class="sh-panel-name">Shield-OMC</h2>
+  <p class="sh-panel-inci">Ethylhexyl Methoxycinnamate (Octinoxate)</p>
+  <div class="sh-badges"><span class="sh-badge b-uvb">UV-B Filter</span></div>
+  <p class="sh-tagline">"The most used UVB filter in the history of cosmetics — and still the global volume standard."</p>
+  <p class="sh-body">Shield-OMC (octinoxate) is the <strong>most widely used UV filter globally by manufactured volume</strong>. Its UVB absorption at 311 nm, combined with proven skin compatibility, long regulatory history across all major markets and highly competitive cost, has made it the default UVB foundation filter in mass-market and professional sun care for over four decades. The majority of global SPF body lotions, daily moisturisers and sunscreen sprays contain octinoxate as their primary UVB active.</p>
+  <p class="sh-body">Shield-OMC is used as a <strong>foundation UVB filter</strong> — typically at 5–7.5% to establish the baseline SPF, complemented with UVA actives (Shield-AVB or Shield-BEMT) and photostabilisers (Shield-OCT or Shield-DHHB). Its moderate photostability means it benefits from co-formulation with photostabilisers, particularly when paired with avobenzone to prevent cross-sensitisation of the UVA system.</p>
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">311 nm</span><span class="sh-perf-lbl">Absorption Maximum</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Liquid</span><span class="sh-perf-lbl">Form (25°C)</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">10.0%</span><span class="sh-perf-lbl">Max. EU</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">7.5%</span><span class="sh-perf-lbl">Max. ANVISA</span></div>
+  </div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Mass-Market Body Sunscreens</span><span class="sh-app-tag">Foundation UVB Filter</span><span class="sh-app-tag">Daily SPF Moisturisers</span><span class="sh-app-tag">LATAM Volume Production</span></div>
+</div>
+<div class="sh-pr">
+  <div>
+    <p class="sh-spec-title">Technical Specifications</p>
+    <div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">5466-77-3</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Assay</span><span class="sh-spec-v">≥ 98.0%</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Absorption max</span><span class="sh-spec-v">311 nm</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Form</span><span class="sh-spec-v">Clear oily liquid</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">2.0 – 10.0%</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Photostability</span><span class="sh-spec-v">Moderate — stabiliser recommended</span></div>
+  </div>
+  <div class="sh-reg-block">
+    <p class="sh-reg-title">Regulatory Limits</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU (Annex VI)</span><span class="sh-reg-v">10.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Brazil (ANVISA)</span><span class="sh-reg-v">7.5%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Colombia / Peru</span><span class="sh-reg-v">10.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">USA (FDA OTC)</span><span class="sh-reg-v">7.5%</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- PBSA -->
+<div class="sh-panel" id="prod-pbsa">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SHIELD — Water-Soluble UVB Filter</div>
+  <h2 class="sh-panel-name">Shield-PBSA</h2>
+  <p class="sh-panel-inci">Phenylbenzimidazole Sulfonic Acid (Ensulizole)</p>
+  <div class="sh-badges"><span class="sh-badge b-uvb">UV-B Filter</span><span class="sh-badge b-uva">Water-Soluble</span></div>
+  <p class="sh-tagline">"The only water-soluble UVB filter — essential for transparent aqueous SPF systems."</p>
+  <p class="sh-body">Shield-PBSA is the <strong>sole water-soluble UVB organic filter approved in all major regulated markets</strong>. This unique solubility profile makes it indispensable for clear aqueous gels, SPF toners, serum-texture sunscreens and any formulation where the UVB contribution must come from the aqueous phase rather than the oil phase — either because the oil phase is limited, or because formula transparency and lightweight texture are primary requirements.</p>
+  <p class="sh-body">Its water solubility also enables formulators to <strong>build SPF without adding to the oil phase at all</strong>, which is critical in water-dominant moisturisers, scalp SPF sprays and after-sun products where any oil-phase contribution unacceptably affects texture or finish. Add to aqueous phase at pH 7–8 using NaOH or triethanolamine to ensure full solubilisation.</p>
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">310 nm</span><span class="sh-perf-lbl">Absorption Maximum</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Water</span><span class="sh-perf-lbl">Solubility</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">pH 7–8</span><span class="sh-perf-lbl">Optimal Incorporation</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">4.0%</span><span class="sh-perf-lbl">Max. EU</span></div>
+  </div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Transparent Aqueous Gels</span><span class="sh-app-tag">SPF Toners</span><span class="sh-app-tag">Scalp UV Protection</span><span class="sh-app-tag">After-Sun with SPF</span><span class="sh-app-tag">Water-based Serum SPF</span></div>
+  <p class="sh-section-h">Formulation Notes</p>
+  <p class="sh-body">Must be neutralised before use — the free acid form is insoluble. Add NaOH or TEA to aqueous phase before incorporating Shield-PBSA; target pH 7.5–8.0. Incompatible with high concentrations of cationic polymers (flocculation risk). Stable in pH range 6–9. Do not use in anhydrous systems.</p>
+</div>
+<div class="sh-pr">
+  <div>
+    <p class="sh-spec-title">Technical Specifications</p>
+    <div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">27503-81-7</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Assay</span><span class="sh-spec-v">≥ 98.0%</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Absorption max</span><span class="sh-spec-v">310 nm (pH 7.5)</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Form</span><span class="sh-spec-v">White powder (Na salt)</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Water-soluble (pH ≥ 7)</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Dosage</span><span class="sh-spec-v">1.0 – 4.0%</span></div>
+  </div>
+  <div class="sh-reg-block">
+    <p class="sh-reg-title">Regulatory Limits</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">4.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Brazil (ANVISA)</span><span class="sh-reg-v">3.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">USA (FDA OTC)</span><span class="sh-reg-v">4.0%</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- HMS -->
+<div class="sh-panel" id="prod-hms">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SHIELD — UVB Filter / Co-solvent</div>
+  <h2 class="sh-panel-name">Shield-HMS</h2>
+  <p class="sh-panel-inci">Homosalate</p>
+  <div class="sh-badges"><span class="sh-badge b-uvb">UV-B Filter</span><span class="sh-badge b-uva">Co-Solvent</span></div>
+  <p class="sh-tagline">"The multifunctional UVB liquid — absorbs UV while dissolving your solid filters."</p>
+  <p class="sh-body">Shield-HMS contributes UVB protection at 306 nm while simultaneously providing valuable <strong>co-solvent functionality for other UV actives</strong>. Its liquid form at ambient temperature makes it an effective carrier for solid filters such as Shield-EHT, Shield-DHHB and Shield-AVB, enabling higher total filter loading without crystallisation — a practical advantage in complex high-SPF systems where multiple solid actives must be dissolved cleanly. Particularly prevalent in the <strong>US market</strong> where FDA monograph approval at up to 15% makes it one of the most used actives in OTC sunscreen category.</p>
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">306 nm</span><span class="sh-perf-lbl">Absorption Maximum</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Liquid</span><span class="sh-perf-lbl">Form (25°C)</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">15.0%</span><span class="sh-perf-lbl">Max. FDA OTC</span></div>
+  </div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">US Market Sunscreens</span><span class="sh-app-tag">Complex Filter Co-solvent</span><span class="sh-app-tag">Sport Formulas</span><span class="sh-app-tag">High-load Anhydrous</span></div>
+</div>
+<div class="sh-pr">
+  <div>
+    <p class="sh-spec-title">Technical Specifications</p>
+    <div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">118-56-9</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Absorption max</span><span class="sh-spec-v">306 nm</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Form</span><span class="sh-spec-v">Clear oily liquid</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Dosage</span><span class="sh-spec-v">2.0 – 10.0%</span></div>
+  </div>
+  <div class="sh-reg-block">
+    <p class="sh-reg-title">Regulatory Limits</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">10.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Brazil / LATAM</span><span class="sh-reg-v">10.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">USA (FDA OTC)</span><span class="sh-reg-v">15.0%</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- OS -->
+<div class="sh-panel" id="prod-os">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SHIELD — UVB Filter / Emollient</div>
+  <h2 class="sh-panel-name">Shield-OS</h2>
+  <p class="sh-panel-inci">Ethylhexyl Salicylate (Octisalate)</p>
+  <div class="sh-badges"><span class="sh-badge b-uvb">UV-B Filter</span><span class="sh-badge b-uva">Emollient Contribution</span></div>
+  <p class="sh-tagline">"The UV filter that improves skin feel while protecting it."</p>
+  <p class="sh-body">Shield-OS (octisalate) is unique among UVB organic filters in providing a <strong>genuine skin-feel benefit alongside UV protection</strong>. As an ester-based salicylate molecule, it contributes mild emollience to oil phases in which it is incorporated, improving the overall sensory profile of high-filter-load formulas where feel typically degrades as filter concentration increases. Frequently used alongside Shield-HMS as a <strong>dual co-solvent and sensory modifier</strong> for complex filter systems.</p>
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">307 nm</span><span class="sh-perf-lbl">Absorption Maximum</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">5.0%</span><span class="sh-perf-lbl">Max. EU / FDA</span></div>
+  </div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Sensory-optimised SPF</span><span class="sh-app-tag">High-filter-load Systems</span><span class="sh-app-tag">US/LATAM Sunscreens</span></div>
+</div>
+<div class="sh-pr">
+  <div>
+    <p class="sh-spec-title">Technical Specifications</p>
+    <div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">118-60-5</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Absorption max</span><span class="sh-spec-v">307 nm</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Form</span><span class="sh-spec-v">Clear oily liquid</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Dosage / Max.</span><span class="sh-spec-v">1–5% / 5%</span></div>
+  </div>
+  <div class="sh-reg-block">
+    <p class="sh-reg-title">Regulatory Limits</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU / LATAM</span><span class="sh-reg-v">5.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">USA (FDA OTC)</span><span class="sh-reg-v">5.0%</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- BP3 -->
+<div class="sh-panel" id="prod-bp3">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SHIELD — Broad Spectrum UVA/B Filter</div>
+  <h2 class="sh-panel-name">Shield-BP3</h2>
+  <p class="sh-panel-inci">Benzophenone-3 (Oxybenzone)</p>
+  <div class="sh-badges"><span class="sh-badge b-broad">Broad Spectrum UV-A/B</span></div>
+  <p class="sh-tagline">"Broad-spectrum coverage in a single economical molecule — the volume filter of the LATAM mass market."</p>
+  <p class="sh-body">Shield-BP3 is the <strong>dominant UV filter in Latin American mass-market sun care formulations by volume</strong>, present in the majority of body sunscreens, daily moisturisers with SPF and after-sun products produced by regional manufacturers. Its absorption peaks at 288 nm and 325 nm provide UVB and UVA-II coverage, its regulatory status across all major LATAM markets permits use at up to 6%, and its oil-soluble form integrates simply into standard production oil phases. For cost-sensitive formulations that require broad-spectrum labelling without complex filter architecture, Shield-BP3 is the most efficient single-active solution available.</p>
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">288 + 325</span><span class="sh-perf-lbl">Absorption Peaks (nm)</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">6.0%</span><span class="sh-perf-lbl">Max. EU / LATAM</span></div>
+  </div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">LATAM Mass-Market SPF</span><span class="sh-app-tag">Body Sunscreens</span><span class="sh-app-tag">Broad-Spectrum Daily UV</span><span class="sh-app-tag">After-Sun SPF</span></div>
+</div>
+<div class="sh-pr">
+  <div>
+    <p class="sh-spec-title">Technical Specifications</p>
+    <div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">131-57-7</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Absorption peaks</span><span class="sh-spec-v">288 nm · 325 nm</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Form</span><span class="sh-spec-v">White to pale yellow powder</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Oil-soluble</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Dosage</span><span class="sh-spec-v">1.0 – 6.0%</span></div>
+  </div>
+  <div class="sh-reg-block">
+    <p class="sh-reg-title">Regulatory Limits</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU / LATAM</span><span class="sh-reg-v">6.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">USA (FDA OTC)</span><span class="sh-reg-v">6.0%</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- BP4 -->
+<div class="sh-panel" id="prod-bp4">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SHIELD — Broad Spectrum · Water-Soluble</div>
+  <h2 class="sh-panel-name">Shield-BP4</h2>
+  <p class="sh-panel-inci">Benzophenone-4 (Sulisobenzone)</p>
+  <div class="sh-badges"><span class="sh-badge b-broad">Broad Spectrum UV-A/B</span><span class="sh-badge b-uva">Water-Soluble</span></div>
+  <p class="sh-tagline">"The aqueous counterpart to BP3 — broad-spectrum coverage without the oil phase."</p>
+  <p class="sh-body">Shield-BP4 is the <strong>sodium sulfonate derivative of benzophenone-3</strong>, sharing its broad-spectrum UV-A/B absorption profile but water-soluble rather than oil-soluble. This enables formulators to achieve broad-spectrum coverage through the aqueous phase independently of the oil-phase filter system — valuable in gel sunscreens, SPF serums and scalp protection sprays where oil-phase capacity is limited and formula transparency or feel is non-negotiable.</p>
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">290 + 325</span><span class="sh-perf-lbl">Absorption Peaks (nm)</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Water</span><span class="sh-perf-lbl">Solubility</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">5.0%</span><span class="sh-perf-lbl">Max. EU</span></div>
+  </div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Aqueous Broad-Spectrum SPF</span><span class="sh-app-tag">SPF Serums</span><span class="sh-app-tag">Scalp / Hair UV</span><span class="sh-app-tag">Clear SPF Gels</span></div>
+</div>
+<div class="sh-pr">
+  <div>
+    <p class="sh-spec-title">Technical Specifications</p>
+    <div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">4065-45-6</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Absorption peaks</span><span class="sh-spec-v">290 nm · 325 nm</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Water-soluble</span></div>
+    <div class="sh-spec-row"><span class="sh-spec-k">Dosage / Max.</span><span class="sh-spec-v">1–5% / 5% EU</span></div>
+  </div>
+  <div class="sh-reg-block">
+    <p class="sh-reg-title">Regulatory Limits</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">5.0%</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Brazil / LATAM</span><span class="sh-reg-v">5.0%</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+    </div><!-- end sh-panels -->
+  </div><!-- end sh-exp-layout -->
+</section>
+
+<!-- FORMULATION SYSTEMS -->
+<section class="sh-form-sec">
+  <div>
+    <p class="eyebrow">Formulation Systems</p>
+    <h2 class="sec-title">Proven filter architectures<br/>for every SPF challenge.</h2>
+    <p class="sec-sub">Three ready-to-use filter combinations covering the primary formulation briefs in the LATAM sun care market.</p>
+  </div>
+  <div class="sh-form-grid">
+    <div class="sh-form-card">
+      <span class="sh-fc-num">System 01</span>
+      <h3 class="sh-fc-title">Classic High-SPF<br/>LATAM Standard</h3>
+      <p class="sh-fc-body">The most widely used sun care architecture across Brazil, Colombia, Peru and Ecuador. Combines the highest-volume UVB filter with photostabilised UVA coverage — the formula profile behind most regional mass-market products from Yanbal, Belcorp and independent manufacturers.</p>
+      <div class="sh-fc-prods">
+        <div class="sh-fc-prod">Shield-OMC · 7.0–7.5%</div>
+        <div class="sh-fc-prod">Shield-AVB · 3.0–5.0%</div>
+        <div class="sh-fc-prod">Shield-OCT · 5.0–8.0%</div>
+        <div class="sh-fc-prod">Shield-BP3 · 2.0–4.0%</div>
+      </div>
+      <span class="sh-fc-spf">SPF 30–50</span>
     </div>
-    <div class="footer-bottom">
-      <span class="ft-code">V3.0 — 2026</span>
-      <span>© VLYOR Science. All rights reserved.</span>
-      <span class="ft-code">REACH · IECIC · ANVISA · INVIMA</span>
+    <div class="sh-form-card">
+      <span class="sh-fc-num">System 02</span>
+      <h3 class="sh-fc-title">Next-Generation<br/>Premium SPF 50+</h3>
+      <p class="sh-fc-body">Achieves SPF 50+ with superior photostability and an elegant, lightweight skin feel. Designed for premium facial sunscreens, tinted SPF bases and clinical anti-photoageing products targeting the professional and prestige segment.</p>
+      <div class="sh-fc-prods">
+        <div class="sh-fc-prod">Shield-BEMT · 4.0–5.0%</div>
+        <div class="sh-fc-prod">Shield-DHHB · 2.0–3.0%</div>
+        <div class="sh-fc-prod">Shield-EHT · 2.0–3.0%</div>
+        <div class="sh-fc-prod">Shield-AVB · 3.0%</div>
+      </div>
+      <span class="sh-fc-spf">SPF 50+</span>
     </div>
-  </footer>
+    <div class="sh-form-card">
+      <span class="sh-fc-num">System 03</span>
+      <h3 class="sh-fc-title">Minimalist Aqueous<br/>Daily UV Protection</h3>
+      <p class="sh-fc-body">For transparent gels, SPF toners and ultra-lightweight moisturisers where total filter load must remain below 10%. Water-soluble filters deliver the SPF without affecting clarity or the skin feel of the aqueous base.</p>
+      <div class="sh-fc-prods">
+        <div class="sh-fc-prod">Shield-PBSA · 3.0–4.0%</div>
+        <div class="sh-fc-prod">Shield-BP4 · 3.0–4.0%</div>
+        <div class="sh-fc-prod">Shield-BEMT · 2.0–3.0%</div>
+      </div>
+      <span class="sh-fc-spf">SPF 20–30</span>
+    </div>
+  </div>
+</section>
 
-  <script src="js/main.js"></script>
-  <script>
-    // Product tabs
-    const navBtns = document.querySelectorAll('.pn-btn');
-    const panels = document.querySelectorAll('.prod-panel');
+<!-- REGULATORY -->
+<section class="sh-reg-sec">
+  <div>
+    <p class="eyebrow">Global Regulatory Compliance</p>
+    <h2 class="sec-title">Every market.<br/>Every standard.</h2>
+  </div>
+  <div class="sh-reg-grid">
+    <div class="sh-reg-card">
+      <span class="sh-rc-flag">🇪🇺</span>
+      <h4 class="sh-rc-title">EU Annex VI</h4>
+      <p class="sh-rc-body">All Shield actives comply with EU Cosmetics Regulation 1223/2009 Annex VI. Concentration limits, approved use conditions and documentation available on request.</p>
+    </div>
+    <div class="sh-reg-card">
+      <span class="sh-rc-flag">🇧🇷</span>
+      <h4 class="sh-rc-title">ANVISA — Brazil</h4>
+      <p class="sh-rc-body">All applicable Shield actives registered under Brazilian RDC 35/2023. Full concentration limits and approved combinations per ANVISA framework documented.</p>
+    </div>
+    <div class="sh-reg-card">
+      <span class="sh-rc-flag">🇨🇴</span>
+      <h4 class="sh-rc-title">INVIMA / DIGEMID</h4>
+      <p class="sh-rc-body">Colombia and Peru follow the EU Mercosur reference framework. Shield documentation package supports INVIMA and DIGEMID notification and market registration.</p>
+    </div>
+    <div class="sh-reg-card">
+      <span class="sh-rc-flag">🇨🇳</span>
+      <h4 class="sh-rc-title">China IECIC</h4>
+      <p class="sh-rc-body">All SHIELD actives listed in China's Inventory of Existing Cosmetic Ingredients. Full documentation for Chinese market registration and product notification available.</p>
+    </div>
+  </div>
+</section>
 
-    navBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        navBtns.forEach(b => b.classList.remove('active'));
-        panels.forEach(p => p.classList.remove('active'));
-        btn.classList.add('active');
-        document.getElementById('panel-' + btn.dataset.panel).classList.add('active');
-        document.getElementById('products').scrollIntoView({behavior:'smooth', block:'start'});
+<!-- CTA -->
+<section class="sh-cta-sec">
+  <div>
+    <h2>Ready to build your<br/>next SPF formulation?</h2>
+    <p>Our technical team responds with targeted dossiers — filter system recommendations, stability guidance and regulatory documentation for your specific market and product brief.</p>
+  </div>
+  <div class="sh-cta-btns">
+    <a href="portal.html#shield" class="btn-g">Full Technical Portal →</a>
+    <a href="index.html#contact" class="btn-p">Request Samples →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-m">VLYOR</span><br/><span class="logo-s">Science</span>
+      <p class="footer-tag">Molecular Integrity. Aesthetic Performance.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col"><h5>SHIELD Portfolio</h5><ul>
+        <li>Shield-DHHB · UV-A</li><li>Shield-BEMT · Broad Spectrum</li>
+        <li>Shield-AVB · Avobenzone</li><li>Shield-OCT · UVB + Stabiliser</li>
+        <li>Shield-EHT · High-Efficiency</li><li>+ 8 more actives</li>
+      </ul></div>
+      <div class="footer-col"><h5>Other Lines</h5><ul>
+        <li><a href="index.html#lines">VLYOR VITAL</a></li>
+        <li><a href="index.html#lines">VLYOR PURE</a></li>
+        <li><a href="index.html#lines">VLYOR FUNC</a></li>
+        <li><a href="index.html#lines">VLYOR SILK · FORM · HYDRA</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul>
+        <li><a href="mailto:science@vlyor.com">science@vlyor.com</a></li>
+        <li>Global Bioactives Hub</li><li>Suzhou, China</li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="ft-code">VLYOR SHIELD — V3.0 — 2026</span>
+    <span>© VLYOR Science. All rights reserved.</span>
+    <span class="ft-code">EU · ANVISA · INVIMA · IECIC</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+const btns = document.querySelectorAll('.sh-sb-btn');
+const panels = document.querySelectorAll('.sh-panel');
+btns.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    btns.forEach(b=>b.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('prod-'+btn.dataset.prod).classList.add('active');
+    document.getElementById('explorer').scrollIntoView({behavior:'smooth'});
+  });
+});
+
+const barsObs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.querySelectorAll('.bar-fill').forEach((f,i)=>{
+        setTimeout(()=>{ f.style.width = f.dataset.w+'%'; }, i*110);
       });
-    });
+      barsObs.unobserve(e.target);
+    }
+  });
+},{threshold:0.3});
+const sbars = document.getElementById('sbars');
+if(sbars) barsObs.observe(sbars);
 
-    // Animate spectrum bars on scroll
-    const barsSection = document.getElementById('spectrum-bars');
-    const barObs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.querySelectorAll('.sc-fill').forEach((fill, i) => {
-            setTimeout(() => {
-              fill.style.width = fill.dataset.w + '%';
-            }, i * 120);
-          });
-          barObs.unobserve(e.target);
-        }
-      });
-    }, {threshold: 0.3});
-    if (barsSection) barObs.observe(barsSection);
-
-    // Nav scroll state
-    window.addEventListener('scroll', () => {
-      document.getElementById('mainnav').classList.toggle('scrolled', window.scrollY > 40);
-    }, {passive:true});
-  </script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('mainnav').classList.toggle('scrolled',window.scrollY>40);
+},{passive:true});
+</script>
 </body>
 </html>
