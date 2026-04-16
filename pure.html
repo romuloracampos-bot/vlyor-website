@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>VLYOR PURE — Biosurfactants & Cleansing Chemistry — 14 Actives | VLYOR Science</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;500;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+:root{--acc:#6EE7B7;--acc-bg:color-mix(in srgb,#6EE7B7 10%,transparent);--acc-border:color-mix(in srgb,#6EE7B7 25%,transparent)}
+.sh-hero{min-height:78vh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;padding:0 40px 64px}
+.sh-bg{position:absolute;inset:0;background-image:url('images/pure.jpg');background-size:cover;background-position:center}
+.sh-ov{position:absolute;inset:0;background:linear-gradient(to top,#0D0D0D 0%,rgba(13,13,13,.72) 40%,rgba(13,13,13,.3) 100%)}
+.sh-grid{position:absolute;inset:0;display:flex;justify-content:space-around}
+.sh-grid span{width:1px;background:rgba(255,255,255,.035)}
+.sh-cnt{position:relative;z-index:2;max-width:860px}
+.sh-bc{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#6B7280;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.sh-bc a{color:#6B7280;transition:color .2s}.sh-bc a:hover{color:#fff}
+.sh-tag{display:inline-flex;align-items:center;gap:8px;font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc-border);padding:5px 12px;margin-bottom:18px}
+.sh-dot{width:6px;height:6px;border-radius:50%;background:var(--acc);flex-shrink:0}
+.sh-h1{font-family:"Barlow Condensed",sans-serif;font-size:clamp(52px,9vw,96px);font-weight:700;line-height:.92;letter-spacing:-.025em;margin-bottom:8px}
+.sh-h1 em{font-style:italic;font-weight:300;color:var(--acc)}
+.sh-sub{font-size:15px;line-height:1.72;color:#D1D5DB;max-width:62ch;margin-bottom:32px}
+.sh-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+.sh-stats{display:flex;gap:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
+.lh-stat{display:flex;flex-direction:column;gap:3px}
+.lh-n{font-family:"Barlow Condensed",sans-serif;font-size:30px;font-weight:700;letter-spacing:-.02em}
+.lh-l{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280}
+.sh-intro{display:grid;grid-template-columns:repeat(3,1fr);gap:1px}
+.lh-in{background:rgba(255,255,255,.04);padding:32px;border-left:1px solid rgba(255,255,255,.05)}
+.lh-in:first-child{border-left:none}
+.lh-in-n{font-family:"Barlow Condensed",sans-serif;font-size:44px;font-weight:700;letter-spacing:-.02em;color:var(--acc);display:block;margin-bottom:6px}
+.lh-in-h{font-size:13px;font-weight:600;margin-bottom:7px}
+.lh-in-b{font-size:12px;line-height:1.7;color:#6B7280}
+.sh-comm{padding:88px 40px;display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:start}
+.sh-comm-body{font-size:14px;line-height:1.82;color:#D1D5DB;margin-bottom:16px}
+.sh-comm-body strong{color:#fff;font-weight:600}
+.sh-quote{border-left:3px solid var(--acc);padding:14px 20px;margin:24px 0;background:var(--acc-bg)}
+.sh-quote p{font-family:"Barlow Condensed",sans-serif;font-size:20px;font-weight:500;line-height:1.35;font-style:italic}
+.sh-quote cite{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;display:block;margin-top:9px;font-style:normal}
+.chart-title{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;margin-bottom:18px}
+.bar-row{display:flex;align-items:center;gap:11px;margin-bottom:9px}
+.bar-lbl{font-family:"DM Mono",monospace;font-size:9px;color:#6B7280;width:112px;flex-shrink:0;text-align:right}
+.bar-track{flex:1;height:5px;background:rgba(255,255,255,.07)}
+.bar-fill{height:100%;background:var(--acc);opacity:.75;width:0;transition:width 1.1s cubic-bezier(0,.8,.2,1)}
+.bar-val{font-family:"DM Mono",monospace;font-size:9px;color:var(--acc);width:28px;flex-shrink:0}
+.sh-explorer{padding:0 0 88px}
+.sh-exp-hdr{padding:0 40px 40px}
+.sh-exp-layout{display:grid;grid-template-columns:280px 1fr;min-height:680px}
+.sh-sidebar{background:#111;border-right:1px solid rgba(255,255,255,.07);padding:0}
+.sh-sb-grp{border-bottom:1px solid rgba(255,255,255,.06)}
+.sh-sb-grp-hd{padding:14px 22px;font-family:"DM Mono",monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#4B5563}
+.sh-sb-btn{display:flex;align-items:center;gap:11px;width:100%;padding:12px 22px;background:none;border:none;color:#9CA3AF;font-family:"Barlow",sans-serif;font-size:13px;cursor:pointer;transition:all .2s;text-align:left;border-left:2px solid transparent}
+.sh-sb-btn:hover{color:#fff;background:rgba(255,255,255,.03)}
+.sh-sb-btn.active{color:#fff;background:var(--acc-bg);border-left-color:var(--acc)}
+.sh-sb-spectrum{display:flex;align-items:center;gap:4px;margin-left:auto;flex-wrap:wrap;justify-content:flex-end}
+.sh-sb-sp{font-family:"DM Mono",monospace;font-size:8px;padding:2px 5px}
+.sp-a{background:var(--acc-bg);color:var(--acc)}
+.sp-b{background:rgba(167,243,208,.1);color:#A7F3D0}
+.sp-c{background:rgba(196,181,253,.1);color:#C4B5FD}
+.sh-panels{flex:1}
+.sh-panel{display:none;animation:fadeIn .25s ease}
+.sh-panel.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.sh-panel-inner{display:grid;grid-template-columns:1fr 380px;min-height:680px}
+.sh-pl{padding:40px 40px 40px 36px}
+.sh-pr{background:#0D0D0D;padding:36px 32px;display:flex;flex-direction:column;gap:24px;border-left:1px solid rgba(255,255,255,.06)}
+.sh-panel-tag{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:6px;margin-bottom:12px}
+.sh-panel-name{font-family:"Barlow Condensed",sans-serif;font-size:44px;font-weight:700;letter-spacing:-.025em;line-height:.95;margin-bottom:6px}
+.sh-panel-inci{font-family:"DM Mono",monospace;font-size:10px;color:#6B7280;letter-spacing:.04em;margin-bottom:18px;font-style:italic}
+.sh-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px}
+.sh-badge{font-family:"DM Mono",monospace;font-size:8.5px;letter-spacing:.04em;padding:4px 9px}
+.b-a{background:var(--acc-bg);color:var(--acc)}
+.b-b{background:rgba(167,243,208,.1);color:#A7F3D0}
+.b-c{background:rgba(196,181,253,.1);color:#C4B5FD}
+.b-d{background:rgba(6,95,70,.15);color:#A7F3D0}
+.b-e{background:rgba(217,119,6,.1);color:#FCD34D}
+.sh-tagline{font-size:16px;line-height:1.65;color:#E5E7EB;margin-bottom:22px;font-style:italic;border-left:2px solid var(--acc);padding-left:16px}
+.sh-body{font-size:13px;line-height:1.82;color:#9CA3AF;margin-bottom:16px}
+.sh-body strong{color:#E5E7EB;font-weight:600}
+.sh-section-h{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;margin-bottom:13px;margin-top:28px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06)}
+.sh-app-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+.sh-app-tag{font-family:"DM Mono",monospace;font-size:9px;padding:4px 10px;background:rgba(255,255,255,.05);color:#D1D5DB;letter-spacing:.03em}
+.sh-syn-list{display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
+.sh-syn{display:flex;align-items:baseline;gap:10px;padding:8px 12px;background:rgba(255,255,255,.025);border-left:2px solid var(--acc-border)}
+.sh-syn-code{font-family:"DM Mono",monospace;font-size:10px;color:var(--acc);flex-shrink:0;white-space:nowrap}
+.sh-syn-desc{font-size:12px;color:#9CA3AF}
+.sh-perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.sh-perf-card{background:rgba(255,255,255,.03);padding:14px;border:1px solid rgba(255,255,255,.06)}
+.sh-perf-val{font-family:"Barlow Condensed",sans-serif;font-size:22px;font-weight:700;letter-spacing:-.02em;display:block;margin-bottom:3px}
+.sh-perf-lbl{font-family:"DM Mono",monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280}
+.sh-spec-title{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#6B7280;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:4px}
+.sh-spec-row{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px}
+.sh-spec-row:last-child{border-bottom:none}
+.sh-spec-k{color:#6B7280}
+.sh-spec-v{font-family:"DM Mono",monospace;font-size:11px;color:#fff;text-align:right;max-width:190px;word-break:break-word}
+.sh-reg-block{background:rgba(255,255,255,.025);padding:16px}
+.sh-reg-title{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;margin-bottom:10px}
+.sh-reg-row{display:flex;justify-content:space-between;font-size:11px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.sh-reg-row:last-child{border-bottom:none}
+.sh-reg-k{color:#6B7280}
+.sh-reg-v{font-family:"DM Mono",monospace;font-size:10px;color:#fff}
+.sh-alert{padding:14px 16px;background:rgba(217,119,6,.08);border:1px solid rgba(217,119,6,.2);margin-bottom:8px}
+.sh-alert-t{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#FCD34D;margin-bottom:7px}
+.sh-alert-b{font-size:12px;line-height:1.65;color:#D1D5DB}
+.sh-note{padding:14px 16px;background:var(--acc-bg);border:1px solid var(--acc-border);margin-bottom:8px}
+.sh-note-t{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin-bottom:7px}
+.sh-note-b{font-size:12px;line-height:1.65;color:#D1D5DB}
+.sh-cta-btn{display:flex;align-items:center;justify-content:space-between;padding:13px 18px;background:rgba(255,255,255,.04);color:var(--acc);border:1px solid var(--acc-border);font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .25s;width:100%}
+.sh-cta-btn:hover{background:var(--acc-bg);border-color:var(--acc)}
+.sh-cta-btn svg{width:14px;height:14px;flex-shrink:0}
+.sh-form-sec{padding:88px 40px;background:#111}
+.sh-form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07);margin-top:48px}
+.sh-form-card{background:#111;padding:32px;transition:background .3s}
+.sh-form-card:hover{background:#161616}
+.sh-fc-num{font-family:"DM Mono",monospace;font-size:10px;color:var(--acc);letter-spacing:.08em;margin-bottom:14px;display:block}
+.sh-fc-title{font-family:"Barlow Condensed",sans-serif;font-size:22px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px;line-height:1.2}
+.sh-fc-body{font-size:12px;line-height:1.72;color:#6B7280;margin-bottom:16px}
+.sh-fc-prods{display:flex;flex-direction:column;gap:4px}
+.sh-fc-prod{font-family:"DM Mono",monospace;font-size:10px;color:#D1D5DB;padding:5px 8px;background:rgba(255,255,255,.03);display:flex;align-items:center;gap:7px}
+.sh-fc-prod::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--acc);flex-shrink:0}
+.sh-fc-spf{font-family:"Barlow Condensed",sans-serif;font-size:26px;font-weight:700;color:var(--acc);margin-top:12px;display:block}
+.sh-reg-sec{padding:88px 40px}
+.sh-reg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);margin-top:48px}
+.sh-reg-card{background:#0D0D0D;padding:24px;transition:background .3s}
+.sh-reg-card:hover{background:#111}
+.sh-rc-flag{font-size:20px;margin-bottom:12px;display:block}
+.sh-rc-title{font-size:13px;font-weight:600;margin-bottom:7px}
+.sh-rc-body{font-size:12px;line-height:1.65;color:#6B7280}
+.sh-cta-sec{background:rgba(255,255,255,.03);border-top:1px solid rgba(255,255,255,.07);padding:72px 40px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.sh-cta-sec h2{font-family:"Barlow Condensed",sans-serif;font-size:clamp(30px,4vw,48px);font-weight:700;letter-spacing:-.02em;line-height:1.05;margin-bottom:10px}
+.sh-cta-sec p{font-size:14px;color:rgba(255,255,255,.6);max-width:52ch}
+.sh-cta-btns{display:flex;gap:12px;flex-shrink:0;flex-wrap:wrap}
+@media(max-width:1100px){.sh-exp-layout{grid-template-columns:240px 1fr}.sh-panel-inner{grid-template-columns:1fr 320px}}
+@media(max-width:900px){
+  .sh-hero{padding:0 20px 48px}.sh-comm{grid-template-columns:1fr;gap:40px;padding:56px 20px}
+  .sh-exp-layout{grid-template-columns:1fr}.sh-sidebar{display:none}
+  .sh-panel-inner{grid-template-columns:1fr}.sh-pr{display:none}
+  .sh-form-grid{grid-template-columns:1fr}.sh-reg-grid{grid-template-columns:1fr 1fr}
+  .sh-cta-sec{grid-template-columns:1fr}.sh-explorer,.sh-form-sec,.sh-reg-sec{padding-left:20px;padding-right:20px}
+  .sh-exp-hdr{padding-left:20px;padding-right:20px}
+}
+@media(max-width:600px){.sh-reg-grid{grid-template-columns:1fr}.sh-intro{grid-template-columns:1fr}.sh-stats{gap:24px}}
+</style>
+</head>
+<body>
+<nav id="mainnav">
+  <a class="logo" href="index.html"><span class="logo-m">VLYOR</span><span class="logo-s">Science <span class="logo-p">|</span> Global Bioactives Hub</span></a>
+  <div class="nav-links">
+    <a href="index.html#lines">Portfolio</a>
+    <a href="index.html#about">Philosophy</a>
+    <a href="index.html#standards">Standards</a>
+    <a href="portal.html" class="nav-portal">Technical Portal →</a>
+  </div>
+</nav>
+<section class="sh-hero">
+  <div class="sh-bg"></div><div class="sh-ov"></div>
+  <div class="sh-grid"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="sh-cnt">
+    <div class="sh-bc"><a href="index.html">VLYOR Science</a><span>→</span><a href="index.html#lines">Portfolio</a><span>→</span><span style="color:#fff">VLYOR PURE</span></div>
+    <div class="sh-tag"><div class="sh-dot"></div>Biosurfactants & Cleansing Chemistry — 14 Actives</div>
+    <h1 class="sh-h1">Green<br/><em>Performance.</em></h1>
+    <p class="sh-sub">Fourteen biosourced surfactants and emulsifiers — from APG glucosides to polysorbates and mild anionic actives. High-performance cleansing chemistry that respects skin, consumer expectations and environmental standards.</p>
+    <div class="sh-actions">
+      <a href="#explorer" class="btn-p">Explore the Portfolio ↓</a>
+      <a href="index.html#contact" class="btn-g">Request Technical Dossier</a>
+    </div>
+    <div class="sh-stats"><div class="lh-stat"><span class="lh-n">14</span><span class="lh-l">Surfactant Actives</span></div><div class="lh-stat"><span class="lh-n">100%</span><span class="lh-l">Biodegradable Portfolio</span></div><div class="lh-stat"><span class="lh-n">COSMOS</span><span class="lh-l">Eligible Grades Available</span></div><div class="lh-stat"><span class="lh-n">APG · Betaine · SCI</span><span class="lh-l">Mild Platforms</span></div></div>
+  </div>
+</section>
+<div class="sh-intro"><div class="lh-in"><span class="lh-in-n">APG</span><p class="lh-in-h">Alkyl Polyglucoside Platform</p><p class="lh-in-b">GlucoPure APGs are produced entirely from renewable feedstocks — glucose and fatty alcohols — with complete biodegradability and a skin irritation profile unmatched by conventional surfactants.</p></div><div class="lh-in"><span class="lh-in-n">Mild</span><p class="lh-in-h">By Design — Not by Compromise</p><p class="lh-in-b">Every PURE active is selected on the basis of its clinical mildness data. The portfolio spans mild, very mild and ultra-mild alternatives for every cleansing application and consumer target.</p></div><div class="lh-in"><span class="lh-in-n">COSMOS</span><p class="lh-in-h">Eligible Raw Material Portfolio</p><p class="lh-in-b">All APG grades and selected polysorbates are COSMOS-organic and COSMOS-natural eligible — enabling certified natural and organic product development without performance sacrifice.</p></div></div>
+<section class="sh-comm">
+  <div>
+    <p class="eyebrow">The Cleansing Argument</p>
+    <h2 class="sec-title">Mild performance is<br/>not a compromise.</h2>
+    <p class="sh-comm-body">For decades, the personal care industry operated on an assumption that high-foam cleansing required irritating anionic surfactants, and that mildness could only be achieved at the cost of performance. <strong>APG surfactants proved this wrong definitively</strong> — Alkyl Polyglucosides match or exceed the foam volume and cleansing efficiency of classic anionic systems while delivering dramatically lower irritation potential, complete biodegradability and full compatibility with natural certification schemes.</p>
+    <p class="sh-comm-body">VLYOR PURE gives formulators access to the <strong>complete biosurfactant toolkit</strong> — from the mildest C8/C10 APGs for baby care through to the industrial-scale SLES for high-foam mass-market applications — plus the polysorbate solubilisers, betaine amphoteric systems and SCI mild anionic that complete every professional cleansing formula architecture.</p>
+    <div class="sh-quote"><p>"The consumer does not know the name of their surfactant. But they know how their skin feels after the shower. PURE is built for the formulator whose client's consumer notices the difference."</p><cite>VLYOR Science — Surfactant Technical Position</cite></div>
+    <p class="sh-comm-body">The growing LATAM market for natural and organic certified hair care, baby care and premium facial cleansing creates direct commercial demand for APG-based formulations. <strong>VLYOR PURE provides the biosourced surfactant foundation that enables these certifications</strong> alongside the conventional anionic actives that remain the backbone of mass-market production.</p>
+  </div>
+  <div>
+    <p class="chart-title">Skin Mildness Index — by Active (higher = milder)</p>
+    <div id="sbars"><div class="bar-row"><span class="bar-lbl">GlucoPure C810</span><div class="bar-track"><div class="bar-fill" data-w="97"></div></div><span class="bar-val">97</span></div><div class="bar-row"><span class="bar-lbl">IsoPure SCI</span><div class="bar-track"><div class="bar-fill" data-w="93"></div></div><span class="bar-val">93</span></div><div class="bar-row"><span class="bar-lbl">GlucoPure CO</span><div class="bar-track"><div class="bar-fill" data-w="91"></div></div><span class="bar-val">91</span></div><div class="bar-row"><span class="bar-lbl">BetaPure CAB</span><div class="bar-track"><div class="bar-fill" data-w="88"></div></div><span class="bar-val">88</span></div><div class="bar-row"><span class="bar-lbl">GlucoPure C10</span><div class="bar-track"><div class="bar-fill" data-w="87"></div></div><span class="bar-val">87</span></div><div class="bar-row"><span class="bar-lbl">SoluPure Series</span><div class="bar-track"><div class="bar-fill" data-w="90"></div></div><span class="bar-val">90</span></div><div class="bar-row"><span class="bar-lbl">SulfoPure SLES</span><div class="bar-track"><div class="bar-fill" data-w="65"></div></div><span class="bar-val">65</span></div><div class="bar-row"><span class="bar-lbl">SulfoPure SLS</span><div class="bar-track"><div class="bar-fill" data-w="48"></div></div><span class="bar-val">48</span></div></div>
+    <div style="font-size:10px;color:#4B5563;font-family:'DM Mono',monospace;margin-top:9px">Performance index — relative reference for formulation guidance</div>
+    
+  </div>
+</section>
+<section id="explorer" class="sh-explorer">
+  <div class="sh-exp-hdr">
+    <p class="eyebrow">The PURE Portfolio</p>
+    <h2 class="sec-title">14 actives.<br/>One precision standard.</h2>
+    <p class="sec-sub">Select any active to access its full commercial profile, technical specifications, performance data and formulation guidance.</p>
+  </div>
+  <div class="sh-exp-layout">
+    <aside class="sh-sidebar"><div class="sh-sb-grp"><div class="sh-sb-grp-hd">APG Glucosides</div><button class="sh-sb-btn active" data-prod="glucoc810">GlucoPure C810 Series<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-a">C8/C10</span></div></button><button class="sh-sb-btn" data-prod="glucoco">GlucoPure CO<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-a">Coco</span></div></button><button class="sh-sb-btn" data-prod="glucoc10">GlucoPure C10<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-a">C10</span></div></button><button class="sh-sb-btn" data-prod="glucoc12">GlucoPure C12<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-a">C12</span></div></button><button class="sh-sb-btn" data-prod="glucoblend">GlucoPure Blend<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-b">Blend</span></div></button></div><div class="sh-sb-grp"><div class="sh-sb-grp-hd">Solubilisers & Non-ionic</div><button class="sh-sb-btn" data-prod="solupur20">SoluPure Series<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-a">PS 20/40/60/80</span></div></button></div><div class="sh-sb-grp"><div class="sh-sb-grp-hd">Amphoteric</div><button class="sh-sb-btn" data-prod="betapure">BetaPure<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-a">Amphoteric</span></div></button></div><div class="sh-sb-grp"><div class="sh-sb-grp-hd">Mild Anionic</div><button class="sh-sb-btn" data-prod="isopure">IsoPure SCI<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-b">Mild Anionic</span></div></button></div><div class="sh-sb-grp"><div class="sh-sb-grp-hd">Anionic</div><button class="sh-sb-btn" data-prod="sulfosles">SulfoPure SLES<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-a">Anionic 70%</span></div></button><button class="sh-sb-btn" data-prod="sulfosls">SulfoPure SLS<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-a">Anionic</span></div></button><button class="sh-sb-btn" data-prod="amidopure">AmidoPure<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-b">Non-ionic</span></div></button></div></aside>
+    <div class="sh-panels"><div class="sh-panel active" id="prod-glucoc810">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR PURE — Biosurfactants</div>
+  <h2 class="sh-panel-name">GlucoPure C810 Series</h2>
+  <p class="sh-panel-inci">Caprylyl/Capryl Glucoside</p>
+  <div class="sh-badges"><span class="sh-badge b-a">APG C8/C10</span><span class="sh-badge b-d">Biosourced</span><span class="sh-badge b-d">Multiple Grades</span></div>
+  <p class="sh-tagline">"The cleanest C8/C10 APG available — maximum mildness with genuine biodegradability."</p>
+  <p class="sh-body">GlucoPure C810 Series provides <strong>Caprylyl/Capryl Glucoside — the shortest-chain APG (Alkyl Polyglucoside) in the PURE portfolio</strong>, produced by the condensation of glucose with a C8/C10 fatty alcohol blend. APGs are biosourced non-ionic surfactants derived entirely from renewable feedstocks — glucose from starch and fatty alcohols from coconut or palm kernel oil — with a biodegradation profile that meets OECD 301B readily biodegradable criteria.</p><p class="sh-body">The C8/C10 chain length positions GlucoPure C810 as the <strong>mildest APG in the portfolio</strong>, with very low irritation potential confirmed by HRIPT (Human Repeat Insult Patch Test) and in-vitro keratinocyte studies. It produces fine, stable foam with excellent rinse-off behaviour and a clean, refreshing skin feel. Available in multiple grades (HSO810, HS215, HS225N) with varying APE content and cloud point — allowing formulators to select the precise technical specification for their application.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">C8/C10</span><span class="sh-perf-lbl">Chain Length</span></div><div class="sh-perf-card"><span class="sh-perf-val">≥99.0%</span><span class="sh-perf-lbl">Active Content (selected grades)</span></div><div class="sh-perf-card"><span class="sh-perf-val">High</span><span class="sh-perf-lbl">Biodegradability</span></div><div class="sh-perf-card"><span class="sh-perf-val">Very Low</span><span class="sh-perf-lbl">Irritation Index</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Micellar Cleansers</span><span class="sh-app-tag">Baby Wash & Shampoo</span><span class="sh-app-tag">Sensitive Skin Cleansers</span><span class="sh-app-tag">Natural & Organic Certified Formulas</span><span class="sh-app-tag">Intimate Hygiene Products</span><span class="sh-app-tag">Eye Makeup Removers</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+BetaPure</span><span class="sh-syn-desc">Mild amphoteric foam system — exceeds mildness requirements for baby and sensitive skin.</span></div><div class="sh-syn"><span class="sh-syn-code">+IsoPure SCI</span><span class="sh-syn-desc">Solid cleansing base combination — GlucoPure provides mildness, SCI provides structure.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number (C8/C10)</span><span class="sh-spec-v">68515-73-1</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear to slightly turbid liquid</span></div><div class="sh-spec-row"><span class="sh-spec-k">APE content</span><span class="sh-spec-v">&lt;10 ppm (COSMOS grade available)</span></div><div class="sh-spec-row"><span class="sh-spec-k">Active content</span><span class="sh-spec-v">50–60% depending on grade</span></div><div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Freely water-miscible</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">3.0 – 15.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">pH (use)</span><span class="sh-spec-v">4.5 – 7.0</span></div><div class="sh-spec-row"><span class="sh-spec-k">Biodegradability</span><span class="sh-spec-v">Readily biodegradable (OECD 301B)</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">COSMOS Organic</span><span class="sh-reg-v">Certified grades available</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil / LATAM</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">REACH</span><span class="sh-reg-v">Pre-registered</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div><div class="sh-panel" id="prod-glucoco">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR PURE — Biosurfactants</div>
+  <h2 class="sh-panel-name">GlucoPure CO</h2>
+  <p class="sh-panel-inci">Coco Glucoside</p>
+  <div class="sh-badges"><span class="sh-badge b-a">APG Coco</span><span class="sh-badge b-d">Mild Anionic Compatible</span><span class="sh-badge b-d">COSMOS Eligible</span></div>
+  <p class="sh-tagline">"Coconut-derived glucoside with the broadest formulation compatibility in the APG family."</p>
+  <p class="sh-body">GlucoPure CO is <strong>Coco Glucoside — the most widely used APG surfactant globally</strong>, produced from the condensation of coconut fatty alcohol (C12-C14 chain) with glucose. Its broader chain-length distribution compared to single-chain APGs delivers a balanced foam-cleansing-mildness profile that performs across a wide formulation range — from premium facial cleansers to cost-effective body washes and baby care products.</p><p class="sh-body">Available in grades HS818 and HS425NE with different active concentrations and processing characteristics. <strong>COSMOS-organic certified grades available</strong> for natural and organic certified formulations. Excellent compatibility with all co-surfactant types — anionic, cationic, amphoteric and non-ionic — without the selectivity restrictions of some surfactant categories.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">C12–C14</span><span class="sh-perf-lbl">Chain Length</span></div><div class="sh-perf-card"><span class="sh-perf-val">50–60%</span><span class="sh-perf-lbl">Active Content</span></div><div class="sh-perf-card"><span class="sh-perf-val">COSMOS</span><span class="sh-perf-lbl">Certified Grades</span></div><div class="sh-perf-card"><span class="sh-perf-val">Mild</span><span class="sh-perf-lbl">Skin Compatibility</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Facial Cleansers</span><span class="sh-app-tag">Body Washes</span><span class="sh-app-tag">Baby Care</span><span class="sh-app-tag">Natural Certified Products</span><span class="sh-app-tag">Shampoos</span><span class="sh-app-tag">2-in-1 Cleanse & Condition</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+AmidoPure</span><span class="sh-syn-desc">Classic foam-boosting combination — CDEA thickens and stabilises APG-based foam.</span></div><div class="sh-syn"><span class="sh-syn-code">+BetaPure</span><span class="sh-syn-desc">Premium mild cleansing — APG + betaine provides excellent mildness with stable foam.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">68515-73-1 / 141464-42-8</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear to opalescent liquid</span></div><div class="sh-spec-row"><span class="sh-spec-k">Active content</span><span class="sh-spec-v">50 – 60%</span></div><div class="sh-spec-row"><span class="sh-spec-k">HLB</span><span class="sh-spec-v">~12</span></div><div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Freely water-miscible</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">3.0 – 20.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">pH stability</span><span class="sh-spec-v">4.5 – 8.0</span></div><div class="sh-spec-row"><span class="sh-spec-k">Biodegradability</span><span class="sh-spec-v">Readily biodegradable</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">COSMOS Organic</span><span class="sh-reg-v">Certified grades available</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil / LATAM</span><span class="sh-reg-v">No restriction</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div><div class="sh-panel" id="prod-glucoc10">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR PURE — Biosurfactants</div>
+  <h2 class="sh-panel-name">GlucoPure C10</h2>
+  <p class="sh-panel-inci">Decyl Glucoside</p>
+  <div class="sh-badges"><span class="sh-badge b-a">APG C10</span><span class="sh-badge b-d">Creamy Foam</span></div>
+  <p class="sh-tagline">"C10 chain for creamy, stable foam — the APG for premium rinse-off and solid cleansers."</p>
+  <p class="sh-body">GlucoPure C10 is <strong>Decyl Glucoside — the C10 APG</strong> offering a distinct foam character compared to C8/C10 blends: <strong>denser, creamier, more stable lather</strong> with excellent rinse behaviour and skin feel. The C10 chain length provides an optimal balance between foam quality, mildness and compatibility with natural cosmetic formulation systems. GlucoPure C10 is the preferred APG for facial cleansing bars, solid shampoos and premium liquid cleansers where foam texture is a key quality parameter.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">C10</span><span class="sh-perf-lbl">Chain Length</span></div><div class="sh-perf-card"><span class="sh-perf-val">Creamy</span><span class="sh-perf-lbl">Foam Character</span></div><div class="sh-perf-card"><span class="sh-perf-val">Mild</span><span class="sh-perf-lbl">Skin Compatibility</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Premium Facial Cleansers</span><span class="sh-app-tag">Solid Shampoo Bars</span><span class="sh-app-tag">Foaming Facial Bars</span><span class="sh-app-tag">Natural Hair Care</span><span class="sh-app-tag">High-End Body Washes</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+GlucoPure CO</span><span class="sh-syn-desc">Blend for optimal foam texture across different temperature conditions.</span></div><div class="sh-syn"><span class="sh-syn-code">+IsoPure SCI</span><span class="sh-syn-desc">Solid cleansing base — SCI provides solid structure, GlucoPure C10 provides foam and mildness.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">54549-25-6</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear to slightly hazy liquid</span></div><div class="sh-spec-row"><span class="sh-spec-k">Active content</span><span class="sh-spec-v">50 – 60%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">5.0 – 20.0%</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">COSMOS</span><span class="sh-reg-v">Eligible</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil / LATAM</span><span class="sh-reg-v">No restriction</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div><div class="sh-panel" id="prod-glucoc12">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR PURE — Biosurfactants</div>
+  <h2 class="sh-panel-name">GlucoPure C12</h2>
+  <p class="sh-panel-inci">Lauryl Glucoside</p>
+  <div class="sh-badges"><span class="sh-badge b-a">APG C12</span><span class="sh-badge b-d">High Foam</span></div>
+  <p class="sh-tagline">"C12 for maximum foam generation — the APG with the strongest foaming performance in the family."</p>
+  <p class="sh-body">GlucoPure C12 is <strong>Lauryl Glucoside — the C12 APG</strong> with the strongest foaming performance in the glucoside family. The C12 lauryl chain provides the optimal HLB for maximum foam generation and stability in aqueous systems, making GlucoPure C12 the preferred APG where high-foam performance is a product requirement — such as in clarifying shampoos, body washes with strong foam experience and foaming facial cleansers.</p><p class="sh-body">Despite higher foaming, GlucoPure C12 retains the inherent <strong>mildness characteristic of all APG surfactants</strong>, remaining significantly less irritating than anionic sulphate surfactants at equivalent foam levels.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">C12</span><span class="sh-perf-lbl">Chain Length</span></div><div class="sh-perf-card"><span class="sh-perf-val">High</span><span class="sh-perf-lbl">Foaming Power</span></div><div class="sh-perf-card"><span class="sh-perf-val">Mild</span><span class="sh-perf-lbl">vs. Sulfate Alternatives</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Clarifying Shampoos</span><span class="sh-app-tag">High-Foam Body Washes</span><span class="sh-app-tag">Foaming Facial Cleansers</span><span class="sh-app-tag">Shower Gels</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+SulfoPure SLES</span><span class="sh-syn-desc">Hybrid cleansing system: SLES provides primary foam bulk, GlucoPure C12 boosts mildness and naturalness.</span></div><div class="sh-syn"><span class="sh-syn-code">+BetaPure</span><span class="sh-syn-desc">Premium high-foam mild cleansing system.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">105329-64-4</span></div><div class="sh-spec-row"><span class="sh-spec-k">Active content</span><span class="sh-spec-v">50 – 70%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">3.0 – 15.0%</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">COSMOS</span><span class="sh-reg-v">Eligible</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil / LATAM</span><span class="sh-reg-v">No restriction</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div><div class="sh-panel" id="prod-glucoblend">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR PURE — Biosurfactants</div>
+  <h2 class="sh-panel-name">GlucoPure Blend</h2>
+  <p class="sh-panel-inci">Coco Glucoside &amp; Glyceryl Oleate</p>
+  <div class="sh-badges"><span class="sh-badge b-a">APG Self-Emulsifying</span><span class="sh-badge b-d">O/W Emulsification</span></div>
+  <p class="sh-tagline">"The self-emulsifying APG blend — cleansing and light emulsification in a single ingredient."</p>
+  <p class="sh-body">GlucoPure Blend is a <strong>co-processed combination of Coco Glucoside and Glyceryl Oleate</strong> designed to provide both surfactant-cleansing function and mild O/W emulsification in a single raw material. The glyceryl oleate component adds a moisturising character and emollient slip that standard APG surfactants lack, contributing to a <strong>"lotion-like" after-feel</strong> in cleansing formulations — particularly relevant in the growing "cleanse and condition" product category.</p><p class="sh-body">Used in balm-to-milk cleansers, cleansing oils, micellar water gel formats and emulsified body washes where a conditioning cleanse experience is the differentiating product benefit.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">APG + GlyOleate</span><span class="sh-perf-lbl">Composition</span></div><div class="sh-perf-card"><span class="sh-perf-val">Self-emulsifying</span><span class="sh-perf-lbl">Key Function</span></div><div class="sh-perf-card"><span class="sh-perf-val">Leave-on compatible</span><span class="sh-perf-lbl">Rinse properties</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Balm-to-Milk Cleansers</span><span class="sh-app-tag">Cleansing Oils</span><span class="sh-app-tag">Micellar Gel Cleansers</span><span class="sh-app-tag">Conditioning Body Washes</span><span class="sh-app-tag">2-in-1 Shower Care</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+BetaPure</span><span class="sh-syn-desc">Enhanced conditioning cleansing — betaine adds foam stabilisation.</span></div><div class="sh-syn"><span class="sh-syn-code">+PanthoActiv 98</span><span class="sh-syn-desc">Conditioning cleanse system with panthenol moisturisation.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">Composition</span><span class="sh-spec-v">Coco Glucoside + Glyceryl Oleate</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Slightly hazy liquid</span></div><div class="sh-spec-row"><span class="sh-spec-k">HLB</span><span class="sh-spec-v">~9–11</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">3.0 – 15.0%</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">COSMOS</span><span class="sh-reg-v">Eligible</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil / LATAM</span><span class="sh-reg-v">No restriction</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div><div class="sh-panel" id="prod-solupur20">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR PURE — Biosurfactants</div>
+  <h2 class="sh-panel-name">SoluPure Series</h2>
+  <p class="sh-panel-inci">Polysorbate 20 · 40 · 60 · 80</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Emulsifier</span><span class="sh-badge b-a">Solubiliser</span><span class="sh-badge b-d">4 Grades Available</span></div>
+  <p class="sh-tagline">"The Polysorbate family — the global standard for essential oil and fragrance solubilisation in aqueous systems."</p>
+  <p class="sh-body">SoluPure Series provides the <strong>complete Polysorbate (Tween) range in 4 grades (20, 40, 60 and 80)</strong> — polyoxyethylene sorbitan fatty acid esters that are among the most used cosmetic emulsifiers and solubilisers globally. Their exceptionally high HLB values (14.5–16.5) make them ideal for <strong>solubilising small amounts of oil-phase ingredients (fragrances, essential oils, fat-soluble vitamins, UV filters) into aqueous systems</strong> — enabling transparent toners, mists and gels containing oil-soluble actives.</p><p class="sh-body"><strong>SoluPure 20 (Polysorbate 20, HLB 16.5)</strong> is the most hydrophilic grade, ideal for light fragrances and essential oils in water-thin systems. <strong>SoluPure 80 (Polysorbate 80, HLB 15.0)</strong> provides slightly stronger emulsification for more oleophilic actives. SoluPure 40 and 60 cover intermediate applications. All four grades are <strong>COSMOS-eligible, low-irritancy and compatible with both anionic and cationic systems</strong>.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">HLB 14.5–16.5</span><span class="sh-perf-lbl">Range across grades</span></div><div class="sh-perf-card"><span class="sh-perf-val">4 grades</span><span class="sh-perf-lbl">20 · 40 · 60 · 80</span></div><div class="sh-perf-card"><span class="sh-perf-val">COSMOS</span><span class="sh-perf-lbl">Eligible</span></div><div class="sh-perf-card"><span class="sh-perf-val">0.5–5%</span><span class="sh-perf-lbl">Typical Use Level</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Fragrance Solubilisation in Toners</span><span class="sh-app-tag">Essential Oil Mists & Sprays</span><span class="sh-app-tag">Vitamin E / Vitamin A Solubilisation</span><span class="sh-app-tag">UV Filter Solubilisation</span><span class="sh-app-tag">Transparent Serums</span><span class="sh-app-tag">Micellar Waters</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+SoluCast 40 (FUNC)</span><span class="sh-syn-desc">Combined solubilisation for complex oil-phase mixes requiring broad HLB coverage.</span></div><div class="sh-syn"><span class="sh-syn-code">+AscorActiv C</span><span class="sh-syn-desc">Vitamin C toner system — polysorbate solubilises any oil-phase actives or fragrance.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">SoluPure 20 CAS</span><span class="sh-spec-v">9005-64-5</span></div><div class="sh-spec-row"><span class="sh-spec-k">SoluPure 80 CAS</span><span class="sh-spec-v">9005-65-6</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Amber viscous liquids</span></div><div class="sh-spec-row"><span class="sh-spec-k">HLB range</span><span class="sh-spec-v">14.5 – 16.5</span></div><div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Freely water-miscible</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">0.5 – 5.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Ratio to oil</span><span class="sh-spec-v">Typically 1:1 to 4:1 polysorbate:oil</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil (ANVISA)</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">COSMOS</span><span class="sh-reg-v">Eligible</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div><div class="sh-panel" id="prod-betapure">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR PURE — Biosurfactants</div>
+  <h2 class="sh-panel-name">BetaPure</h2>
+  <p class="sh-panel-inci">Cocamidopropyl Betaine 35%</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Amphoteric</span><span class="sh-badge b-d">Foam Stabiliser</span><span class="sh-badge b-d">Anti-Irritant</span></div>
+  <p class="sh-tagline">"The amphoteric workhorse — viscosity, foam stability and irritation reduction in every cleansing system."</p>
+  <p class="sh-body">BetaPure is <strong>Cocamidopropyl Betaine at 35% active concentration</strong> — the most widely used amphoteric surfactant in personal care. Its zwitterionic character (positive at low pH, negative at high pH, neutral at physiological pH) enables it to function simultaneously as a <strong>foam booster, foam stabiliser, viscosity builder and irritation reducer</strong> in combination with anionic surfactants.</p><p class="sh-body">The irritation-reducing mechanism is well-documented: in anionic surfactant systems, CAPB forms mixed micelles with the anionic primary surfactant, increasing micelle size and reducing the fraction of monomeric anionic surfactant — the species responsible for skin and eye irritation. This is why CAPB is near-universal in baby shampoos, tear-free products and sensitive skin cleansers, where it enables high-foam performance while remaining within dermatologically acceptable irritation limits.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">35%</span><span class="sh-perf-lbl">Active Content</span></div><div class="sh-perf-card"><span class="sh-perf-val">High</span><span class="sh-perf-lbl">Foam Stabilisation</span></div><div class="sh-perf-card"><span class="sh-perf-val">Reduces</span><span class="sh-perf-lbl">Anionic Irritation</span></div><div class="sh-perf-card"><span class="sh-perf-val">pH neutral</span><span class="sh-perf-lbl">Zwitterionic</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">All Cleansing Formulas</span><span class="sh-app-tag">Baby Shampoos (tear-free)</span><span class="sh-app-tag">Sensitive Skin Washes</span><span class="sh-app-tag">2-in-1 Shampoo-Conditioners</span><span class="sh-app-tag">Hand Washes</span><span class="sh-app-tag">Facial Foaming Cleansers</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+SulfoPure SLES</span><span class="sh-syn-desc">Primary synergistic combination — betaine reduces SLES irritation and boosts foam stability.</span></div><div class="sh-syn"><span class="sh-syn-code">+GlucoPure CO / C810</span><span class="sh-syn-desc">Ultra-mild natural cleansing — double-mild system for baby and sensitive skin.</span></div><div class="sh-syn"><span class="sh-syn-code">+IsoPure SCI</span><span class="sh-syn-desc">Mild anionic + amphoteric — premium cleansing with reduced irritation potential.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">61789-40-0</span></div><div class="sh-spec-row"><span class="sh-spec-k">Active content</span><span class="sh-spec-v">35%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Pale yellow clear liquid</span></div><div class="sh-spec-row"><span class="sh-spec-k">Betaine content</span><span class="sh-spec-v">35 ± 2%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Free amine</span><span class="sh-spec-v">&lt; 0.1% (low DMAPA grade)</span></div><div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Freely water-miscible</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">2.0 – 10.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">pH (use)</span><span class="sh-spec-v">4.5 – 9.0</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil / LATAM</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div><div class="sh-panel" id="prod-isopure">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR PURE — Biosurfactants</div>
+  <h2 class="sh-panel-name">IsoPure SCI</h2>
+  <p class="sh-panel-inci">Sodium Cocoyl Isethionate</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Mild Anionic</span><span class="sh-badge b-d">Solid-form Available</span><span class="sh-badge b-d">Sulphate-free</span></div>
+  <p class="sh-tagline">"The mild anionic that enabled the sulphate-free revolution — structuring agent for solid cleansing formats."</p>
+  <p class="sh-body">IsoPure SCI provides <strong>Sodium Cocoyl Isethionate in 80% paste and 85% powder grades</strong> — the benchmark mild anionic surfactant for solid cleansing bars, syndet (synthetic detergent) bars and premium shampoo bars. SCI is an isethionate ester — structurally distinct from sulphates — with a skin compatibility profile dramatically superior to SLS while delivering comparable foam volume and cleansing efficacy.</p><p class="sh-body">The <strong>solid-form (85% powder grade)</strong> is the primary raw material enabling the "solid shampoo bar" format that has driven significant market growth in sustainable hair care — providing the structural matrix that allows water-free hair cleansing products to hold their form while delivering salon-level foam and rinse-off performance. IsoPure SCI is <strong>sulphate-free, parabens-free</strong> and COSMOS-eligible, meeting the formulation requirements of the largest natural and organic certification schemes.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">SCI 80% (paste)</span><span class="sh-perf-lbl">Grade 1 — liquid use</span></div><div class="sh-perf-card"><span class="sh-perf-val">SCI 85% (powder)</span><span class="sh-perf-lbl">Grade 2 — solid bars</span></div><div class="sh-perf-card"><span class="sh-perf-val">Sulphate-free</span><span class="sh-perf-lbl">Classification</span></div><div class="sh-perf-card"><span class="sh-perf-val">COSMOS</span><span class="sh-perf-lbl">Eligible</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Solid Shampoo Bars</span><span class="sh-app-tag">Syndet Cleansing Bars</span><span class="sh-app-tag">Sulphate-Free Cleansers</span><span class="sh-app-tag">Natural Hair Care</span><span class="sh-app-tag">Sensitive Scalp Products</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+GlucoPure C10 / C12</span><span class="sh-syn-desc">Solid bar system — SCI for structure and primary cleansing, APG for mildness.</span></div><div class="sh-syn"><span class="sh-syn-code">+BetaPure</span><span class="sh-syn-desc">Mild cleansing performance enhancement in liquid and solid formats.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">61789-32-0</span></div><div class="sh-spec-row"><span class="sh-spec-k">Grades</span><span class="sh-spec-v">80% paste · 85% powder</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">White waxy solid (85%) / paste (80%)</span></div><div class="sh-spec-row"><span class="sh-spec-k">Melting point (85%)</span><span class="sh-spec-v">~47–52°C</span></div><div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Dispersible in water</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">5.0 – 30.0% (solid bar formulas)</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">COSMOS</span><span class="sh-reg-v">Eligible</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div><div class="sh-panel" id="prod-sulfosles">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR PURE — Biosurfactants</div>
+  <h2 class="sh-panel-name">SulfoPure SLES</h2>
+  <p class="sh-panel-inci">Sodium Lauryl Ether Sulfate 70%</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Primary Anionic</span><span class="sh-badge b-d">High Performance</span></div>
+  <p class="sh-tagline">"The global benchmark anionic surfactant — unmatched foam density and cleansing power."</p>
+  <p class="sh-body">SulfoPure SLES is <strong>Sodium Lauryl Ether Sulfate at 70% active concentration</strong> — the most used primary anionic surfactant in personal care globally. SLES delivers <strong>outstanding foam volume, foam density and cleansing efficiency</strong> across a wide formulation pH range and performs effectively in hard water — properties that have made it the standard primary surfactant in shampoos, body washes and liquid soaps for decades.</p><p class="sh-body">SLES is distinguished from SLS (sodium lauryl sulfate) by the <strong>ethoxylation (EO2)</strong> of the lauryl chain: this modification significantly reduces the penetration of surfactant monomer through the skin barrier, resulting in substantially lower irritation and eye-sting potential compared to SLS, while preserving the cleansing and foaming performance that makes anionic surfactants commercially dominant.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">70%</span><span class="sh-perf-lbl">Active Content</span></div><div class="sh-perf-card"><span class="sh-perf-val">EO2</span><span class="sh-perf-lbl">Ethoxylation Degree</span></div><div class="sh-perf-card"><span class="sh-perf-val">Mild vs. SLS</span><span class="sh-perf-lbl">Irritation Profile</span></div><div class="sh-perf-card"><span class="sh-perf-val">High</span><span class="sh-perf-lbl">Foam Performance</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Shampoos</span><span class="sh-app-tag">Body Washes</span><span class="sh-app-tag">Liquid Hand Soaps</span><span class="sh-app-tag">Bubble Baths</span><span class="sh-app-tag">Dishwashing Liquids (personal care grade)</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+BetaPure</span><span class="sh-syn-desc">The most widely formulated cleansing combination in the world — SLES + CAPB.</span></div><div class="sh-syn"><span class="sh-syn-code">+AmidoPure</span><span class="sh-syn-desc">SLES + CDEA — classic thickening and foam stabilisation system.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">68585-34-2 / 9004-82-4</span></div><div class="sh-spec-row"><span class="sh-spec-k">Active content</span><span class="sh-spec-v">70%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Viscous pale yellow liquid</span></div><div class="sh-spec-row"><span class="sh-spec-k">Sulphated active</span><span class="sh-spec-v">70 ± 2%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Unsulfated alcohol</span><span class="sh-spec-v">&lt; 1.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">EO2 (average)</span><span class="sh-spec-v">2 moles ethylene oxide</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">5.0 – 20.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">pH (use)</span><span class="sh-spec-v">5.5 – 7.5</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil / LATAM</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div><div class="sh-panel" id="prod-sulfosls">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR PURE — Biosurfactants</div>
+  <h2 class="sh-panel-name">SulfoPure SLS</h2>
+  <p class="sh-panel-inci">Sodium Lauryl Sulfate</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Anionic</span><span class="sh-badge b-d">30% · 95% grades</span></div>
+  <p class="sh-tagline">"Two concentrations for every manufacturing context — the classic anionic in liquid and powder form."</p>
+  <p class="sh-body">SulfoPure SLS provides <strong>Sodium Lauryl Sulfate in two grades: 30% liquid solution and 95% powder</strong> — covering liquid manufacturing and solid/powder formulation contexts respectively. SLS remains the most studied surfactant in cosmetic science, with decades of safety and efficacy data, and is still widely used in toothpaste, shampoos and body washes where its <strong>maximum cleansing power and low cost</strong> are the primary selection criteria.</p><p class="sh-body">The <strong>95% powder grade</strong> is the essential raw material for solid toothpaste, dry-mix cleansing powders and foam-building powder sachets — applications where liquid surfactants cannot be used. The 30% liquid grade is suited for straightforward shampoo and body wash manufacturing where SLES is not required.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">30% liquid</span><span class="sh-perf-lbl">Grade 1</span></div><div class="sh-perf-card"><span class="sh-perf-val">95% powder</span><span class="sh-perf-lbl">Grade 2</span></div><div class="sh-perf-card"><span class="sh-perf-val">Maximum</span><span class="sh-perf-lbl">Cleansing Power</span></div><div class="sh-perf-card"><span class="sh-perf-val">Standard</span><span class="sh-perf-lbl">Cost</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Toothpaste (SLS foaming agent)</span><span class="sh-app-tag">Classic Shampoos</span><span class="sh-app-tag">Dry Cleansing Powders</span><span class="sh-app-tag">Industrial Personal Care</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+BetaPure</span><span class="sh-syn-desc">SLS irritation mitigation — betaine reduces the monomer concentration responsible for eye-sting.</span></div><div class="sh-syn"><span class="sh-syn-code">+GlucoPure CO</span><span class="sh-syn-desc">Mildness-boosted SLS system for hair care with sustainability claims.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">151-21-3</span></div><div class="sh-spec-row"><span class="sh-spec-k">Grades available</span><span class="sh-spec-v">30% solution · 95% powder</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">30%: clear liquid · 95%: white powder</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">1.0 – 15.0%</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div><div class="sh-panel" id="prod-amidopure">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR PURE — Biosurfactants</div>
+  <h2 class="sh-panel-name">AmidoPure</h2>
+  <p class="sh-panel-inci">Cocamide DEA</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Non-ionic</span><span class="sh-badge b-d">Foam Booster</span><span class="sh-badge b-d">Viscosity Builder</span></div>
+  <p class="sh-tagline">"The classic foam booster and thickener — cost-effective viscosity and foam enhancement in any anionic system."</p>
+  <p class="sh-body">AmidoPure provides <strong>Cocamide DEA (Coconut Oil Diethanolamide) in standard and NF (nitrosamine-free) grades</strong> — a fatty acid alkanolamide that functions as a foam booster, foam stabiliser, thickener and emollient in anionic surfactant systems. The <strong>NF (nitrosamine-free) grade</strong> is recommended for all personal care applications — it is manufactured without free DEA and prevents N-nitrosodiethanolamine (NDEA) formation that can occur in conventional CDEA grades in the presence of nitrosating agents.</p><p class="sh-body">The combination of SLES + CDEA remains one of the most cost-effective shampoo thickening systems available — typically 1–3% CDEA in an SLES base provides significant viscosity increase through mixed-micelle formation, reducing or eliminating the need for salt thickening and providing a creamy foam character.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">Standard grade</span><span class="sh-perf-lbl">CDEA conventional</span></div><div class="sh-perf-card"><span class="sh-perf-val">NF grade</span><span class="sh-perf-lbl">Nitrosamine-free — preferred</span></div><div class="sh-perf-card"><span class="sh-perf-val">Foam boost</span><span class="sh-perf-lbl">Key function</span></div><div class="sh-perf-card"><span class="sh-perf-val">1–3%</span><span class="sh-perf-lbl">Typical use level</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Shampoos (foam boost + viscosity)</span><span class="sh-app-tag">Body Washes</span><span class="sh-app-tag">Liquid Hand Soaps</span><span class="sh-app-tag">Bubble Baths</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+SulfoPure SLES</span><span class="sh-syn-desc">Classic viscosity system — SLES + CDEA thickening via mixed micelle formation.</span></div><div class="sh-syn"><span class="sh-syn-code">+BetaPure</span><span class="sh-syn-desc">Triple surfactant combination for stable, thick, mild cleansing formulas.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">61791-31-9</span></div><div class="sh-spec-row"><span class="sh-spec-k">Grades</span><span class="sh-spec-v">Standard · NF (nitrosamine-free)</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Amber semi-solid to paste</span></div><div class="sh-spec-row"><span class="sh-spec-k">Active content</span><span class="sh-spec-v">88–92%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">1.0 – 4.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Incorporation</span><span class="sh-spec-v">Oil phase or melted separately at 60°C</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction (NF grade strongly preferred in EU)</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil / LATAM</span><span class="sh-reg-v">No restriction</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div></div>
+  </div>
+</section>
+<section class="sh-form-sec">
+  <div>
+    <p class="eyebrow">Formulation Systems</p>
+    <h2 class="sec-title">Ready-to-use systems<br/>for every formulation brief.</h2>
+    <p class="sec-sub">Application-ready combinations from the PURE portfolio for the most common formulation challenges.</p>
+  </div>
+  <div class="sh-form-grid"><div class="sh-form-card">
+      <span class="sh-fc-num">System 01</span>
+      <h3 class="sh-fc-title">Ultra-Mild Baby &amp; Sensitive Skin Wash</h3>
+      <p class="sh-fc-body">Zero-compromise mildness system based entirely on APG and betaine — no sulphates, no irritants. COSMOS-eligible.</p>
+      <div class="sh-fc-prods"><div class="sh-fc-prod">GlucoPure C810 · 8–10%</div><div class="sh-fc-prod">GlucoPure CO · 5%</div><div class="sh-fc-prod">BetaPure · 5%</div></div>
+      <span class="sh-fc-spf">Ultra-Mild · Tear-Free</span>
+    </div><div class="sh-form-card">
+      <span class="sh-fc-num">System 02</span>
+      <h3 class="sh-fc-title">Premium Natural Shampoo</h3>
+      <p class="sh-fc-body">High-performance sulphate-free shampoo combining APG foam with betaine stability and SCI mild anionic for volume and shine. COSMOS-eligible.</p>
+      <div class="sh-fc-prods"><div class="sh-fc-prod">GlucoPure C12 · 10%</div><div class="sh-fc-prod">IsoPure SCI · 8%</div><div class="sh-fc-prod">BetaPure · 6%</div><div class="sh-fc-prod">AmidoPure NF · 2%</div></div>
+      <span class="sh-fc-spf">Sulphate-Free · Natural</span>
+    </div><div class="sh-form-card">
+      <span class="sh-fc-num">System 03</span>
+      <h3 class="sh-fc-title">High-Foam Volume Shampoo / Body Wash</h3>
+      <p class="sh-fc-body">Maximum foam performance system for cost-effective mass-market production with betaine-enhanced mildness.</p>
+      <div class="sh-fc-prods"><div class="sh-fc-prod">SulfoPure SLES · 12–15%</div><div class="sh-fc-prod">BetaPure · 4–6%</div><div class="sh-fc-prod">AmidoPure NF · 2%</div></div>
+      <span class="sh-fc-spf">High Foam · Volume Production</span>
+    </div></div>
+</section>
+<section class="sh-reg-sec">
+  <div>
+    <p class="eyebrow">Global Compliance</p>
+    <h2 class="sec-title">Every market.<br/>Every standard.</h2>
+  </div>
+  <div class="sh-reg-grid"><div class="sh-reg-card"><span class="sh-rc-flag">🌿</span><h4 class="sh-rc-title">COSMOS Organic / Natural</h4><p class="sh-rc-body">All APG grades and selected polysorbates are COSMOS-organic and COSMOS-natural eligible. Certification documentation available.</p></div><div class="sh-reg-card"><span class="sh-rc-flag">🇪🇺</span><h4 class="sh-rc-title">EU Cosmetics Regulation</h4><p class="sh-rc-body">All PURE actives comply with EU Regulation 1223/2009. No restriction for any active at cosmetic use concentrations.</p></div><div class="sh-reg-card"><span class="sh-rc-flag">🇧🇷</span><h4 class="sh-rc-title">ANVISA — Brazil</h4><p class="sh-rc-body">All surfactants approved for cosmetic use under Brazilian regulation. Full compliance documentation available.</p></div><div class="sh-reg-card"><span class="sh-rc-flag">♻️</span><h4 class="sh-rc-title">Environmental / Biodegradability</h4><p class="sh-rc-body">APG and betaine actives readily biodegradable per OECD 301B. Full biodegradability data available on request for eco-label support.</p></div></div>
+</section>
+<section class="sh-cta-sec">
+  <div>
+    <h2>Building a natural,<br/>sulphate-free or premium<br/>cleansing formula?</h2>
+    <p>Our surfactant team provides system recommendations, mildness data summaries and COSMOS eligibility documentation for your specific cleansing brief and market.</p>
+  </div>
+  <div class="sh-cta-btns">
+    <a href="portal.html" class="btn-g">Full Technical Portal →</a>
+    <a href="index.html#contact" class="btn-p">Request Samples →</a>
+  </div>
+</section>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><span class="logo-m">VLYOR</span><br/><span class="logo-s">Science</span><p class="footer-tag">Molecular Integrity. Aesthetic Performance.</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h5>Portfolio</h5><ul>
+        <li><a href="shield.html">VLYOR SHIELD</a></li><li><a href="vital.html">VLYOR VITAL</a></li>
+        <li><a href="pure.html">VLYOR PURE</a></li><li><a href="func.html">VLYOR FUNC</a></li>
+        <li><a href="cond.html">VLYOR COND</a></li><li><a href="silk.html">VLYOR SILK</a></li>
+        <li><a href="form.html">VLYOR FORM</a></li><li><a href="hydra.html">VLYOR HYDRA</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Resources</h5><ul>
+        <li><a href="portal.html">Technical Portal</a></li>
+        <li><a href="index.html#contact">Request Sample</a></li>
+        <li><a href="index.html#standards">Compliance</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul>
+        <li><a href="mailto:science@vlyor.com">science@vlyor.com</a></li>
+        <li>Global Bioactives Hub</li><li>Suzhou, China</li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="ft-code">V3.0 — 2026</span>
+    <span>© VLYOR Science. All rights reserved.</span>
+    <span class="ft-code">REACH · IECIC · GHS</span>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script>
+const btns=document.querySelectorAll('.sh-sb-btn');
+const panels=document.querySelectorAll('.sh-panel');
+btns.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    btns.forEach(b=>b.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('prod-'+btn.dataset.prod).classList.add('active');
+    document.getElementById('explorer').scrollIntoView({behavior:'smooth'});
+  });
+});
+const bObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.querySelectorAll('.bar-fill').forEach((f,i)=>{
+        setTimeout(()=>{f.style.width=f.dataset.w+'%';},i*110);
+      });
+      bObs.unobserve(e.target);
+    }
+  });
+},{threshold:0.3});
+const sb=document.getElementById('sbars');
+if(sb)bObs.observe(sb);
+window.addEventListener('scroll',()=>{document.getElementById('mainnav').classList.toggle('scrolled',window.scrollY>40);},{passive:true});
+</script>
+</body></html>

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>VLYOR FUNC — Functional Chemistry — 10 Formula Stability Actives | VLYOR Science</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;500;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+:root{--acc:#7EC8DA;--acc-bg:color-mix(in srgb,#7EC8DA 10%,transparent);--acc-border:color-mix(in srgb,#7EC8DA 25%,transparent)}
+.sh-hero{min-height:78vh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;padding:0 40px 64px}
+.sh-bg{position:absolute;inset:0;background-image:url('images/func.jpg');background-size:cover;background-position:center}
+.sh-ov{position:absolute;inset:0;background:linear-gradient(to top,#0D0D0D 0%,rgba(13,13,13,.72) 40%,rgba(13,13,13,.3) 100%)}
+.sh-grid{position:absolute;inset:0;display:flex;justify-content:space-around}
+.sh-grid span{width:1px;background:rgba(255,255,255,.035)}
+.sh-cnt{position:relative;z-index:2;max-width:860px}
+.sh-bc{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#6B7280;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.sh-bc a{color:#6B7280;transition:color .2s}.sh-bc a:hover{color:#fff}
+.sh-tag{display:inline-flex;align-items:center;gap:8px;font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc-border);padding:5px 12px;margin-bottom:18px}
+.sh-dot{width:6px;height:6px;border-radius:50%;background:var(--acc);flex-shrink:0}
+.sh-h1{font-family:"Barlow Condensed",sans-serif;font-size:clamp(52px,9vw,96px);font-weight:700;line-height:.92;letter-spacing:-.025em;margin-bottom:8px}
+.sh-h1 em{font-style:italic;font-weight:300;color:var(--acc)}
+.sh-sub{font-size:15px;line-height:1.72;color:#D1D5DB;max-width:62ch;margin-bottom:32px}
+.sh-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+.sh-stats{display:flex;gap:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
+.lh-stat{display:flex;flex-direction:column;gap:3px}
+.lh-n{font-family:"Barlow Condensed",sans-serif;font-size:30px;font-weight:700;letter-spacing:-.02em}
+.lh-l{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280}
+.sh-intro{display:grid;grid-template-columns:repeat(3,1fr);gap:1px}
+.lh-in{background:rgba(255,255,255,.04);padding:32px;border-left:1px solid rgba(255,255,255,.05)}
+.lh-in:first-child{border-left:none}
+.lh-in-n{font-family:"Barlow Condensed",sans-serif;font-size:44px;font-weight:700;letter-spacing:-.02em;color:var(--acc);display:block;margin-bottom:6px}
+.lh-in-h{font-size:13px;font-weight:600;margin-bottom:7px}
+.lh-in-b{font-size:12px;line-height:1.7;color:#6B7280}
+.sh-comm{padding:88px 40px;display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:start}
+.sh-comm-body{font-size:14px;line-height:1.82;color:#D1D5DB;margin-bottom:16px}
+.sh-comm-body strong{color:#fff;font-weight:600}
+.sh-quote{border-left:3px solid var(--acc);padding:14px 20px;margin:24px 0;background:var(--acc-bg)}
+.sh-quote p{font-family:"Barlow Condensed",sans-serif;font-size:20px;font-weight:500;line-height:1.35;font-style:italic}
+.sh-quote cite{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;display:block;margin-top:9px;font-style:normal}
+.chart-title{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;margin-bottom:18px}
+.bar-row{display:flex;align-items:center;gap:11px;margin-bottom:9px}
+.bar-lbl{font-family:"DM Mono",monospace;font-size:9px;color:#6B7280;width:112px;flex-shrink:0;text-align:right}
+.bar-track{flex:1;height:5px;background:rgba(255,255,255,.07)}
+.bar-fill{height:100%;background:var(--acc);opacity:.75;width:0;transition:width 1.1s cubic-bezier(0,.8,.2,1)}
+.bar-val{font-family:"DM Mono",monospace;font-size:9px;color:var(--acc);width:28px;flex-shrink:0}
+.sh-explorer{padding:0 0 88px}
+.sh-exp-hdr{padding:0 40px 40px}
+.sh-exp-layout{display:grid;grid-template-columns:280px 1fr;min-height:680px}
+.sh-sidebar{background:#111;border-right:1px solid rgba(255,255,255,.07);padding:0}
+.sh-sb-grp{border-bottom:1px solid rgba(255,255,255,.06)}
+.sh-sb-grp-hd{padding:14px 22px;font-family:"DM Mono",monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#4B5563}
+.sh-sb-btn{display:flex;align-items:center;gap:11px;width:100%;padding:12px 22px;background:none;border:none;color:#9CA3AF;font-family:"Barlow",sans-serif;font-size:13px;cursor:pointer;transition:all .2s;text-align:left;border-left:2px solid transparent}
+.sh-sb-btn:hover{color:#fff;background:rgba(255,255,255,.03)}
+.sh-sb-btn.active{color:#fff;background:var(--acc-bg);border-left-color:var(--acc)}
+.sh-sb-spectrum{display:flex;align-items:center;gap:4px;margin-left:auto;flex-wrap:wrap;justify-content:flex-end}
+.sh-sb-sp{font-family:"DM Mono",monospace;font-size:8px;padding:2px 5px}
+.sp-a{background:var(--acc-bg);color:var(--acc)}
+.sp-b{background:rgba(167,243,208,.1);color:#A7F3D0}
+.sp-c{background:rgba(196,181,253,.1);color:#C4B5FD}
+.sh-panels{flex:1}
+.sh-panel{display:none;animation:fadeIn .25s ease}
+.sh-panel.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.sh-panel-inner{display:grid;grid-template-columns:1fr 380px;min-height:680px}
+.sh-pl{padding:40px 40px 40px 36px}
+.sh-pr{background:#0D0D0D;padding:36px 32px;display:flex;flex-direction:column;gap:24px;border-left:1px solid rgba(255,255,255,.06)}
+.sh-panel-tag{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:6px;margin-bottom:12px}
+.sh-panel-name{font-family:"Barlow Condensed",sans-serif;font-size:44px;font-weight:700;letter-spacing:-.025em;line-height:.95;margin-bottom:6px}
+.sh-panel-inci{font-family:"DM Mono",monospace;font-size:10px;color:#6B7280;letter-spacing:.04em;margin-bottom:18px;font-style:italic}
+.sh-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px}
+.sh-badge{font-family:"DM Mono",monospace;font-size:8.5px;letter-spacing:.04em;padding:4px 9px}
+.b-a{background:var(--acc-bg);color:var(--acc)}
+.b-b{background:rgba(167,243,208,.1);color:#A7F3D0}
+.b-c{background:rgba(196,181,253,.1);color:#C4B5FD}
+.b-d{background:rgba(6,95,70,.15);color:#A7F3D0}
+.b-e{background:rgba(217,119,6,.1);color:#FCD34D}
+.sh-tagline{font-size:16px;line-height:1.65;color:#E5E7EB;margin-bottom:22px;font-style:italic;border-left:2px solid var(--acc);padding-left:16px}
+.sh-body{font-size:13px;line-height:1.82;color:#9CA3AF;margin-bottom:16px}
+.sh-body strong{color:#E5E7EB;font-weight:600}
+.sh-section-h{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;margin-bottom:13px;margin-top:28px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06)}
+.sh-app-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+.sh-app-tag{font-family:"DM Mono",monospace;font-size:9px;padding:4px 10px;background:rgba(255,255,255,.05);color:#D1D5DB;letter-spacing:.03em}
+.sh-syn-list{display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
+.sh-syn{display:flex;align-items:baseline;gap:10px;padding:8px 12px;background:rgba(255,255,255,.025);border-left:2px solid var(--acc-border)}
+.sh-syn-code{font-family:"DM Mono",monospace;font-size:10px;color:var(--acc);flex-shrink:0;white-space:nowrap}
+.sh-syn-desc{font-size:12px;color:#9CA3AF}
+.sh-perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.sh-perf-card{background:rgba(255,255,255,.03);padding:14px;border:1px solid rgba(255,255,255,.06)}
+.sh-perf-val{font-family:"Barlow Condensed",sans-serif;font-size:22px;font-weight:700;letter-spacing:-.02em;display:block;margin-bottom:3px}
+.sh-perf-lbl{font-family:"DM Mono",monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280}
+.sh-spec-title{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#6B7280;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:4px}
+.sh-spec-row{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px}
+.sh-spec-row:last-child{border-bottom:none}
+.sh-spec-k{color:#6B7280}
+.sh-spec-v{font-family:"DM Mono",monospace;font-size:11px;color:#fff;text-align:right;max-width:190px;word-break:break-word}
+.sh-reg-block{background:rgba(255,255,255,.025);padding:16px}
+.sh-reg-title{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;margin-bottom:10px}
+.sh-reg-row{display:flex;justify-content:space-between;font-size:11px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.sh-reg-row:last-child{border-bottom:none}
+.sh-reg-k{color:#6B7280}
+.sh-reg-v{font-family:"DM Mono",monospace;font-size:10px;color:#fff}
+.sh-alert{padding:14px 16px;background:rgba(217,119,6,.08);border:1px solid rgba(217,119,6,.2);margin-bottom:8px}
+.sh-alert-t{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#FCD34D;margin-bottom:7px}
+.sh-alert-b{font-size:12px;line-height:1.65;color:#D1D5DB}
+.sh-note{padding:14px 16px;background:var(--acc-bg);border:1px solid var(--acc-border);margin-bottom:8px}
+.sh-note-t{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin-bottom:7px}
+.sh-note-b{font-size:12px;line-height:1.65;color:#D1D5DB}
+.sh-cta-btn{display:flex;align-items:center;justify-content:space-between;padding:13px 18px;background:rgba(255,255,255,.04);color:var(--acc);border:1px solid var(--acc-border);font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .25s;width:100%}
+.sh-cta-btn:hover{background:var(--acc-bg);border-color:var(--acc)}
+.sh-cta-btn svg{width:14px;height:14px;flex-shrink:0}
+.sh-form-sec{padding:88px 40px;background:#111}
+.sh-form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07);margin-top:48px}
+.sh-form-card{background:#111;padding:32px;transition:background .3s}
+.sh-form-card:hover{background:#161616}
+.sh-fc-num{font-family:"DM Mono",monospace;font-size:10px;color:var(--acc);letter-spacing:.08em;margin-bottom:14px;display:block}
+.sh-fc-title{font-family:"Barlow Condensed",sans-serif;font-size:22px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px;line-height:1.2}
+.sh-fc-body{font-size:12px;line-height:1.72;color:#6B7280;margin-bottom:16px}
+.sh-fc-prods{display:flex;flex-direction:column;gap:4px}
+.sh-fc-prod{font-family:"DM Mono",monospace;font-size:10px;color:#D1D5DB;padding:5px 8px;background:rgba(255,255,255,.03);display:flex;align-items:center;gap:7px}
+.sh-fc-prod::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--acc);flex-shrink:0}
+.sh-fc-spf{font-family:"Barlow Condensed",sans-serif;font-size:26px;font-weight:700;color:var(--acc);margin-top:12px;display:block}
+.sh-reg-sec{padding:88px 40px}
+.sh-reg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);margin-top:48px}
+.sh-reg-card{background:#0D0D0D;padding:24px;transition:background .3s}
+.sh-reg-card:hover{background:#111}
+.sh-rc-flag{font-size:20px;margin-bottom:12px;display:block}
+.sh-rc-title{font-size:13px;font-weight:600;margin-bottom:7px}
+.sh-rc-body{font-size:12px;line-height:1.65;color:#6B7280}
+.sh-cta-sec{background:rgba(255,255,255,.03);border-top:1px solid rgba(255,255,255,.07);padding:72px 40px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.sh-cta-sec h2{font-family:"Barlow Condensed",sans-serif;font-size:clamp(30px,4vw,48px);font-weight:700;letter-spacing:-.02em;line-height:1.05;margin-bottom:10px}
+.sh-cta-sec p{font-size:14px;color:rgba(255,255,255,.6);max-width:52ch}
+.sh-cta-btns{display:flex;gap:12px;flex-shrink:0;flex-wrap:wrap}
+@media(max-width:1100px){.sh-exp-layout{grid-template-columns:240px 1fr}.sh-panel-inner{grid-template-columns:1fr 320px}}
+@media(max-width:900px){
+  .sh-hero{padding:0 20px 48px}.sh-comm{grid-template-columns:1fr;gap:40px;padding:56px 20px}
+  .sh-exp-layout{grid-template-columns:1fr}.sh-sidebar{display:none}
+  .sh-panel-inner{grid-template-columns:1fr}.sh-pr{display:none}
+  .sh-form-grid{grid-template-columns:1fr}.sh-reg-grid{grid-template-columns:1fr 1fr}
+  .sh-cta-sec{grid-template-columns:1fr}.sh-explorer,.sh-form-sec,.sh-reg-sec{padding-left:20px;padding-right:20px}
+  .sh-exp-hdr{padding-left:20px;padding-right:20px}
+}
+@media(max-width:600px){.sh-reg-grid{grid-template-columns:1fr}.sh-intro{grid-template-columns:1fr}.sh-stats{gap:24px}}
+</style>
+</head>
+<body>
+<nav id="mainnav">
+  <a class="logo" href="index.html"><span class="logo-m">VLYOR</span><span class="logo-s">Science <span class="logo-p">|</span> Global Bioactives Hub</span></a>
+  <div class="nav-links">
+    <a href="index.html#lines">Portfolio</a>
+    <a href="index.html#about">Philosophy</a>
+    <a href="index.html#standards">Standards</a>
+    <a href="portal.html" class="nav-portal">Technical Portal →</a>
+  </div>
+</nav>
+<section class="sh-hero">
+  <div class="sh-bg"></div><div class="sh-ov"></div>
+  <div class="sh-grid"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="sh-cnt">
+    <div class="sh-bc"><a href="index.html">VLYOR Science</a><span>→</span><a href="index.html#lines">Portfolio</a><span>→</span><span style="color:#fff">VLYOR FUNC</span></div>
+    <div class="sh-tag"><div class="sh-dot"></div>Functional Chemistry — 10 Formula Stability Actives</div>
+    <h1 class="sh-h1">Formula<br/><em>Integrity.</em></h1>
+    <p class="sh-sub">Ten functional ingredients — chelating agents, preservative systems, solubilisers and antiperspirant actives. The invisible chemistry that determines whether your formula performs month after month.</p>
+    <div class="sh-actions">
+      <a href="#explorer" class="btn-p">Explore the Portfolio ↓</a>
+      <a href="index.html#contact" class="btn-g">Request Technical Dossier</a>
+    </div>
+    <div class="sh-stats"><div class="lh-stat"><span class="lh-n">10</span><span class="lh-l">Functional Actives</span></div><div class="lh-stat"><span class="lh-n">ISO 11930</span><span class="lh-l">Preservative Challenge Standard</span></div><div class="lh-stat"><span class="lh-n">Broad Spectrum</span><span class="lh-l">Preservation Coverage</span></div><div class="lh-stat"><span class="lh-n">100%</span><span class="lh-l">GHS Compliant</span></div></div>
+  </div>
+</section>
+<div class="sh-intro"><div class="lh-in"><span class="lh-in-n">1st</span><p class="lh-in-h">Line of Formula Defence</p><p class="lh-in-b">ChelaGuard chelating agents protect every active, every preservative and every fragrance in the formula from metal-ion catalysed degradation.</p></div><div class="lh-in"><span class="lh-in-n">Broad</span><p class="lh-in-h">Spectrum Preservation</p><p class="lh-in-b">PreserFlex systems cover gram-positive, gram-negative, yeast and mould — the full ISO 11930 challenge organism panel.</p></div><div class="lh-in"><span class="lh-in-n">0%</span><p class="lh-in-h">Compromise on Stability</p><p class="lh-in-b">Every FUNC active is selected because formula integrity is non-negotiable. Efficacy at first use must equal efficacy at month 24.</p></div></div>
+<section class="sh-comm">
+  <div>
+    <p class="eyebrow">The Stability Argument</p>
+    <h2 class="sec-title">The formula that<br/>fails quietly.</h2>
+    <p class="sh-comm-body">A cosmetic formula can fail in two ways: visibly — with separation, discolouration or odour that the consumer notices immediately; or quietly — with a preservative system that passes challenge testing at launch but fails in the field six months later, or a Vitamin C concentration that reads 15% on the label but delivers 3% at the point of skin contact.</p>
+    <p class="sh-comm-body">VLYOR FUNC addresses the chemistry behind both failure modes. <strong>ChelaGuard chelating agents</strong> prevent the metal-ion catalysis that degrades actives and undermines preservative efficacy. <strong>PreserFlex preservative systems</strong> provide the microbial challenge protection that keeps products safe throughout their claimed shelf life.</p>
+    <div class="sh-quote"><p>"The formulator's reputation is not defined by the formula they launch. It is defined by the formula that arrives at the consumer twelve months after launch — unchanged, effective, safe."</p><cite>VLYOR Science — Functional Chemistry Position</cite></div>
+    <p class="sh-comm-body">In LATAM markets — where supply chains involve ambient temperature warehousing, prolonged distribution periods and variable humidity — the requirement for robust preservation and stabilisation chemistry is more demanding than in temperate markets. <strong>VLYOR FUNC is built for these conditions.</strong></p>
+  </div>
+  <div>
+    <p class="chart-title">Preservative System Coverage — by Organism Class</p>
+    <div id="sbars"><div class="bar-row"><span class="bar-lbl">PreserFlex EHG</span><div class="bar-track"><div class="bar-fill" data-w="95"></div></div><span class="bar-val">95</span></div><div class="bar-row"><span class="bar-lbl">PreserFlex PE</span><div class="bar-track"><div class="bar-fill" data-w="85"></div></div><span class="bar-val">85</span></div><div class="bar-row"><span class="bar-lbl">PreserFlex MP</span><div class="bar-track"><div class="bar-fill" data-w="92"></div></div><span class="bar-val">92</span></div><div class="bar-row"><span class="bar-lbl">PreserFlex DMDM</span><div class="bar-track"><div class="bar-fill" data-w="88"></div></div><span class="bar-val">88</span></div><div class="bar-row"><span class="bar-lbl">PE + EHG + EDTA</span><div class="bar-track"><div class="bar-fill" data-w="99"></div></div><span class="bar-val">99</span></div></div>
+    <div style="font-size:10px;color:#4B5563;font-family:'DM Mono',monospace;margin-top:9px">Performance index — relative reference for formulation guidance</div>
+    
+  </div>
+</section>
+<section id="explorer" class="sh-explorer">
+  <div class="sh-exp-hdr">
+    <p class="eyebrow">The FUNC Portfolio</p>
+    <h2 class="sec-title">10 actives.<br/>One precision standard.</h2>
+    <p class="sec-sub">Select any active to access its full commercial profile, technical specifications, performance data and formulation guidance.</p>
+  </div>
+  <div class="sh-exp-layout">
+    <aside class="sh-sidebar"><div class="sh-sb-grp"><div class="sh-sb-grp-hd">Chelating Agents</div><button class="sh-sb-btn active" data-prod="chela2">ChelaGuard 2<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-a">Di-Na EDTA</span></div></button><button class="sh-sb-btn" data-prod="chela4">ChelaGuard 4<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-a">Tetra-Na EDTA</span></div></button></div><div class="sh-sb-grp"><div class="sh-sb-grp-hd">Solubilisers</div><button class="sh-sb-btn" data-prod="solucast">SoluCast 40<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-b">Solubiliser</span></div></button></div><div class="sh-sb-grp"><div class="sh-sb-grp-hd">Preservatives</div><button class="sh-sb-btn" data-prod="preservpe">PreserFlex PE<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-a">Preservative</span></div></button><button class="sh-sb-btn" data-prod="preservehg">PreserFlex EHG<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-a">Blend</span></div></button><button class="sh-sb-btn" data-prod="preservmp">PreserFlex MP<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-a">Paraben</span></div></button><button class="sh-sb-btn" data-prod="preservdmdm">PreserFlex DMDM<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-a">DMDM</span></div></button></div><div class="sh-sb-grp"><div class="sh-sb-grp-hd">Specialty Functional</div><button class="sh-sb-btn" data-prod="climbaflex">ClimbaFlex<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-b">Antifungal</span></div></button><button class="sh-sb-btn" data-prod="antipersach">AntipersFlex ACH<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-b">Antiperspirant</span></div></button><button class="sh-sb-btn" data-prod="antipersazg">AntipersFlex AZG<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-b">Clinical AP</span></div></button></div></aside>
+    <div class="sh-panels"><div class="sh-panel active" id="prod-chela2">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR FUNC — Functional Chemistry</div>
+  <h2 class="sh-panel-name">ChelaGuard 2</h2>
+  <p class="sh-panel-inci">Disodium EDTA</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Chelating Agent</span><span class="sh-badge b-d">Preservative Booster</span></div>
+  <p class="sh-tagline">"The formula guardian — chelating metal ions that would otherwise destroy your preservative system and degrade your actives."</p>
+  <p class="sh-body">ChelaGuard 2 is <strong>Disodium EDTA at ≥99.0% purity</strong> — ethylenediaminetetraacetic acid disodium salt, the most used chelating agent in cosmetics globally. EDTA sequesters divalent metal ions (Ca²⁺, Mg²⁺, Fe²⁺, Cu²⁺) present in tap water, manufacturing equipment and raw materials that would otherwise catalyse oxidative degradation of actives (Vitamin C, retinoids, fragrances) and deactivate preservative systems by binding to their active sites.</p><p class="sh-body">The <strong>preservative-boosting mechanism</strong> is particularly commercially important: EDTA chelates metal ions in bacterial cell walls, destabilising the membrane and rendering bacteria more susceptible to the primary preservative (phenoxyethanol, parabens, DMDM hydantoin). This means ChelaGuard 2 can extend the useful concentration range of preservative systems, reduce the required preservative load and improve broad-spectrum efficacy — enabling formulators to achieve challenge-test compliance at lower preservative doses.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">≥99.0%</span><span class="sh-perf-lbl">Purity</span></div><div class="sh-perf-card"><span class="sh-perf-val">0.05–0.5%</span><span class="sh-perf-lbl">Effective Range</span></div><div class="sh-perf-card"><span class="sh-perf-val">Broad</span><span class="sh-perf-lbl">Ion specificity</span></div><div class="sh-perf-card"><span class="sh-perf-val">pH 4–9</span><span class="sh-perf-lbl">Stable Range</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">All Cosmetic Formulations (standard)</span><span class="sh-app-tag">Vitamin C Systems (essential)</span><span class="sh-app-tag">Preservative Systems</span><span class="sh-app-tag">Emulsions with Hard Water Sensitivity</span><span class="sh-app-tag">Retinoid Formulations</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+AscorActiv C (VITAL)</span><span class="sh-syn-desc">Absolutely essential — chelates Fe/Cu that catalyse Vitamin C oxidation.</span></div><div class="sh-syn"><span class="sh-syn-code">+PreserFlex Series</span><span class="sh-syn-desc">Extends preservative efficacy across gram-negative and gram-positive spectra.</span></div><div class="sh-syn"><span class="sh-syn-code">+TocoActiv E (VITAL)</span><span class="sh-syn-desc">Prevents metal-catalysed tocopherol oxidation in oil phases.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">139-33-3</span></div><div class="sh-spec-row"><span class="sh-spec-k">Assay</span><span class="sh-spec-v">≥ 99.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">White crystalline powder</span></div><div class="sh-spec-row"><span class="sh-spec-k">Molecular weight</span><span class="sh-spec-v">336.2 g/mol</span></div><div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Freely water-soluble</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">0.05 – 0.5%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Incorporation</span><span class="sh-spec-v">Aqueous phase · dissolves easily at ambient temperature</span></div><div class="sh-spec-row"><span class="sh-spec-k">pH stability</span><span class="sh-spec-v">4.0 – 9.0</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil (ANVISA)</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div><div class="sh-panel" id="prod-chela4">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR FUNC — Functional Chemistry</div>
+  <h2 class="sh-panel-name">ChelaGuard 4</h2>
+  <p class="sh-panel-inci">Tetrasodium EDTA</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Chelating Agent</span><span class="sh-badge b-d">High-pH Compatible</span></div>
+  <p class="sh-tagline">"ChelaGuard 2's partner for alkaline systems — the chelating agent that remains effective above pH 7."</p>
+  <p class="sh-body">ChelaGuard 4 is <strong>Tetrasodium EDTA at ≥99.0% purity</strong> — the fully neutralised tetrasodium salt form of EDTA, differentiated from ChelaGuard 2 (disodium) by its <strong>higher pH in solution (pH ~11–12)</strong> and improved performance in alkaline and high-pH systems. Where ChelaGuard 2 requires an aqueous system pH above 5 for effective chelation, ChelaGuard 4 maintains chelating activity across a broader pH range including alkaline manufacturing conditions.</p><p class="sh-body">Preferred in <strong>hair dye systems, bleaching formulations, hair relaxers and alkaline cleansers</strong> where system pH is above 7 and disodium EDTA's solubility and chelation efficiency decline. Also used in industrial personal care manufacturing where hard-water control throughout the process — not just in the final product — is required.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">≥99.0%</span><span class="sh-perf-lbl">Purity</span></div><div class="sh-perf-card"><span class="sh-perf-val">High pH</span><span class="sh-perf-lbl">Optimal performance range</span></div><div class="sh-perf-card"><span class="sh-perf-val">0.05–0.5%</span><span class="sh-perf-lbl">Dose</span></div><div class="sh-perf-card"><span class="sh-perf-val">Alkaline</span><span class="sh-perf-lbl">System compatibility</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Hair Dye Systems</span><span class="sh-app-tag">Bleaching & Lightening Formulas</span><span class="sh-app-tag">Alkaline Cleansers</span><span class="sh-app-tag">High-pH Hair Care</span><span class="sh-app-tag">Industrial Formulations</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+ChelaGuard 2</span><span class="sh-syn-desc">Sequential chelation — use tetrasodium in alkaline phase, disodium in final acidified product.</span></div><div class="sh-syn"><span class="sh-syn-code">+PreserFlex Series</span><span class="sh-syn-desc">Preservative system support in alkaline personal care products.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">64-02-8</span></div><div class="sh-spec-row"><span class="sh-spec-k">Assay</span><span class="sh-spec-v">≥ 99.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">White granular powder</span></div><div class="sh-spec-row"><span class="sh-spec-k">pH (1% solution)</span><span class="sh-spec-v">11.0 – 12.0</span></div><div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Freely water-soluble</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">0.05 – 0.5%</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil (ANVISA)</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div><div class="sh-panel" id="prod-solucast">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR FUNC — Functional Chemistry</div>
+  <h2 class="sh-panel-name">SoluCast 40</h2>
+  <p class="sh-panel-inci">PEG-40 Hydrogenated Castor Oil</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Solubiliser</span><span class="sh-badge b-d">O/W Emulsifier</span><span class="sh-badge b-d">Clear Systems</span></div>
+  <p class="sh-tagline">"The professional solubiliser for fragrances, essential oils and UV filters in aqueous transparent systems."</p>
+  <p class="sh-body">SoluCast 40 is <strong>PEG-40 Hydrogenated Castor Oil</strong> — an ethoxylated hydrogenated castor oil derivative widely used as a non-ionic solubiliser and O/W emulsifier in transparent cosmetic systems. Its high HLB value (~13–14) and excellent compatibility with fragrance compounds, essential oils and fat-soluble vitamins make it the standard industrial solubiliser for incorporating oil-soluble ingredients into aqueous formulations while maintaining full transparency.</p><p class="sh-body">SoluCast 40 is the <strong>preferred solubiliser for UV filters in transparent aqueous systems</strong> (toners, mists, transparent serums with SPF), and performs equivalently to polysorbates in most fragrance solubilisation applications. Its castor oil base also provides a mild emollient character that SoluPure polysorbates lack — making it preferred in leave-on transparent formulations where skin conditioning is a secondary objective.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">HLB ~13–14</span><span class="sh-perf-lbl">Value</span></div><div class="sh-perf-card"><span class="sh-perf-val">Fragrance</span><span class="sh-perf-lbl">Primary solubilisation target</span></div><div class="sh-perf-card"><span class="sh-perf-val">Clear systems</span><span class="sh-perf-lbl">Key application</span></div><div class="sh-perf-card"><span class="sh-perf-val">0.5–5%</span><span class="sh-perf-lbl">Dose range</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Fragrance Solubilisation in Toners</span><span class="sh-app-tag">Essential Oil Mists</span><span class="sh-app-tag">UV Filter in Transparent Systems</span><span class="sh-app-tag">Fat-Soluble Vitamin Incorporation</span><span class="sh-app-tag">Transparent Leave-On Serums</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+SoluPure 20 / 80 (PURE)</span><span class="sh-syn-desc">Combined solubilisation for complex oil-phase mixes.</span></div><div class="sh-syn"><span class="sh-syn-code">+Shield-PBSA (SHIELD)</span><span class="sh-syn-desc">UV filter system — SoluCast 40 solubilises oil-soluble filters for transparent SPF systems.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">61788-85-0</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Pale yellow oily to waxy substance</span></div><div class="sh-spec-row"><span class="sh-spec-k">HLB</span><span class="sh-spec-v">13 – 14</span></div><div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Freely water-miscible</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">0.5 – 5.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Oil-to-solubiliser ratio</span><span class="sh-spec-v">Typically 1:2 to 1:4</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil (ANVISA)</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">No restriction</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div><div class="sh-panel" id="prod-preservpe">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR FUNC — Functional Chemistry</div>
+  <h2 class="sh-panel-name">PreserFlex PE</h2>
+  <p class="sh-panel-inci">Phenoxyethanol</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Preservative</span><span class="sh-badge b-d">Broad Spectrum</span></div>
+  <p class="sh-tagline">"The global standard cosmetic preservative — broad spectrum, stable and regulatory-accepted worldwide."</p>
+  <p class="sh-body">PreserFlex PE is <strong>Phenoxyethanol at ≥99.5% purity</strong> — the single most used cosmetic preservative globally by volume. It provides <strong>broad-spectrum antimicrobial activity against bacteria (gram-positive and gram-negative) and yeasts</strong> at concentrations of 0.5–1.0%, with a mechanism of action involving disruption of bacterial cell membrane integrity that makes it effective against a wide range of challenge-test organisms.</p><p class="sh-body">Phenoxyethanol's dominance in cosmetic preservation stems from its combination of <strong>broad-spectrum efficacy, broad formulation compatibility, stability across pH 3–10, and regulatory approval in all major cosmetic markets at up to 1%</strong>. It functions as a drop-in preservative in virtually any formulation type and is the baseline ingredient in most combination preservative systems including PreserFlex EHG.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">≥99.5%</span><span class="sh-perf-lbl">Purity</span></div><div class="sh-perf-card"><span class="sh-perf-val">0.5–1.0%</span><span class="sh-perf-lbl">Effective Range</span></div><div class="sh-perf-card"><span class="sh-perf-val">Broad Spectrum</span><span class="sh-perf-lbl">Coverage</span></div><div class="sh-perf-card"><span class="sh-perf-val">pH 3–10</span><span class="sh-perf-lbl">Stable Range</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">All Cosmetic Formulations</span><span class="sh-app-tag">Standard Preservation System</span><span class="sh-app-tag">Parabens-Free Products</span><span class="sh-app-tag">Broad-Spectrum Preservation</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+ChelaGuard 2</span><span class="sh-syn-desc">Essential pairing — EDTA chelation extends phenoxyethanol's efficacy against gram-negative bacteria.</span></div><div class="sh-syn"><span class="sh-syn-code">+PreserFlex EHG</span><span class="sh-syn-desc">Upgrade path — combination with EHG improves gram-positive and yeast efficacy.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">122-99-6</span></div><div class="sh-spec-row"><span class="sh-spec-k">Assay</span><span class="sh-spec-v">≥ 99.5%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear oily liquid</span></div><div class="sh-spec-row"><span class="sh-spec-k">Molecular weight</span><span class="sh-spec-v">138.2 g/mol</span></div><div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Slightly water-soluble · miscible in oil</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">0.5 – 1.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Max. EU / ANVISA</span><span class="sh-spec-v">1.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Incorporation</span><span class="sh-spec-v">Oil or aqueous phase</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU (Annex V)</span><span class="sh-reg-v">1.0% max</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil (ANVISA)</span><span class="sh-reg-v">1.0% max</span></div><div class="sh-reg-row"><span class="sh-reg-k">Japan</span><span class="sh-reg-v">0.5% in products for children under 3</span></div><div class="sh-reg-row"><span class="sh-reg-k">USA</span><span class="sh-reg-v">OTC: no restriction at ≤1%</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div><div class="sh-panel" id="prod-preservehg">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR FUNC — Functional Chemistry</div>
+  <h2 class="sh-panel-name">PreserFlex EHG</h2>
+  <p class="sh-panel-inci">Phenoxyethanol &amp; Ethylhexylglycerin</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Preservative Blend</span><span class="sh-badge b-d">Booster System</span></div>
+  <p class="sh-tagline">"Phenoxyethanol upgraded — the two-component system that closes the gram-positive gap."</p>
+  <p class="sh-body">PreserFlex EHG is a <strong>precision blend of Phenoxyethanol and Ethylhexylglycerin</strong> — designed to address the key limitation of pure phenoxyethanol: moderate efficacy against gram-positive bacteria and yeasts at practical use concentrations. Ethylhexylglycerin functions as a <strong>membrane-active booster</strong> that sensitises microbial cell membranes to phenoxyethanol, enabling full broad-spectrum coverage (bacteria + yeast + mould) at lower total preservative dose than phenoxyethanol alone.</p><p class="sh-body">This combination is the <strong>most used modern cosmetic preservative system globally</strong> — replacing parabens in premium formulations while providing a cleaner, more marketing-friendly label claim than traditional preservatives. Challenge-test (ISO 11930) data typically shows compliant results at combined doses of 0.7–0.9%.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">PE + EHG</span><span class="sh-perf-lbl">Two-component system</span></div><div class="sh-perf-card"><span class="sh-perf-val">Lower total dose</span><span class="sh-perf-lbl">vs. PE alone</span></div><div class="sh-perf-card"><span class="sh-perf-val">ISO 11930</span><span class="sh-perf-lbl">Challenge test compliant</span></div><div class="sh-perf-card"><span class="sh-perf-val">Clean label</span><span class="sh-perf-lbl">Market positioning</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">All Leave-On and Rinse-Off Formulas</span><span class="sh-app-tag">Parabens Replacement Systems</span><span class="sh-app-tag">Premium Clean Beauty Preservation</span><span class="sh-app-tag">Sensitive Skin Formulations</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+ChelaGuard 2</span><span class="sh-syn-desc">Always combine with EDTA for gram-negative bacteria coverage completion.</span></div><div class="sh-syn"><span class="sh-syn-code">+PreserFlex MP</span><span class="sh-syn-desc">Combination with low-dose methylparaben for the most robust broad-spectrum challenge-test performance.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS</span><span class="sh-spec-v">122-99-6 / 70445-33-9</span></div><div class="sh-spec-row"><span class="sh-spec-k">Ratio</span><span class="sh-spec-v">typically 9:1 PE:EHG</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear liquid</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">0.7 – 1.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Max. EU</span><span class="sh-spec-v">PE 1.0% / EHG 0.7%</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">PE 1.0% / EHG 0.7%</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil (ANVISA)</span><span class="sh-reg-v">PE 1.0%</span></div><div class="sh-reg-row"><span class="sh-reg-k">Japan</span><span class="sh-reg-v">Refer to individual limits</span></div><div class="sh-reg-row"><span class="sh-reg-k">USA</span><span class="sh-reg-v">No OTC restriction</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div><div class="sh-panel" id="prod-preservmp">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR FUNC — Functional Chemistry</div>
+  <h2 class="sh-panel-name">PreserFlex MP</h2>
+  <p class="sh-panel-inci">Methylparaben</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Preservative</span><span class="sh-badge b-d">Gram-Positive Specialist</span></div>
+  <p class="sh-tagline">"The most studied preservative in history — still the most effective gram-positive anti-fungal available."</p>
+  <p class="sh-body">PreserFlex MP is <strong>Methylparaben at ≥99.5% purity</strong> — the most extensively studied cosmetic preservative in the scientific literature, with safety data spanning over 80 years of commercial use. Parabens work via inhibition of microbial enzyme activity, with particular effectiveness against <strong>gram-positive bacteria, yeasts and moulds</strong> — the organisms most commonly responsible for cosmetic spoilage in water-continuous systems.</p><p class="sh-body">Despite consumer and market perception challenges, parabens remain <strong>WHO-considered safe</strong> at cosmetic use concentrations, and the scientific consensus among dermatologists and toxicologists continues to support their safety. Methylparaben remains the reference standard against which all alternative preservatives are benchmarked for efficacy and skin compatibility. In combination systems, low-dose methylparaben (0.1–0.2%) consistently provides the most robust challenge-test performance.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">≥99.5%</span><span class="sh-perf-lbl">Purity</span></div><div class="sh-perf-card"><span class="sh-perf-val">0.1–0.4%</span><span class="sh-perf-lbl">Effective Range</span></div><div class="sh-perf-card"><span class="sh-perf-val">Gram-positive</span><span class="sh-perf-lbl">Primary Efficacy</span></div><div class="sh-perf-card"><span class="sh-perf-val">pH 4–8</span><span class="sh-perf-lbl">Optimal Range</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Regulated Markets Where Parabens Are Accepted</span><span class="sh-app-tag">Combination Preservative Systems</span><span class="sh-app-tag">High-Water-Activity Formulas</span><span class="sh-app-tag">Rinse-Off Products</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+PreserFlex PE</span><span class="sh-syn-desc">Classic combination — broadens coverage to gram-negative bacteria.</span></div><div class="sh-syn"><span class="sh-syn-code">+ChelaGuard 2</span><span class="sh-syn-desc">EDTA enhancement for complete broad-spectrum performance.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">99-76-3</span></div><div class="sh-spec-row"><span class="sh-spec-k">Assay</span><span class="sh-spec-v">≥ 99.5%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">White crystalline powder</span></div><div class="sh-spec-row"><span class="sh-spec-k">Melting point</span><span class="sh-spec-v">125–128°C</span></div><div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Slightly water-soluble (pre-dissolve in ethanol or propylene glycol)</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">0.1 – 0.4%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Max. EU</span><span class="sh-spec-v">0.4% (methylparaben alone)</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU (Annex V)</span><span class="sh-reg-v">0.4% (single) / 0.8% (mixed parabens)</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil (ANVISA)</span><span class="sh-reg-v">0.4%</span></div><div class="sh-reg-row"><span class="sh-reg-k">Japan</span><span class="sh-reg-v">Approved</span></div><div class="sh-reg-row"><span class="sh-reg-k">USA</span><span class="sh-reg-v">No restriction at ≤0.4%</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div><div class="sh-panel" id="prod-preservdmdm">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR FUNC — Functional Chemistry</div>
+  <h2 class="sh-panel-name">PreserFlex DMDM</h2>
+  <p class="sh-panel-inci">DMDM Hydantoin</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Preservative</span><span class="sh-badge b-d">Formaldehyde Releaser</span></div>
+  <p class="sh-tagline">"Broad-spectrum preservation through controlled formaldehyde release — the industrial standard for rinse-off products."</p>
+  <p class="sh-body">PreserFlex DMDM is <strong>DMDM Hydantoin at ≥99.0% purity</strong> — a formaldehyde-releasing preservative that provides broad-spectrum antimicrobial coverage at low use concentrations. It functions by slowly releasing small amounts of formaldehyde in aqueous systems, which binds to and inactivates microbial cell proteins — a mechanism that ensures continuous low-level antimicrobial protection throughout the product shelf life.</p><p class="sh-body">PreserFlex DMDM is widely used in <strong>rinse-off hair care products, shampoos and conditioners</strong> where its excellent performance at pH 5–8 and compatibility with surfactant systems makes it a cost-effective preservative choice. Given market sensitivities around formaldehyde-releasing preservatives in some regions, its use is best positioned in products where the brief prioritises efficacy and cost.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">≥99.0%</span><span class="sh-perf-lbl">Purity</span></div><div class="sh-perf-card"><span class="sh-perf-val">0.05–0.3%</span><span class="sh-perf-lbl">Dose</span></div><div class="sh-perf-card"><span class="sh-perf-val">pH 5–8</span><span class="sh-perf-lbl">Optimal range</span></div><div class="sh-perf-card"><span class="sh-perf-val">Formaldehyde releaser</span><span class="sh-perf-lbl">Mechanism</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Shampoos & Conditioners</span><span class="sh-app-tag">Rinse-Off Hair Treatments</span><span class="sh-app-tag">Industrial Personal Care Formulas</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+ChelaGuard 2</span><span class="sh-syn-desc">EDTA enhances gram-negative coverage.</span></div><div class="sh-syn"><span class="sh-syn-code">+PreserFlex PE</span><span class="sh-syn-desc">Combination for broad-spectrum performance at reduced individual doses.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">6440-58-4</span></div><div class="sh-spec-row"><span class="sh-spec-k">Assay</span><span class="sh-spec-v">≥ 99.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear to slightly yellow liquid</span></div><div class="sh-spec-row"><span class="sh-spec-k">Active DMDM content</span><span class="sh-spec-v">55%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">0.05 – 0.3%</span></div><div class="sh-spec-row"><span class="sh-spec-k">pH stability</span><span class="sh-spec-v">5.0 – 8.0</span></div><div class="sh-spec-row"><span class="sh-spec-k">Max. EU</span><span class="sh-spec-v">0.6% (as formaldehyde)</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">0.6% max (as HCHO)</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil</span><span class="sh-reg-v">Approved</span></div><div class="sh-reg-row"><span class="sh-reg-k">Japan</span><span class="sh-reg-v">Approved at ≤0.5% as HCHO</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div><div class="sh-panel" id="prod-climbaflex">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR FUNC — Functional Chemistry</div>
+  <h2 class="sh-panel-name">ClimbaFlex</h2>
+  <p class="sh-panel-inci">Climbazole</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Antifungal</span><span class="sh-badge b-d">Anti-Dandruff</span><span class="sh-badge b-d">Scalp Treatment</span></div>
+  <p class="sh-tagline">"The imidazole antifungal for scalp care — proven efficacy against Malassezia, the primary cause of dandruff."</p>
+  <p class="sh-body">ClimbaFlex is <strong>Climbazole at ≥99.0% purity</strong> — an imidazole antifungal cosmetic active with specific efficacy against <em>Malassezia furfur</em> and related lipophilic yeasts, the primary causative organisms of seborrhoeic dermatitis and dandruff. Climbazole inhibits the ergosterol biosynthesis pathway in fungal cells, disrupting membrane integrity and preventing fungal replication with high selectivity.</p><p class="sh-body">ClimbaFlex is the <strong>reference cosmetic anti-dandruff active in Europe</strong>, used at 0.5% in the majority of branded anti-dandruff shampoos and scalp treatments. Its oil solubility enables efficient deposition on the scalp's sebum-rich environment where Malassezia proliferates, providing sustained antifungal activity between washes that zinc pyrithione and selenium sulfide actives cannot match in residual performance.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">≥99.0%</span><span class="sh-perf-lbl">Purity</span></div><div class="sh-perf-card"><span class="sh-perf-val">0.5%</span><span class="sh-perf-lbl">Standard Anti-Dandruff Dose</span></div><div class="sh-perf-card"><span class="sh-perf-val">Malassezia</span><span class="sh-perf-lbl">Primary Target</span></div><div class="sh-perf-card"><span class="sh-perf-val">Oil-soluble</span><span class="sh-perf-lbl">Phase</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Anti-Dandruff Shampoos</span><span class="sh-app-tag">Scalp Treatment Serums</span><span class="sh-app-tag">Seborrhoeic Dermatitis Products</span><span class="sh-app-tag">Anti-Fungal Hair Masks</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+PreserFlex PE</span><span class="sh-syn-desc">Full-spectrum preservation system for anti-dandruff products.</span></div><div class="sh-syn"><span class="sh-syn-code">+ChelaGuard 2</span><span class="sh-syn-desc">Metal ion chelation improves antifungal stability in hard-water manufacturing.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">38083-17-9</span></div><div class="sh-spec-row"><span class="sh-spec-k">Assay</span><span class="sh-spec-v">≥ 99.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">White to off-white powder</span></div><div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Oil-soluble</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">0.1 – 0.5%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Standard anti-dandruff dose</span><span class="sh-spec-v">0.5%</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU (cosmetic)</span><span class="sh-reg-v">No restriction as cosmetic active</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil</span><span class="sh-reg-v">Approved as cosmetic active</span></div><div class="sh-reg-row"><span class="sh-reg-k">Japan</span><span class="sh-reg-v">Approved</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div><div class="sh-panel" id="prod-antipersach">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR FUNC — Functional Chemistry</div>
+  <h2 class="sh-panel-name">AntipersFlex ACH</h2>
+  <p class="sh-panel-inci">Aluminum Chlorohydrate</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Antiperspirant</span><span class="sh-badge b-d">OTC Active</span></div>
+  <p class="sh-tagline">"The standard antiperspirant active — forming aluminium hydroxide gels that physically reduce eccrine sweat gland secretion."</p>
+  <p class="sh-body">AntipersFlex ACH is <strong>Aluminum Chlorohydrate (ACH) at high purity</span> — the most used antiperspirant active globally, functioning by forming aluminium hydroxide gel plugs within the ductal lumen of eccrine sweat glands, physically restricting sweat secretion to the skin surface. This mechanism is distinctly different from a deodorant (which addresses odour without affecting perspiration volume) — ACH is a true antiperspirant that reduces wetness.</p><p class="sh-body">ACH is available in multiple grades (anhydrous and hydrate forms, varying solution concentrations) suited to different formulation formats — roll-on aqueous systems, stick formulations and spray antiperspirants. The <strong>20% solution grade</strong> is standard for roll-on products; anhydrous powder grades are used in pressed stick and powder spray formats.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">~15–23%</span><span class="sh-perf-lbl">Al content in solution grades</span></div><div class="sh-perf-card"><span class="sh-perf-val">Sweat reduction</span><span class="sh-perf-lbl">Mechanism</span></div><div class="sh-perf-card"><span class="sh-perf-val">20% solution</span><span class="sh-perf-lbl">Standard roll-on grade</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Roll-On Antiperspirants</span><span class="sh-app-tag">Aerosol Antiperspirant Sprays</span><span class="sh-app-tag">Antiperspirant Sticks & Gels</span><span class="sh-app-tag">Combined Antiperspirant/Deodorant</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+AntipersFlex AZG</span><span class="sh-syn-desc">Higher efficacy combination — ACH provides immediate effect; AZG provides sustained occlusion.</span></div><div class="sh-syn"><span class="sh-syn-code">+PreserFlex PE</span><span class="sh-syn-desc">Preservation of aqueous antiperspirant systems.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">12042-91-0</span></div><div class="sh-spec-row"><span class="sh-spec-k">Assay (Al₂O₃ equiv.)</span><span class="sh-spec-v">≥ 20.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">White powder or clear solution</span></div><div class="sh-spec-row"><span class="sh-spec-k">Available grades</span><span class="sh-spec-v">Anhydrous powder / 20% / 50% solution</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">10 – 25% (active Al equivalent)</span></div><div class="sh-spec-row"><span class="sh-spec-k">pH (20% solution)</span><span class="sh-spec-v">4.0 – 4.5</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">USA (FDA OTC)</span><span class="sh-reg-v">Standard antiperspirant ingredient</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil</span><span class="sh-reg-v">Approved</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div><div class="sh-panel" id="prod-antipersazg">
+<div class="sh-panel-inner">
+<div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR FUNC — Functional Chemistry</div>
+  <h2 class="sh-panel-name">AntipersFlex AZG</h2>
+  <p class="sh-panel-inci">Aluminum Zirconium Tetrachlorohydrex Glycine (ZAG)</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Enhanced Antiperspirant</span><span class="sh-badge b-d">Maximum Efficacy</span></div>
+  <p class="sh-tagline">"The enhanced-efficacy antiperspirant — ZAG complexes provide superior sweat reduction for clinical and sport-performance products."</p>
+  <p class="sh-body">AntipersFlex AZG is <strong>Aluminum Zirconium Tetrachlorohydrex Glycine (ZAG complex)</strong> — the highest-efficacy antiperspirant active commercially available, used in "clinical strength" and "enhanced protection" products where standard ACH does not provide sufficient sweat reduction. The zirconium-aluminium complex forms a more robust, less soluble gel plug in the sweat duct than ACH alone, providing both stronger initial occlusion and <strong>longer-lasting antiperspirant performance between applications</strong>.</p><p class="sh-body">ZAG is the <strong>active ingredient in clinical-strength antiperspirant products</strong> marketed by leading personal care brands globally. In the growing LATAM performance and clinical personal care segment, it enables product positioning at a significant commercial premium over standard ACH-based formulations.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">ZAG complex</span><span class="sh-perf-lbl">Active type</span></div><div class="sh-perf-card"><span class="sh-perf-val">Maximum</span><span class="sh-perf-lbl">Sweat reduction</span></div><div class="sh-perf-card"><span class="sh-perf-val">Clinical strength</span><span class="sh-perf-lbl">Product positioning</span></div><div class="sh-perf-card"><span class="sh-perf-val">Anhydrous powder</span><span class="sh-perf-lbl">Primary form</span></div></div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Clinical Strength Antiperspirants</span><span class="sh-app-tag">Sport Performance Deodorant/Antiperspirant</span><span class="sh-app-tag">72-Hour Protection Claims</span><span class="sh-app-tag">Hyperhidrosis Management Products</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+AntipersFlex ACH</span><span class="sh-syn-desc">Combination systems for intermediate efficacy / cost optimisation.</span></div><div class="sh-syn"><span class="sh-syn-code">+PreserFlex EHG</span><span class="sh-syn-desc">Preservation for ZAG-based stick and roll-on formulations.</span></div></div>
+  
+</div>
+<div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">57158-29-9</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">White powder</span></div><div class="sh-spec-row"><span class="sh-spec-k">Al content</span><span class="sh-spec-v">~8–10%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Zr content</span><span class="sh-spec-v">~5–7%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Glycine content</span><span class="sh-spec-v">~1.5–2.5%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">10 – 20%</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">USA (FDA OTC)</span><span class="sh-reg-v">Standard antiperspirant ingredient</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil</span><span class="sh-reg-v">Approved</span></div></div>
+  
+  
+  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div></div>
+  </div>
+</section>
+<section class="sh-form-sec">
+  <div>
+    <p class="eyebrow">Formulation Systems</p>
+    <h2 class="sec-title">Ready-to-use systems<br/>for every formulation brief.</h2>
+    <p class="sec-sub">Application-ready combinations from the FUNC portfolio for the most common formulation challenges.</p>
+  </div>
+  <div class="sh-form-grid"><div class="sh-form-card">
+      <span class="sh-fc-num">System 01</span>
+      <h3 class="sh-fc-title">Standard Broad-Spectrum Preservation</h3>
+      <p class="sh-fc-body">The most widely used preservation system in professional cosmetics — phenoxyethanol + EDTA covers the full gram-positive, gram-negative and yeast spectrum at practical concentrations.</p>
+      <div class="sh-fc-prods"><div class="sh-fc-prod">PreserFlex PE · 0.8–1.0%</div><div class="sh-fc-prod">ChelaGuard 2 · 0.1–0.3%</div></div>
+      <span class="sh-fc-spf">ISO 11930 Compliant</span>
+    </div><div class="sh-form-card">
+      <span class="sh-fc-num">System 02</span>
+      <h3 class="sh-fc-title">Clean Beauty Preservation — Paraben-Free</h3>
+      <p class="sh-fc-body">Advanced preservation for clean beauty positioning. PE/EHG blend with EDTA support provides robust broad-spectrum coverage without parabens or formaldehyde releasers.</p>
+      <div class="sh-fc-prods"><div class="sh-fc-prod">PreserFlex EHG · 0.7–0.9%</div><div class="sh-fc-prod">ChelaGuard 2 · 0.1–0.2%</div></div>
+      <span class="sh-fc-spf">Clean Label · Paraben-Free</span>
+    </div><div class="sh-form-card">
+      <span class="sh-fc-num">System 03</span>
+      <h3 class="sh-fc-title">Vitamin C Serum Stabilisation</h3>
+      <p class="sh-fc-body">Complete formula stabilisation system for L-Ascorbic Acid serums — chelation prevents oxidation, preservation prevents microbial growth in the low-pH environment.</p>
+      <div class="sh-fc-prods"><div class="sh-fc-prod">ChelaGuard 2 · 0.3–0.5%</div><div class="sh-fc-prod">PreserFlex PE · 0.5–0.8%</div><div class="sh-fc-prod">System pH: 2.5–3.5</div></div>
+      <span class="sh-fc-spf">Vitamin C System</span>
+    </div></div>
+</section>
+<section class="sh-reg-sec">
+  <div>
+    <p class="eyebrow">Global Compliance</p>
+    <h2 class="sec-title">Every market.<br/>Every standard.</h2>
+  </div>
+  <div class="sh-reg-grid"><div class="sh-reg-card"><span class="sh-rc-flag">🇪🇺</span><h4 class="sh-rc-title">EU Annex V — Preservatives</h4><p class="sh-rc-body">PreserFlex preservatives comply with EU Cosmetics Regulation Annex V maximum concentrations. Full compliance documentation available.</p></div><div class="sh-reg-card"><span class="sh-rc-flag">🇧🇷</span><h4 class="sh-rc-title">ANVISA — Brazil</h4><p class="sh-rc-body">All preservatives and chelating agents approved under Brazilian RDC for cosmetic use at listed concentrations.</p></div><div class="sh-reg-card"><span class="sh-rc-flag">🇨🇳</span><h4 class="sh-rc-title">China IECIC</h4><p class="sh-rc-body">All FUNC actives listed in IECIC. Documentation for Chinese market registration available.</p></div><div class="sh-reg-card"><span class="sh-rc-flag">🌎</span><h4 class="sh-rc-title">GHS Safety Data</h4><p class="sh-rc-body">All FUNC actives supplied with 16-section GHS Safety Data Sheets. Full hazard communication documentation in multiple languages.</p></div></div>
+</section>
+<section class="sh-cta-sec">
+  <div>
+    <h2>Ready to build a<br/>formula that lasts?</h2>
+    <p>Our formulation team provides preservation system recommendations, challenge test guidance and chelation advice tailored to your specific product type and target market conditions.</p>
+  </div>
+  <div class="sh-cta-btns">
+    <a href="portal.html" class="btn-g">Full Technical Portal →</a>
+    <a href="index.html#contact" class="btn-p">Request Samples →</a>
+  </div>
+</section>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><span class="logo-m">VLYOR</span><br/><span class="logo-s">Science</span><p class="footer-tag">Molecular Integrity. Aesthetic Performance.</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h5>Portfolio</h5><ul>
+        <li><a href="shield.html">VLYOR SHIELD</a></li><li><a href="vital.html">VLYOR VITAL</a></li>
+        <li><a href="pure.html">VLYOR PURE</a></li><li><a href="func.html">VLYOR FUNC</a></li>
+        <li><a href="cond.html">VLYOR COND</a></li><li><a href="silk.html">VLYOR SILK</a></li>
+        <li><a href="form.html">VLYOR FORM</a></li><li><a href="hydra.html">VLYOR HYDRA</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Resources</h5><ul>
+        <li><a href="portal.html">Technical Portal</a></li>
+        <li><a href="index.html#contact">Request Sample</a></li>
+        <li><a href="index.html#standards">Compliance</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul>
+        <li><a href="mailto:science@vlyor.com">science@vlyor.com</a></li>
+        <li>Global Bioactives Hub</li><li>Suzhou, China</li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="ft-code">V3.0 — 2026</span>
+    <span>© VLYOR Science. All rights reserved.</span>
+    <span class="ft-code">REACH · IECIC · GHS</span>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script>
+const btns=document.querySelectorAll('.sh-sb-btn');
+const panels=document.querySelectorAll('.sh-panel');
+btns.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    btns.forEach(b=>b.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('prod-'+btn.dataset.prod).classList.add('active');
+    document.getElementById('explorer').scrollIntoView({behavior:'smooth'});
+  });
+});
+const bObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.querySelectorAll('.bar-fill').forEach((f,i)=>{
+        setTimeout(()=>{f.style.width=f.dataset.w+'%';},i*110);
+      });
+      bObs.unobserve(e.target);
+    }
+  });
+},{threshold:0.3});
+const sb=document.getElementById('sbars');
+if(sb)bObs.observe(sb);
+window.addEventListener('scroll',()=>{document.getElementById('mainnav').classList.toggle('scrolled',window.scrollY>40);},{passive:true});
+</script>
+</body></html>

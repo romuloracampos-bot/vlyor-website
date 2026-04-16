@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>VLYOR VITAL — Vitamins &amp; Bioactives | VLYOR Science</title>
+<meta name="description" content="VLYOR VITAL — 16 vitamins, AHAs, peptides and performance actives. Complete technical and commercial profiles for professional cosmetic formulators."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;500;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+:root{--acc:#60A5FA;--acc-bg:rgba(96,165,250,.08);--acc-border:rgba(96,165,250,.22);--line-dark:#1E3A8A}
+
+/* HERO */
+.vt-hero{min-height:78vh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;padding:0 40px 64px}
+.vt-bg{position:absolute;inset:0;background-image:url('images/vital.jpg');background-size:cover;background-position:center}
+.vt-ov{position:absolute;inset:0;background:linear-gradient(to top,#0D0D0D 0%,rgba(13,13,13,.72) 40%,rgba(30,58,138,.3) 100%)}
+.vt-grid{position:absolute;inset:0;display:flex;justify-content:space-around}
+.vt-grid span{width:1px;background:rgba(255,255,255,.035)}
+.vt-cnt{position:relative;z-index:2;max-width:860px}
+.vt-bc{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#6B7280;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.vt-bc a{color:#6B7280;transition:color .2s}.vt-bc a:hover{color:#fff}
+.vt-tag{display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc-border);padding:5px 12px;margin-bottom:18px}
+.vt-dot{width:6px;height:6px;border-radius:50%;background:var(--acc);flex-shrink:0}
+.vt-h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(52px,9vw,96px);font-weight:700;line-height:.92;letter-spacing:-.025em;margin-bottom:8px}
+.vt-h1 em{font-style:italic;font-weight:300;color:var(--acc)}
+.vt-sub{font-size:15px;line-height:1.72;color:#D1D5DB;max-width:62ch;margin-bottom:32px}
+.vt-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+.vt-stats{display:flex;gap:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
+.vt-stat{display:flex;flex-direction:column;gap:3px}
+.vt-stat-n{font-family:'Barlow Condensed',sans-serif;font-size:30px;font-weight:700;letter-spacing:-.02em}
+.vt-stat-l{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280}
+
+/* INTRO STRIP */
+.vt-intro{background:var(--line-dark);display:grid;grid-template-columns:repeat(4,1fr);gap:1px}
+.vt-in{background:rgba(255,255,255,.04);padding:28px;border-left:1px solid rgba(255,255,255,.05)}
+.vt-in:first-child{border-left:none}
+.vt-in-n{font-family:'Barlow Condensed',sans-serif;font-size:38px;font-weight:700;letter-spacing:-.02em;color:var(--acc);display:block;margin-bottom:5px}
+.vt-in-h{font-size:12px;font-weight:600;margin-bottom:5px}
+.vt-in-b{font-size:11px;line-height:1.65;color:rgba(255,255,255,.45)}
+
+/* COMMERCIAL */
+.vt-comm{padding:88px 40px;display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:start}
+.vt-comm-body{font-size:14px;line-height:1.82;color:#D1D5DB;margin-bottom:16px}
+.vt-comm-body strong{color:#fff;font-weight:600}
+.vt-quote{border-left:3px solid var(--acc);padding:14px 20px;margin:24px 0;background:var(--acc-bg)}
+.vt-quote p{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:500;line-height:1.35;font-style:italic}
+.vt-quote cite{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;display:block;margin-top:9px;font-style:normal}
+.cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cat-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);padding:18px}
+.cat-n{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:700;color:var(--acc);display:block;margin-bottom:4px;letter-spacing:-.02em}
+.cat-t{font-size:13px;font-weight:600;margin-bottom:5px}
+.cat-b{font-size:11px;line-height:1.6;color:#6B7280}
+
+/* EXPLORER */
+.vt-explorer{padding:0 0 88px}
+.vt-exp-hdr{padding:0 40px 40px}
+.vt-exp-layout{display:grid;grid-template-columns:280px 1fr;min-height:700px}
+.vt-sidebar{background:#111;border-right:1px solid rgba(255,255,255,.07)}
+.vt-sb-grp{border-bottom:1px solid rgba(255,255,255,.06)}
+.vt-sb-grp-hd{padding:14px 22px;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#4B5563}
+.vt-sb-btn{display:flex;align-items:center;gap:0;width:100%;padding:12px 22px;background:none;border:none;color:#9CA3AF;font-family:'Barlow',sans-serif;font-size:13px;cursor:pointer;transition:all .2s;text-align:left;border-left:2px solid transparent}
+.vt-sb-btn:hover{color:#fff;background:rgba(255,255,255,.03)}
+.vt-sb-btn.active{color:#fff;background:rgba(96,165,250,.07);border-left-color:var(--acc)}
+.vt-sb-cat{font-family:'DM Mono',monospace;font-size:8px;padding:2px 5px;margin-left:auto;flex-shrink:0}
+.c-vit{background:rgba(96,165,250,.15);color:var(--acc)}
+.c-act{background:rgba(167,243,208,.12);color:#A7F3D0}
+.c-aha{background:rgba(251,191,36,.1);color:#FCD34D}
+.c-pep{background:rgba(196,181,253,.12);color:#C4B5FD}
+.c-min{background:rgba(209,213,219,.08);color:#D1D5DB}
+
+/* PANEL */
+.vt-panel{display:none;animation:vtFade .25s ease}
+.vt-panel.active{display:block}
+@keyframes vtFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.vt-panel-inner{display:grid;grid-template-columns:1fr 380px;min-height:700px}
+.vt-pl{padding:40px 40px 40px 36px}
+.vt-pr{background:#0D0D0D;padding:36px 32px;display:flex;flex-direction:column;gap:24px;border-left:1px solid rgba(255,255,255,.06)}
+.vt-p-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:6px;margin-bottom:12px}
+.vt-p-name{font-family:'Barlow Condensed',sans-serif;font-size:44px;font-weight:700;letter-spacing:-.025em;line-height:.95;margin-bottom:6px}
+.vt-p-inci{font-family:'DM Mono',monospace;font-size:10px;color:#6B7280;letter-spacing:.04em;margin-bottom:18px;font-style:italic}
+.vt-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px}
+.vt-badge{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.04em;padding:4px 9px}
+.b-vit{background:rgba(96,165,250,.1);color:var(--acc)}
+.b-act{background:rgba(167,243,208,.1);color:#A7F3D0}
+.b-aha{background:rgba(251,191,36,.1);color:#FCD34D}
+.b-pep{background:rgba(196,181,253,.1);color:#C4B5FD}
+.b-min{background:rgba(209,213,219,.08);color:#D1D5DB}
+.b-warn{background:rgba(217,119,6,.1);color:#FCD34D}
+.vt-tagline{font-size:16px;line-height:1.65;color:#E5E7EB;margin-bottom:22px;font-style:italic;border-left:2px solid var(--acc);padding-left:16px}
+.vt-body{font-size:13px;line-height:1.82;color:#9CA3AF;margin-bottom:14px}
+.vt-body strong{color:#E5E7EB;font-weight:600}
+.vt-sh{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;margin:26px 0 11px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06)}
+.vt-app-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.vt-app-tag{font-family:'DM Mono',monospace;font-size:9px;padding:4px 10px;background:rgba(255,255,255,.05);color:#D1D5DB;letter-spacing:.03em}
+.vt-syn-list{display:flex;flex-direction:column;gap:5px;margin-bottom:16px}
+.vt-syn{display:flex;align-items:baseline;gap:10px;padding:8px 12px;background:rgba(255,255,255,.025);border-left:2px solid rgba(96,165,250,.3)}
+.vt-syn-code{font-family:'DM Mono',monospace;font-size:10px;color:var(--acc);flex-shrink:0;white-space:nowrap}
+.vt-syn-desc{font-size:12px;color:#9CA3AF}
+.vt-perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+.vt-perf-card{background:rgba(255,255,255,.03);padding:14px;border:1px solid rgba(255,255,255,.06)}
+.vt-perf-val{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:700;letter-spacing:-.02em;display:block;margin-bottom:3px}
+.vt-perf-lbl{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280}
+.vt-spec-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#6B7280;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:4px}
+.vt-spec-row{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px}
+.vt-spec-row:last-child{border-bottom:none}
+.vt-spec-k{color:#6B7280}
+.vt-spec-v{font-family:'DM Mono',monospace;font-size:11px;color:#fff;text-align:right;max-width:200px;word-break:break-word}
+.vt-reg-block{background:rgba(255,255,255,.025);padding:16px}
+.vt-reg-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;margin-bottom:10px}
+.vt-reg-row{display:flex;justify-content:space-between;font-size:11px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.vt-reg-row:last-child{border-bottom:none}
+.vt-reg-k{color:#6B7280}
+.vt-reg-v{font-family:'DM Mono',monospace;font-size:10px;color:#fff}
+.vt-alert{padding:14px 16px;background:rgba(96,165,250,.07);border:1px solid rgba(96,165,250,.2);margin-bottom:8px}
+.vt-alert-t{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin-bottom:7px}
+.vt-alert-b{font-size:12px;line-height:1.65;color:#D1D5DB}
+.vt-cta-btn{display:flex;align-items:center;justify-content:space-between;padding:13px 18px;background:var(--line-dark);color:var(--acc);border:1px solid var(--acc-border);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .25s;width:100%}
+.vt-cta-btn:hover{background:var(--acc-bg);border-color:var(--acc)}
+.vt-cta-btn svg{width:14px;height:14px;flex-shrink:0}
+
+/* FORMULATION SYSTEMS */
+.vt-form-sec{padding:88px 40px;background:#111}
+.vt-form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07);margin-top:48px}
+.vt-form-card{background:#111;padding:32px;transition:background .3s}
+.vt-form-card:hover{background:#161616}
+.vt-fc-num{font-family:'DM Mono',monospace;font-size:10px;color:var(--acc);letter-spacing:.08em;margin-bottom:14px;display:block}
+.vt-fc-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px;line-height:1.2}
+.vt-fc-body{font-size:12px;line-height:1.72;color:#6B7280;margin-bottom:16px}
+.vt-fc-prods{display:flex;flex-direction:column;gap:4px}
+.vt-fc-prod{font-family:'DM Mono',monospace;font-size:10px;color:#D1D5DB;padding:5px 8px;background:rgba(255,255,255,.03);display:flex;align-items:center;gap:7px}
+.vt-fc-prod::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--acc);flex-shrink:0}
+.vt-fc-label{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;color:var(--acc);margin-top:14px;display:block;letter-spacing:-.01em}
+
+/* REGULATORY */
+.vt-reg-sec{padding:88px 40px}
+.vt-reg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);margin-top:48px}
+.vt-reg-card{background:#0D0D0D;padding:24px;transition:background .3s}
+.vt-reg-card:hover{background:#111}
+.vt-rc-flag{font-size:22px;margin-bottom:12px;display:block}
+.vt-rc-title{font-size:13px;font-weight:600;margin-bottom:7px}
+.vt-rc-body{font-size:12px;line-height:1.65;color:#6B7280}
+
+/* CTA */
+.vt-cta-sec{background:var(--line-dark);padding:72px 40px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.vt-cta-sec h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(30px,4vw,48px);font-weight:700;letter-spacing:-.02em;line-height:1.05;margin-bottom:10px}
+.vt-cta-sec p{font-size:14px;color:rgba(255,255,255,.6);max-width:52ch}
+.vt-cta-btns{display:flex;gap:12px;flex-shrink:0;flex-wrap:wrap}
+
+@media(max-width:1100px){.vt-exp-layout{grid-template-columns:240px 1fr}.vt-panel-inner{grid-template-columns:1fr 320px}}
+@media(max-width:900px){
+  .vt-hero{padding:0 20px 48px}.vt-comm{grid-template-columns:1fr;gap:40px;padding:56px 20px}
+  .vt-exp-layout{grid-template-columns:1fr}.vt-sidebar{display:none}
+  .vt-panel-inner{grid-template-columns:1fr}.vt-pr{display:none}
+  .vt-form-grid{grid-template-columns:1fr}.vt-intro{grid-template-columns:1fr 1fr}
+  .vt-cta-sec{grid-template-columns:1fr}.vt-explorer,.vt-form-sec,.vt-reg-sec{padding-left:20px;padding-right:20px}
+  .vt-exp-hdr{padding-left:20px;padding-right:20px}
+}
+@media(max-width:600px){.vt-intro{grid-template-columns:1fr}.vt-stats{gap:24px}.cat-grid{grid-template-columns:1fr}.vt-reg-grid{grid-template-columns:1fr 1fr}.vt-form-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav id="mainnav">
+  <a class="logo" href="index.html">
+    <span class="logo-m">VLYOR</span>
+    <span class="logo-s">Science <span class="logo-p">|</span> Global Bioactives Hub</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#lines">Portfolio</a>
+    <a href="index.html#about">Philosophy</a>
+    <a href="index.html#standards">Standards</a>
+    <a href="portal.html" class="nav-portal">Technical Portal →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="vt-hero">
+  <div class="vt-bg"></div>
+  <div class="vt-ov"></div>
+  <div class="vt-grid"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="vt-cnt">
+    <div class="vt-bc">
+      <a href="index.html">VLYOR Science</a><span>→</span>
+      <a href="index.html#lines">Portfolio</a><span>→</span>
+      <span style="color:#fff">VLYOR VITAL</span>
+    </div>
+    <div class="vt-tag"><div class="vt-dot"></div>Vitamins &amp; Bioactives · 16 Performance Actives</div>
+    <h1 class="vt-h1">Bioactive<br/><em>Precision.</em></h1>
+    <p class="vt-sub">Sixteen vitamins, acids, peptides and performance actives — each verified to pharmaceutical-grade purity standards. From classical vitamins B5 and E to next-generation retinol alternatives and multi-weight hyaluronic acid. The complete bioactive toolkit for high-efficacy cosmetic formulation.</p>
+    <div class="vt-actions">
+      <a href="#explorer" class="btn-p">Explore 16 Actives ↓</a>
+      <a href="index.html#contact" class="btn-g">Request Technical Dossier</a>
+    </div>
+    <div class="vt-stats">
+      <div class="vt-stat"><span class="vt-stat-n">16</span><span class="vt-stat-l">Bioactive Actives</span></div>
+      <div class="vt-stat"><span class="vt-stat-n">≥98.0%</span><span class="vt-stat-l">Purity Minimum</span></div>
+      <div class="vt-stat"><span class="vt-stat-n">5</span><span class="vt-stat-l">Active Categories</span></div>
+      <div class="vt-stat"><span class="vt-stat-n">6+</span><span class="vt-stat-l">Regulated Markets</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<div class="vt-intro">
+  <div class="vt-in"><span class="vt-in-n">5</span><p class="vt-in-h">Active Categories</p><p class="vt-in-b">Vitamins, AHAs, brightening agents, peptides, mineral actives and functional specialty — the full spectrum of cosmetic bioactive function.</p></div>
+  <div class="vt-in"><span class="vt-in-n">≥98%</span><p class="vt-in-h">Purity on All Actives</p><p class="vt-in-b">Every VITAL active is verified by HPLC or equivalent analytical method. The purity level that makes efficacy claims deliverable, not aspirational.</p></div>
+  <div class="vt-in"><span class="vt-in-n">1.5M</span><p class="vt-in-h">Hyaluronic Acid Max. MW</p><p class="vt-in-b">HyalActiv Series available at 1.0–1.5 MDa — high-molecular-weight grades for surface-acting hydration and barrier-compatible film formation.</p></div>
+  <div class="vt-in"><span class="vt-in-n">100%</span><p class="vt-in-h">GHS Documented</p><p class="vt-in-b">Every VITAL active ships with a 16-section GHS Safety Data Sheet and full Certificate of Analysis in English, Portuguese and Spanish.</p></div>
+</div>
+
+<!-- COMMERCIAL -->
+<section class="vt-comm">
+  <div>
+    <p class="eyebrow">The Performance Argument</p>
+    <h2 class="sec-title">Active ingredients that<br/>earn their label claim.</h2>
+    <p class="vt-comm-body">The cosmetic active market is saturated with ingredients that perform in vitro and disappoint in-formula. The difference between a bioactive that delivers and one that does not comes down to three variables: <strong>purity, stability and delivery concentration</strong>. An ascorbic acid at 90% assay does not behave the same as one at 99.7%. A hyaluronic acid outside its molecular weight specification does not film-form as claimed. These are not edge cases — they are the routine quality failures of commodity active supply.</p>
+    <p class="vt-comm-body">VLYOR VITAL was built on a single principle: <strong>every active in the portfolio must perform to its specification, every time, at the concentration stated in the TDS</strong>. This means verified assay on each batch, real molecular weight data on hyaluronic acid grades, and full characterisation documentation — not a supplier specification sheet rebranded under a private label.</p>
+    <div class="vt-quote">
+      <p>"An efficacy claim is only as strong as the active behind it. The formulator who understands this selects ingredients differently — and their products perform differently in the market."</p>
+      <cite>VLYOR Science — Bioactive Standards Position</cite>
+    </div>
+    <p class="vt-comm-body">The VITAL portfolio covers the five categories of bioactive function driving the majority of premium cosmetic efficacy claims globally: <strong>skin conditioning and repair</strong> (panthenol, allantoin), <strong>antioxidant protection</strong> (tocopheryl acetate, CoQ10), <strong>brightening and pigmentation control</strong> (niacinamide, kojic acid, vitamin C), <strong>hydration and barrier support</strong> (sodium hyaluronate), and <strong>anti-ageing and renewal</strong> (retinyl palmitate, bakuchiol, AHAs, copper tripeptide).</p>
+  </div>
+  <div>
+    <p class="eyebrow" style="margin-bottom:18px">Active Categories — VLYOR VITAL</p>
+    <div class="cat-grid">
+      <div class="cat-card"><span class="cat-n">5</span><p class="cat-t">Vitamins</p><p class="cat-b">B5 (×2 grades), E, A and C — classical vitamins at pharmaceutical-grade purity</p></div>
+      <div class="cat-card"><span class="cat-n">4</span><p class="cat-t">Performance Actives</p><p class="cat-b">Niacinamide, bakuchiol, CoQ10 and copper tripeptide — high-value claim actives</p></div>
+      <div class="cat-card"><span class="cat-n">3</span><p class="cat-t">Brightening Agents</p><p class="cat-b">Kojic acid, mandelic acid and niacinamide — multi-mechanism pigmentation control</p></div>
+      <div class="cat-card"><span class="cat-n">2</span><p class="cat-t">Alpha-Hydroxy Acids</p><p class="cat-b">Mandelic and malic acids — mild AHAs for resurfacing and texture refinement</p></div>
+      <div class="cat-card"><span class="cat-n">2</span><p class="cat-t">Hydration &amp; Soothing</p><p class="cat-b">Sodium hyaluronate 1.0–1.5 MDa and allantoin — barrier support and comfort</p></div>
+      <div class="cat-card"><span class="cat-n">2</span><p class="cat-t">Functional Specialty</p><p class="cat-b">Menthol crystal and hydroxyapatite — sensory and mineral active applications</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORER -->
+<section id="explorer" class="vt-explorer">
+  <div class="vt-exp-hdr">
+    <p class="eyebrow">The VITAL Portfolio</p>
+    <h2 class="sec-title">16 actives.<br/>Verified performance.</h2>
+    <p class="sec-sub">Select any active for complete commercial profile, technical specifications, performance data and formulation guidance.</p>
+  </div>
+  <div class="vt-exp-layout">
+
+    <aside class="vt-sidebar">
+      <div class="vt-sb-grp">
+        <div class="vt-sb-grp-hd">Vitamins</div>
+        <button class="vt-sb-btn active" data-p="pantho98">PanthoActiv 98 <span class="vt-sb-cat c-vit">Vit. B5</span></button>
+        <button class="vt-sb-btn" data-p="panthodl">PanthoActiv DL <span class="vt-sb-cat c-vit">Vit. B5</span></button>
+        <button class="vt-sb-btn" data-p="toco">TocoActiv E <span class="vt-sb-cat c-vit">Vit. E</span></button>
+        <button class="vt-sb-btn" data-p="retin">RetinActiv A <span class="vt-sb-cat c-vit">Vit. A</span></button>
+        <button class="vt-sb-btn" data-p="ascor">AscorActiv C <span class="vt-sb-cat c-vit">Vit. C</span></button>
+      </div>
+      <div class="vt-sb-grp">
+        <div class="vt-sb-grp-hd">Performance Actives</div>
+        <button class="vt-sb-btn" data-p="niaci">NiaciActiv <span class="vt-sb-cat c-act">Vit. B3</span></button>
+        <button class="vt-sb-btn" data-p="baku">BakuActiv <span class="vt-sb-cat c-act">Retinol Alt.</span></button>
+        <button class="vt-sb-btn" data-p="coenz">CoenzActiv Q10 <span class="vt-sb-cat c-act">Antioxidant</span></button>
+        <button class="vt-sb-btn" data-p="copper">CuActiv <span class="vt-sb-cat c-pep">Peptide</span></button>
+      </div>
+      <div class="vt-sb-grp">
+        <div class="vt-sb-grp-hd">Brightening &amp; AHA</div>
+        <button class="vt-sb-btn" data-p="kojic">KojicActiv <span class="vt-sb-cat c-aha">Brightening</span></button>
+        <button class="vt-sb-btn" data-p="mandel">MandelActiv <span class="vt-sb-cat c-aha">AHA</span></button>
+        <button class="vt-sb-btn" data-p="malic">MalicActiv <span class="vt-sb-cat c-aha">AHA</span></button>
+      </div>
+      <div class="vt-sb-grp">
+        <div class="vt-sb-grp-hd">Hydration &amp; Specialty</div>
+        <button class="vt-sb-btn" data-p="hyal">HyalActiv Series <span class="vt-sb-cat c-act">HA</span></button>
+        <button class="vt-sb-btn" data-p="allan">AllanActiv <span class="vt-sb-cat c-act">Soothing</span></button>
+        <button class="vt-sb-btn" data-p="mentho">MenthoActiv <span class="vt-sb-cat c-min">Cooling</span></button>
+        <button class="vt-sb-btn" data-p="hydroxy">HydroxyActiv <span class="vt-sb-cat c-min">Mineral</span></button>
+      </div>
+    </aside>
+
+    <div id="vt-panels">
+
+<!-- ═══ PANTHOACTIV 98 ═══ -->
+<div class="vt-panel active" id="p-pantho98">
+<div class="vt-panel-inner">
+<div class="vt-pl">
+  <div class="vt-p-tag"><div class="vt-dot"></div>VLYOR VITAL — Vitamin B5 · D-Form</div>
+  <h2 class="vt-p-name">PanthoActiv 98</h2>
+  <p class="vt-p-inci">D-Panthenol (98.0% Minimum Assay)</p>
+  <div class="vt-badges"><span class="vt-badge b-vit">Vitamin B5</span><span class="vt-badge b-act">D-Form · High Purity</span><span class="vt-badge b-act">Skin &amp; Hair</span></div>
+  <p class="vt-tagline">"The most broadly used conditioning active in cosmetics — at the purity level that actually delivers on every claim."</p>
+  <p class="vt-body">PanthoActiv 98 is VLYOR's premium-grade <strong>D-Panthenol at a minimum assay of 98.0%</strong> — the biologically active enantiomer of panthenol. Once applied to skin or hair, it is enzymatically converted to pantothenic acid (Vitamin B5), a key component in the synthesis of Coenzyme A and essential to cellular metabolism, keratinocyte proliferation and tissue repair.</p>
+  <p class="vt-body">In cosmetic application, PanthoActiv 98 delivers three well-established mechanisms simultaneously: <strong>humectancy</strong> (hygroscopic properties that bind moisture in the stratum corneum), <strong>skin barrier support</strong> (stimulates keratinocyte differentiation to reinforce the cornified envelope and reduce TEWL), and <strong>anti-inflammatory activity</strong> (reduces cytokine-mediated irritation responses, particularly relevant in post-procedure and sensitive-skin formulations). In hair applications, it penetrates the cuticle and cortex, improves tensile strength, reduces breakage under mechanical stress and imparts softness and shine.</p>
+  <p class="vt-body">The 98% assay specification matters commercially: <strong>D-Panthenol at 85–90% assay — standard in lower-cost supply chains — contains significant proportions of inactive L-panthenol and process impurities</strong> that dilute efficacy and can cause formulation instability at acidic pH. At 98%, dosing is precise, results are predictable, and the efficacy published in the clinical literature is reproducible.</p>
+  <div class="vt-perf-grid">
+    <div class="vt-perf-card"><span class="vt-perf-val">≥98.0%</span><span class="vt-perf-lbl">Assay D-form</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">0.5–2.0%</span><span class="vt-perf-lbl">Effective Dose</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">+28 – +30.5°</span><span class="vt-perf-lbl">Optical Rotation [α]D</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">pH 4–8</span><span class="vt-perf-lbl">Stability Range</span></div>
+  </div>
+  <p class="vt-sh">Formulation Applications</p>
+  <div class="vt-app-tags"><span class="vt-app-tag">Shampoo &amp; Conditioner</span><span class="vt-app-tag">Leave-in Hair Treatment</span><span class="vt-app-tag">Facial Serums</span><span class="vt-app-tag">Body Lotions</span><span class="vt-app-tag">Post-Procedure Recovery</span><span class="vt-app-tag">Baby &amp; Sensitive Skin</span><span class="vt-app-tag">Eye Area Formulas</span><span class="vt-app-tag">After-Sun Products</span></div>
+  <p class="vt-sh">Synergistic Combinations</p>
+  <div class="vt-syn-list">
+    <div class="vt-syn"><span class="vt-syn-code">+ AllanActiv</span><span class="vt-syn-desc">Classic repair pair — panthenol rebuilds, allantoin soothes. Standard for sensitive skin, post-procedure and after-sun.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ HyalActiv Series</span><span class="vt-syn-desc">Multi-layer hydration: panthenol conditions the barrier, hyaluronate provides surface humectancy. Complete moisturisation architecture.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ NiaciActiv</span><span class="vt-syn-desc">Barrier repair combination — panthenol addresses structural conditioning, niacinamide reduces inflammation and regulates ceramide synthesis.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ TocoActiv E</span><span class="vt-syn-desc">Conditioning + antioxidant pair — extends protection against oxidative stress while maintaining skin comfort.</span></div>
+  </div>
+</div>
+<div class="vt-pr">
+  <div>
+    <p class="vt-spec-title">Technical Specifications</p>
+    <div class="vt-spec-row"><span class="vt-spec-k">CAS Number</span><span class="vt-spec-v">81-13-0</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">INCI Name</span><span class="vt-spec-v">D-Panthenol</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Assay (HPLC)</span><span class="vt-spec-v">≥ 98.0% (D-form)</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Optical rotation [α]D</span><span class="vt-spec-v">+28.0° to +30.5°</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Appearance</span><span class="vt-spec-v">Colourless viscous liquid</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Molecular weight</span><span class="vt-spec-v">205.25 g/mol</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Refractive index (20°C)</span><span class="vt-spec-v">1.497 – 1.500</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Solubility</span><span class="vt-spec-v">Water &amp; alcohol-soluble</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Incorporation phase</span><span class="vt-spec-v">Aqueous · ≤ 85°C</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Recommended dosage</span><span class="vt-spec-v">0.5 – 2.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">pH stability</span><span class="vt-spec-v">4 – 8</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">IECIC / REACH</span><span class="vt-spec-v">Listed / Pre-registered</span></div>
+  </div>
+  <div class="vt-reg-block">
+    <p class="vt-reg-title">Global Regulatory Status</p>
+    <div class="vt-reg-row"><span class="vt-reg-k">EU</span><span class="vt-reg-v">No restriction</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">Brazil (ANVISA)</span><span class="vt-reg-v">Approved · No limit</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">USA (FDA)</span><span class="vt-reg-v">GRAS · No restriction</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">China IECIC</span><span class="vt-reg-v">Listed</span></div>
+  </div>
+  <button class="vt-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- ═══ PANTHOACTIV DL ═══ -->
+<div class="vt-panel" id="p-panthodl">
+<div class="vt-panel-inner">
+<div class="vt-pl">
+  <div class="vt-p-tag"><div class="vt-dot"></div>VLYOR VITAL — Vitamin B5 · Racemic Grade</div>
+  <h2 class="vt-p-name">PanthoActiv DL</h2>
+  <p class="vt-p-inci">DL-Panthenol</p>
+  <div class="vt-badges"><span class="vt-badge b-vit">Vitamin B5</span><span class="vt-badge b-act">Racemic · Volume Grade</span></div>
+  <p class="vt-tagline">"The cost-optimised Vitamin B5 — for high-volume formulations where performance at scale is the brief."</p>
+  <p class="vt-body">PanthoActiv DL is the <strong>racemic (DL) form of panthenol</strong> — an equal mixture of D- and L-panthenol enantiomers. Only the D-form is biologically active, meaning PanthoActiv DL delivers approximately 50% of the active dose per gram compared to PanthoActiv 98. This makes it appropriate for <strong>high-volume rinse-off formulations</strong> — shampoos, body washes, conditioners — where panthenol's sensory contribution (slip, softness, manageability) is the primary objective and cost efficiency is critical.</p>
+  <p class="vt-body">PanthoActiv DL is <strong>the global volume standard for panthenol</strong>. The majority of commercial shampoos, conditioners and body lotions in the LATAM market use DL-panthenol at 0.5–1.0% for cost-effective conditioning claims. The choice between DL and D-grade is a commercial and technical decision: <strong>for leave-on treatments, serums and products making specific skin repair, barrier function or wound-healing claims, PanthoActiv 98 is the correct specification</strong>. For volume rinse-off conditioning, PanthoActiv DL delivers equivalent sensory results at half the active-ingredient cost.</p>
+  <div class="vt-perf-grid">
+    <div class="vt-perf-card"><span class="vt-perf-val">≥98.0%</span><span class="vt-perf-lbl">Total Assay (D+L)</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">~50%</span><span class="vt-perf-lbl">Active D-form Content</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">0.5–1.5%</span><span class="vt-perf-lbl">Typical Dosage</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">pH 4–8</span><span class="vt-perf-lbl">Stability Range</span></div>
+  </div>
+  <p class="vt-sh">When to Choose DL vs 98</p>
+  <div class="vt-syn-list">
+    <div class="vt-syn"><span class="vt-syn-code">PanthoActiv DL</span><span class="vt-syn-desc">Rinse-off formulations · Mass market · Cost-sensitive briefs · When sensory contribution rather than active dose is the objective</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">PanthoActiv 98</span><span class="vt-syn-desc">Leave-on serums and treatments · Sensitive skin · Barrier repair claims · Premium positioning · Post-procedure applications</span></div>
+  </div>
+  <p class="vt-sh">Formulation Applications</p>
+  <div class="vt-app-tags"><span class="vt-app-tag">Shampoo (Rinse-off)</span><span class="vt-app-tag">Body Wash</span><span class="vt-app-tag">Conditioner</span><span class="vt-app-tag">Volume B5 Positioning</span><span class="vt-app-tag">Mass-Market Hair Care</span></div>
+</div>
+<div class="vt-pr">
+  <div>
+    <p class="vt-spec-title">Technical Specifications</p>
+    <div class="vt-spec-row"><span class="vt-spec-k">CAS Number</span><span class="vt-spec-v">16485-10-2</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">INCI Name</span><span class="vt-spec-v">DL-Panthenol</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Assay (total)</span><span class="vt-spec-v">≥ 98.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Active D-form</span><span class="vt-spec-v">~50%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Appearance</span><span class="vt-spec-v">Colourless to pale yellow liquid</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Molecular weight</span><span class="vt-spec-v">205.25 g/mol</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Solubility</span><span class="vt-spec-v">Water &amp; alcohol-soluble</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Recommended dosage</span><span class="vt-spec-v">0.5 – 1.5%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">pH stability</span><span class="vt-spec-v">4 – 8</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Incorporation phase</span><span class="vt-spec-v">Aqueous · ≤ 85°C</span></div>
+  </div>
+  <div class="vt-reg-block">
+    <p class="vt-reg-title">Global Regulatory Status</p>
+    <div class="vt-reg-row"><span class="vt-reg-k">EU / BR / LATAM / USA</span><span class="vt-reg-v">Approved · No restriction</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">China IECIC</span><span class="vt-reg-v">Listed</span></div>
+  </div>
+  <button class="vt-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- ═══ TOCOACTIV E ═══ -->
+<div class="vt-panel" id="p-toco">
+<div class="vt-panel-inner">
+<div class="vt-pl">
+  <div class="vt-p-tag"><div class="vt-dot"></div>VLYOR VITAL — Vitamin E</div>
+  <h2 class="vt-p-name">TocoActiv E</h2>
+  <p class="vt-p-inci">Tocopheryl Acetate</p>
+  <div class="vt-badges"><span class="vt-badge b-vit">Vitamin E</span><span class="vt-badge b-act">Antioxidant</span><span class="vt-badge b-act">Lipid-Stabiliser</span></div>
+  <p class="vt-tagline">"The oil-phase antioxidant that protects the formula and the skin simultaneously."</p>
+  <p class="vt-body">TocoActiv E (tocopheryl acetate) is the most commercially used form of Vitamin E in cosmetic formulation — the <strong>acetate ester of alpha-tocopherol</strong> that provides superior oxidative stability compared to free tocopherol while delivering identical biological efficacy once de-esterified by skin esterases upon application. The esterification serves a dual commercial purpose: it <strong>stabilises the ingredient itself</strong> against air oxidation during manufacturing and shelf life, and it <strong>protects lipid-containing formulas</strong> from rancidity and peroxide formation by acting as a chain-breaking antioxidant in the oil phase.</p>
+  <p class="vt-body">Biologically, TocoActiv E is converted to alpha-tocopherol in the stratum corneum and dermis, where it integrates into cell membrane phospholipid bilayers and <strong>neutralises lipid peroxyl radicals</strong> before they propagate oxidative damage. This mechanism provides direct protection against UV-induced lipid peroxidation, reduces photoageing markers and supports the skin's natural antioxidant network. At ≥97.0% assay, maximum specific antioxidant activity per gram is guaranteed.</p>
+  <div class="vt-perf-grid">
+    <div class="vt-perf-card"><span class="vt-perf-val">≥97.0%</span><span class="vt-perf-lbl">Assay (HPLC)</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">0.1–1.0%</span><span class="vt-perf-lbl">Effective Dose Range</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">Oil Phase</span><span class="vt-perf-lbl">Incorporation</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">Excellent</span><span class="vt-perf-lbl">Oxidative Stability</span></div>
+  </div>
+  <p class="vt-sh">Performance Highlights</p>
+  <p class="vt-body"><strong>Formula oxidative protection:</strong> TocoActiv E at 0.1–0.5% in the oil phase extends the oxidative stability of lipid-rich formulas by 3–6 months in accelerated shelf-life testing, measurably reducing peroxide value development and preventing rancid odour formation — particularly critical in formulas containing polyunsaturated oils (rosehip, argan, sea buckthorn) that oxidise rapidly without antioxidant protection.</p>
+  <p class="vt-body"><strong>Skin antioxidant contribution:</strong> At 0.5–1.0% in leave-on formulas, TocoActiv E contributes measurably to skin surface antioxidant capacity under UV exposure, reducing singlet oxygen and peroxyl radical activity in the stratum corneum. This supports photodamage prevention claims and reduces the rate of UV-induced lipid peroxidation independently of UV filter systems.</p>
+  <p class="vt-sh">Formulation Applications</p>
+  <div class="vt-app-tags"><span class="vt-app-tag">Facial Serums &amp; Oils</span><span class="vt-app-tag">Anti-Ageing Creams</span><span class="vt-app-tag">Body Oils &amp; Lotions</span><span class="vt-app-tag">Lip Care</span><span class="vt-app-tag">SPF Formulas</span><span class="vt-app-tag">Anhydrous Concentrates</span><span class="vt-app-tag">Hair Oils</span></div>
+  <p class="vt-sh">Synergistic Combinations</p>
+  <div class="vt-syn-list">
+    <div class="vt-syn"><span class="vt-syn-code">+ AscorActiv C</span><span class="vt-syn-desc">Classic C+E synergy — ascorbic acid regenerates oxidised tocopherol, extending antioxidant activity lifetime. Most validated topical antioxidant combination.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ CoenzActiv Q10</span><span class="vt-syn-desc">Lipophilic antioxidant stack — multiple chain-breaking mechanisms in the oil phase and at cellular membranes.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ RetinActiv A</span><span class="vt-syn-desc">Tocopheryl acetate stabilises retinyl palmitate against oxidative degradation while adding independent antioxidant activity.</span></div>
+  </div>
+</div>
+<div class="vt-pr">
+  <div>
+    <p class="vt-spec-title">Technical Specifications</p>
+    <div class="vt-spec-row"><span class="vt-spec-k">CAS Number</span><span class="vt-spec-v">58-95-7</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">INCI Name</span><span class="vt-spec-v">Tocopheryl Acetate</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Assay (HPLC)</span><span class="vt-spec-v">≥ 97.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Appearance</span><span class="vt-spec-v">Clear pale yellow oily liquid</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Molecular weight</span><span class="vt-spec-v">472.7 g/mol</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Refractive index (20°C)</span><span class="vt-spec-v">1.494 – 1.498</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Solubility</span><span class="vt-spec-v">Oil-soluble · Insoluble in water</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Incorporation phase</span><span class="vt-spec-v">Oil phase · ≤ 80°C</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Recommended dosage</span><span class="vt-spec-v">0.1 – 1.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">IECIC / REACH</span><span class="vt-spec-v">Listed / Pre-registered</span></div>
+  </div>
+  <div class="vt-reg-block">
+    <p class="vt-reg-title">Global Regulatory Status</p>
+    <div class="vt-reg-row"><span class="vt-reg-k">EU / BR / LATAM / USA</span><span class="vt-reg-v">No restriction</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">China IECIC</span><span class="vt-reg-v">Listed</span></div>
+  </div>
+  <button class="vt-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- ═══ RETINACTIV A ═══ -->
+<div class="vt-panel" id="p-retin">
+<div class="vt-panel-inner">
+<div class="vt-pl">
+  <div class="vt-p-tag"><div class="vt-dot"></div>VLYOR VITAL — Vitamin A</div>
+  <h2 class="vt-p-name">RetinActiv A</h2>
+  <p class="vt-p-inci">Retinyl Palmitate 1,700,000 IU/g</p>
+  <div class="vt-badges"><span class="vt-badge b-vit">Vitamin A</span><span class="vt-badge b-act">Anti-Ageing</span><span class="vt-badge b-warn">Light &amp; O₂ Sensitive</span></div>
+  <p class="vt-tagline">"The gentlest retinoid — proven anti-ageing activity with a tolerability profile suitable for every skin type."</p>
+  <p class="vt-body">RetinActiv A (retinyl palmitate) is the <strong>fatty acid ester of retinol and palmitic acid</strong> — the most stable and best-tolerated form of Vitamin A in cosmetic use. Enzymatically hydrolysed in the epidermis to retinol and subsequently oxidised to retinoic acid, it activates retinoid nuclear receptors (RAR, RXR), stimulates collagen synthesis via upregulation of COL1A1 and COL3A1, accelerates cellular turnover and reduces hyperpigmentation — the same biological cascade as prescription retinoic acid, at a substantially lower irritation and photosensitivity burden.</p>
+  <p class="vt-body">Supplied at <strong>1,700,000 IU/g</strong> — the internationally recognised concentration specification for cosmetic retinyl palmitate — enabling precise dosing against published clinical protocols and regulatory guidelines. This is the concentrated active, not a premix: formulators retain full control over final concentration and carrier selection.</p>
+  <p class="vt-body">Stability management is non-negotiable: RetinActiv A is <strong>highly sensitive to light, oxygen and heat</strong>. It must be incorporated at cool-down (≤40°C), protected by antioxidants (TocoActiv E, AscorActiv C), and packaged in opaque or airless containers to maintain potency throughout shelf life.</p>
+  <div class="vt-perf-grid">
+    <div class="vt-perf-card"><span class="vt-perf-val">1.7M IU/g</span><span class="vt-perf-lbl">Concentration</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">0.1–0.5%</span><span class="vt-perf-lbl">Effective Dose Range</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">≤40°C</span><span class="vt-perf-lbl">Max. Incorporation Temp.</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">Oil Phase</span><span class="vt-perf-lbl">Incorporation</span></div>
+  </div>
+  <div class="vt-alert">
+    <p class="vt-alert-t">Stability Protocol — Essential</p>
+    <p class="vt-alert-b">Add to oil phase at cool-down only, ≤40°C. Always formulate with antioxidants: minimum 0.1% TocoActiv E. Use opaque or airless packaging. Nitrogen blanketing during manufacturing is recommended. Incompatible with strong oxidising agents and peroxides. EU Annex V applies — verify concentration limits per product category.</p>
+  </div>
+  <p class="vt-sh">Formulation Applications</p>
+  <div class="vt-app-tags"><span class="vt-app-tag">Anti-Ageing Night Creams</span><span class="vt-app-tag">Retinoid Serums</span><span class="vt-app-tag">Eye Area Treatments</span><span class="vt-app-tag">Body Anti-Ageing</span><span class="vt-app-tag">Photoageing Correction</span></div>
+  <p class="vt-sh">Synergistic Combinations</p>
+  <div class="vt-syn-list">
+    <div class="vt-syn"><span class="vt-syn-code">+ TocoActiv E</span><span class="vt-syn-desc">Antioxidant protection of retinyl palmitate — significantly extends formula shelf-life and potency.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ NiaciActiv</span><span class="vt-syn-desc">Complements retinoid activity with independent anti-ageing mechanisms while reducing potential irritation through anti-inflammatory pathways.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ BakuActiv</span><span class="vt-syn-desc">Retinoid + retinol alternative — multi-pathway renewal at sub-irritant doses of each active for sensitive skin positioning.</span></div>
+  </div>
+</div>
+<div class="vt-pr">
+  <div>
+    <p class="vt-spec-title">Technical Specifications</p>
+    <div class="vt-spec-row"><span class="vt-spec-k">CAS Number</span><span class="vt-spec-v">79-81-2</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">INCI Name</span><span class="vt-spec-v">Retinyl Palmitate</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Concentration</span><span class="vt-spec-v">1,700,000 IU/g</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Appearance</span><span class="vt-spec-v">Pale to yellow oily liquid</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Molecular weight</span><span class="vt-spec-v">524.9 g/mol</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Solubility</span><span class="vt-spec-v">Oil-soluble</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Max. incorporation temp.</span><span class="vt-spec-v">≤ 40°C (cool-down)</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Recommended dosage</span><span class="vt-spec-v">0.1 – 0.5%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Light sensitivity</span><span class="vt-spec-v">High — opaque pkg required</span></div>
+  </div>
+  <div class="vt-reg-block">
+    <p class="vt-reg-title">Regulatory Concentration Limits</p>
+    <div class="vt-reg-row"><span class="vt-reg-k">EU (Annex V)</span><span class="vt-reg-v">35,000 IU/g body · 13,333 IU/g face</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">Brazil (ANVISA)</span><span class="vt-reg-v">Approved per RDC guidance</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">USA</span><span class="vt-reg-v">OTC cosmetic · No restriction</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">China IECIC</span><span class="vt-reg-v">Listed</span></div>
+  </div>
+  <button class="vt-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- ═══ ASCOR C ═══ -->
+<div class="vt-panel" id="p-ascor">
+<div class="vt-panel-inner">
+<div class="vt-pl">
+  <div class="vt-p-tag"><div class="vt-dot"></div>VLYOR VITAL — Vitamin C</div>
+  <h2 class="vt-p-name">AscorActiv C</h2>
+  <p class="vt-p-inci">Ascorbic Acid (L-Ascorbic Acid)</p>
+  <div class="vt-badges"><span class="vt-badge b-vit">Vitamin C</span><span class="vt-badge b-act">Antioxidant</span><span class="vt-badge b-act">Brightening</span><span class="vt-badge b-warn">pH-Sensitive</span></div>
+  <p class="vt-tagline">"The most studied topical antioxidant — and the most demanding to formulate correctly."</p>
+  <p class="vt-body">AscorActiv C (L-ascorbic acid) is the <strong>biologically active form of Vitamin C</strong> and the most clinically studied topical antioxidant in cosmetic science. At 10–20%, it delivers measurable collagen synthesis stimulation, reduces UV-induced pigmentation via tyrosinase inhibition, neutralises reactive oxygen species in the epidermis, and contributes to the skin's photoprotective capacity — independently of UV filter systems.</p>
+  <p class="vt-body">The formulation challenge is well-established: <strong>L-ascorbic acid is inherently unstable at neutral pH and in the presence of water</strong>, oxidising progressively to dehydroascorbic acid and diketogulonic acid — compounds with no biological activity that cause characteristic product yellowing. Stable, efficacious formulations require pH below 3.5, low water activity or anhydrous environment, antioxidant co-actives and appropriate packaging. At ≥99.7% assay, AscorActiv C ensures maximum active content per gram and minimises the oxidation impurities that accelerate degradation cascades.</p>
+  <div class="vt-perf-grid">
+    <div class="vt-perf-card"><span class="vt-perf-val">≥99.7%</span><span class="vt-perf-lbl">Assay (HPLC)</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">5–20%</span><span class="vt-perf-lbl">Effective Dose Range</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">pH &lt; 3.5</span><span class="vt-perf-lbl">Stability Requirement</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">Water-sol.</span><span class="vt-perf-lbl">Solubility</span></div>
+  </div>
+  <p class="vt-sh">Clinical Performance Highlights</p>
+  <p class="vt-body"><strong>Collagen synthesis:</strong> L-ascorbic acid is essential for the hydroxylation of proline and lysine in procollagen synthesis — the rate-limiting step in collagen crosslinking. At 10–20% topical application, published studies demonstrate measurable increases in type I collagen mRNA expression and procollagen synthesis, with reduction in fine line depth after 12 weeks of consistent use.</p>
+  <p class="vt-body"><strong>Brightening mechanism:</strong> AscorActiv C inhibits tyrosinase at multiple points in the melanogenesis pathway, reducing new melanin synthesis and the DOPA → dopaquinone conversion. Clinical reduction in UV-induced and post-inflammatory hyperpigmentation has been demonstrated at 5–15% in multiple randomised controlled trials.</p>
+  <div class="vt-alert">
+    <p class="vt-alert-t">Stability Protocol — Critical</p>
+    <p class="vt-alert-b">Formulate at pH 2.5–3.5. Minimise water activity where possible. Combine with 0.1–0.5% TocoActiv E as antioxidant co-active. Use nitrogen blanketing during manufacturing. Opaque or airless packaging essential. Do not combine with oxidising preservatives or high-pH actives in the same phase.</p>
+  </div>
+  <p class="vt-sh">Formulation Applications</p>
+  <div class="vt-app-tags"><span class="vt-app-tag">Vitamin C Serums (10–20%)</span><span class="vt-app-tag">Brightening Treatments</span><span class="vt-app-tag">Antioxidant Serums</span><span class="vt-app-tag">Pigmentation Correction</span><span class="vt-app-tag">Anti-Ageing Night Formulas</span></div>
+  <p class="vt-sh">Synergistic Combinations</p>
+  <div class="vt-syn-list">
+    <div class="vt-syn"><span class="vt-syn-code">+ TocoActiv E</span><span class="vt-syn-desc">C+E synergy — ascorbic acid regenerates oxidised tocopherol, doubling antioxidant lifetime. Most clinically validated topical antioxidant combination.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ NiaciActiv</span><span class="vt-syn-desc">Complementary brightening — niacinamide blocks melanosome transfer while ascorbic acid inhibits synthesis. Multi-mechanism pigmentation correction.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ KojicActiv</span><span class="vt-syn-desc">Dual tyrosinase inhibition — each acts at different points in the melanogenesis pathway for enhanced brightening.</span></div>
+  </div>
+</div>
+<div class="vt-pr">
+  <div>
+    <p class="vt-spec-title">Technical Specifications</p>
+    <div class="vt-spec-row"><span class="vt-spec-k">CAS Number</span><span class="vt-spec-v">50-81-7</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">INCI Name</span><span class="vt-spec-v">Ascorbic Acid</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Assay (HPLC)</span><span class="vt-spec-v">≥ 99.7%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Appearance</span><span class="vt-spec-v">White crystalline powder</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Molecular weight</span><span class="vt-spec-v">176.12 g/mol</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Melting point</span><span class="vt-spec-v">190–192°C (dec.)</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Solubility</span><span class="vt-spec-v">Water-soluble (~300 g/L)</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">pH (10% solution)</span><span class="vt-spec-v">2.4 – 2.7</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Recommended dosage</span><span class="vt-spec-v">5.0 – 20.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Stability pH range</span><span class="vt-spec-v">&lt; 3.5</span></div>
+  </div>
+  <div class="vt-reg-block">
+    <p class="vt-reg-title">Global Regulatory Status</p>
+    <div class="vt-reg-row"><span class="vt-reg-k">EU / BR / LATAM / USA</span><span class="vt-reg-v">No restriction</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">China IECIC</span><span class="vt-reg-v">Listed</span></div>
+  </div>
+  <button class="vt-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- ═══ NIACIACTIV ═══ -->
+<div class="vt-panel" id="p-niaci">
+<div class="vt-panel-inner">
+<div class="vt-pl">
+  <div class="vt-p-tag"><div class="vt-dot"></div>VLYOR VITAL — Vitamin B3</div>
+  <h2 class="vt-p-name">NiaciActiv</h2>
+  <p class="vt-p-inci">Niacinamide</p>
+  <div class="vt-badges"><span class="vt-badge b-vit">Vitamin B3</span><span class="vt-badge b-act">Brightening</span><span class="vt-badge b-act">Barrier Repair</span><span class="vt-badge b-act">Sebum Control</span></div>
+  <p class="vt-tagline">"The most multi-functional active in modern cosmetics — ten clinically validated mechanisms in one ingredient."</p>
+  <p class="vt-body">NiaciActiv (niacinamide) has emerged as <strong>the dominant performance active in premium cosmetics globally</strong> — present across more skin care categories than any other single active — precisely because its clinical evidence spans an unusually broad range of independently validated mechanisms. At 2–10%, niacinamide delivers meaningful improvements in brightening, barrier function, pore appearance, sebum regulation and fine line reduction, making it capable of supporting multiple simultaneous product claims from a single ingredient.</p>
+  <p class="vt-body">Primary mechanisms: <strong>melanosome transfer inhibition</strong> (reduces delivery of melanin granules from melanocytes to keratinocytes, addressing hyperpigmentation without tyrosinase inhibition — making it compatible with all brightening actives and retinoids); <strong>ceramide synthesis stimulation</strong> (increases ceramide and fatty acid production in the stratum corneum, reinforcing barrier function); <strong>sebum reduction</strong> (inhibits lipase activity in sebaceous glands, reducing sebum excretion by 15–25% at 2% concentration in double-blind clinical trials); and <strong>collagen synthesis stimulation</strong> (increases dermal collagen and fibronectin, improving elasticity and fine line depth after 8–12 weeks).</p>
+  <div class="vt-perf-grid">
+    <div class="vt-perf-card"><span class="vt-perf-val">≥99.5%</span><span class="vt-perf-lbl">Assay (HPLC)</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">2–10%</span><span class="vt-perf-lbl">Effective Dose Range</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">10+</span><span class="vt-perf-lbl">Validated Mechanisms</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">pH 5–8</span><span class="vt-perf-lbl">Stability Range</span></div>
+  </div>
+  <p class="vt-sh">Dose-Dependent Clinical Performance</p>
+  <p class="vt-body"><strong>2%:</strong> Sebum control, reduced pore visibility, anti-inflammatory effects. Minimum effective dose for the majority of mechanisms.</p>
+  <p class="vt-body"><strong>4–5%:</strong> Measurable brightening (hyperpigmentation reduction after 8–12 weeks), barrier ceramide stimulation, fine line improvement. Standard clinical dose in published peer-reviewed studies.</p>
+  <p class="vt-body"><strong>10%:</strong> Acne-equivalent efficacy to clindamycin in comparative trials. Maximum brightening and sebum control. Preferred concentration for pharmacocosmetics and corrective formulas.</p>
+  <p class="vt-sh">Formulation Applications</p>
+  <div class="vt-app-tags"><span class="vt-app-tag">Brightening Serums</span><span class="vt-app-tag">Oily / Acne-Prone Formulas</span><span class="vt-app-tag">Anti-Ageing Moisturisers</span><span class="vt-app-tag">Active Toners</span><span class="vt-app-tag">Eye Area Treatments</span><span class="vt-app-tag">Barrier Repair Creams</span></div>
+  <p class="vt-sh">Synergistic Combinations</p>
+  <div class="vt-syn-list">
+    <div class="vt-syn"><span class="vt-syn-code">+ HyalActiv Series</span><span class="vt-syn-desc">The globally best-selling serum architecture: niacinamide (4–10%) + hyaluronic acid — brightening, barrier and hydration in one formula.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ RetinActiv A</span><span class="vt-syn-desc">Anti-ageing amplification — niacinamide mitigates retinoid-induced irritation while independently stimulating collagen synthesis.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ KojicActiv</span><span class="vt-syn-desc">Complementary brightening pathways — niacinamide blocks melanosome transfer; kojic acid inhibits tyrosinase. Dual-mechanism depigmentation.</span></div>
+  </div>
+</div>
+<div class="vt-pr">
+  <div>
+    <p class="vt-spec-title">Technical Specifications</p>
+    <div class="vt-spec-row"><span class="vt-spec-k">CAS Number</span><span class="vt-spec-v">98-92-0</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">INCI Name</span><span class="vt-spec-v">Niacinamide</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Assay (HPLC)</span><span class="vt-spec-v">≥ 99.5%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Appearance</span><span class="vt-spec-v">White crystalline powder</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Molecular weight</span><span class="vt-spec-v">122.12 g/mol</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Melting point</span><span class="vt-spec-v">128 – 131°C</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Solubility</span><span class="vt-spec-v">Water-soluble (1 g/mL at 20°C)</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Incorporation phase</span><span class="vt-spec-v">Aqueous · any stage ≤85°C</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Recommended dosage</span><span class="vt-spec-v">2.0 – 10.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">pH stability</span><span class="vt-spec-v">5 – 8</span></div>
+  </div>
+  <div class="vt-reg-block">
+    <p class="vt-reg-title">Global Regulatory Status</p>
+    <div class="vt-reg-row"><span class="vt-reg-k">EU / BR / LATAM / USA</span><span class="vt-reg-v">No restriction</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">China IECIC</span><span class="vt-reg-v">Listed</span></div>
+  </div>
+  <button class="vt-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- ═══ BAKUACTIV ═══ -->
+<div class="vt-panel" id="p-baku">
+<div class="vt-panel-inner">
+<div class="vt-pl">
+  <div class="vt-p-tag"><div class="vt-dot"></div>VLYOR VITAL — Retinol Alternative</div>
+  <h2 class="vt-p-name">BakuActiv</h2>
+  <p class="vt-p-inci">Bakuchiol</p>
+  <div class="vt-badges"><span class="vt-badge b-act">Retinol Alternative</span><span class="vt-badge b-act">Anti-Ageing</span><span class="vt-badge b-act">Plant-Derived</span><span class="vt-badge b-act">Photostable</span></div>
+  <p class="vt-tagline">"The plant-derived retinol functional analogue — retinoid gene expression without retinoid irritation."</p>
+  <p class="vt-body">BakuActiv (bakuchiol) is a <strong>naturally derived meroterpene from Psoralea corylifolia seeds</strong> that has demonstrated in multiple peer-reviewed randomised controlled trials the ability to upregulate the same family of retinoid-responsive genes as retinol — COL1A1 (type I collagen), COL3A1 (type III collagen), FBN1 (fibrillin) and elastin — without binding to retinoid receptors or triggering the retinoic acid signalling cascade that causes the irritation, photosensitivity and barrier compromise associated with topical retinoids.</p>
+  <p class="vt-body">A landmark 2018 double-blind, randomised controlled trial (Dhaliwal et al., British Journal of Dermatology) compared bakuchiol 0.5% twice daily against retinol 0.5% once daily over 12 weeks. <strong>Both groups showed statistically equivalent reductions in wrinkle area, wrinkle count, photoageing score and overall skin tone</strong>. The bakuchiol group experienced significantly less scaling, stinging and erythema. This positions BakuActiv as a clinically validated retinoid-equivalent with a superior tolerability profile — directly addressable to sensitive skin, pregnant consumers and brands communicating natural or clean positioning.</p>
+  <div class="vt-perf-grid">
+    <div class="vt-perf-card"><span class="vt-perf-val">≥98.0%</span><span class="vt-perf-lbl">Assay (HPLC)</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">0.5–1.0%</span><span class="vt-perf-lbl">Clinical Dose (RCT)</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-v" style="font-size:12px;display:block;margin-bottom:3px">≡ Retinol 0.5%</span><span class="vt-perf-lbl">Efficacy at 12 weeks</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">Photostable</span><span class="vt-perf-lbl">Stability Profile</span></div>
+  </div>
+  <p class="vt-sh">Formulation Applications</p>
+  <div class="vt-app-tags"><span class="vt-app-tag">Retinol Alternative Serums</span><span class="vt-app-tag">Sensitive Skin Anti-Ageing</span><span class="vt-app-tag">Pregnancy-Safe Claims</span><span class="vt-app-tag">Clean Beauty Positioning</span><span class="vt-app-tag">Day-Use Anti-Ageing</span></div>
+  <p class="vt-sh">Synergistic Combinations</p>
+  <div class="vt-syn-list">
+    <div class="vt-syn"><span class="vt-syn-code">+ NiaciActiv</span><span class="vt-syn-desc">Anti-ageing amplification via complementary mechanisms — niacinamide further mitigates residual irritation potential.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ HyalActiv Series</span><span class="vt-syn-desc">Hydration support compensates any mild barrier disruption from renewal activity. Standard premium anti-ageing architecture.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ RetinActiv A</span><span class="vt-syn-desc">Retinoid + alternative combination — maximum anti-ageing at sub-irritant doses of each, suitable for reformulation projects.</span></div>
+  </div>
+</div>
+<div class="vt-pr">
+  <div>
+    <p class="vt-spec-title">Technical Specifications</p>
+    <div class="vt-spec-row"><span class="vt-spec-k">CAS Number</span><span class="vt-spec-v">10309-37-2</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">INCI Name</span><span class="vt-spec-v">Bakuchiol</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Assay (HPLC)</span><span class="vt-spec-v">≥ 98.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Appearance</span><span class="vt-spec-v">Pale yellow oily liquid</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Molecular weight</span><span class="vt-spec-v">256.4 g/mol</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Solubility</span><span class="vt-spec-v">Oil-soluble</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Incorporation phase</span><span class="vt-spec-v">Oil phase · ≤ 75°C</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Recommended dosage</span><span class="vt-spec-v">0.5 – 1.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Photostability</span><span class="vt-spec-v">Stable under UV exposure</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Source</span><span class="vt-spec-v">Psoralea corylifolia (plant)</span></div>
+  </div>
+  <div class="vt-reg-block">
+    <p class="vt-reg-title">Global Regulatory Status</p>
+    <div class="vt-reg-row"><span class="vt-reg-k">EU / BR / LATAM / USA</span><span class="vt-reg-v">No restriction</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">China IECIC</span><span class="vt-reg-v">Listed</span></div>
+  </div>
+  <button class="vt-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- ═══ COENZ Q10 ═══ -->
+<div class="vt-panel" id="p-coenz">
+<div class="vt-panel-inner">
+<div class="vt-pl">
+  <div class="vt-p-tag"><div class="vt-dot"></div>VLYOR VITAL — Mitochondrial Antioxidant</div>
+  <h2 class="vt-p-name">CoenzActiv Q10</h2>
+  <p class="vt-p-inci">Ubiquinone (Coenzyme Q10)</p>
+  <div class="vt-badges"><span class="vt-badge b-act">Antioxidant</span><span class="vt-badge b-act">Mitochondrial</span><span class="vt-badge b-act">Anti-Ageing</span></div>
+  <p class="vt-tagline">"The mitochondrial antioxidant — cellular energy protection and radical scavenging at the membrane level."</p>
+  <p class="vt-body">CoenzActiv Q10 (ubiquinone) is a <strong>lipophilic antioxidant naturally present in all human cell membranes</strong>, central to the mitochondrial electron transport chain and essential to cellular energy production. Endogenous CoQ10 levels decline progressively from the third decade of life — measurably so in the dermis and epidermis — correlating with increased oxidative damage markers, mitochondrial dysfunction and visible ageing hallmarks including fine lines, loss of elasticity and uneven tone.</p>
+  <p class="vt-body">Topical replenishment via CoenzActiv Q10 in leave-on formulations has been demonstrated to penetrate the epidermis and restore mitochondrial membrane CoQ10 levels, reducing ROS production from UV exposure and <strong>supporting cellular energy metabolism in keratinocytes</strong>. Its primary antioxidant mechanism is chain-breaking radical scavenging in the lipid phase, combined with regeneration of other antioxidants — particularly tocopherol — forming a reinforced <strong>lipophilic antioxidant network</strong> in the oil phase and cellular membranes of the treated skin.</p>
+  <div class="vt-perf-grid">
+    <div class="vt-perf-card"><span class="vt-perf-val">≥98.0%</span><span class="vt-perf-lbl">Assay (HPLC)</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">0.05–0.3%</span><span class="vt-perf-lbl">Effective Dose</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">Oil Phase</span><span class="vt-perf-lbl">Incorporation</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-v" style="font-size:12px;display:block;margin-bottom:3px">Gold-yellow</span><span class="vt-perf-lbl">Characteristic Colour</span></div>
+  </div>
+  <p class="vt-sh">Formulation Applications</p>
+  <div class="vt-app-tags"><span class="vt-app-tag">Anti-Ageing Serums</span><span class="vt-app-tag">Eye Area Products</span><span class="vt-app-tag">Mitochondrial Skincare</span><span class="vt-app-tag">Antioxidant Complexes</span><span class="vt-app-tag">Premium Facial Creams</span></div>
+  <p class="vt-sh">Synergistic Combinations</p>
+  <div class="vt-syn-list">
+    <div class="vt-syn"><span class="vt-syn-code">+ TocoActiv E</span><span class="vt-syn-desc">CoQ10 regenerates oxidised tocopherol, extending the antioxidant network. Lipophilic antioxidant stack for premium anti-ageing oil phases.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ AscorActiv C</span><span class="vt-syn-desc">Complete antioxidant triad (C + E + Q10) covering both aqueous and lipid phases — comprehensive oxidative stress protection.</span></div>
+  </div>
+</div>
+<div class="vt-pr">
+  <div>
+    <p class="vt-spec-title">Technical Specifications</p>
+    <div class="vt-spec-row"><span class="vt-spec-k">CAS Number</span><span class="vt-spec-v">303-98-0</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">INCI Name</span><span class="vt-spec-v">Ubiquinone</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Assay (HPLC)</span><span class="vt-spec-v">≥ 98.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Appearance</span><span class="vt-spec-v">Orange to yellow crystalline powder</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Molecular weight</span><span class="vt-spec-v">863.3 g/mol</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Melting point</span><span class="vt-spec-v">49 – 52°C</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Solubility</span><span class="vt-spec-v">Oil-soluble (esters, triglycerides)</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Incorporation</span><span class="vt-spec-v">Oil phase · 75–80°C</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Recommended dosage</span><span class="vt-spec-v">0.05 – 0.3%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Light sensitivity</span><span class="vt-spec-v">Moderate — amber pkg preferred</span></div>
+  </div>
+  <div class="vt-reg-block">
+    <p class="vt-reg-title">Global Regulatory Status</p>
+    <div class="vt-reg-row"><span class="vt-reg-k">EU / BR / LATAM / USA</span><span class="vt-reg-v">No restriction</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">China IECIC</span><span class="vt-reg-v">Listed</span></div>
+  </div>
+  <button class="vt-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- ═══ CUACTIV ═══ -->
+<div class="vt-panel" id="p-copper">
+<div class="vt-panel-inner">
+<div class="vt-pl">
+  <div class="vt-p-tag"><div class="vt-dot"></div>VLYOR VITAL — Bioactive Peptide</div>
+  <h2 class="vt-p-name">CuActiv</h2>
+  <p class="vt-p-inci">Copper Tripeptide-1 (GHK-Cu)</p>
+  <div class="vt-badges"><span class="vt-badge b-pep">Peptide</span><span class="vt-badge b-act">Wound Healing</span><span class="vt-badge b-act">Anti-Ageing</span><span class="vt-badge b-act">Anti-Inflammatory</span></div>
+  <p class="vt-tagline">"The most bioactive copper peptide commercially available — tissue regeneration, antioxidant and anti-inflammatory in one molecule."</p>
+  <p class="vt-body">CuActiv (GHK-Cu, Copper Tripeptide-1) is a <strong>naturally occurring tripeptide-copper complex</strong> — glycine-histidine-lysine chelated to cupric ion — first isolated from human plasma where it is present in nanomolar concentrations. GHK-Cu plays a documented physiological role in wound healing, tissue remodelling and systemic anti-inflammatory signalling. It is the most extensively studied copper peptide in cosmetic science, with published data spanning over four decades, including in-vivo wound healing studies, gene expression analysis and clinical efficacy trials.</p>
+  <p class="vt-body">In cosmetic application at 0.01–0.1%, CuActiv simultaneously delivers: <strong>collagen and elastin synthesis stimulation</strong> via TGF-β1 and SPARC upregulation; <strong>matrix metalloproteinase activation</strong> (MMP-2, MMP-9) that clears degraded, cross-linked collagen and enables new matrix deposition; <strong>pro-inflammatory cytokine inhibition</strong> (IL-6, TNF-α); <strong>antioxidant enzyme activation</strong> via superoxide dismutase-1 (SOD-1) upregulation; and <strong>hair follicle stimulation</strong> via growth factor expression — making it uniquely valuable across facial anti-ageing, post-procedure recovery and scalp care categories.</p>
+  <div class="vt-perf-grid">
+    <div class="vt-perf-card"><span class="vt-perf-val">≥98.0%</span><span class="vt-perf-lbl">Purity (HPLC)</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">0.01–0.1%</span><span class="vt-perf-lbl">Effective Dose</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-v" style="font-size:12px;display:block;margin-bottom:3px">GHK-Cu complex</span><span class="vt-perf-lbl">Active Form</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">Blue</span><span class="vt-perf-lbl">Characteristic Colour</span></div>
+  </div>
+  <p class="vt-sh">Formulation Notes</p>
+  <p class="vt-body">Water-soluble and stable at pH 6–7.5. The characteristic blue colouration from copper chelation is authentic and expected — it is not a sign of contamination. Avoid combination with strong chelating agents such as ChelaGuard 2 or 4 (EDTA) that may compete for copper ion binding. Incorporate in aqueous phase at cool-down, avoid prolonged heating above 50°C.</p>
+  <p class="vt-sh">Formulation Applications</p>
+  <div class="vt-app-tags"><span class="vt-app-tag">Premium Anti-Ageing Serums</span><span class="vt-app-tag">Post-Procedure Recovery</span><span class="vt-app-tag">Hair Regrowth Serums</span><span class="vt-app-tag">Eye Area Treatments</span><span class="vt-app-tag">Wound-Healing Cosmetics</span></div>
+</div>
+<div class="vt-pr">
+  <div>
+    <p class="vt-spec-title">Technical Specifications</p>
+    <div class="vt-spec-row"><span class="vt-spec-k">CAS Number</span><span class="vt-spec-v">49557-75-7</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">INCI Name</span><span class="vt-spec-v">Copper Tripeptide-1</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Assay (HPLC)</span><span class="vt-spec-v">≥ 98.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Appearance</span><span class="vt-spec-v">Blue crystalline powder</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Molecular weight</span><span class="vt-spec-v">340.8 g/mol</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Solubility</span><span class="vt-spec-v">Water-soluble</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Recommended dosage</span><span class="vt-spec-v">0.01 – 0.1%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">pH stability</span><span class="vt-spec-v">6.0 – 7.5</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Max. incorporation temp.</span><span class="vt-spec-v">≤ 50°C</span></div>
+  </div>
+  <div class="vt-reg-block">
+    <p class="vt-reg-title">Global Regulatory Status</p>
+    <div class="vt-reg-row"><span class="vt-reg-k">EU / BR / LATAM / USA</span><span class="vt-reg-v">No restriction</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">China IECIC</span><span class="vt-reg-v">Listed</span></div>
+  </div>
+  <button class="vt-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- ═══ KOJICACTIV ═══ -->
+<div class="vt-panel" id="p-kojic">
+<div class="vt-panel-inner">
+<div class="vt-pl">
+  <div class="vt-p-tag"><div class="vt-dot"></div>VLYOR VITAL — Brightening Agent</div>
+  <h2 class="vt-p-name">KojicActiv</h2>
+  <p class="vt-p-inci">Kojic Acid</p>
+  <div class="vt-badges"><span class="vt-badge b-aha">Brightening</span><span class="vt-badge b-act">Tyrosinase Inhibitor</span></div>
+  <p class="vt-tagline">"The benchmark brightening active — direct tyrosinase inhibition via copper chelation with decades of clinical validation."</p>
+  <p class="vt-body">KojicActiv (kojic acid) is a <strong>naturally derived fungal metabolite</strong> produced by Aspergillus oryzae during fermentation, and remains the <strong>benchmark tyrosinase inhibitor</strong> in cosmetic brightening formulations. Its mechanism — chelation of the copper ions at the active site of tyrosinase, preventing the enzymatic oxidation of tyrosine to DOPA and DOPA to dopaquinone — is the most clearly characterised of any brightening active and serves as the reference mechanism against which newer ingredients are benchmarked.</p>
+  <p class="vt-body">At 1–4%, KojicActiv delivers measurable reduction in melanin production in melanocyte cultures and clinically significant reduction in UV-induced and constitutive hyperpigmentation in multiple peer-reviewed studies. Its particular commercial strength is <strong>efficacy on established hyperpigmentation</strong> — existing dark spots and uneven tone — as well as prevention of new pigment formation. At ≥99.0% assay, maximum specific tyrosinase-inhibitory activity per gram is guaranteed, and fermentation process impurities that cause formulation instability are minimised.</p>
+  <div class="vt-perf-grid">
+    <div class="vt-perf-card"><span class="vt-perf-val">≥99.0%</span><span class="vt-perf-lbl">Assay (HPLC)</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">1–4%</span><span class="vt-perf-lbl">Clinical Dose Range</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-v" style="font-size:12px;display:block;margin-bottom:3px">Cu chelation</span><span class="vt-perf-lbl">Inhibition Mechanism</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">pH 3.5–5</span><span class="vt-perf-lbl">Stability Range</span></div>
+  </div>
+  <div class="vt-alert">
+    <p class="vt-alert-t">Stability Protocol</p>
+    <p class="vt-alert-b">Formulate at pH 3.5–5.0. Yellowing occurs at pH &gt;6 or in the presence of iron ions. Avoid ChelaGuard 2/4 (EDTA) in the same formula — iron-chelation competition. Protect from UV in packaging. Compatible with niacinamide and AHAs within the same pH window.</p>
+  </div>
+  <p class="vt-sh">Formulation Applications</p>
+  <div class="vt-app-tags"><span class="vt-app-tag">Brightening Serums</span><span class="vt-app-tag">Dark Spot Correctors</span><span class="vt-app-tag">Even-Tone Moisturisers</span><span class="vt-app-tag">Post-Inflammatory Treatment</span><span class="vt-app-tag">Underarm Brightening</span></div>
+  <p class="vt-sh">Synergistic Combinations</p>
+  <div class="vt-syn-list">
+    <div class="vt-syn"><span class="vt-syn-code">+ NiaciActiv</span><span class="vt-syn-desc">Complementary mechanisms — kojic acid inhibits synthesis, niacinamide blocks transfer. Multi-step brightening approach.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ AscorActiv C</span><span class="vt-syn-desc">Dual tyrosinase inhibition at different enzymatic sites — enhanced brightening efficacy at lower concentrations of each active.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ MandelActiv</span><span class="vt-syn-desc">Brightening + exfoliation combination — surface renewal accelerates clearance of existing pigmentation as new synthesis is inhibited.</span></div>
+  </div>
+</div>
+<div class="vt-pr">
+  <div>
+    <p class="vt-spec-title">Technical Specifications</p>
+    <div class="vt-spec-row"><span class="vt-spec-k">CAS Number</span><span class="vt-spec-v">501-30-4</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">INCI Name</span><span class="vt-spec-v">Kojic Acid</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Assay (HPLC)</span><span class="vt-spec-v">≥ 99.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Appearance</span><span class="vt-spec-v">White crystalline powder</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Molecular weight</span><span class="vt-spec-v">142.11 g/mol</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Melting point</span><span class="vt-spec-v">152 – 155°C</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Solubility</span><span class="vt-spec-v">Water-soluble</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Recommended dosage</span><span class="vt-spec-v">1.0 – 4.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Optimal pH</span><span class="vt-spec-v">3.5 – 5.0</span></div>
+  </div>
+  <div class="vt-reg-block">
+    <p class="vt-reg-title">Regulatory Concentration Limits</p>
+    <div class="vt-reg-row"><span class="vt-reg-k">EU</span><span class="vt-reg-v">1.0% face / 0.5% hand leave-on</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">Brazil (ANVISA)</span><span class="vt-reg-v">Approved per product category</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">Japan</span><span class="vt-reg-v">Quasi-drug approved</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">China IECIC</span><span class="vt-reg-v">Listed</span></div>
+  </div>
+  <button class="vt-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- ═══ MANDELACTIV ═══ -->
+<div class="vt-panel" id="p-mandel">
+<div class="vt-panel-inner">
+<div class="vt-pl">
+  <div class="vt-p-tag"><div class="vt-dot"></div>VLYOR VITAL — Alpha-Hydroxy Acid</div>
+  <h2 class="vt-p-name">MandelActiv</h2>
+  <p class="vt-p-inci">Mandelic Acid</p>
+  <div class="vt-badges"><span class="vt-badge b-aha">AHA</span><span class="vt-badge b-act">Exfoliant</span><span class="vt-badge b-act">Brightening</span></div>
+  <p class="vt-tagline">"The gentlest AHA — large molecular structure, slower penetration and effective exfoliation without the sting."</p>
+  <p class="vt-body">MandelActiv (mandelic acid) is an <strong>aromatic alpha-hydroxy acid derived from bitter almonds</strong> with a molecular weight of 152.15 Da — the largest of the commonly used AHAs, compared to glycolic acid at 76 Da. This larger molecular size results in <strong>slower, more controlled dermal penetration</strong> that translates directly into a gentler skin response with equivalent exfoliation efficacy to lower-molecular-weight AHAs at comparable concentrations. MandelActiv is the preferred AHA for sensitive skin types, darker Fitzpatrick skin tones with post-inflammatory hyperpigmentation (PIH) risk, and markets where glycolic acid intolerance or irritation complaints are common.</p>
+  <p class="vt-body">MandelActiv delivers AHA-class keratolysis (desmosome disruption between corneocytes, releasing dead cells and smoothing surface texture) combined with <strong>independent brightening activity via competitive tyrosinase inhibition</strong> — an uncommon dual function among AHAs. This makes it particularly valuable in brightening treatments where chemical exfoliation and pigmentation control are simultaneously desired, as the active addresses both the surface accumulation of pigmented cells and the ongoing melanin synthesis.</p>
+  <div class="vt-perf-grid">
+    <div class="vt-perf-card"><span class="vt-perf-val">≥99.0%</span><span class="vt-perf-lbl">Assay</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">5–15%</span><span class="vt-perf-lbl">Effective Dose Range</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-v" style="font-size:12px;display:block;margin-bottom:3px">Gentlest AHA</span><span class="vt-perf-lbl">Irritation Profile vs. AHAs</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">pH 3–4</span><span class="vt-perf-lbl">Optimal Formulation pH</span></div>
+  </div>
+  <p class="vt-sh">Formulation Applications</p>
+  <div class="vt-app-tags"><span class="vt-app-tag">Gentle Exfoliating Serums</span><span class="vt-app-tag">Sensitive Skin Peels</span><span class="vt-app-tag">Brightening Toners</span><span class="vt-app-tag">Darker Skin Tone Formulas</span><span class="vt-app-tag">Acne &amp; PIH Treatment</span></div>
+  <p class="vt-sh">Synergistic Combinations</p>
+  <div class="vt-syn-list">
+    <div class="vt-syn"><span class="vt-syn-code">+ MalicActiv</span><span class="vt-syn-desc">AHA combination — complementary exfoliation mechanisms at lower doses of each for improved tolerability and broader pH performance.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ NiaciActiv</span><span class="vt-syn-desc">Exfoliation + brightening: mandelate addresses surface pigmentation while niacinamide blocks melanosome transfer.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ AllanActiv</span><span class="vt-syn-desc">Allantoin mitigates residual AHA irritation — standard pairing for gentle peels and sensitive-skin exfoliating formulas.</span></div>
+  </div>
+</div>
+<div class="vt-pr">
+  <div>
+    <p class="vt-spec-title">Technical Specifications</p>
+    <div class="vt-spec-row"><span class="vt-spec-k">CAS Number</span><span class="vt-spec-v">90-64-2</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">INCI Name</span><span class="vt-spec-v">Mandelic Acid</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Assay (HPLC)</span><span class="vt-spec-v">≥ 99.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Appearance</span><span class="vt-spec-v">White crystalline powder</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Molecular weight</span><span class="vt-spec-v">152.15 g/mol</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Melting point</span><span class="vt-spec-v">117 – 120°C</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Solubility</span><span class="vt-spec-v">Water &amp; ethanol-soluble</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Recommended dosage</span><span class="vt-spec-v">5.0 – 15.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Optimal formulation pH</span><span class="vt-spec-v">3.0 – 4.0</span></div>
+  </div>
+  <div class="vt-reg-block">
+    <p class="vt-reg-title">Global Regulatory Status</p>
+    <div class="vt-reg-row"><span class="vt-reg-k">EU / BR / LATAM / USA</span><span class="vt-reg-v">No restriction (cosmetics)</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">China IECIC</span><span class="vt-reg-v">Listed</span></div>
+  </div>
+  <button class="vt-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- ═══ MALICACTIV ═══ -->
+<div class="vt-panel" id="p-malic">
+<div class="vt-panel-inner">
+<div class="vt-pl">
+  <div class="vt-p-tag"><div class="vt-dot"></div>VLYOR VITAL — Alpha-Hydroxy Acid</div>
+  <h2 class="vt-p-name">MalicActiv</h2>
+  <p class="vt-p-inci">Malic Acid (L-Malic Acid)</p>
+  <div class="vt-badges"><span class="vt-badge b-aha">AHA</span><span class="vt-badge b-act">Exfoliant</span><span class="vt-badge b-act">pH Adjuster</span><span class="vt-badge b-act">Dicarboxylic</span></div>
+  <p class="vt-tagline">"The apple dicarboxylic AHA — gentle exfoliation and multi-functional pH management in one ingredient."</p>
+  <p class="vt-body">MalicActiv (L-malic acid) is a <strong>dicarboxylic alpha-hydroxy acid naturally occurring in apples and other fruits</strong>, with a molecular weight of 134.09 Da — larger than glycolic acid (76 Da) and lactic acid (90 Da), resulting in slower dermal penetration and a milder irritation profile. Its dicarboxylic acid structure provides <strong>two dissociable protons</strong>, offering broader buffering capacity across the pH range 3–5 compared to monocarboxylic AHAs — making MalicActiv particularly valuable as both an exfoliant and a pH management tool in multifunctional formulas.</p>
+  <p class="vt-body">In addition to standard AHA keratolysis (desmosome disruption and accelerated corneocyte shedding), MalicActiv has demonstrated <strong>mild skin lightening activity</strong> in comparative studies — attributable to reduction of melanin transfer from melanocytes to surrounding keratinocytes via the exfoliation-induced keratinocyte renewal. It is commonly used in <strong>combination AHA systems</strong> alongside glycolic, lactic or mandelic acids, where it broadens the exfoliation activity and the buffering range while reducing total irritation load.</p>
+  <div class="vt-perf-grid">
+    <div class="vt-perf-card"><span class="vt-perf-val">≥99.0%</span><span class="vt-perf-lbl">Assay (HPLC)</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">2–10%</span><span class="vt-perf-lbl">Effective Dose Range</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">Dicarboxylic</span><span class="vt-perf-lbl">Acid Class</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">pH 3–5</span><span class="vt-perf-lbl">Buffering Range</span></div>
+  </div>
+  <p class="vt-sh">Formulation Applications</p>
+  <div class="vt-app-tags"><span class="vt-app-tag">Multi-AHA Exfoliating Serums</span><span class="vt-app-tag">Brightening Toners</span><span class="vt-app-tag">pH Adjustment in AHA Formulas</span><span class="vt-app-tag">Gentle Resurfacing Treatments</span><span class="vt-app-tag">Anti-Acne Formulas</span></div>
+  <p class="vt-sh">Synergistic Combinations</p>
+  <div class="vt-syn-list">
+    <div class="vt-syn"><span class="vt-syn-code">+ MandelActiv</span><span class="vt-syn-desc">Classic dicarboxylic + monocarboxylic AHA blend — broader exfoliation activity and smoother pH buffering than either acid alone.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ NiaciActiv</span><span class="vt-syn-desc">Exfoliation + barrier repair combination — niacinamide compensates for any AHA-induced barrier disruption while adding brightening activity.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ AllanActiv</span><span class="vt-syn-desc">Soothing complement — allantoin reduces AHA-induced irritation response, enabling higher active concentrations in sensitive skin formulas.</span></div>
+  </div>
+</div>
+<div class="vt-pr">
+  <div>
+    <p class="vt-spec-title">Technical Specifications</p>
+    <div class="vt-spec-row"><span class="vt-spec-k">CAS Number</span><span class="vt-spec-v">97-67-6</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">INCI Name</span><span class="vt-spec-v">Malic Acid</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Assay (HPLC)</span><span class="vt-spec-v">≥ 99.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Appearance</span><span class="vt-spec-v">White crystalline powder</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Molecular weight</span><span class="vt-spec-v">134.09 g/mol</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Melting point</span><span class="vt-spec-v">100 – 103°C</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Solubility</span><span class="vt-spec-v">Water-soluble (558 g/L at 20°C)</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">pKa values</span><span class="vt-spec-v">3.40 · 5.11</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Recommended dosage</span><span class="vt-spec-v">2.0 – 10.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Optimal formulation pH</span><span class="vt-spec-v">3.0 – 5.0</span></div>
+  </div>
+  <div class="vt-reg-block">
+    <p class="vt-reg-title">Global Regulatory Status</p>
+    <div class="vt-reg-row"><span class="vt-reg-k">EU / BR / LATAM / USA</span><span class="vt-reg-v">No restriction (cosmetics)</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">China IECIC</span><span class="vt-reg-v">Listed</span></div>
+  </div>
+  <button class="vt-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- ═══ HYALACTIV SERIES ═══ -->
+<div class="vt-panel" id="p-hyal">
+<div class="vt-panel-inner">
+<div class="vt-pl">
+  <div class="vt-p-tag"><div class="vt-dot"></div>VLYOR VITAL — Hyaluronic Acid</div>
+  <h2 class="vt-p-name">HyalActiv Series</h2>
+  <p class="vt-p-inci">Sodium Hyaluronate (1.0–1.5 MDa)</p>
+  <div class="vt-badges"><span class="vt-badge b-act">Hydration</span><span class="vt-badge b-act">Film-Former</span><span class="vt-badge b-act">High MW Series</span></div>
+  <p class="vt-tagline">"High-molecular-weight hyaluronate — surface hydration, film formation and the visible plumping effect that consumers recognise."</p>
+  <p class="vt-body">HyalActiv Series is VLYOR's <strong>high-molecular-weight sodium hyaluronate at 1.0–1.5 MDa</strong> — the grade of hyaluronic acid that delivers the surface-acting hydration, film-forming properties and visible plumping effect associated with premium skin care. At this molecular weight range, sodium hyaluronate does not penetrate the stratum corneum under normal conditions; instead, it forms a <strong>continuous viscoelastic film on the skin surface</strong> that reduces moisture evaporation (TEWL reduction), provides immediate perceptible hydration and creates the characteristic "bouncy" tactile skin feel consumers associate with premium HA serums.</p>
+  <p class="vt-body">Molecular weight specification matters critically in hyaluronic acid — and represents one of the most common quality failures in commodity HA supply. <strong>HA at unverified molecular weight can behave as a low-MW fragment with pro-inflammatory properties rather than the anti-inflammatory, film-forming high-MW intended</strong>. HyalActiv Series molecular weight is verified by GPC (Gel Permeation Chromatography) on each production batch, ensuring the 1.0–1.5 MDa specification is consistently met.</p>
+  <p class="vt-body">Fermented from microbial sources via Streptococcus zooepidemicus biosynthesis — animal-source free. Vegan positioning is supported by full production chain documentation available on request.</p>
+  <div class="vt-perf-grid">
+    <div class="vt-perf-card"><span class="vt-perf-val">1.0–1.5</span><span class="vt-perf-lbl">Molecular Weight (MDa)</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">≥90%</span><span class="vt-perf-lbl">Assay (GPC)</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">0.1–1.0%</span><span class="vt-perf-lbl">Effective Dose Range</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-v" style="font-size:12px;display:block;margin-bottom:3px">Surface-acting</span><span class="vt-perf-lbl">Penetration Profile</span></div>
+  </div>
+  <p class="vt-sh">Performance Highlights</p>
+  <p class="vt-body"><strong>Immediate hydration:</strong> At 0.1–0.5% in serums, HyalActiv Series increases skin surface hydration by 30–50% above baseline in corneometry measurements within 30 minutes of application, with the effect sustained for 8+ hours under normal indoor conditions. This is attributable primarily to the water-binding capacity of the HA film (up to 1,000× its weight in water) rather than penetration-mediated effects.</p>
+  <p class="vt-body"><strong>TEWL reduction:</strong> The physical barrier formed by high-MW HA on the stratum corneum surface reduces transepidermal water loss measurably — supporting claims including "strengthens the skin barrier" and "reduces moisture loss" in clinical testing. Particularly effective in after-sun, post-procedure and dry skin formulations where barrier compromise elevates TEWL above baseline.</p>
+  <p class="vt-sh">Formulation Applications</p>
+  <div class="vt-app-tags"><span class="vt-app-tag">Hydrating Serums</span><span class="vt-app-tag">Moisturising Creams &amp; Lotions</span><span class="vt-app-tag">Post-Procedure Recovery</span><span class="vt-app-tag">Eye Area Gels</span><span class="vt-app-tag">Sheet Mask Essence</span><span class="vt-app-tag">Plumping Treatments</span></div>
+  <p class="vt-sh">Synergistic Combinations</p>
+  <div class="vt-syn-list">
+    <div class="vt-syn"><span class="vt-syn-code">+ NiaciActiv</span><span class="vt-syn-desc">The globally dominant serum format — niacinamide + high-MW HA addressing brightening, barrier and hydration simultaneously.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ PanthoActiv 98</span><span class="vt-syn-desc">Complete moisturisation architecture — panthenol reinforces the barrier from within, HA hydrates the surface. Multi-layer hydration strategy.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ AllanActiv</span><span class="vt-syn-desc">Soothing + hydration pairing — standard formulation for after-sun, post-procedure and sensitive skin recovery products.</span></div>
+  </div>
+</div>
+<div class="vt-pr">
+  <div>
+    <p class="vt-spec-title">Technical Specifications</p>
+    <div class="vt-spec-row"><span class="vt-spec-k">CAS Number</span><span class="vt-spec-v">9067-32-7</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">INCI Name</span><span class="vt-spec-v">Sodium Hyaluronate</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Molecular weight</span><span class="vt-spec-v">1.0 – 1.5 MDa (GPC verified)</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Assay</span><span class="vt-spec-v">≥ 90.0% (sodium hyaluronate)</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Appearance</span><span class="vt-spec-v">White to off-white powder</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Viscosity (1% aq.)</span><span class="vt-spec-v">≥ 1000 mPa·s</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Solubility</span><span class="vt-spec-v">Water-soluble (slow hydration)</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Incorporation phase</span><span class="vt-spec-v">Aqueous · pre-swell in cold water</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Recommended dosage</span><span class="vt-spec-v">0.1 – 1.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">pH stability</span><span class="vt-spec-v">5 – 8</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Source</span><span class="vt-spec-v">Microbial fermentation · Animal-free</span></div>
+  </div>
+  <div class="vt-reg-block">
+    <p class="vt-reg-title">Global Regulatory Status</p>
+    <div class="vt-reg-row"><span class="vt-reg-k">EU / BR / LATAM / USA</span><span class="vt-reg-v">No restriction</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">China IECIC</span><span class="vt-reg-v">Listed</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">Vegan Status</span><span class="vt-reg-v">Vegan-eligible (fermentation)</span></div>
+  </div>
+  <button class="vt-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- ═══ ALLANACTIV ═══ -->
+<div class="vt-panel" id="p-allan">
+<div class="vt-panel-inner">
+<div class="vt-pl">
+  <div class="vt-p-tag"><div class="vt-dot"></div>VLYOR VITAL — Soothing &amp; Repair Active</div>
+  <h2 class="vt-p-name">AllanActiv</h2>
+  <p class="vt-p-inci">Allantoin</p>
+  <div class="vt-badges"><span class="vt-badge b-act">Soothing</span><span class="vt-badge b-act">Keratolytic</span><span class="vt-badge b-act">Cell Proliferation</span></div>
+  <p class="vt-tagline">"The universal soothing active — anti-irritant, keratolytic and wound-healing in one classic molecule."</p>
+  <p class="vt-body">AllanActiv (allantoin) is a <strong>naturally occurring purine derivative</strong> — biochemically the end product of purine catabolism — with one of the best-established safety and efficacy profiles of any cosmetic active. Originally isolated from comfrey root (Symphytum officinale) and now produced synthetically to pharmaceutical purity standards, allantoin has been used in dermatology and cosmetics for over a century, with a depth of published safety and efficacy data that is surpassed by few actives in the VITAL portfolio.</p>
+  <p class="vt-body">Its primary cosmetic mechanisms are: <strong>keratolytic activity</strong> (promotes the hydration and softening of the stratum corneum by interacting with keratin, facilitating desquamation and texture smoothing); <strong>cell proliferation stimulation</strong> (documented in multiple in-vitro studies to stimulate keratinocyte and fibroblast proliferation, accelerating wound re-epithelialisation); and <strong>anti-irritant / soothing activity</strong> (reduces the inflammatory response to physical and chemical irritants, making it the standard anti-irritancy active in products containing acids, retinoids, exfoliants or other potentially irritating actives).</p>
+  <div class="vt-perf-grid">
+    <div class="vt-perf-card"><span class="vt-perf-val">≥99.0%</span><span class="vt-perf-lbl">Assay (HPLC)</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">0.1–2.0%</span><span class="vt-perf-lbl">Effective Dose Range</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">pH 3–8</span><span class="vt-perf-lbl">Stability Range</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-v" style="font-size:12px;display:block;margin-bottom:3px">Water-soluble</span><span class="vt-perf-lbl">Solubility</span></div>
+  </div>
+  <p class="vt-sh">Formulation Applications</p>
+  <div class="vt-app-tags"><span class="vt-app-tag">Sensitive Skin Formulas</span><span class="vt-app-tag">AHA / Retinoid Products</span><span class="vt-app-tag">After-Sun Care</span><span class="vt-app-tag">Post-Procedure Recovery</span><span class="vt-app-tag">Baby Skin Care</span><span class="vt-app-tag">Shave Balms</span><span class="vt-app-tag">Wound-Healing Cosmetics</span></div>
+  <p class="vt-sh">Synergistic Combinations</p>
+  <div class="vt-syn-list">
+    <div class="vt-syn"><span class="vt-syn-code">+ PanthoActiv 98</span><span class="vt-syn-desc">The classic repair pairing — panthenol rebuilds barrier integrity while allantoin soothes and accelerates cell renewal. Present in most sensitive skin and after-sun products globally.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ MandelActiv / MalicActiv</span><span class="vt-syn-desc">Soothing counterbalance to AHA-induced irritation — enables higher acid concentrations in formulas positioned for sensitive skin.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ HyalActiv Series</span><span class="vt-syn-desc">Soothing + hydration pairing — standard formulation for after-sun recovery, post-procedure serums and sensitive skin moisturisers.</span></div>
+  </div>
+</div>
+<div class="vt-pr">
+  <div>
+    <p class="vt-spec-title">Technical Specifications</p>
+    <div class="vt-spec-row"><span class="vt-spec-k">CAS Number</span><span class="vt-spec-v">97-59-6</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">INCI Name</span><span class="vt-spec-v">Allantoin</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Assay (HPLC)</span><span class="vt-spec-v">≥ 99.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Appearance</span><span class="vt-spec-v">White crystalline powder</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Molecular weight</span><span class="vt-spec-v">158.12 g/mol</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Melting point</span><span class="vt-spec-v">228 – 232°C (dec.)</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Solubility</span><span class="vt-spec-v">Water-soluble (6 g/L at 20°C)</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Incorporation phase</span><span class="vt-spec-v">Aqueous · dissolve in hot water first</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Recommended dosage</span><span class="vt-spec-v">0.1 – 2.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">pH stability</span><span class="vt-spec-v">3 – 8</span></div>
+  </div>
+  <div class="vt-reg-block">
+    <p class="vt-reg-title">Global Regulatory Status</p>
+    <div class="vt-reg-row"><span class="vt-reg-k">EU / BR / LATAM / USA</span><span class="vt-reg-v">No restriction</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">USA (OTC)</span><span class="vt-reg-v">Skin protectant monograph · 0.5–2%</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">China IECIC</span><span class="vt-reg-v">Listed</span></div>
+  </div>
+  <button class="vt-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- ═══ MENTHOACTIV ═══ -->
+<div class="vt-panel" id="p-mentho">
+<div class="vt-panel-inner">
+<div class="vt-pl">
+  <div class="vt-p-tag"><div class="vt-dot"></div>VLYOR VITAL — Cooling Active</div>
+  <h2 class="vt-p-name">MenthoActiv</h2>
+  <p class="vt-p-inci">Menthol (L-Menthol Crystal)</p>
+  <div class="vt-badges"><span class="vt-badge b-min">Cooling Active</span><span class="vt-badge b-act">TRPM8 Agonist</span><span class="vt-badge b-act">Analgesic</span><span class="vt-badge b-act">Fragrance</span></div>
+  <p class="vt-tagline">"The TRPM8 receptor agonist — physiological cooling without temperature change, with proven analgesic and antimicrobial properties."</p>
+  <p class="vt-body">MenthoActiv (L-menthol) is the <strong>principal active component of peppermint oil</strong> — a cyclic terpene alcohol with a precise physiological cooling mechanism: direct agonism of the TRPM8 (Transient Receptor Potential Melastatin-8) ion channel in sensory neurons, triggering the same neural signal generated by actual cold temperature in the absence of any temperature change. This makes MenthoActiv a <strong>true physiological cooling active</strong>, distinct from evaporative or thermal cooling effects, providing a cooling sensation that is independent of ambient temperature or product formulation temperature.</p>
+  <p class="vt-body">Beyond cooling, MenthoActiv delivers documented <strong>mild analgesic activity</strong> (counterirritant via TRPV1 desensitisation, reducing pain perception in muscles and joints), <strong>antimicrobial activity</strong> (active against Gram-positive bacteria and dermatophytes at concentrations above 0.1%), and provides a characteristic <strong>clean, fresh fragrance note</strong> that positions it uniquely as a functional aromatic active rather than a passive fragrance ingredient.</p>
+  <div class="vt-perf-grid">
+    <div class="vt-perf-card"><span class="vt-perf-val">≥99.0%</span><span class="vt-perf-lbl">Assay (GC)</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">0.1–3.0%</span><span class="vt-perf-lbl">Effective Dose Range</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-v" style="font-size:12px;display:block;margin-bottom:3px">TRPM8 agonist</span><span class="vt-perf-lbl">Cooling Mechanism</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">41–43°C</span><span class="vt-perf-lbl">Melting Point</span></div>
+  </div>
+  <p class="vt-sh">Performance by Concentration</p>
+  <p class="vt-body"><strong>0.1–0.5%:</strong> Subtle cooling and fresh fragrance note. Suitable for facial formulations, scalp treatments and products where gentle sensory enhancement is desired without strong cooling impact.</p>
+  <p class="vt-body"><strong>0.5–2.0%:</strong> Strong, lasting cooling sensation. Standard dose for cooling body gels, after-sun products, sport recovery formulas and foot care products.</p>
+  <p class="vt-body"><strong>2.0–3.0%:</strong> Intense cooling and analgesic counterirritant effect. Used in muscle relief formulations, cooling patches and high-impact sport cosmetics.</p>
+  <p class="vt-sh">Formulation Applications</p>
+  <div class="vt-app-tags"><span class="vt-app-tag">Cooling Body Gels</span><span class="vt-app-tag">After-Sun Products</span><span class="vt-app-tag">Muscle Relief Formulas</span><span class="vt-app-tag">Scalp Treatments</span><span class="vt-app-tag">Foot Care</span><span class="vt-app-tag">Oral / Lip Care</span><span class="vt-app-tag">Sport Recovery</span></div>
+</div>
+<div class="vt-pr">
+  <div>
+    <p class="vt-spec-title">Technical Specifications</p>
+    <div class="vt-spec-row"><span class="vt-spec-k">CAS Number</span><span class="vt-spec-v">89-78-1</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">INCI Name</span><span class="vt-spec-v">Menthol</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Assay (GC)</span><span class="vt-spec-v">≥ 99.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Enantiomer</span><span class="vt-spec-v">L-Menthol (natural isomer)</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Appearance</span><span class="vt-spec-v">White crystalline needles</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Molecular weight</span><span class="vt-spec-v">156.27 g/mol</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Melting point</span><span class="vt-spec-v">41 – 43°C</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Optical rotation [α]D</span><span class="vt-spec-v">-49° to -50° (L-form)</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Solubility</span><span class="vt-spec-v">Oil-soluble · Slightly water-soluble</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Recommended dosage</span><span class="vt-spec-v">0.1 – 3.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Incorporation</span><span class="vt-spec-v">Oil phase or cool-down ≤45°C</span></div>
+  </div>
+  <div class="vt-reg-block">
+    <p class="vt-reg-title">Global Regulatory Status</p>
+    <div class="vt-reg-row"><span class="vt-reg-k">EU / BR / LATAM</span><span class="vt-reg-v">No restriction (cosmetics)</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">USA (OTC)</span><span class="vt-reg-v">Counterirritant monograph · ≤16%</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">China IECIC</span><span class="vt-reg-v">Listed</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">IFRA</span><span class="vt-reg-v">Category-specific limits apply</span></div>
+  </div>
+  <button class="vt-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+<!-- ═══ HYDROXYACTIV ═══ -->
+<div class="vt-panel" id="p-hydroxy">
+<div class="vt-panel-inner">
+<div class="vt-pl">
+  <div class="vt-p-tag"><div class="vt-dot"></div>VLYOR VITAL — Mineral Active</div>
+  <h2 class="vt-p-name">HydroxyActiv</h2>
+  <p class="vt-p-inci">Hydroxyapatite</p>
+  <div class="vt-badges"><span class="vt-badge b-min">Mineral Active</span><span class="vt-badge b-min">Biocompatible</span><span class="vt-badge b-act">Anti-Ageing</span></div>
+  <p class="vt-tagline">"The principal mineral of bone and teeth — and the newest precision ingredient in advanced anti-ageing formulation."</p>
+  <p class="vt-body">HydroxyActiv (hydroxyapatite, Ca₁₀(PO₄)₆(OH)₂) is a <strong>calcium phosphate mineral that constitutes 65–70% of human bone and 97% of tooth enamel by weight</strong>. In cosmetic application, nano- and micrograde hydroxyapatite has emerged as one of the most scientifically substantiated new entrants to the premium anti-ageing active space — particularly in oral care, facial anti-ageing and skin mineralisation applications.</p>
+  <p class="vt-body">In facial skin care, HydroxyActiv functions via three primary mechanisms: <strong>calcium signalling support</strong> (extracellular calcium ions released from HA dissolution modulate keratinocyte differentiation and barrier formation, supporting the natural "calcium gradient" essential to stratum corneum function); <strong>skin remineralisation</strong> (provides direct mineral supplementation to calcium-depleted skin associated with photoageing and barrier compromise); and at nano-scale, <strong>temporary physical filling of micro-topography</strong> — fine lines and pores — via light-scattering particles that create an optical blurring and smoothing effect visible immediately on application. This combination of functional anti-ageing and immediate visual benefit is unique among mineral actives.</p>
+  <div class="vt-perf-grid">
+    <div class="vt-perf-card"><span class="vt-perf-val">≥97.0%</span><span class="vt-perf-lbl">Purity</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-val">0.5–5.0%</span><span class="vt-perf-lbl">Effective Dose Range</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-v" style="font-size:12px;display:block;margin-bottom:3px">Ca/P = 1.67</span><span class="vt-perf-lbl">Stoichiometric Ratio</span></div>
+    <div class="vt-perf-card"><span class="vt-perf-v" style="font-size:12px;display:block;margin-bottom:3px">White powder</span><span class="vt-perf-lbl">Appearance</span></div>
+  </div>
+  <p class="vt-sh">Formulation Applications</p>
+  <div class="vt-app-tags"><span class="vt-app-tag">Advanced Anti-Ageing Serums</span><span class="vt-app-tag">Oral Care (Toothpaste, Mouthwash)</span><span class="vt-app-tag">Mineralising Skin Treatments</span><span class="vt-app-tag">Pore-Minimising Products</span><span class="vt-app-tag">Enamel-Protection Formulas</span></div>
+  <p class="vt-sh">Formulation Notes</p>
+  <p class="vt-body">HydroxyActiv is insoluble in water — it is incorporated as a fine mineral suspension. Requires adequate dispersion via high-shear mixing before addition to the final formula. Stable across pH 6–9. Avoid acidic pH environments below 5 where partial dissolution may alter Ca/P ratio and particle morphology. Compatible with most cosmetic formulation systems and actives.</p>
+  <p class="vt-sh">Synergistic Combinations</p>
+  <div class="vt-syn-list">
+    <div class="vt-syn"><span class="vt-syn-code">+ HyalActiv Series</span><span class="vt-syn-desc">Mineral + hydration pairing for advanced anti-ageing — HA provides surface hydration, hydroxyapatite supports mineral skin physiology.</span></div>
+    <div class="vt-syn"><span class="vt-syn-code">+ NiaciActiv</span><span class="vt-syn-desc">Barrier and pore combination — niacinamide regulates sebum and barrier, hydroxyapatite provides optical pore-minimising effect.</span></div>
+  </div>
+</div>
+<div class="vt-pr">
+  <div>
+    <p class="vt-spec-title">Technical Specifications</p>
+    <div class="vt-spec-row"><span class="vt-spec-k">CAS Number</span><span class="vt-spec-v">1306-06-5</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">INCI Name</span><span class="vt-spec-v">Hydroxyapatite</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Chemical formula</span><span class="vt-spec-v">Ca₁₀(PO₄)₆(OH)₂</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Purity</span><span class="vt-spec-v">≥ 97.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Ca/P molar ratio</span><span class="vt-spec-v">1.67 (stoichiometric)</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Appearance</span><span class="vt-spec-v">White fine powder</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Molecular weight</span><span class="vt-spec-v">1004.6 g/mol</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Solubility</span><span class="vt-spec-v">Water-insoluble (suspension)</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Recommended dosage</span><span class="vt-spec-v">0.5 – 5.0%</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">pH stability</span><span class="vt-spec-v">6 – 9</span></div>
+    <div class="vt-spec-row"><span class="vt-spec-k">Origin</span><span class="vt-spec-v">Synthetic (non-animal)</span></div>
+  </div>
+  <div class="vt-reg-block">
+    <p class="vt-reg-title">Global Regulatory Status</p>
+    <div class="vt-reg-row"><span class="vt-reg-k">EU</span><span class="vt-reg-v">Approved cosmetics &amp; oral care</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">Brazil (ANVISA)</span><span class="vt-reg-v">Approved</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">USA</span><span class="vt-reg-v">GRAS / OTC oral care approved</span></div>
+    <div class="vt-reg-row"><span class="vt-reg-k">China IECIC</span><span class="vt-reg-v">Listed</span></div>
+  </div>
+  <button class="vt-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div>
+</div>
+</div>
+
+    </div><!-- end vt-panels -->
+  </div><!-- end vt-exp-layout -->
+</section>
+
+<!-- FORMULATION SYSTEMS -->
+<section class="vt-form-sec">
+  <div>
+    <p class="eyebrow">Formulation Systems</p>
+    <h2 class="sec-title">Proven active combinations<br/>for every efficacy brief.</h2>
+    <p class="sec-sub">Three ready-to-use active architectures covering the primary efficacy claims in the LATAM and global premium skin care market.</p>
+  </div>
+  <div class="vt-form-grid">
+    <div class="vt-form-card">
+      <span class="vt-fc-num">System 01</span>
+      <h3 class="vt-fc-title">Brightening &amp;<br/>Even Tone</h3>
+      <p class="vt-fc-body">Multi-mechanism brightening formula targeting the dominant skin concern in LATAM markets. Combines melanosome transfer inhibition, tyrosinase suppression, surface exfoliation and antioxidant protection for comprehensive pigmentation correction.</p>
+      <div class="vt-fc-prods">
+        <div class="vt-fc-prod">NiaciActiv · 5.0%</div>
+        <div class="vt-fc-prod">AscorActiv C · 10.0%</div>
+        <div class="vt-fc-prod">KojicActiv · 2.0%</div>
+        <div class="vt-fc-prod">MandelActiv · 5.0%</div>
+        <div class="vt-fc-prod">HyalActiv Series · 0.3%</div>
+      </div>
+      <span class="vt-fc-label">Brightening Serum</span>
+    </div>
+    <div class="vt-form-card">
+      <span class="vt-fc-num">System 02</span>
+      <h3 class="vt-fc-title">Premium Anti-Ageing<br/>Renewal Complex</h3>
+      <p class="vt-fc-body">High-performance anti-ageing architecture combining retinoid activity, retinol alternative, antioxidant network and hyaluronic acid hydration. Designed for the premium facial anti-ageing segment targeting consumers 35+ in prestige retail channels.</p>
+      <div class="vt-fc-prods">
+        <div class="vt-fc-prod">BakuActiv · 0.5%</div>
+        <div class="vt-fc-prod">NiaciActiv · 5.0%</div>
+        <div class="vt-fc-prod">CoenzActiv Q10 · 0.1%</div>
+        <div class="vt-fc-prod">TocoActiv E · 0.5%</div>
+        <div class="vt-fc-prod">HyalActiv Series · 0.5%</div>
+        <div class="vt-fc-prod">CuActiv · 0.05%</div>
+      </div>
+      <span class="vt-fc-label">Anti-Ageing Serum</span>
+    </div>
+    <div class="vt-form-card">
+      <span class="vt-fc-num">System 03</span>
+      <h3 class="vt-fc-title">Repair &amp;<br/>Barrier Recovery</h3>
+      <p class="vt-fc-body">Post-procedure, sensitive skin and barrier repair formulation combining panthenol's proven barrier conditioning with allantoin's soothing and cell-renewal activity, hyaluronic acid hydration and niacinamide ceramide stimulation.</p>
+      <div class="vt-fc-prods">
+        <div class="vt-fc-prod">PanthoActiv 98 · 2.0%</div>
+        <div class="vt-fc-prod">AllanActiv · 0.5%</div>
+        <div class="vt-fc-prod">NiaciActiv · 4.0%</div>
+        <div class="vt-fc-prod">HyalActiv Series · 0.5%</div>
+        <div class="vt-fc-prod">TocoActiv E · 0.3%</div>
+      </div>
+      <span class="vt-fc-label">Barrier Recovery Cream</span>
+    </div>
+  </div>
+</section>
+
+<!-- REGULATORY -->
+<section class="vt-reg-sec">
+  <div>
+    <p class="eyebrow">Global Compliance</p>
+    <h2 class="sec-title">Every market.<br/>Every standard.</h2>
+  </div>
+  <div class="vt-reg-grid">
+    <div class="vt-reg-card">
+      <span class="vt-rc-flag">🇪🇺</span>
+      <h4 class="vt-rc-title">EU Cosmetics Regulation</h4>
+      <p class="vt-rc-body">All VITAL actives comply with EU Regulation 1223/2009. Concentration limits applicable to RetinActiv A (Annex V) are documented per category — face, body and leave-on/rinse-off distinctions provided.</p>
+    </div>
+    <div class="vt-reg-card">
+      <span class="vt-rc-flag">🇧🇷</span>
+      <h4 class="vt-rc-title">ANVISA — Brazil</h4>
+      <p class="vt-rc-body">All VITAL actives registered under applicable ANVISA resolutions. Full concentration guidance and approved use conditions per Brazilian cosmetic regulatory framework available on request.</p>
+    </div>
+    <div class="vt-reg-card">
+      <span class="vt-rc-flag">🇨🇴</span>
+      <h4 class="vt-rc-title">INVIMA / DIGEMID</h4>
+      <p class="vt-rc-body">Colombia and Peru follow the EU Mercosur reference framework for cosmetic actives. VITAL documentation package supports both INVIMA and DIGEMID notification procedures.</p>
+    </div>
+    <div class="vt-reg-card">
+      <span class="vt-rc-flag">🇨🇳</span>
+      <h4 class="vt-rc-title">China IECIC</h4>
+      <p class="vt-rc-body">All VITAL actives listed in China's Inventory of Existing Cosmetic Ingredients. Full documentation for Chinese market registration and product safety notification available.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="vt-cta-sec">
+  <div>
+    <h2>Ready to build your<br/>next high-efficacy formula?</h2>
+    <p>Our technical team responds with targeted dossiers — active system recommendations, stability guidance and regulatory documentation for your specific market and product brief.</p>
+  </div>
+  <div class="vt-cta-btns">
+    <a href="portal.html#vital" class="btn-g">Full Technical Portal →</a>
+    <a href="index.html#contact" class="btn-p">Request Samples →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-m">VLYOR</span><br/><span class="logo-s">Science</span>
+      <p class="footer-tag">Molecular Integrity. Aesthetic Performance.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col"><h5>VITAL Portfolio</h5><ul>
+        <li>PanthoActiv 98 / DL · B5</li><li>TocoActiv E · Vitamin E</li>
+        <li>NiaciActiv · Niacinamide</li><li>BakuActiv · Retinol Alternative</li>
+        <li>HyalActiv Series · Hyaluronic Acid</li><li>+ 11 more actives</li>
+      </ul></div>
+      <div class="footer-col"><h5>Other Lines</h5><ul>
+        <li><a href="shield.html">VLYOR SHIELD — UV Filters</a></li>
+        <li><a href="index.html#lines">VLYOR PURE — Surfactants</a></li>
+        <li><a href="index.html#lines">VLYOR FUNC — Functional</a></li>
+        <li><a href="index.html#lines">VLYOR COND · SILK · FORM · HYDRA</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul>
+        <li><a href="mailto:science@vlyor.com">science@vlyor.com</a></li>
+        <li>Global Bioactives Hub</li><li>Suzhou, China</li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="ft-code">VLYOR VITAL — V3.0 — 2026</span>
+    <span>© VLYOR Science. All rights reserved.</span>
+    <span class="ft-code">EU · ANVISA · INVIMA · IECIC</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+const btns=document.querySelectorAll('.vt-sb-btn');
+const panels=document.querySelectorAll('.vt-panel');
+btns.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    btns.forEach(b=>b.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('p-'+btn.dataset.p).classList.add('active');
+    document.getElementById('explorer').scrollIntoView({behavior:'smooth'});
+  });
+});
+window.addEventListener('scroll',()=>{
+  document.getElementById('mainnav').classList.toggle('scrolled',window.scrollY>40);
+},{passive:true});
+</script>
+</body>
+</html>
