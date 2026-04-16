@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>VLYOR FUNC — Technical Dossier | VLYOR Science</title>
+<meta name="description" content="Technical dossier for VLYOR FUNC functional chemistry. Complete commercial-technical specifications, formulation guidance and regulatory data for all 10 actives."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;500;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+:root{--acc:#7EC8DA;--acc-bg:rgba(126,200,218,.08);--acc-border:rgba(126,200,218,.22);--line-dark:#1F4E5F}
+.dos-wrap{display:grid;grid-template-columns:260px 1fr;min-height:100vh;padding-top:60px}
+.dos-sidebar{background:#0A0A0A;border-right:1px solid rgba(255,255,255,.07);position:sticky;top:60px;height:calc(100vh - 60px);overflow-y:auto;display:flex;flex-direction:column}
+.dos-sb-head{padding:28px 24px 20px;border-bottom:1px solid rgba(255,255,255,.06)}
+.dos-sb-line{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);margin-bottom:8px;display:flex;align-items:center;gap:7px}
+.dos-sb-dot{width:5px;height:5px;border-radius:50%;background:var(--acc);flex-shrink:0}
+.dos-sb-title{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;letter-spacing:-.01em;line-height:1.1;margin-bottom:4px}
+.dos-sb-count{font-family:'DM Mono',monospace;font-size:9px;color:#4B5563;letter-spacing:.08em}
+.dos-sb-nav{flex:1;padding:12px 0}
+.dos-sb-grp{border-bottom:1px solid rgba(255,255,255,.05)}
+.dos-sb-grp-hd{padding:12px 24px 6px;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#374151}
+.dos-sb-btn{display:flex;align-items:center;width:100%;padding:10px 24px;background:none;border:none;color:#6B7280;font-family:'Barlow',sans-serif;font-size:12px;cursor:pointer;transition:all .18s;text-align:left;border-left:2px solid transparent;gap:10px}
+.dos-sb-btn:hover{color:#D1D5DB;background:rgba(255,255,255,.025)}
+.dos-sb-btn.active{color:#fff;background:rgba(126,200,218,.07);border-left-color:var(--acc)}
+.dos-sb-btn-name{flex:1;line-height:1.3}
+.dos-sb-tag{font-family:'DM Mono',monospace;font-size:8px;padding:2px 6px;background:rgba(126,200,218,.1);color:var(--acc);flex-shrink:0}
+.dos-sb-footer{padding:20px 24px;border-top:1px solid rgba(255,255,255,.06)}
+.dos-sb-back{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#4B5563;display:flex;align-items:center;gap:7px;transition:color .2s}
+.dos-sb-back:hover{color:var(--acc)}
+.dos-main{background:#0D0D0D;min-height:calc(100vh - 60px)}
+.dos-panel{display:none;animation:dosIn .22s ease}
+.dos-panel.active{display:block}
+@keyframes dosIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.dos-ph{padding:48px 56px 40px;border-bottom:1px solid rgba(255,255,255,.06);background:linear-gradient(135deg,rgba(31,78,95,.14) 0%,transparent 60%)}
+.dos-ph-eyebrow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:8px;margin-bottom:18px}
+.dos-ph-dot{width:5px;height:5px;border-radius:50%;background:var(--acc)}
+.dos-ph-name{font-family:'Barlow Condensed',sans-serif;font-size:clamp(42px,5vw,64px);font-weight:700;letter-spacing:-.03em;line-height:.92;margin-bottom:8px}
+.dos-ph-inci{font-family:'DM Mono',monospace;font-size:11px;color:#6B7280;font-style:italic;letter-spacing:.04em;margin-bottom:20px}
+.dos-ph-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:20px}
+.dos-ph-badge{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.04em;padding:4px 10px}
+.b-a{background:rgba(126,200,218,.1);color:var(--acc)}
+.b-b{background:rgba(167,243,208,.1);color:#A7F3D0}
+.b-c{background:rgba(196,181,253,.1);color:#C4B5FD}
+.b-d{background:rgba(31,78,95,.22);color:#7EC8DA}
+.b-e{background:rgba(217,119,6,.1);color:#FCD34D}
+.dos-ph-tagline{font-size:15px;line-height:1.7;color:#E5E7EB;font-style:italic;border-left:2px solid var(--acc);padding-left:16px;max-width:72ch}
+.dos-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06)}
+.dos-metric{background:#0D0D0D;padding:20px 24px}
+.dos-metric-val{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:700;letter-spacing:-.02em;color:var(--acc);display:block;margin-bottom:4px}
+.dos-metric-lbl{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:#4B5563}
+.dos-body{padding:48px 56px 64px;display:grid;grid-template-columns:1fr 340px;gap:56px;align-items:start}
+.dos-sec-h{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);padding-bottom:10px;border-bottom:1px solid var(--acc-border);margin-bottom:18px;margin-top:36px}
+.dos-sec-h:first-child{margin-top:0}
+.dos-desc{font-size:13.5px;line-height:1.86;color:#9CA3AF;margin-bottom:14px}
+.dos-desc strong{color:#E5E7EB;font-weight:600}
+.dos-desc em{color:var(--acc);font-style:normal}
+.dos-mech{background:rgba(126,200,218,.04);border:1px solid var(--acc-border);padding:20px 24px;margin-bottom:20px}
+.dos-mech-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-bottom:10px}
+.dos-mech-body{font-size:13px;line-height:1.78;color:#D1D5DB}
+.dos-perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:24px}
+.dos-perf-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);padding:14px 16px}
+.dos-perf-val{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;letter-spacing:-.02em;display:block;color:#fff;margin-bottom:3px}
+.dos-perf-lbl{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280}
+.dos-app-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px}
+.dos-app-tag{font-family:'DM Mono',monospace;font-size:9px;padding:5px 11px;background:rgba(255,255,255,.04);color:#D1D5DB;letter-spacing:.03em;border:1px solid rgba(255,255,255,.07)}
+.dos-form-row{display:grid;grid-template-columns:1fr 80px 80px;gap:0;border-bottom:1px solid rgba(255,255,255,.05);font-size:12px}
+.dos-form-row:first-child{border-top:1px solid rgba(255,255,255,.05)}
+.dos-form-hd{background:rgba(255,255,255,.04);font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:#4B5563}
+.dos-form-cell{padding:9px 12px;color:#9CA3AF}
+.dos-form-cell.hi{color:#E5E7EB}
+.dos-form-cell.mono{font-family:'DM Mono',monospace;font-size:11px;color:var(--acc)}
+.dos-syn-list{display:flex;flex-direction:column;gap:6px;margin-bottom:8px}
+.dos-syn{padding:12px 14px;background:rgba(255,255,255,.025);border-left:2px solid var(--acc-border)}
+.dos-syn-code{font-family:'DM Mono',monospace;font-size:10px;color:var(--acc);display:block;margin-bottom:4px}
+.dos-syn-desc{font-size:12px;color:#9CA3AF;line-height:1.6}
+.dos-spec-block{background:#111;padding:24px;margin-bottom:12px}
+.dos-spec-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:4px}
+.dos-spec-row{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px}
+.dos-spec-row:last-child{border-bottom:none}
+.dos-spec-k{color:#6B7280;flex-shrink:0;padding-right:12px}
+.dos-spec-v{font-family:'DM Mono',monospace;font-size:11px;color:#fff;text-align:right;word-break:break-word}
+.dos-reg-block{background:#111;padding:24px;margin-bottom:12px}
+.dos-reg-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06)}
+.dos-reg-row{display:grid;grid-template-columns:auto 1fr auto;gap:0 16px;align-items:start;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:11px}
+.dos-reg-row:last-child{border-bottom:none}
+.dos-reg-mkt{color:#6B7280;white-space:nowrap}
+.dos-reg-detail{color:#9CA3AF;font-size:11px;line-height:1.5}
+.dos-reg-status{font-family:'DM Mono',monospace;font-size:9px;padding:2px 7px;white-space:nowrap}
+.s-ok{background:rgba(126,200,218,.1);color:var(--acc)}
+.s-cond{background:rgba(217,119,6,.1);color:#FCD34D}
+.s-cosmos{background:rgba(167,243,208,.1);color:#A7F3D0}
+.dos-note{padding:14px 16px;background:var(--acc-bg);border:1px solid var(--acc-border);margin-bottom:10px}
+.dos-note-t{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);margin-bottom:6px}
+.dos-note-b{font-size:12px;line-height:1.65;color:#D1D5DB}
+.dos-alert{padding:14px 16px;background:rgba(217,119,6,.06);border:1px solid rgba(217,119,6,.2);margin-bottom:10px}
+.dos-alert-t{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:#FCD34D;margin-bottom:6px}
+.dos-alert-b{font-size:12px;line-height:1.65;color:#D1D5DB}
+.dos-req{background:var(--line-dark);padding:20px 24px;display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.dos-req-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;margin-bottom:2px}
+.dos-req-body{font-size:12px;color:rgba(255,255,255,.55);line-height:1.55}
+.dos-req-btn{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:rgba(126,200,218,.12);color:var(--acc);border:1px solid var(--acc-border);font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .22s;text-decoration:none}
+.dos-req-btn:hover{background:rgba(126,200,218,.22);border-color:var(--acc)}
+.dos-req-btn svg{width:13px;height:13px;flex-shrink:0}
+.dos-docnav{display:flex;align-items:center;justify-content:space-between;padding:20px 56px;border-top:1px solid rgba(255,255,255,.06);margin-top:48px}
+.dos-docnav-btn{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#4B5563;display:flex;align-items:center;gap:8px;cursor:pointer;background:none;border:none;transition:color .2s;padding:8px 0}
+.dos-docnav-btn:hover{color:var(--acc)}
+.dos-docnav-name{font-size:13px;font-family:'Barlow',sans-serif;font-weight:600;color:#E5E7EB;display:block;margin-top:2px;letter-spacing:0}
+@media(max-width:1100px){.dos-body{grid-template-columns:1fr;gap:0;padding:36px 40px 56px}.dos-right{margin-top:32px}.dos-ph{padding:36px 40px 32px}}
+@media(max-width:860px){.dos-wrap{grid-template-columns:1fr}.dos-sidebar{display:none}.dos-body{padding:28px 20px 48px}.dos-ph{padding:28px 20px 24px}.dos-docnav{padding:20px}.dos-metrics{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.dos-metrics{grid-template-columns:1fr}.dos-perf-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav id="mainnav">
+  <a class="logo" href="index.html"><span class="logo-m">VLYOR</span><span class="logo-s">Science <span class="logo-p">|</span> Global Bioactives Hub</span></a>
+  <div class="nav-links">
+    <a href="func.html">← VLYOR FUNC</a>
+    <a href="index.html#lines">Portfolio</a>
+    <a href="portal.html" class="nav-portal">Technical Portal →</a>
+  </div>
+</nav>
+
+<div class="dos-wrap">
+  <aside class="dos-sidebar">
+    <div class="dos-sb-head">
+      <div class="dos-sb-line"><div class="dos-sb-dot"></div>Technical Dossier</div>
+      <div class="dos-sb-title">VLYOR FUNC</div>
+      <div class="dos-sb-count">10 Functional Chemistry Actives</div>
+    </div>
+    <nav class="dos-sb-nav">
+      <div class="dos-sb-grp">
+        <div class="dos-sb-grp-hd">Chelating Agents</div>
+        <button class="dos-sb-btn active" data-dos="chela2"><span class="dos-sb-btn-name">ChelaGuard 2</span><span class="dos-sb-tag">Di-Na EDTA</span></button>
+        <button class="dos-sb-btn" data-dos="chela4"><span class="dos-sb-btn-name">ChelaGuard 4</span><span class="dos-sb-tag">Tetra-Na EDTA</span></button>
+      </div>
+      <div class="dos-sb-grp">
+        <div class="dos-sb-grp-hd">Solubilisers</div>
+        <button class="dos-sb-btn" data-dos="solucast"><span class="dos-sb-btn-name">SoluCast 40</span><span class="dos-sb-tag">HCO-40</span></button>
+      </div>
+      <div class="dos-sb-grp">
+        <div class="dos-sb-grp-hd">Preservative Systems</div>
+        <button class="dos-sb-btn" data-dos="preservpe"><span class="dos-sb-btn-name">PreserFlex PE</span><span class="dos-sb-tag">Phenoxyeth.</span></button>
+        <button class="dos-sb-btn" data-dos="preservehg"><span class="dos-sb-btn-name">PreserFlex EHG</span><span class="dos-sb-tag">PE + EHG</span></button>
+        <button class="dos-sb-btn" data-dos="preservmp"><span class="dos-sb-btn-name">PreserFlex MP</span><span class="dos-sb-tag">Methylparaben</span></button>
+        <button class="dos-sb-btn" data-dos="preservdmdm"><span class="dos-sb-btn-name">PreserFlex DMDM</span><span class="dos-sb-tag">DMDM</span></button>
+      </div>
+      <div class="dos-sb-grp">
+        <div class="dos-sb-grp-hd">Scalp &amp; Antifungal</div>
+        <button class="dos-sb-btn" data-dos="climbaflex"><span class="dos-sb-btn-name">ClimbaFlex</span><span class="dos-sb-tag">Climbazole</span></button>
+      </div>
+      <div class="dos-sb-grp">
+        <div class="dos-sb-grp-hd">Antiperspirant Actives</div>
+        <button class="dos-sb-btn" data-dos="antipersach"><span class="dos-sb-btn-name">AntipersFlex ACH</span><span class="dos-sb-tag">ACH</span></button>
+        <button class="dos-sb-btn" data-dos="antipersazg"><span class="dos-sb-btn-name">AntipersFlex AZG</span><span class="dos-sb-tag">ZAG · Clinical</span></button>
+      </div>
+    </nav>
+    <div class="dos-sb-footer">
+      <a href="func.html" class="dos-sb-back">← Back to VLYOR FUNC</a>
+    </div>
+  </aside>
+
+  <main class="dos-main">
+
+<!-- ══════════════════════════════════════════════════════════
+     PRODUCT 01 — ChelaGuard 2 / Disodium EDTA
+══════════════════════════════════════════════════════════ -->
+<div class="dos-panel active" id="dos-chela2">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR FUNC — Chelating Agent</div>
+    <div class="dos-ph-name">ChelaGuard 2</div>
+    <div class="dos-ph-inci">Disodium EDTA · CAS 139-33-3 · MW 336.2 g/mol</div>
+    <div class="dos-ph-badges">
+      <span class="dos-ph-badge b-a">Chelating Agent</span>
+      <span class="dos-ph-badge b-d">Preservative Booster</span>
+      <span class="dos-ph-badge b-d">Antioxidant Protector</span>
+      <span class="dos-ph-badge b-d">Universal Application</span>
+    </div>
+    <div class="dos-ph-tagline">"The invisible guardian of every formula — sequestering the metal ions that catalyse active degradation, disrupt preservation and accelerate rancidity before they cause damage."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">≥99.0%</span><span class="dos-metric-lbl">Assay purity</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">0.05–0.5%</span><span class="dos-metric-lbl">Effective dose</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">pH 4–9</span><span class="dos-metric-lbl">Stability range</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Universal</span><span class="dos-metric-lbl">Formula compatibility</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">ChelaGuard 2 is <strong>Disodium EDTA at ≥99.0% purity</strong> — ethylenediaminetetraacetic acid disodium salt, the most widely used chelating agent in personal care globally. Its four carboxylate and two amine donor atoms form stable, water-soluble complexes with divalent and trivalent metal cations — Ca²⁺, Mg²⁺, Fe²⁺, Fe³⁺, Cu²⁺, Mn²⁺ — present in trace concentrations throughout the manufacturing environment: in process water, raw material impurities and packaging extractables.</p>
+      <p class="dos-desc">Left unchelated, these metal ions catalyse a cascade of degradation reactions: <strong>oxidative degradation of Vitamin C, retinoids, tocopherols and fragrances</strong> via Fenton-type radical generation; <strong>rancidity of lipid phases</strong> via metal-catalysed autoxidation; and systematic <strong>undermining of preservative efficacy</strong> through competitive binding to preservative active sites. ChelaGuard 2 at 0.05–0.5% comprehensively blocks all three degradation pathways simultaneously.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Mechanism of Action — Chelation Chemistry</p>
+        <p class="dos-mech-body">EDTA is a hexadentate ligand that forms thermodynamically stable octahedral complexes with most divalent and trivalent metal cations. The stability constants (log K) of key EDTA-metal complexes range from 14.3 (Ca²⁺) to 25.1 (Fe³⁺), ensuring effectively quantitative metal sequestration at pH 4–9 and at cosmetic use concentrations. The chelated metal is rendered catalytically inactive — it cannot participate in Fenton reactions, cannot bridge bacterial outer membrane lipopolysaccharide chains and cannot catalyse lipid peroxidation. The EDTA-metal complex is water-soluble and stable throughout the product's shelf life. <strong>Preservative booster mechanism</strong>: gram-negative bacteria (particularly Pseudomonas) maintain outer membrane integrity through Mg²⁺/Ca²⁺ bridges between lipopolysaccharide chains. EDTA sequesters these structural cations, disrupting the outer membrane and rendering the bacteria dramatically more susceptible to the primary preservative at equivalent concentration.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">336.2</span><span class="dos-perf-lbl">Molecular Weight (g/mol)</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">≥99.0%</span><span class="dos-perf-lbl">Assay</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">pH 4–9</span><span class="dos-perf-lbl">Active chelation range</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">4.0–5.5</span><span class="dos-perf-lbl">Solution pH (1% aq.)</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">Dose</div><div class="dos-form-cell">Priority</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">All formulas (standard)</div><div class="dos-form-cell mono">0.05–0.1%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Preservation boost</div><div class="dos-form-cell mono">0.1–0.2%</div><div class="dos-form-cell mono">Required</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Vitamin C serums</div><div class="dos-form-cell mono">0.3–0.5%</div><div class="dos-form-cell mono">Essential</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Hard-water manufacturing</div><div class="dos-form-cell mono">0.2–0.3%</div><div class="dos-form-cell mono">Required</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Retinoid formulations</div><div class="dos-form-cell mono">0.1–0.3%</div><div class="dos-form-cell mono">Recommended</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">All Cosmetic Formulations</span>
+        <span class="dos-app-tag">Vitamin C Serums</span>
+        <span class="dos-app-tag">All Preservative Systems</span>
+        <span class="dos-app-tag">Retinoid Formulations</span>
+        <span class="dos-app-tag">Antioxidant Products</span>
+        <span class="dos-app-tag">Emulsions — Oil Phase Protection</span>
+        <span class="dos-app-tag">Hard-Water Manufacturing</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+PreserFlex PE (FUNC) — Mandatory gram-negative coverage</span><span class="dos-syn-desc">ChelaGuard 2 at 0.1–0.2% is the mandatory co-preservative in every PreserFlex PE application. EDTA chelation of outer membrane Mg²⁺/Ca²⁺ converts Pseudomonas from a resistant to a susceptible organism, completing PE's spectrum. Without EDTA, PreserFlex PE alone frequently fails ISO 11930 gram-negative criteria.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+AscorActiv C (VITAL) — Vitamin C stabilisation system</span><span class="dos-syn-desc">Fe²⁺/Cu²⁺ ions at single-digit ppm catalyse L-Ascorbic Acid oxidation via Fenton-type radical generation. ChelaGuard 2 at 0.3–0.5% sequesters these catalytic metal ions, extending functional Vitamin C stability from days to months under equivalent storage conditions.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+PreserFlex EHG (FUNC) — Clean beauty preservation backbone</span><span class="dos-syn-desc">Even in premium PE/EHG preservation systems, ChelaGuard 2 is required for Pseudomonas compliance. Include at 0.1–0.2% in every PreserFlex EHG formulation to complete the ISO 11930 gram-negative challenge criterion.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Disodium EDTA</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">139-33-3</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">EINECS</span><span class="dos-spec-v">203-082-9</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Assay</span><span class="dos-spec-v">≥99.0% (potentiometric)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Molecular weight</span><span class="dos-spec-v">336.21 g/mol</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">White crystalline powder</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH (1% aq.)</span><span class="dos-spec-v">4.0 – 5.5</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Solubility (water, 20°C)</span><span class="dos-spec-v">~100 g/L (freely soluble)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Moisture content</span><span class="dos-spec-v">≤1.0% (loss on drying)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Heavy metals</span><span class="dos-spec-v">≤10 ppm</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">0.05 – 0.5%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Incorporation</span><span class="dos-spec-v">Aqueous phase, ambient temperature</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Stability</span><span class="dos-spec-v">Stable at pH 4–9; decomposes above pH 11</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU 1223/2009</span><span class="dos-reg-detail">No restriction — free use as chelating agent</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">Approved — no concentration restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Colombia / Peru / Argentina</span><span class="dos-reg-detail">Approved per INVIMA / DIGEMID / ANMAT</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">USA / FDA</span><span class="dos-reg-detail">GRAS-equivalent — permitted cosmetic ingredient</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">China IECIC</span><span class="dos-reg-detail">Listed — IECIC inventory</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Japan</span><span class="dos-reg-detail">Approved cosmetic ingredient</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">Full TDS, SDS (GHS 16-section), Certificate of Analysis and IECIC listing documentation available on request.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <div></div>
+    <button class="dos-docnav-btn" onclick="showDos('chela4')">Next →<span class="dos-docnav-name">ChelaGuard 4</span></button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PRODUCT 02 — ChelaGuard 4 / Tetrasodium EDTA
+══════════════════════════════════════════════════════════ -->
+<div class="dos-panel" id="dos-chela4">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR FUNC — Chelating Agent</div>
+    <div class="dos-ph-name">ChelaGuard 4</div>
+    <div class="dos-ph-inci">Tetrasodium EDTA · CAS 64-02-8 · MW 380.2 g/mol</div>
+    <div class="dos-ph-badges">
+      <span class="dos-ph-badge b-a">Chelating Agent</span>
+      <span class="dos-ph-badge b-d">High-pH Compatible</span>
+      <span class="dos-ph-badge b-d">Alkaline Systems</span>
+    </div>
+    <div class="dos-ph-tagline">"The alkaline-compatible chelator — fully neutralised Tetrasodium EDTA for hair dye, bleach and high-pH systems where Disodium EDTA performance declines."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">≥99.0%</span><span class="dos-metric-lbl">Assay purity</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">pH 11–12</span><span class="dos-metric-lbl">Solution pH (1%)</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">0.05–0.5%</span><span class="dos-metric-lbl">Effective dose</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Alkaline</span><span class="dos-metric-lbl">Primary system type</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">ChelaGuard 4 is <strong>Tetrasodium EDTA at ≥99.0% purity</strong> — the fully neutralised tetrasodium salt of ethylenediaminetetraacetic acid. While chemically identical to Disodium EDTA in its chelating function, the fully neutralised form creates a strongly alkaline aqueous solution (pH 11–12 at 1%) that makes it the appropriate choice for high-pH formulation systems where ChelaGuard 2 would lower pH and where the alkaline environment optimises tetrasodium EDTA's chelation efficiency.</p>
+      <p class="dos-desc">Preferred in <strong>oxidative hair colourant systems</strong> (hydrogen peroxide-based, pH 9–11), <strong>hair bleaching formulas</strong> (pH 9.5–12), <strong>alkaline hair relaxers</strong> (pH 12–14, thioglycolate or sodium hydroxide-based) and <strong>high-pH cleansers and industrial personal care</strong> where the manufacturing and in-use pH consistently exceeds 7 and disodium EDTA's chelation efficiency and solubility characteristics are suboptimal.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Differentiation from ChelaGuard 2 (Disodium EDTA)</p>
+        <p class="dos-mech-body">Both disodium and tetrasodium EDTA chelate metal ions through the same hexadentate complexation mechanism. The key practical difference is the <strong>degree of neutralisation</strong> and resulting solution pH. Disodium EDTA (two of the four carboxylic acid groups neutralised) produces pH 4–5 in solution — ideal for acidic to neutral cosmetic systems. Tetrasodium EDTA (all four groups neutralised) produces pH 11–12 — providing chelation without additional acidification in alkaline systems. In alkaline manufacturing, adding ChelaGuard 2 would require pH correction; ChelaGuard 4 is added without affecting the system pH balance. <strong>Sequential use strategy</strong>: use ChelaGuard 4 during alkaline processing stages (colour mixing, bleach preparation) and ChelaGuard 2 in the final acidified finished product where applicable.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">380.2</span><span class="dos-perf-lbl">Molecular Weight (g/mol)</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">pH 11–12</span><span class="dos-perf-lbl">Solution pH (1%)</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">≥99.0%</span><span class="dos-perf-lbl">Assay</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">0.05–0.5%</span><span class="dos-perf-lbl">Dose range</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">Dose</div><div class="dos-form-cell">Priority</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Oxidative hair colour</div><div class="dos-form-cell mono">0.1–0.3%</div><div class="dos-form-cell mono">Required</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Bleaching formulas</div><div class="dos-form-cell mono">0.1–0.3%</div><div class="dos-form-cell mono">Required</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Alkaline relaxers</div><div class="dos-form-cell mono">0.05–0.2%</div><div class="dos-form-cell mono">Recommended</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">High-pH cleansers</div><div class="dos-form-cell mono">0.05–0.15%</div><div class="dos-form-cell mono">Recommended</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Oxidative Hair Colour Systems</span>
+        <span class="dos-app-tag">Bleaching &amp; Lightening Formulas</span>
+        <span class="dos-app-tag">Alkaline Hair Relaxers</span>
+        <span class="dos-app-tag">High-pH Cleansers</span>
+        <span class="dos-app-tag">Industrial Process Water Control</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+ChelaGuard 2 (FUNC) — Sequential strategy</span><span class="dos-syn-desc">ChelaGuard 4 during alkaline stages (manufacturing, mixing, application); ChelaGuard 2 in the finished acidified product. Together they provide comprehensive chelation across the full pH range of the formulation lifecycle.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+PreserFlex PE / EHG (FUNC) — Alkaline preservation support</span><span class="dos-syn-desc">In alkaline personal care products requiring preservation, ChelaGuard 4 provides gram-negative membrane destabilisation without disturbing the high-pH system balance.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Tetrasodium EDTA</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">64-02-8</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">EINECS</span><span class="dos-spec-v">200-573-9</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Assay</span><span class="dos-spec-v">≥99.0% (potentiometric)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Molecular weight</span><span class="dos-spec-v">380.17 g/mol</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">White granular powder</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH (1% aq.)</span><span class="dos-spec-v">11.0 – 12.0</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Solubility (water)</span><span class="dos-spec-v">Freely soluble</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">0.05 – 0.5%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Incorporation</span><span class="dos-spec-v">Aqueous phase, ambient temperature</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU 1223/2009</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">No concentration restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">LATAM General</span><span class="dos-reg-detail">Approved per regional harmonisation</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">China IECIC</span><span class="dos-reg-detail">Listed</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Global</span><span class="dos-reg-detail">Universally approved</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">Full TDS, SDS (GHS 16-section) and IECIC listing documentation available on request.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('chela2')">← Previous<span class="dos-docnav-name">ChelaGuard 2</span></button>
+    <button class="dos-docnav-btn" onclick="showDos('solucast')">Next →<span class="dos-docnav-name">SoluCast 40</span></button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PRODUCT 03 — SoluCast 40 / PEG-40 Hydrogenated Castor Oil
+══════════════════════════════════════════════════════════ -->
+<div class="dos-panel" id="dos-solucast">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR FUNC — Solubiliser</div>
+    <div class="dos-ph-name">SoluCast 40</div>
+    <div class="dos-ph-inci">PEG-40 Hydrogenated Castor Oil · CAS 61788-85-0</div>
+    <div class="dos-ph-badges">
+      <span class="dos-ph-badge b-a">Solubiliser</span>
+      <span class="dos-ph-badge b-d">O/W Emulsifier</span>
+      <span class="dos-ph-badge b-d">HLB 13–14</span>
+      <span class="dos-ph-badge b-d">Clear Systems</span>
+    </div>
+    <div class="dos-ph-tagline">"The professional solubiliser for fragrances, essential oils and oil-soluble UV filters in transparent aqueous systems — with a mild emollient character polysorbates cannot provide."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">HLB ~13–14</span><span class="dos-metric-lbl">Hydrophile-lipophile balance</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">0.5–5%</span><span class="dos-metric-lbl">Use level</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">1:2–1:4</span><span class="dos-metric-lbl">Oil : solubiliser ratio</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Clear</span><span class="dos-metric-lbl">System compatibility</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">SoluCast 40 is <strong>PEG-40 Hydrogenated Castor Oil (HCO-40)</strong> — produced by ethoxylation of hydrogenated castor oil (predominantly 12-hydroxystearic acid triglyceride) with 40 moles of ethylene oxide. The resulting non-ionic polyethoxylated ester carries a high HLB value of approximately 13–14, enabling effective solubilisation of a wide range of oil-soluble fragrance compounds, essential oils, fat-soluble vitamins and cosmetic actives into transparent aqueous formulations while maintaining optical clarity at higher oil loads than polysorbate 20 alone.</p>
+      <p class="dos-desc">The <strong>practical differentiation from polysorbates</strong> arises from the castor oil ester core: while polysorbates are built on sorbitan esters with no skin-functional contribution, HCO-40's 12-hydroxystearic acid polyhydroxy fatty acid structure provides a mild emollient and conditioning character to the finished product. This makes SoluCast 40 preferred in <strong>leave-on transparent formulations — toners, clear serums, face mists</strong> — where the solubiliser is part of the final formula and a positive skin feel is commercially important.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Solubilisation Mechanism</p>
+        <p class="dos-mech-body">HCO-40 solubilises oil-soluble compounds through micellar encapsulation. Above its critical micellar concentration (typically 0.01–0.05%), HCO-40 molecules self-assemble into spherical micelles with a hydrophobic core formed by the hydrogenated castor oil acyl chains. Oil-soluble ingredients partition into this hydrophobic core, increasing their apparent aqueous solubility by several orders of magnitude. The outer polyethylene oxide chains (40 EO units) provide strong hydration and steric stabilisation, maintaining micellar stability across a wide pH and temperature range. <strong>Ratio guidance</strong>: start at 2:1 to 4:1 (solubiliser:oil by weight) and optimise for each fragrance or oil based on polarity. Complex fragrance blends with high-polarity components may require reduced ratios; purely hydrocarbon-type essential oils may require 4:1 or higher.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">~13–14</span><span class="dos-perf-lbl">HLB Value</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Emollient</span><span class="dos-perf-lbl">Skin feel character</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Optical clear</span><span class="dos-perf-lbl">Aqueous transparency</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">pH 4–9</span><span class="dos-perf-lbl">Stability range</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">Dose</div><div class="dos-form-cell">Priority</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Fragrance in toners/mists</div><div class="dos-form-cell mono">0.5–2%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Essential oil incorporation</div><div class="dos-form-cell mono">1–3%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">UV filter transparent SPF</div><div class="dos-form-cell mono">2–5%</div><div class="dos-form-cell mono">Required</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Fat-soluble vitamins</div><div class="dos-form-cell mono">1–3%</div><div class="dos-form-cell mono">Recommended</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Fragrance in Toners</span>
+        <span class="dos-app-tag">Essential Oil Face Mists</span>
+        <span class="dos-app-tag">Transparent SPF Systems</span>
+        <span class="dos-app-tag">Fat-Soluble Vitamin Serums</span>
+        <span class="dos-app-tag">Clear Leave-On Serums</span>
+        <span class="dos-app-tag">Body Splash &amp; Sprays</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+SoluPure 20 / 80 (PURE) — Expanded solubilisation range</span><span class="dos-syn-desc">SoluCast 40 + SoluPure 80 (Polysorbate 80) combination covers a broader range of oil-soluble compounds — HCO-40 contributes emollient character and broad-spectrum solubilisation; PS-80 handles highly lipophilic components. Combined system for complex premium fragrance blends.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+Shield-BEMT / EHT (SHIELD) — Transparent SPF</span><span class="dos-syn-desc">SoluCast 40 solubilises oil-soluble UV filters (Bemotrizinol, Ethylhexyl Triazone, Avobenzone) for clear SPF toners and mists where conventional emulsion formulation destroys transparency.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+ClimbaFlex (FUNC) — Antifungal shampoo system</span><span class="dos-syn-desc">SoluCast 40 at 1–2% disperses oil-soluble climbazole into aqueous shampoo and scalp treatment matrices while maintaining scalp-deposition efficiency of the antifungal active.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">PEG-40 Hydrogenated Castor Oil</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">61788-85-0</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Pale yellow oily to waxy liquid/solid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">HLB</span><span class="dos-spec-v">13 – 14</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Melting point</span><span class="dos-spec-v">20 – 30°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Acid value</span><span class="dos-spec-v">≤2.0 mg KOH/g</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Hydroxyl value</span><span class="dos-spec-v">40 – 60 mg KOH/g</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Saponification value</span><span class="dos-spec-v">45 – 70 mg KOH/g</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Water content</span><span class="dos-spec-v">≤3.0%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Solubility</span><span class="dos-spec-v">Freely water-miscible; clear at &lt;1%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">0.5 – 5.0%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Oil:solubiliser ratio</span><span class="dos-spec-v">1:2 – 1:4 by weight</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU 1223/2009</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">Approved cosmetic ingredient</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">LATAM General</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">China IECIC</span><span class="dos-reg-detail">Listed</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Global</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">TDS, SDS (GHS 16-section), CoA and IECIC documentation available on request.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('chela4')">← Previous<span class="dos-docnav-name">ChelaGuard 4</span></button>
+    <button class="dos-docnav-btn" onclick="showDos('preservpe')">Next →<span class="dos-docnav-name">PreserFlex PE</span></button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PRODUCT 04 — PreserFlex PE / Phenoxyethanol
+══════════════════════════════════════════════════════════ -->
+<div class="dos-panel" id="dos-preservpe">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR FUNC — Preservative</div>
+    <div class="dos-ph-name">PreserFlex PE</div>
+    <div class="dos-ph-inci">Phenoxyethanol · CAS 122-99-6 · MW 138.2 g/mol</div>
+    <div class="dos-ph-badges">
+      <span class="dos-ph-badge b-a">Preservative</span>
+      <span class="dos-ph-badge b-d">Broad Spectrum</span>
+      <span class="dos-ph-badge b-d">Paraben-Free</span>
+      <span class="dos-ph-badge b-d">ISO 11930</span>
+    </div>
+    <div class="dos-ph-tagline">"The global standard cosmetic preservative — broad-spectrum bacteriostatic activity, universal formulation compatibility and regulatory acceptance at 1% in every major cosmetic market."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">≥99.5%</span><span class="dos-metric-lbl">Assay purity</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">0.5–1.0%</span><span class="dos-metric-lbl">Effective dose</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">pH 3–10</span><span class="dos-metric-lbl">Stability range</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">1.0%</span><span class="dos-metric-lbl">Max (EU / ANVISA)</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">PreserFlex PE is <strong>Phenoxyethanol at ≥99.5% purity</strong> — 2-phenoxyethanol, the single most commercially used cosmetic preservative globally by formulation frequency. Its amphiphilic structure — an aromatic phenyl ether with a polar ethanol tail — enables it to partition into microbial cell membranes, disrupting membrane fluidity and permeability and ultimately disabling the proton motive force required for bacterial ATP synthesis. This membrane-disruption mechanism provides bacteriostatic and bactericidal activity against a broad range of bacteria and yeasts at 0.5–1.0%.</p>
+      <p class="dos-desc">Phenoxyethanol's commercial dominance arises from properties that no single alternative fully replicates: <strong>broad-spectrum coverage across gram-positive, gram-negative bacteria and yeasts; stability across pH 3–10; compatibility with all formulation matrices; and regulatory approval at 1% in every major cosmetic market globally</strong>. It can be incorporated into aqueous or oil phases and is stable throughout the manufacturing process including heating to 80°C.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Mechanism of Action — Membrane Disruption + EDTA Synergy</p>
+        <p class="dos-mech-body">Phenoxyethanol partitions into microbial phospholipid bilayers based on its log P (~1.16) — enough lipophilicity for membrane association, enough hydrophilicity for aqueous delivery. Once inserted, it disorders membrane phospholipid packing, increases membrane permeability to protons and small ions, and disrupts the proton-motive force (PMF) driving ATP synthesis. <strong>The gram-negative limitation</strong>: gram-negative bacteria possess an outer membrane (OM) as a permeability barrier exterior to the cytoplasmic membrane. The OM's lipopolysaccharide layer is stabilised by Mg²⁺/Ca²⁺ bridges — if these are intact, PE cannot reach the cytoplasmic membrane at practical concentrations. <strong>ChelaGuard 2 (EDTA) resolves this</strong>: EDTA chelates the OM cations, destabilising the LPS layer and allowing PE to access and disrupt the cytoplasmic membrane. PE without EDTA fails ISO 11930 gram-negative criteria in approximately 40–60% of formulation types; PE + EDTA achieves compliant results in &gt;95% of applications.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">138.2</span><span class="dos-perf-lbl">Molecular Weight (g/mol)</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">≥99.5%</span><span class="dos-perf-lbl">Assay purity</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">245°C</span><span class="dos-perf-lbl">Boiling point</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">1.0% max</span><span class="dos-perf-lbl">Global regulatory limit</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">PE Dose</div><div class="dos-form-cell">+ EDTA</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Standard leave-on</div><div class="dos-form-cell mono">0.8–1.0%</div><div class="dos-form-cell mono">0.1–0.2%</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Standard rinse-off</div><div class="dos-form-cell mono">0.7–1.0%</div><div class="dos-form-cell mono">0.1–0.2%</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Vitamin C serum (low pH)</div><div class="dos-form-cell mono">0.5–0.8%</div><div class="dos-form-cell mono">0.3–0.5%</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">High aw formulas</div><div class="dos-form-cell mono">0.9–1.0%</div><div class="dos-form-cell mono">0.2%</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">All Cosmetic Formulations</span>
+        <span class="dos-app-tag">Primary Preservation System</span>
+        <span class="dos-app-tag">Paraben-Free Positioning</span>
+        <span class="dos-app-tag">Emulsions · Gels · Serums</span>
+        <span class="dos-app-tag">Leave-On &amp; Rinse-Off</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+ChelaGuard 2 (FUNC) — Gram-negative completion (mandatory)</span><span class="dos-syn-desc">ChelaGuard 2 at 0.1–0.2% is the mandatory co-ingredient in every PreserFlex PE application. Without EDTA, PE's gram-negative efficacy is unreliable. With EDTA, PE + EDTA achieves ISO 11930 compliance across all five challenge organisms in the vast majority of cosmetic formulation types.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+PreserFlex EHG (FUNC) — Full-spectrum upgrade</span><span class="dos-syn-desc">For applications requiring higher challenge-test confidence or premium market positioning, replace PreserFlex PE with PreserFlex EHG (PE/Ethylhexylglycerin blend). EHG membrane sensitisation closes the gram-positive and yeast gap without requiring higher PE concentration.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Phenoxyethanol</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">122-99-6</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">EINECS</span><span class="dos-spec-v">204-589-7</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Assay</span><span class="dos-spec-v">≥99.5% (GC)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Molecular weight</span><span class="dos-spec-v">138.17 g/mol</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Clear colourless oily liquid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Boiling point</span><span class="dos-spec-v">245°C (760 mmHg)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Flash point</span><span class="dos-spec-v">&gt;100°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Refractive index</span><span class="dos-spec-v">1.537 – 1.540 (20°C)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Solubility water (20°C)</span><span class="dos-spec-v">~26 g/L</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">0.5 – 1.0%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Incorporation</span><span class="dos-spec-v">Oil or aqueous phase; stable to 80°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH stability</span><span class="dos-spec-v">3.0 – 10.0</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Limits by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU (Annex V #29)</span><span class="dos-reg-detail">1.0% maximum in finished product</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">1.0% maximum</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Colombia / Peru / Argentina</span><span class="dos-reg-detail">1.0% max per ANVISA harmonisation</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Japan</span><span class="dos-reg-detail">0.5% max in products for children under 3</span><span class="dos-reg-status s-cond">Conditional</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">USA (OTC)</span><span class="dos-reg-detail">No restriction at ≤1%</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">TDS, SDS (GHS 16-section), ISO 11930 guidance data and market-specific compliance documentation available.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('solucast')">← Previous<span class="dos-docnav-name">SoluCast 40</span></button>
+    <button class="dos-docnav-btn" onclick="showDos('preservehg')">Next →<span class="dos-docnav-name">PreserFlex EHG</span></button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PRODUCT 05 — PreserFlex EHG / Phenoxyethanol & Ethylhexylglycerin
+══════════════════════════════════════════════════════════ -->
+<div class="dos-panel" id="dos-preservehg">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR FUNC — Preservative Blend</div>
+    <div class="dos-ph-name">PreserFlex EHG</div>
+    <div class="dos-ph-inci">Phenoxyethanol &amp; Ethylhexylglycerin · CAS 122-99-6 / 70445-33-9</div>
+    <div class="dos-ph-badges">
+      <span class="dos-ph-badge b-a">Preservative Blend</span>
+      <span class="dos-ph-badge b-d">PE + EHG Synergy</span>
+      <span class="dos-ph-badge b-d">Clean Label</span>
+      <span class="dos-ph-badge b-d">ISO 11930 Compliant</span>
+    </div>
+    <div class="dos-ph-tagline">"The modern preservation standard — Ethylhexylglycerin membrane sensitisation closes phenoxyethanol's gram-positive gap, delivering full broad-spectrum ISO 11930 coverage at lower total preservative dose."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">9:1</span><span class="dos-metric-lbl">PE : EHG ratio</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">0.7–0.9%</span><span class="dos-metric-lbl">Effective total dose</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">5 organisms</span><span class="dos-metric-lbl">ISO 11930 coverage</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Clean label</span><span class="dos-metric-lbl">Market positioning</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">PreserFlex EHG is a <strong>precision blend of Phenoxyethanol and Ethylhexylglycerin in a 9:1 ratio</strong> — the most commercially specified modern cosmetic preservation system globally, designed to address phenoxyethanol's primary performance limitation: moderate efficacy against gram-positive bacteria (Staphylococcus aureus) and yeasts (Candida albicans) at practical use concentrations.</p>
+      <p class="dos-desc">Ethylhexylglycerin (2-ethylhexyl glycerine ether) is a <strong>membrane-active sensitiser</strong>: its amphiphilic glycerol ether structure inserts into microbial cell membranes, reducing interfacial surface tension and disrupting membrane phospholipid organisation. This membrane destabilisation does not itself kill microorganisms at cosmetic use concentrations, but it <strong>dramatically lowers the minimum inhibitory concentration (MIC) of phenoxyethanol</strong> for gram-positive organisms — in effect converting resistant strains into sensitive ones. The resulting combination achieves ISO 11930 A/B compliance across all five challenge organisms at 0.7–0.9% total blend, versus 0.9–1.0% phenoxyethanol alone and without the gram-positive coverage assurance.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Dual Mechanism — Membrane Disruption + Sensitisation</p>
+        <p class="dos-mech-body"><strong>Phenoxyethanol component (90%)</strong>: disrupts cytoplasmic membrane integrity through phospholipid disordering, disabling proton motive force and ATP synthesis. Active against gram-negative, gram-positive bacteria and yeasts. <strong>Ethylhexylglycerin component (10%)</strong>: reduces membrane interfacial tension through glycerol ether intercalation into phospholipid headgroup regions. Does not independently kill organisms at cosmetic concentrations, but lowers the PE concentration required for MIC against gram-positive bacteria and Candida from approximately 0.8–1.0% to 0.6–0.8% — enabling full broad-spectrum coverage at a lower total preservative load. Combined with ChelaGuard 2, which completes gram-negative (Pseudomonas) coverage, the three-component system (PE/EHG/EDTA) is the most widely used broad-spectrum preservation approach in premium cosmetics globally, achieving reliable ISO 11930 Category A/B compliance across all five challenge organisms in the vast majority of formulation types.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">9:1</span><span class="dos-perf-lbl">PE : EHG ratio</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">0.7–0.9%</span><span class="dos-perf-lbl">ISO 11930 dose</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">pH 3–10</span><span class="dos-perf-lbl">Stability range</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">All types</span><span class="dos-perf-lbl">Formula compatibility</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">EHG dose</div><div class="dos-form-cell">+ EDTA</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Standard leave-on</div><div class="dos-form-cell mono">0.7–0.9%</div><div class="dos-form-cell mono">0.1–0.2%</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Standard rinse-off</div><div class="dos-form-cell mono">0.7–1.0%</div><div class="dos-form-cell mono">0.1–0.2%</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">High-challenge (high aw)</div><div class="dos-form-cell mono">0.9–1.0%</div><div class="dos-form-cell mono">0.2%</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Premium clean beauty</div><div class="dos-form-cell mono">0.7–0.8%</div><div class="dos-form-cell mono">0.1%</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Premium Leave-On Formulations</span>
+        <span class="dos-app-tag">Paraben Replacement</span>
+        <span class="dos-app-tag">Clean Beauty Positioning</span>
+        <span class="dos-app-tag">Sensitive Skin Products</span>
+        <span class="dos-app-tag">All Rinse-Off Formats</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+ChelaGuard 2 (FUNC) — Gram-negative completion</span><span class="dos-syn-desc">Always required for ISO 11930 Pseudomonas compliance. PreserFlex EHG at 0.7–0.9% + ChelaGuard 2 at 0.1–0.2% = the VLYOR FUNC reference clean beauty preservation system. This combination achieves reliable ISO 11930 Category A compliance across all five organisms in most cosmetic formulation types.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+PreserFlex MP (FUNC) — Maximum challenge confidence</span><span class="dos-syn-desc">For formulas requiring the highest challenge-test confidence (high water activity, high-protein formulas, water-based tonics). Low-dose methylparaben at 0.1% combined with PreserFlex EHG + ChelaGuard 2 provides the most robust three-component system. Antifungal reinforcement from MP is particularly valuable in high-humidity LATAM storage conditions.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">Components (INCI)</span><span class="dos-spec-v">Phenoxyethanol, Ethylhexylglycerin</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS (PE / EHG)</span><span class="dos-spec-v">122-99-6 / 70445-33-9</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Standard ratio</span><span class="dos-spec-v">9:1 PE:EHG by weight</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Clear to slightly hazy liquid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Solubility</span><span class="dos-spec-v">Oil phase preferred; water-dispersible</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">0.7 – 1.0%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Incorporation</span><span class="dos-spec-v">Oil or aqueous phase; stable to 80°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH stability</span><span class="dos-spec-v">3.0 – 10.0</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes (both components)</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Limits by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU — PE (Annex V #29)</span><span class="dos-reg-detail">1.0% maximum for PE component</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU — EHG (Annex III)</span><span class="dos-reg-detail">0.7% maximum for EHG component</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">PE 1.0% max; EHG no restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">LATAM General</span><span class="dos-reg-detail">PE 1.0% per ANVISA harmonisation</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">USA / Global</span><span class="dos-reg-detail">No OTC restriction at use levels</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">TDS, SDS (GHS 16-section), ISO 11930 guidance and market documentation available.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('preservpe')">← Previous<span class="dos-docnav-name">PreserFlex PE</span></button>
+    <button class="dos-docnav-btn" onclick="showDos('preservmp')">Next →<span class="dos-docnav-name">PreserFlex MP</span></button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PRODUCT 06 — PreserFlex MP / Methylparaben
+══════════════════════════════════════════════════════════ -->
+<div class="dos-panel" id="dos-preservmp">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR FUNC — Preservative</div>
+    <div class="dos-ph-name">PreserFlex MP</div>
+    <div class="dos-ph-inci">Methylparaben · CAS 99-76-3 · MW 152.1 g/mol</div>
+    <div class="dos-ph-badges">
+      <span class="dos-ph-badge b-a">Preservative</span>
+      <span class="dos-ph-badge b-d">Gram-Positive &amp; Fungal Specialist</span>
+      <span class="dos-ph-badge b-d">Reference Standard</span>
+    </div>
+    <div class="dos-ph-tagline">"The most studied cosmetic preservative in history — still the reference standard for gram-positive and antifungal efficacy, against which every alternative preservative system is benchmarked."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">≥99.5%</span><span class="dos-metric-lbl">Assay purity</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">0.1–0.4%</span><span class="dos-metric-lbl">Effective dose</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">pH 4–8</span><span class="dos-metric-lbl">Optimal range</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">80+ years</span><span class="dos-metric-lbl">Commercial safety record</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">PreserFlex MP is <strong>Methylparaben at ≥99.5% purity</strong> — methyl 4-hydroxybenzoate, a para-hydroxybenzoate ester with an 80-year commercial safety and efficacy record, the most extensively studied preservative in cosmetic science. Methylparaben operates through inhibition of essential microbial enzymes (particularly dehydrogenases) and disruption of cell membrane transport function, with particular effectiveness against gram-positive bacteria (Staphylococcus aureus, Bacillus subtilis) and fungi/yeasts (Candida albicans, Aspergillus brasiliensis) — the organism classes most frequently implicated in cosmetic product spoilage.</p>
+      <p class="dos-desc">The scientific and regulatory consensus on methylparaben safety is clear: <strong>EU Annex V listed at 0.4% (solo) or 0.8% (mixed parabens), WHO-evaluated and approved, and supported by the scientific opinion of the EU Scientific Committee on Consumer Safety (SCCS) confirming safety at current use levels</strong>. In LATAM markets — where the clean beauty movement has penetrated less deeply than in Western Europe — methylparaben remains widely commercially accepted and enables cost-effective preservation with proven challenge-test performance.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Mechanism of Action — Enzymatic Inhibition + Membrane Disruption</p>
+        <p class="dos-mech-body">Methylparaben inhibits microbial membrane transport enzymes including Na⁺/K⁺-ATPase and membrane-associated dehydrogenases, disrupting cellular energy metabolism and active transport of nutrients across the membrane. The phenolic hydroxyl group is essential for activity — it is believed to interact with key enzymatic thiol and amino groups through hydrogen bonding and hydrophobic interactions. Methylparaben is <strong>effective predominantly at acidic to neutral pH (4–8)</strong> — above pH 8, the phenolate form predominates and activity decreases. This explains the recommendation to use ChelaGuard 2 (or ChelaGuard 4) together with methylparaben in all applications: the gram-negative bacteria (Pseudomonas, E. coli) are poorly controlled by methylparaben alone but respond strongly to PE or EHG combined with EDTA-mediated membrane sensitisation.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">152.1</span><span class="dos-perf-lbl">Molecular Weight (g/mol)</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">125–128°C</span><span class="dos-perf-lbl">Melting point</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">pH 4–8</span><span class="dos-perf-lbl">Optimal activity</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">0.4%</span><span class="dos-perf-lbl">EU/ANVISA max (solo)</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">MP dose</div><div class="dos-form-cell">Priority</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Mass market leave-on</div><div class="dos-form-cell mono">0.2–0.4%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Rinse-off hair care</div><div class="dos-form-cell mono">0.2–0.4%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Combination system</div><div class="dos-form-cell mono">0.1–0.2%</div><div class="dos-form-cell mono">Booster</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Premium + clean backup</div><div class="dos-form-cell mono">0.05–0.1%</div><div class="dos-form-cell mono">Reinforcement</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Mass Market Leave-On</span>
+        <span class="dos-app-tag">Rinse-Off Hair Care</span>
+        <span class="dos-app-tag">Combination Preservative Systems</span>
+        <span class="dos-app-tag">High Water-Activity Formulas</span>
+        <span class="dos-app-tag">LATAM Market Products</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+PreserFlex PE + ChelaGuard 2 — Complete broad-spectrum system</span><span class="dos-syn-desc">The most reliable ISO 11930 preservation system in the FUNC portfolio: MP (0.2%) covers gram-positive and fungi; PE (0.6%) covers gram-negative with EDTA (0.1%) completing Pseudomonas coverage. This three-component system achieves Category A compliance in &gt;98% of formulation types and is the recommendation for LATAM mass market applications.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+PreserFlex EHG + ChelaGuard 2 — Premium market version</span><span class="dos-syn-desc">For premium positioning with minimum paraben dose: EHG (0.7%) provides primary preservation and gram-positive sensitisation; MP at 0.1% adds antifungal reinforcement without triggering paraben-free labelling restrictions; EDTA (0.1%) completes gram-negative coverage.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Methylparaben</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">99-76-3</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">EINECS</span><span class="dos-spec-v">202-785-7</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Assay</span><span class="dos-spec-v">≥99.5% (HPLC)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Molecular weight</span><span class="dos-spec-v">152.15 g/mol</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">White crystalline powder</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Melting point</span><span class="dos-spec-v">125 – 128°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Solubility (water, 20°C)</span><span class="dos-spec-v">2.5 g/L (slightly soluble)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Dissolution note</span><span class="dos-spec-v">Pre-dissolve in PG, ethanol or glycerin</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">0.1 – 0.4%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Incorporation</span><span class="dos-spec-v">Heated aqueous phase (60–70°C) or pre-dissolved</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH stability</span><span class="dos-spec-v">4.0 – 8.0 (optimal)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Limits by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU (Annex V #12)</span><span class="dos-reg-detail">0.4% solo; 0.8% mixed parabens</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">0.4% maximum</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Colombia / Peru / Argentina</span><span class="dos-reg-detail">0.4% per ANVISA harmonisation</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Japan</span><span class="dos-reg-detail">Approved — standard listed preservative</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">USA</span><span class="dos-reg-detail">No restriction at ≤0.4%</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">TDS, SDS (GHS 16-section), CoA and market-specific regulatory documentation available.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('preservehg')">← Previous<span class="dos-docnav-name">PreserFlex EHG</span></button>
+    <button class="dos-docnav-btn" onclick="showDos('preservdmdm')">Next →<span class="dos-docnav-name">PreserFlex DMDM</span></button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PRODUCT 07 — PreserFlex DMDM / DMDM Hydantoin
+══════════════════════════════════════════════════════════ -->
+<div class="dos-panel" id="dos-preservdmdm">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR FUNC — Preservative</div>
+    <div class="dos-ph-name">PreserFlex DMDM</div>
+    <div class="dos-ph-inci">DMDM Hydantoin · CAS 6440-58-4</div>
+    <div class="dos-ph-badges">
+      <span class="dos-ph-badge b-a">Preservative</span>
+      <span class="dos-ph-badge b-d">Formaldehyde Releaser</span>
+      <span class="dos-ph-badge b-d">Rinse-Off Specialist</span>
+      <span class="dos-ph-badge b-e">Formaldehyde-releasing note</span>
+    </div>
+    <div class="dos-ph-tagline">"Broad-spectrum preservation through controlled formaldehyde release — cost-effective broad-spectrum protection for rinse-off hair care at pH 5–8 with excellent surfactant compatibility."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">55%</span><span class="dos-metric-lbl">Active DMDM content</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">0.05–0.3%</span><span class="dos-metric-lbl">Effective dose</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">pH 5–8</span><span class="dos-metric-lbl">Optimal range</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Rinse-off</span><span class="dos-metric-lbl">Primary application type</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">PreserFlex DMDM is <strong>DMDM Hydantoin</strong> — 1,3-bis(hydroxymethyl)-5,5-dimethylhydantoin, a formaldehyde-releasing preservative (FRP) that generates free formaldehyde in aqueous systems through hydrolysis of its N-hydroxymethyl bonds. The released formaldehyde cross-links microbial proteins (by reacting with amino groups in proteins and nucleic acid bases), providing continuous low-level antimicrobial protection throughout product shelf life through sustained slow-release rather than a one-time dose.</p>
+      <p class="dos-desc">PreserFlex DMDM's primary commercial application is <strong>rinse-off hair care — shampoos, conditioners, scalp treatments and hair masks</strong> — where its outstanding compatibility with anionic and amphoteric surfactant systems, stable efficacy at pH 5–8 and highly competitive cost-performance ratio make it the preferred preservative for mass-market hair care production. Its water-solubility enables simple aqueous-phase incorporation without pre-dissolution steps.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Mechanism of Action — Controlled Formaldehyde Release</p>
+        <p class="dos-mech-body">DMDM Hydantoin releases formaldehyde through slow hydrolysis of N-CH₂OH bonds in aqueous solution. The equilibrium formaldehyde concentration in the final product is typically 30–100 ppm at normal use levels — well below the EU 100 ppm label declaration threshold at concentrations ≤0.6% (as HCHO). The released HCHO reacts with primary amines, thiol groups and guanine bases in microbial proteins and DNA, cross-linking cellular macromolecules and preventing microbial replication. <strong>Continuous replenishment</strong>: as free formaldehyde is consumed by microbial reaction, the equilibrium shifts to release additional formaldehyde from the DMDM reservoir, providing sustained protection throughout shelf life. This sustained-release mechanism differentiates DMDM from direct formaldehyde addition. <strong>Positioning note</strong>: for products where "formaldehyde-free" is a consumer-facing claim or a brand commitment, specify PreserFlex PE or PreserFlex EHG instead.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">55 ± 2%</span><span class="dos-perf-lbl">Active DMDM in solution</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">pH 5–8</span><span class="dos-perf-lbl">Optimal pH range</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">0.05–0.3%</span><span class="dos-perf-lbl">Dose range</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Broad spectrum</span><span class="dos-perf-lbl">Organism coverage</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">DMDM dose</div><div class="dos-form-cell">Priority</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Shampoo / body wash</div><div class="dos-form-cell mono">0.1–0.2%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Conditioner</div><div class="dos-form-cell mono">0.1–0.3%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Rinse-off treatment</div><div class="dos-form-cell mono">0.1–0.2%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">+ PreserFlex PE combination</div><div class="dos-form-cell mono">0.05–0.1%</div><div class="dos-form-cell mono">Booster</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Shampoos</span>
+        <span class="dos-app-tag">Conditioners</span>
+        <span class="dos-app-tag">Rinse-Off Hair Treatments</span>
+        <span class="dos-app-tag">Mass Market Hair Care</span>
+        <span class="dos-app-tag">Industrial Personal Care</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+ChelaGuard 2 (FUNC) — Gram-negative coverage + stability</span><span class="dos-syn-desc">EDTA at 0.1–0.2% enhances gram-negative (Pseudomonas, E. coli) coverage in DMDM-preserved shampoo systems and protects against metal-ion catalysed decomposition of formaldehyde that could reduce efficacy over shelf life.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+PreserFlex PE (FUNC) — Combination system</span><span class="dos-syn-desc">DMDM (0.05–0.1%) + PE (0.5–0.7%) combination for enhanced broad-spectrum coverage at reduced individual doses. PE covers gram-negative bacteria efficiently; DMDM provides gram-positive and mould coverage through formaldehyde release at lower individual concentrations than either would require alone.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">DMDM Hydantoin</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">6440-58-4</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Clear to slightly yellow aqueous solution</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Active DMDM content</span><span class="dos-spec-v">55 ± 2%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Free formaldehyde</span><span class="dos-spec-v">≤0.5% (in 55% solution)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Solubility</span><span class="dos-spec-v">Freely water-miscible</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">0.05 – 0.3%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Incorporation</span><span class="dos-spec-v">Aqueous phase; add after main processing</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH stability</span><span class="dos-spec-v">5.0 – 8.0 (optimal)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Thermal stability</span><span class="dos-spec-v">Add below 40°C to avoid excess HCHO</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Limits by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU (Annex V #27)</span><span class="dos-reg-detail">0.6% max (as HCHO released); label if &gt;100 ppm free HCHO</span><span class="dos-reg-status s-cond">Conditional</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">Approved — listed FRP preservative</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Japan</span><span class="dos-reg-detail">Approved at ≤0.5% as free HCHO equivalent</span><span class="dos-reg-status s-cond">Conditional</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">USA</span><span class="dos-reg-detail">Approved as FRP cosmetic preservative</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-alert">
+        <p class="dos-alert-t">Positioning Note</p>
+        <p class="dos-alert-b">DMDM Hydantoin is a formaldehyde-releasing preservative. For products with "formaldehyde-free" consumer claims or clean beauty brand positioning, specify PreserFlex PE or PreserFlex EHG instead.</p>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">TDS, SDS (GHS 16-section), CoA and REACH/regulatory documentation available.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('preservmp')">← Previous<span class="dos-docnav-name">PreserFlex MP</span></button>
+    <button class="dos-docnav-btn" onclick="showDos('climbaflex')">Next →<span class="dos-docnav-name">ClimbaFlex</span></button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PRODUCT 08 — ClimbaFlex / Climbazole
+══════════════════════════════════════════════════════════ -->
+<div class="dos-panel" id="dos-climbaflex">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR FUNC — Antifungal Active</div>
+    <div class="dos-ph-name">ClimbaFlex</div>
+    <div class="dos-ph-inci">Climbazole · CAS 38083-17-9 · MW 292.8 g/mol</div>
+    <div class="dos-ph-badges">
+      <span class="dos-ph-badge b-a">Antifungal Active</span>
+      <span class="dos-ph-badge b-d">Anti-Dandruff</span>
+      <span class="dos-ph-badge b-d">Malassezia-Specific</span>
+      <span class="dos-ph-badge b-d">Ergosterol Inhibitor</span>
+    </div>
+    <div class="dos-ph-tagline">"The imidazole antifungal for scalp care — specific ergosterol biosynthesis inhibition against Malassezia species with sebum-mediated deposition providing residual activity between washes."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">≥99.0%</span><span class="dos-metric-lbl">Assay purity</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">0.5%</span><span class="dos-metric-lbl">Standard AD dose</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Oil-soluble</span><span class="dos-metric-lbl">Phase compatibility</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Malassezia</span><span class="dos-metric-lbl">Primary target organism</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">ClimbaFlex is <strong>Climbazole at ≥99.0% purity</strong> — 1-(4-chlorophenoxy)-1-imidazol-1-yl-3,3-dimethylbutan-2-one, an imidazole-class antifungal cosmetic active with high specific efficacy against Malassezia furfur, M. globosa, M. restricta and related lipophilic Malassezia species. These organisms are the primary — and in the vast majority of cases, the sole — causative agents of seborrhoeic dermatitis and dandruff, affecting approximately 50% of the adult population in some form and up to 80% in high-humidity tropical climates.</p>
+      <p class="dos-desc">ClimbaFlex is the <strong>reference cosmetic anti-dandruff active in the European and LATAM professional market</strong>, used at 0.5% in the majority of premium anti-dandruff shampoos and scalp treatment formulas. Its <strong>oil solubility enables critical sebum-mediated scalp deposition</strong>: upon rinse-off application, climbazole partitions preferentially into the sebum layer on the scalp surface — the precise lipid-rich environment where Malassezia preferentially colonises and replicates — providing residual antifungal activity between washes that water-soluble alternatives (zinc pyrithione, selenium sulfide, piroctone olamine) cannot match in leave-on efficacy.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Mechanism of Action — Ergosterol Biosynthesis Inhibition</p>
+        <p class="dos-mech-body">Climbazole inhibits the fungal cytochrome P450 enzyme <strong>lanosterol 14α-demethylase (CYP51)</strong> — the enzyme responsible for converting lanosterol to ergosterol in the fungal cell membrane biosynthesis pathway. Ergosterol is the primary sterol component of fungal cell membranes (equivalent to cholesterol in mammalian membranes); its depletion disrupts membrane fluidity, permeability and integrity, ultimately preventing fungal cell replication. The imidazole nitrogen of climbazole coordinates with the haem iron of the fungal CYP51 enzyme active site, blocking substrate access with high affinity (Ki in the nanomolar range for Malassezia CYP51). <strong>Selectivity</strong>: the fungal CYP51 has substantially different substrate binding characteristics from mammalian sterol metabolism enzymes, explaining climbazole's excellent safety profile at scalp application concentrations. <strong>Minimum fungicidal concentration (MFC) against Malassezia</strong>: typically 0.001–0.01% — meaning the 0.5% standard formulation dose provides a 50–500-fold safety margin relative to the minimum effective antifungal concentration, ensuring efficacy even accounting for dilution effects in rinse-off application.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">292.8</span><span class="dos-perf-lbl">Molecular Weight (g/mol)</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">93–97°C</span><span class="dos-perf-lbl">Melting point</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">0.5%</span><span class="dos-perf-lbl">Standard anti-dandruff dose</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Oil-soluble</span><span class="dos-perf-lbl">Phase (sebum-depositing)</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">Dose</div><div class="dos-form-cell">Priority</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Anti-dandruff shampoo</div><div class="dos-form-cell mono">0.5%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Scalp serum (leave-on)</div><div class="dos-form-cell mono">0.2–0.5%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Scalp mask/treatment</div><div class="dos-form-cell mono">0.3–0.5%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Mild maintenance shampoo</div><div class="dos-form-cell mono">0.1–0.3%</div><span class="dos-form-cell mono">Preventive</span></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Anti-Dandruff Shampoos</span>
+        <span class="dos-app-tag">Scalp Treatment Serums</span>
+        <span class="dos-app-tag">Seborrhoeic Dermatitis Products</span>
+        <span class="dos-app-tag">Anti-Fungal Scalp Masks</span>
+        <span class="dos-app-tag">Leave-On Scalp Tonics</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+SoluCast 40 (FUNC) — Aqueous solubilisation system</span><span class="dos-syn-desc">Climbazole is oil-soluble and requires solubilisation for aqueous-based shampoo and toner applications. SoluCast 40 at 1–2% effectively disperses climbazole into the aqueous phase while maintaining sebum-deposition efficiency — the critical delivery mechanism for post-rinse scalp efficacy.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+PreserFlex PE + ChelaGuard 2 (FUNC) — Complete scalp care system</span><span class="dos-syn-desc">The complete anti-dandruff formulation package: ClimbaFlex (0.5%) provides antifungal activity; PreserFlex PE (0.8%) covers broad-spectrum bacterial preservation; ChelaGuard 2 (0.1%) completes gram-negative coverage and stabilises the antifungal active against metal-catalysed degradation.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Climbazole</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">38083-17-9</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">EINECS</span><span class="dos-spec-v">253-775-4</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Assay</span><span class="dos-spec-v">≥99.0% (HPLC)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Molecular weight</span><span class="dos-spec-v">292.76 g/mol</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">White to off-white crystalline powder</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Melting point</span><span class="dos-spec-v">93 – 97°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Solubility</span><span class="dos-spec-v">Oil-soluble; requires surfactant/HCO-40 in aq.</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">0.1 – 0.5%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Standard anti-dandruff dose</span><span class="dos-spec-v">0.5%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Incorporation</span><span class="dos-spec-v">Dissolve in oil phase or with SoluCast 40</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU (cosmetic)</span><span class="dos-reg-detail">Approved — no concentration restriction as cosmetic active</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">Approved as cosmetic anti-dandruff active</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Colombia / Peru / Argentina</span><span class="dos-reg-detail">Approved as cosmetic active</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Japan</span><span class="dos-reg-detail">Approved cosmetic ingredient</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">China IECIC</span><span class="dos-reg-detail">Listed</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">TDS, SDS (GHS 16-section), CoA and efficacy data documentation available on request.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('preservdmdm')">← Previous<span class="dos-docnav-name">PreserFlex DMDM</span></button>
+    <button class="dos-docnav-btn" onclick="showDos('antipersach')">Next →<span class="dos-docnav-name">AntipersFlex ACH</span></button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PRODUCT 09 — AntipersFlex ACH / Aluminum Chlorohydrate
+══════════════════════════════════════════════════════════ -->
+<div class="dos-panel" id="dos-antipersach">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR FUNC — Antiperspirant Active</div>
+    <div class="dos-ph-name">AntipersFlex ACH</div>
+    <div class="dos-ph-inci">Aluminum Chlorohydrate · CAS 12042-91-0</div>
+    <div class="dos-ph-badges">
+      <span class="dos-ph-badge b-a">Antiperspirant Active</span>
+      <span class="dos-ph-badge b-d">OTC / Cosmetic Grade</span>
+      <span class="dos-ph-badge b-d">Multiple Grades</span>
+      <span class="dos-ph-badge b-d">Physical Occlusion</span>
+    </div>
+    <div class="dos-ph-tagline">"The standard antiperspirant active globally — aluminium hydroxide gel plug formation within eccrine sweat gland ducts for physical reduction of perspiration at the skin surface."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">≥20%</span><span class="dos-metric-lbl">Al₂O₃ equivalent</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">10–25%</span><span class="dos-metric-lbl">Recommended dose</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">pH 4.0–4.5</span><span class="dos-metric-lbl">Solution pH (20%)</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">3 grades</span><span class="dos-metric-lbl">Anhydrous · 20% · 50% sol.</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">AntipersFlex ACH is <strong>Aluminum Chlorohydrate at ≥20% Al₂O₃ equivalent</strong> — a polymeric aluminium hydroxychloride complex that is the most widely used antiperspirant active globally by formulation volume. ACH is a true antiperspirant: it reduces wetness by forming physical gel plugs within eccrine sweat gland ducts, mechanically restricting secretion of sweat to the skin surface — a fundamentally different mode of action from deodorant actives (which address odour without reducing perspiration volume).</p>
+      <p class="dos-desc">The mechanism requires aluminium ion interaction with eccrine sweat secretion at the duct opening: Al³⁺ ions react with electrolytes in the sweat to form insoluble aluminium hydroxide hydrogels that physically occlude the ductal lumen. This process is <strong>reversible and temporary</strong> — the gel plugs dissolve over time (typically 24–48 hours without reapplication) as sweat production and pH changes dissolve the aluminium hydroxide structure. The 48-hour claim standard for ACH-based products reflects typical plug durability under moderate sweat load conditions.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Physical Occlusion Mechanism + Grade Selection</p>
+        <p class="dos-mech-body">ACH is supplied in three grades matched to formulation format. <strong>Anhydrous powder grade</strong>: used in pressed stick, compressed powder and aerosol-format antiperspirants where water-free processing is required and the active is dispersed in anhydrous vehicles (cyclomethicones, waxes, esters). The anhydrous form provides higher active loading per unit weight and is essential for achieving antiperspirant claims in dry formulation formats. <strong>20% aqueous solution grade</strong>: standard for roll-on antiperspirants where the active is delivered in aqueous vehicle. Simple addition to the water phase; moderate viscosity solution with pH 4.0–4.5. <strong>50% solution grade</strong>: high-concentration grade for applications requiring maximum active loading in aqueous systems. Requires controlled pH management during formulation due to the higher acidity of the concentrated solution.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">≥20%</span><span class="dos-perf-lbl">Al₂O₃ equivalent</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Physical</span><span class="dos-perf-lbl">Antiperspirant mechanism</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">pH 4.0–4.5</span><span class="dos-perf-lbl">Solution pH (20% grade)</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">48h</span><span class="dos-perf-lbl">Typical protection duration</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Format</div><div class="dos-form-cell">Grade</div><div class="dos-form-cell">ACH dose</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Aqueous roll-on</div><div class="dos-form-cell mono">20% sol.</div><div class="dos-form-cell mono">15–25%</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Anhydrous stick</div><div class="dos-form-cell mono">Anhydrous</div><div class="dos-form-cell mono">20–25%</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Aerosol spray</div><div class="dos-form-cell mono">Anhydrous</div><div class="dos-form-cell mono">15–22%</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Gel format</div><div class="dos-form-cell mono">20%/50% sol.</div><div class="dos-form-cell mono">10–20%</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Roll-On Antiperspirants</span>
+        <span class="dos-app-tag">Aerosol Antiperspirant Sprays</span>
+        <span class="dos-app-tag">Anhydrous Sticks &amp; Gels</span>
+        <span class="dos-app-tag">Combined AP/Deodorant</span>
+        <span class="dos-app-tag">48-Hour Protection Products</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+AntipersFlex AZG (FUNC) — Enhanced efficacy combination</span><span class="dos-syn-desc">ACH + ZAG blended at varying ratios enables tiered product line architecture. High-ACH/low-ZAG: standard 48h protection at moderate cost. Balanced blend: mid-range enhanced protection. High-ZAG/low-ACH: near-clinical-strength performance at optimised cost versus pure-ZAG formulas. Ratios are adjusted to meet efficacy and cost targets.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+PreserFlex PE + ChelaGuard 2 (FUNC) — Aqueous roll-on preservation</span><span class="dos-syn-desc">ACH solution at pH 4.0–4.5 provides inherent antimicrobial effect, but preservation reinforcement is recommended for aqueous roll-on formats subject to repeated use exposure and warm storage conditions typical of LATAM distribution. PE + EDTA at standard doses completes microbial protection.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Aluminum Chlorohydrate</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">12042-91-0</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Assay (Al₂O₃ equiv.)</span><span class="dos-spec-v">≥20.0%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">White powder or clear solution (grade dep.)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Available grades</span><span class="dos-spec-v">Anhydrous · 20% solution · 50% solution</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH (20% solution)</span><span class="dos-spec-v">4.0 – 4.5</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Cl/Al ratio</span><span class="dos-spec-v">0.90 – 1.10 (typical)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">10 – 25% (as Al equivalent)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Heavy metals</span><span class="dos-spec-v">≤10 ppm total</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU 1223/2009</span><span class="dos-reg-detail">No restriction as cosmetic active</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">USA (FDA OTC Monograph)</span><span class="dos-reg-detail">Standard OTC antiperspirant drug ingredient</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">Approved antiperspirant active</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Colombia / Peru / Argentina</span><span class="dos-reg-detail">Approved per regional harmonisation</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">China IECIC</span><span class="dos-reg-detail">Listed</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">TDS, SDS (GHS 16-section), CoA and grade-specific technical documentation available on request.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('climbaflex')">← Previous<span class="dos-docnav-name">ClimbaFlex</span></button>
+    <button class="dos-docnav-btn" onclick="showDos('antipersazg')">Next →<span class="dos-docnav-name">AntipersFlex AZG</span></button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PRODUCT 10 — AntipersFlex AZG / Aluminum Zirconium Tetrachlorohydrex Glycine
+══════════════════════════════════════════════════════════ -->
+<div class="dos-panel" id="dos-antipersazg">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR FUNC — Enhanced Antiperspirant</div>
+    <div class="dos-ph-name">AntipersFlex AZG</div>
+    <div class="dos-ph-inci">Aluminum Zirconium Tetrachlorohydrex Glycine (ZAG) · CAS 57158-29-9</div>
+    <div class="dos-ph-badges">
+      <span class="dos-ph-badge b-a">Enhanced Antiperspirant</span>
+      <span class="dos-ph-badge b-d">Clinical Strength</span>
+      <span class="dos-ph-badge b-d">ZAG Complex</span>
+      <span class="dos-ph-badge b-d">72-Hour Protection</span>
+    </div>
+    <div class="dos-ph-tagline">"The highest-efficacy antiperspirant active commercially available — ZAG complex superior duct occlusion for clinical-strength, sport-performance and extended-wear product positioning at a material commercial premium."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">ZAG</span><span class="dos-metric-lbl">Al-Zr complex type</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Maximum</span><span class="dos-metric-lbl">Sweat reduction efficacy</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">72h</span><span class="dos-metric-lbl">Extended protection claim</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Clinical</span><span class="dos-metric-lbl">Product positioning</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">AntipersFlex AZG is <strong>Aluminum Zirconium Tetrachlorohydrex Glycine (ZAG complex)</strong> — a multi-metal coordination compound in which aluminium and zirconium are co-complexed with the amino acid glycine as a polymeric bridging ligand. The resulting ZAG polymer forms a <strong>materially more robust, less hydrophilic and denser gel plug</strong> within the eccrine sweat duct versus aluminium chlorohydrate alone, providing stronger initial occlusion and significantly longer-lasting antiperspirant efficacy between applications.</p>
+      <p class="dos-desc">ZAG is the <strong>active ingredient in every major clinical-strength, 72-hour, sport-performance and enhanced-protection antiperspirant</strong> marketed globally by leading personal care brands. In the LATAM premium antiperspirant segment — driven by high ambient temperatures (requiring genuinely superior sweat control), growing sport and active lifestyle consumer positioning, and increasing premiumisation of personal care — ZAG-based products command a significant price premium and represent the fastest-growing segment of the antiperspirant category. AntipersFlex AZG is supplied exclusively in <strong>anhydrous powder form</strong> for compatibility with dry-manufacturing processes used in stick, aerosol and compressed format production.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Enhanced Mechanism — ZAG vs. ACH Duct Occlusion</p>
+        <p class="dos-mech-body">The performance advantage of ZAG arises from the <strong>mixed Al/Zr metal complex with glycine bridging</strong>. Zirconium forms more stable, less hydrolysis-reversible hydroxide gels at physiological pH than aluminium alone — the resulting aluminium-zirconium hydroxide complex has a higher cross-link density and lower water solubility than the aluminium hydroxide formed from ACH. The glycine amino acid acts as a polymeric bridging ligand between Al and Zr metal centres, creating a network structure that forms a mechanically stiffer, more occlusive plug within the eccrine duct. <strong>Clinical comparison data (internal formulation reference)</strong>: ZAG at equivalent Al metal dosing provides 15–30% greater sweat reduction at 24 hours versus ACH and maintains statistically significant superiority at 48 and 72 hours post-application. This clinical differentiation — supported by published comparative efficacy data for commercial ZAG products — directly justifies the premium pricing of clinical-strength antiperspirant products in LATAM markets and globally.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">~8–10%</span><span class="dos-perf-lbl">Al content</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">~5–7%</span><span class="dos-perf-lbl">Zr content</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">~5:1</span><span class="dos-perf-lbl">Al:Zr atomic ratio</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">72h</span><span class="dos-perf-lbl">Extended protection window</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Format</div><div class="dos-form-cell">AZG dose</div><div class="dos-form-cell">Positioning</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Clinical-strength stick</div><div class="dos-form-cell mono">18–22%</div><div class="dos-form-cell mono">Clinical</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Sport aerosol spray</div><div class="dos-form-cell mono">15–20%</div><div class="dos-form-cell mono">Premium</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">72h compact stick</div><div class="dos-form-cell mono">20–25%</div><div class="dos-form-cell mono">Clinical</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">ACH + AZG blended</div><div class="dos-form-cell mono">8–12%</div><div class="dos-form-cell mono">Enhanced</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Clinical Strength Antiperspirants</span>
+        <span class="dos-app-tag">Sport Performance Deodorant/AP</span>
+        <span class="dos-app-tag">72-Hour Protection Claims</span>
+        <span class="dos-app-tag">Hyperhidrosis Management</span>
+        <span class="dos-app-tag">Premium Anhydrous Sticks</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+AntipersFlex ACH (FUNC) — Tiered efficacy architecture</span><span class="dos-syn-desc">ACH + ZAG blended at varying ratios enables cost-calibrated product line architecture. Standard 48h: pure ACH. Enhanced 72h: 50:50 ACH/ZAG blend. Clinical strength: pure ZAG or 80% ZAG/20% ACH. This tiered approach optimises cost-efficacy at each price tier without requiring entirely separate active systems.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+PreserFlex EHG + ChelaGuard 2 (FUNC) — Aqueous format preservation</span><span class="dos-syn-desc">For ZAG-containing formats with water activity (aqueous roll-on, gel), PreserFlex EHG + ChelaGuard 2 at standard doses provides complete broad-spectrum preservation. ZAG's slightly lower pH (3.8–4.2 at use concentration) contributes inherent antimicrobial effect but does not alone satisfy preservation requirements for aqueous formats with open use exposure.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Aluminum Zirconium Tetrachlorohydrex Gly</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">57158-29-9</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">White free-flowing powder</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Al content</span><span class="dos-spec-v">~8 – 10%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Zr content</span><span class="dos-spec-v">~5 – 7%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Glycine content</span><span class="dos-spec-v">~1.5 – 2.5%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Al/Zr atomic ratio</span><span class="dos-spec-v">~5:1</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Cl/(Al+Zr) ratio</span><span class="dos-spec-v">0.90 – 1.10</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Heavy metals</span><span class="dos-spec-v">≤10 ppm total</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">10 – 22% (anhydrous format)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Physical form</span><span class="dos-spec-v">Anhydrous powder (primary supply form)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU 1223/2009</span><span class="dos-reg-detail">No restriction as cosmetic active</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">USA (FDA OTC Monograph)</span><span class="dos-reg-detail">Monograph antiperspirant active — standard ingredient</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">Approved — clinical AP active</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Colombia / Peru / Argentina</span><span class="dos-reg-detail">Approved per regional harmonisation</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">China IECIC</span><span class="dos-reg-detail">Listed</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">Full TDS, SDS (GHS 16-section), CoA, IECIC listing and regulatory market documentation available on request.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('antipersach')">← Previous<span class="dos-docnav-name">AntipersFlex ACH</span></button>
+    <div></div>
+  </div>
+</div>
+
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+function showDos(id) {
+  document.querySelectorAll('.dos-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.dos-sb-btn').forEach(b => b.classList.remove('active'));
+  const panel = document.getElementById('dos-' + id);
+  const btn = document.querySelector('[data-dos="' + id + '"]');
+  if (panel) { panel.classList.add('active'); window.scrollTo({top: 0, behavior: 'smooth'}); }
+  if (btn) btn.classList.add('active');
+}
+document.querySelectorAll('.dos-sb-btn').forEach(btn => {
+  btn.addEventListener('click', () => showDos(btn.dataset.dos));
+});
+// Hash navigation
+function activateFromHash() {
+  const hash = window.location.hash.replace('#', '');
+  if (hash) showDos(hash);
+}
+window.addEventListener('hashchange', activateFromHash);
+activateFromHash();
+window.addEventListener('scroll', () => {
+  document.getElementById('mainnav').classList.toggle('scrolled', window.scrollY > 40);
+}, {passive: true});
+</script>
+</body>
+</html>
