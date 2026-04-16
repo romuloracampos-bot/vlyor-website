@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>VLYOR PURE — Technical Dossier | VLYOR Science</title>
+<meta name="description" content="Technical dossier for VLYOR PURE biosurfactants. Complete commercial-technical specifications, formulation guidance and regulatory data for all 14 actives."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;500;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+:root{--acc:#6EE7B7;--acc-bg:rgba(110,231,183,.08);--acc-border:rgba(110,231,183,.22);--line-dark:#065F46}
+
+/* ── DOSSIER SHELL ── */
+.dos-wrap{display:grid;grid-template-columns:260px 1fr;min-height:100vh;padding-top:60px}
+
+/* ── SIDEBAR ── */
+.dos-sidebar{background:#0A0A0A;border-right:1px solid rgba(255,255,255,.07);position:sticky;top:60px;height:calc(100vh - 60px);overflow-y:auto;display:flex;flex-direction:column}
+.dos-sb-head{padding:28px 24px 20px;border-bottom:1px solid rgba(255,255,255,.06)}
+.dos-sb-line{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);margin-bottom:8px;display:flex;align-items:center;gap:7px}
+.dos-sb-dot{width:5px;height:5px;border-radius:50%;background:var(--acc);flex-shrink:0}
+.dos-sb-title{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;letter-spacing:-.01em;line-height:1.1;margin-bottom:4px}
+.dos-sb-count{font-family:'DM Mono',monospace;font-size:9px;color:#4B5563;letter-spacing:.08em}
+.dos-sb-nav{flex:1;padding:12px 0}
+.dos-sb-grp{border-bottom:1px solid rgba(255,255,255,.05)}
+.dos-sb-grp-hd{padding:12px 24px 6px;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#374151}
+.dos-sb-btn{display:flex;align-items:center;width:100%;padding:10px 24px;background:none;border:none;color:#6B7280;font-family:'Barlow',sans-serif;font-size:12px;cursor:pointer;transition:all .18s;text-align:left;border-left:2px solid transparent;gap:10px}
+.dos-sb-btn:hover{color:#D1D5DB;background:rgba(255,255,255,.025)}
+.dos-sb-btn.active{color:#fff;background:rgba(110,231,183,.07);border-left-color:var(--acc)}
+.dos-sb-btn-name{flex:1;line-height:1.3}
+.dos-sb-tag{font-family:'DM Mono',monospace;font-size:8px;padding:2px 6px;background:rgba(110,231,183,.1);color:var(--acc);flex-shrink:0}
+.dos-sb-footer{padding:20px 24px;border-top:1px solid rgba(255,255,255,.06)}
+.dos-sb-back{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#4B5563;display:flex;align-items:center;gap:7px;transition:color .2s}
+.dos-sb-back:hover{color:var(--acc)}
+
+/* ── DOSSIER MAIN ── */
+.dos-main{background:#0D0D0D;min-height:calc(100vh - 60px)}
+.dos-panel{display:none;animation:dosIn .22s ease}
+.dos-panel.active{display:block}
+@keyframes dosIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── PANEL HEADER ── */
+.dos-ph{padding:48px 56px 40px;border-bottom:1px solid rgba(255,255,255,.06);background:linear-gradient(135deg,rgba(6,95,70,.12) 0%,transparent 60%)}
+.dos-ph-eyebrow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:8px;margin-bottom:18px}
+.dos-ph-dot{width:5px;height:5px;border-radius:50%;background:var(--acc)}
+.dos-ph-name{font-family:'Barlow Condensed',sans-serif;font-size:clamp(42px,5vw,64px);font-weight:700;letter-spacing:-.03em;line-height:.92;margin-bottom:8px}
+.dos-ph-inci{font-family:'DM Mono',monospace;font-size:11px;color:#6B7280;font-style:italic;letter-spacing:.04em;margin-bottom:20px}
+.dos-ph-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:20px}
+.dos-ph-badge{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.04em;padding:4px 10px}
+.b-a{background:rgba(110,231,183,.1);color:var(--acc)}
+.b-b{background:rgba(167,243,208,.1);color:#A7F3D0}
+.b-c{background:rgba(196,181,253,.1);color:#C4B5FD}
+.b-d{background:rgba(6,95,70,.2);color:#6EE7B7}
+.b-e{background:rgba(217,119,6,.1);color:#FCD34D}
+.dos-ph-tagline{font-size:15px;line-height:1.7;color:#E5E7EB;font-style:italic;border-left:2px solid var(--acc);padding-left:16px;max-width:72ch}
+
+/* ── KEY METRICS BAR ── */
+.dos-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06)}
+.dos-metric{background:#0D0D0D;padding:20px 24px}
+.dos-metric-val{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:700;letter-spacing:-.02em;color:var(--acc);display:block;margin-bottom:4px}
+.dos-metric-lbl{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:#4B5563}
+
+/* ── CONTENT GRID ── */
+.dos-body{padding:0 56px 64px;display:grid;grid-template-columns:1fr 340px;gap:56px;align-items:start;padding-top:48px}
+.dos-left{}
+.dos-right{}
+
+/* ── SECTION HEADINGS ── */
+.dos-sec-h{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);padding-bottom:10px;border-bottom:1px solid var(--acc-border);margin-bottom:18px;margin-top:36px}
+.dos-sec-h:first-child{margin-top:0}
+
+/* ── DESCRIPTION ── */
+.dos-desc{font-size:13.5px;line-height:1.86;color:#9CA3AF;margin-bottom:14px}
+.dos-desc strong{color:#E5E7EB;font-weight:600}
+.dos-desc em{color:var(--acc);font-style:normal}
+
+/* ── MECHANISM BOX ── */
+.dos-mech{background:rgba(110,231,183,.04);border:1px solid var(--acc-border);padding:20px 24px;margin-bottom:20px}
+.dos-mech-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-bottom:10px}
+.dos-mech-body{font-size:13px;line-height:1.78;color:#D1D5DB}
+
+/* ── PERFORMANCE TABLE (LEFT) ── */
+.dos-perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:24px}
+.dos-perf-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);padding:14px 16px}
+.dos-perf-val{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;letter-spacing:-.02em;display:block;color:#fff;margin-bottom:3px}
+.dos-perf-lbl{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280}
+
+/* ── APPLICATIONS ── */
+.dos-app-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px}
+.dos-app-tag{font-family:'DM Mono',monospace;font-size:9px;padding:5px 11px;background:rgba(255,255,255,.04);color:#D1D5DB;letter-spacing:.03em;border:1px solid rgba(255,255,255,.07)}
+
+/* ── FORMULATION GUIDE ── */
+.dos-form-row{display:grid;grid-template-columns:1fr 80px 80px;gap:0;border-bottom:1px solid rgba(255,255,255,.05);font-size:12px}
+.dos-form-row:first-child{border-top:1px solid rgba(255,255,255,.05)}
+.dos-form-hd{background:rgba(255,255,255,.04);font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:#4B5563}
+.dos-form-cell{padding:9px 12px;color:#9CA3AF}
+.dos-form-cell.hi{color:#E5E7EB}
+.dos-form-cell.mono{font-family:'DM Mono',monospace;font-size:11px;color:var(--acc)}
+
+/* ── SYNERGIES ── */
+.dos-syn-list{display:flex;flex-direction:column;gap:6px;margin-bottom:8px}
+.dos-syn{padding:12px 14px;background:rgba(255,255,255,.025);border-left:2px solid var(--acc-border)}
+.dos-syn-code{font-family:'DM Mono',monospace;font-size:10px;color:var(--acc);display:block;margin-bottom:4px}
+.dos-syn-desc{font-size:12px;color:#9CA3AF;line-height:1.6}
+
+/* ── RIGHT COLUMN: SPECS ── */
+.dos-spec-block{background:#111;padding:24px;margin-bottom:12px}
+.dos-spec-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:4px}
+.dos-spec-row{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px}
+.dos-spec-row:last-child{border-bottom:none}
+.dos-spec-k{color:#6B7280;flex-shrink:0;padding-right:12px}
+.dos-spec-v{font-family:'DM Mono',monospace;font-size:11px;color:#fff;text-align:right;word-break:break-word}
+
+/* ── REGULATORY TABLE ── */
+.dos-reg-block{background:#111;padding:24px;margin-bottom:12px}
+.dos-reg-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06)}
+.dos-reg-row{display:grid;grid-template-columns:auto 1fr auto;gap:0 16px;align-items:start;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:11px}
+.dos-reg-row:last-child{border-bottom:none}
+.dos-reg-mkt{color:#6B7280;white-space:nowrap}
+.dos-reg-detail{color:#9CA3AF;font-size:11px;line-height:1.5}
+.dos-reg-status{font-family:'DM Mono',monospace;font-size:9px;padding:2px 7px;white-space:nowrap}
+.s-ok{background:rgba(110,231,183,.1);color:var(--acc)}
+.s-cond{background:rgba(217,119,6,.1);color:#FCD34D}
+.s-cosmos{background:rgba(167,243,208,.1);color:#A7F3D0}
+
+/* ── NOTES & ALERTS ── */
+.dos-note{padding:14px 16px;background:var(--acc-bg);border:1px solid var(--acc-border);margin-bottom:10px}
+.dos-note-t{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);margin-bottom:6px}
+.dos-note-b{font-size:12px;line-height:1.65;color:#D1D5DB}
+.dos-alert{padding:14px 16px;background:rgba(217,119,6,.06);border:1px solid rgba(217,119,6,.2);margin-bottom:10px}
+.dos-alert-t{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:#FCD34D;margin-bottom:6px}
+.dos-alert-b{font-size:12px;line-height:1.65;color:#D1D5DB}
+
+/* ── REQUEST CTA ── */
+.dos-req{background:var(--line-dark);padding:20px 24px;display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.dos-req-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;margin-bottom:2px}
+.dos-req-body{font-size:12px;color:rgba(255,255,255,.55);line-height:1.55}
+.dos-req-btn{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:rgba(110,231,183,.12);color:var(--acc);border:1px solid var(--acc-border);font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .22s;text-decoration:none}
+.dos-req-btn:hover{background:rgba(110,231,183,.2);border-color:var(--acc)}
+.dos-req-btn svg{width:13px;height:13px;flex-shrink:0}
+
+/* ── DOCUMENT NAV ── */
+.dos-docnav{display:flex;align-items:center;justify-content:space-between;padding:20px 56px;border-top:1px solid rgba(255,255,255,.06);margin-top:48px}
+.dos-docnav-btn{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#4B5563;display:flex;align-items:center;gap:8px;cursor:pointer;background:none;border:none;transition:color .2s;padding:8px 0}
+.dos-docnav-btn:hover{color:var(--acc)}
+.dos-docnav-name{font-size:13px;font-family:'Barlow',sans-serif;font-weight:600;color:#E5E7EB;display:block;margin-top:2px;letter-spacing:0}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){.dos-body{grid-template-columns:1fr;gap:0;padding:36px 40px 56px}.dos-right{margin-top:32px}.dos-ph{padding:36px 40px 32px}}
+@media(max-width:860px){.dos-wrap{grid-template-columns:1fr}.dos-sidebar{display:none}.dos-body{padding:28px 20px 48px}.dos-ph{padding:28px 20px 24px}.dos-docnav{padding:20px}.dos-metrics{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.dos-metrics{grid-template-columns:1fr}.dos-perf-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav id="mainnav">
+  <a class="logo" href="index.html">
+    <span class="logo-m">VLYOR</span>
+    <span class="logo-s">Science <span class="logo-p">|</span> Global Bioactives Hub</span>
+  </a>
+  <div class="nav-links">
+    <a href="pure.html">← VLYOR PURE</a>
+    <a href="index.html#lines">Portfolio</a>
+    <a href="portal.html" class="nav-portal">Technical Portal →</a>
+  </div>
+</nav>
+
+<div class="dos-wrap">
+
+  <!-- ═══════════════════ SIDEBAR ═══════════════════ -->
+  <aside class="dos-sidebar">
+    <div class="dos-sb-head">
+      <div class="dos-sb-line"><div class="dos-sb-dot"></div>Technical Dossier</div>
+      <div class="dos-sb-title">VLYOR PURE</div>
+      <div class="dos-sb-count">14 Biosurfactant Actives</div>
+    </div>
+    <nav class="dos-sb-nav">
+      <div class="dos-sb-grp">
+        <div class="dos-sb-grp-hd">APG Glucosides</div>
+        <button class="dos-sb-btn active" data-dos="glucoc810"><span class="dos-sb-btn-name">GlucoPure C810 Series</span><span class="dos-sb-tag">C8/C10</span></button>
+        <button class="dos-sb-btn" data-dos="glucoco"><span class="dos-sb-btn-name">GlucoPure CO</span><span class="dos-sb-tag">Coco</span></button>
+        <button class="dos-sb-btn" data-dos="glucoc10"><span class="dos-sb-btn-name">GlucoPure C10</span><span class="dos-sb-tag">C10</span></button>
+        <button class="dos-sb-btn" data-dos="glucoc12"><span class="dos-sb-btn-name">GlucoPure C12</span><span class="dos-sb-tag">C12</span></button>
+        <button class="dos-sb-btn" data-dos="glucoblend"><span class="dos-sb-btn-name">GlucoPure Blend</span><span class="dos-sb-tag">Self-emul.</span></button>
+      </div>
+      <div class="dos-sb-grp">
+        <div class="dos-sb-grp-hd">Polysorbates</div>
+        <button class="dos-sb-btn" data-dos="solu20"><span class="dos-sb-btn-name">SoluPure 20</span><span class="dos-sb-tag">PS-20</span></button>
+        <button class="dos-sb-btn" data-dos="solu40"><span class="dos-sb-btn-name">SoluPure 40</span><span class="dos-sb-tag">PS-40</span></button>
+        <button class="dos-sb-btn" data-dos="solu60"><span class="dos-sb-btn-name">SoluPure 60</span><span class="dos-sb-tag">PS-60</span></button>
+        <button class="dos-sb-btn" data-dos="solu80"><span class="dos-sb-btn-name">SoluPure 80</span><span class="dos-sb-tag">PS-80</span></button>
+      </div>
+      <div class="dos-sb-grp">
+        <div class="dos-sb-grp-hd">Amphoteric</div>
+        <button class="dos-sb-btn" data-dos="betapure"><span class="dos-sb-btn-name">BetaPure</span><span class="dos-sb-tag">CAPB</span></button>
+      </div>
+      <div class="dos-sb-grp">
+        <div class="dos-sb-grp-hd">Mild Anionic</div>
+        <button class="dos-sb-btn" data-dos="isopure"><span class="dos-sb-btn-name">IsoPure SCI</span><span class="dos-sb-tag">SCI</span></button>
+      </div>
+      <div class="dos-sb-grp">
+        <div class="dos-sb-grp-hd">Anionic Surfactants</div>
+        <button class="dos-sb-btn" data-dos="sulfosles"><span class="dos-sb-btn-name">SulfoPure SLES</span><span class="dos-sb-tag">70%</span></button>
+        <button class="dos-sb-btn" data-dos="sulfosls"><span class="dos-sb-btn-name">SulfoPure SLS</span><span class="dos-sb-tag">Dual</span></button>
+        <button class="dos-sb-btn" data-dos="amidopure"><span class="dos-sb-btn-name">AmidoPure</span><span class="dos-sb-tag">CDEA</span></button>
+      </div>
+    </nav>
+    <div class="dos-sb-footer">
+      <a href="pure.html" class="dos-sb-back">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
+        Back to VLYOR PURE
+      </a>
+    </div>
+  </aside>
+
+  <!-- ═══════════════════ PANELS ═══════════════════ -->
+  <main class="dos-main">
+
+<!-- ══════════ GlucoPure C810 ══════════ -->
+<div class="dos-panel active" id="dos-glucoc810">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR PURE — Biosurfactants &amp; Green Cleansing Chemistry</div>
+    <h1 class="dos-ph-name">GlucoPure C810 Series</h1>
+    <p class="dos-ph-inci">Caprylyl/Capryl Glucoside · CAS 68515-73-1</p>
+    <div class="dos-ph-badges">
+      <span class="dos-ph-badge b-a">APG C8/C10</span>
+      <span class="dos-ph-badge b-d">Biosourced</span>
+      <span class="dos-ph-badge b-d">COSMOS Eligible</span>
+      <span class="dos-ph-badge b-b">Readily Biodegradable</span>
+      <span class="dos-ph-badge b-d">Multiple Grades</span>
+    </div>
+    <p class="dos-ph-tagline">"The shortest-chain APG in the PURE portfolio — ultra-mild C8/C10 glucoside with maximum biodegradability and the cleanest irritation profile available for baby, sensitive and certified natural cleansing applications."</p>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">C8/C10</span><span class="dos-metric-lbl">Chain Length</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">50–60%</span><span class="dos-metric-lbl">Active Content</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">OECD 301B</span><span class="dos-metric-lbl">Biodegradability</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">3–15%</span><span class="dos-metric-lbl">Recommended Dosage</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">GlucoPure C810 Series is <strong>Caprylyl/Capryl Glucoside</strong> — the C8/C10 Alkyl Polyglucoside (APG) produced by acid-catalysed Fischer glycosidation of glucose with a C8/C10 fatty alcohol blend derived from renewable coconut and palm kernel fractions. APGs represent the state of the art in biosourced surfactant chemistry: fully derived from renewable carbohydrate and fatty alcohol feedstocks, readily biodegradable per OECD 301B standard, and carrying COSMOS-organic and COSMOS-natural certification eligibility for natural cosmetic formulation.</p>
+      <p class="dos-desc">The <strong>short C8/C10 chain length</strong> positions GlucoPure C810 as the mildest APG in the PURE portfolio. In-vitro keratinocyte and in-vivo HRIPT studies confirm near-zero transepidermal water loss alteration at use concentrations, establishing it as the reference non-ionic surfactant for products targeting baby, sensitive skin and intimate hygiene categories where clinical mildness certification is required. Available in multiple grades — HSO810, HS215 and HS225N — with varying active content, APE specification and cloud point to match different formulation requirements.</p>
+
+      <div class="dos-mech">
+        <div class="dos-mech-title">Mechanism of Action</div>
+        <p class="dos-mech-body">APG surfactants function through classical micelle formation. The glucoside headgroup is markedly larger and more hydrophilic than conventional non-ionic headgroups (polyethoxylates), generating micelles with larger hydrodynamic radii and lower free monomer concentration at equivalent CMC. This structural feature directly explains the reduced skin penetration and irritation profile of APGs relative to conventional anionic and non-ionic surfactants: it is the monomeric surfactant — not the micellar form — that penetrates the stratum corneum and elicits inflammatory response. <strong>Caprylyl/Capryl Glucoside combines this structural advantage with the minimum viable alkyl chain length</strong>, producing the lowest irritation index within the glucoside family.</p>
+      </div>
+
+      <p class="dos-sec-h">Key Performance Parameters</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">~13.5</span><span class="dos-perf-lbl">HLB Value</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">&lt;10 ppm</span><span class="dos-perf-lbl">APE Content (COSMOS grade)</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Fine-bubble</span><span class="dos-perf-lbl">Foam Character</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">4.5 – 8.5</span><span class="dos-perf-lbl">pH Stability Range</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <p class="dos-desc">GlucoPure C810 is incorporated directly into the aqueous phase at room temperature. At use concentrations of 3–10%, it contributes mild cleansing and fine stable foam. <strong>At 8–12% in combination with BetaPure</strong>, the system approaches Zein solubilisation values near those of pure water — the most sensitive benchmark for skin barrier compatibility available. Optimal pH for use is 5.5–7.0. Broad pH stability (4.5–8.5) without surfactant hydrolysis.</p>
+      <div style="overflow-x:auto">
+        <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application Context</div><div class="dos-form-cell">Use Level</div><div class="dos-form-cell">Notes</div></div>
+        <div class="dos-form-row"><div class="dos-form-cell hi">Baby Wash / Tear-Free</div><div class="dos-form-cell mono">8 – 12%</div><div class="dos-form-cell">Combine with BetaPure 3–5% for max mildness</div></div>
+        <div class="dos-form-row"><div class="dos-form-cell hi">Sensitive Skin Cleanser</div><div class="dos-form-cell mono">6 – 10%</div><div class="dos-form-cell">COSMOS-eligible as primary surfactant</div></div>
+        <div class="dos-form-row"><div class="dos-form-cell hi">Micellar Water</div><div class="dos-form-cell mono">3 – 5%</div><div class="dos-form-cell">Low-level as solubiliser and mild cleanser</div></div>
+        <div class="dos-form-row"><div class="dos-form-cell hi">Solid Shampoo Bar</div><div class="dos-form-cell mono">5 – 8%</div><div class="dos-form-cell">Combine with IsoPure SCI 85% as primary matrix</div></div>
+      </div>
+
+      <p class="dos-sec-h">Target Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Baby Wash &amp; Shampoo</span>
+        <span class="dos-app-tag">Sensitive Skin Cleansers</span>
+        <span class="dos-app-tag">Micellar Cleansing Waters</span>
+        <span class="dos-app-tag">COSMOS Natural / Organic Formulas</span>
+        <span class="dos-app-tag">Intimate Hygiene</span>
+        <span class="dos-app-tag">Eye Makeup Removers</span>
+        <span class="dos-app-tag">Tear-Free Products</span>
+        <span class="dos-app-tag">Scalp-Sensitive Shampoos</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">GlucoPure C810 + BetaPure</span><span class="dos-syn-desc">The VLYOR reference ultra-mild system. APG non-ionic provides the biosourced, COSMOS-eligible base; betaine amphoteric adds foam stability, viscosity contribution and irritation-buffering through mixed micelle formation. Benchmark combination for certified natural baby and sensitive skin cleansers.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">GlucoPure C810 + IsoPure SCI (85%)</span><span class="dos-syn-desc">Solid bar mildness architecture. SCI powder forms the structural matrix and delivers the primary anionic cleansing performance; GlucoPure C810 contributes mildness, COSMOS eligibility and a fine-bubble foam character that differentiates premium syndet bars.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">GlucoPure C810 + GlucoPure CO</span><span class="dos-syn-desc">APG chain-blend for extended foam performance. C8/C10 mildness character paired with C12–C14 foam body for formulas requiring the full APG mildness claim with elevated foam volume.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Caprylyl/Capryl Glucoside</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">68515-73-1</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Clear to slightly turbid liquid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Active content</span><span class="dos-spec-v">50 – 60% (grade dependent)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">HLB</span><span class="dos-spec-v">~13.5</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH (5% aq.)</span><span class="dos-spec-v">5.0 – 7.5</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH stability</span><span class="dos-spec-v">4.5 – 8.5</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">APE content</span><span class="dos-spec-v">&lt;10 ppm (COSMOS grades)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Solubility</span><span class="dos-spec-v">Freely water-miscible</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">3.0 – 15.0%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Biodegradability</span><span class="dos-spec-v">Readily biodegradable (OECD 301B)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Available grades</span><span class="dos-spec-v">HSO810 · HS215 · HS225N</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU</span><span class="dos-reg-detail">No restriction — EU Regulation 1223/2009 compliant</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">COSMOS</span><span class="dos-reg-detail">Certified grades available; APE &lt;10 ppm specification</span><span class="dos-reg-status s-cosmos">Certified</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Brazil</span><span class="dos-reg-detail">ANVISA RDC 21/2015 compliant. No restriction.</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">LATAM</span><span class="dos-reg-detail">Colombia, Peru, Argentina — no restriction at cosmetic use levels</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">REACH</span><span class="dos-reg-detail">Pre-registered. GHS SDS available.</span><span class="dos-reg-status s-ok">Compliant</span></div>
+      </div>
+      <div class="dos-note">
+        <p class="dos-note-t">COSMOS Specification Note</p>
+        <p class="dos-note-b">COSMOS-organic certified grades (APE &lt;10 ppm) are available on request. Specify grade requirement at time of enquiry. Full certification documentation provided with batch.</p>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Full Documentation</div>
+        <p class="dos-req-body">Complete TDS, SDS (GHS), batch COA and COSMOS certification available on request for qualified accounts.</p>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS + COA <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <div></div>
+    <button class="dos-docnav-btn" data-nav-to="glucoco">Next Active <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg><span class="dos-docnav-name">GlucoPure CO →</span></button>
+  </div>
+</div>
+
+<!-- ══════════ GlucoPure CO ══════════ -->
+<div class="dos-panel" id="dos-glucoco">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR PURE — Biosurfactants &amp; Green Cleansing Chemistry</div>
+    <h1 class="dos-ph-name">GlucoPure CO</h1>
+    <p class="dos-ph-inci">Coco Glucoside · CAS 68515-73-1 / 141464-42-8</p>
+    <div class="dos-ph-badges">
+      <span class="dos-ph-badge b-a">APG Coconut</span>
+      <span class="dos-ph-badge b-d">COSMOS Eligible</span>
+      <span class="dos-ph-badge b-b">Universal Co-surfactant Compatibility</span>
+    </div>
+    <p class="dos-ph-tagline">"Coco Glucoside — the most widely used APG globally. Broad C12–C14 chain distribution for balanced foam, mildness and the broadest co-surfactant compatibility in the glucoside family."</p>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">C12–C14</span><span class="dos-metric-lbl">Chain Length</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">~12</span><span class="dos-metric-lbl">HLB Value</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">50–60%</span><span class="dos-metric-lbl">Active Content</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">3–20%</span><span class="dos-metric-lbl">Recommended Dosage</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">GlucoPure CO is <strong>Coco Glucoside</strong> — produced from the condensation of coconut fatty alcohol (C12–C14 distribution) with glucose. The broad chain-length distribution relative to single-chain APGs delivers a balanced foam-cleansing-mildness profile across a wide formulation pH range, making it the most versatile primary APG surfactant in the PURE portfolio.</p>
+      <p class="dos-desc">Available in grades HS818 and HS425NE. <strong>Grade HS818 carries COSMOS-organic certification</strong>, enabling its use as the primary surfactant in certified natural and organic product development. Coco Glucoside demonstrates exceptional compatibility with all co-surfactant charge types — anionic, cationic, amphoteric and non-ionic — without the charge selectivity restrictions of some surfactant categories, making it ideal for complex 2-in-1 systems where cationic conditioning polymers must coexist with the primary surfactant.</p>
+      <div class="dos-mech">
+        <div class="dos-mech-title">Compatibility Note — Cationic Systems</div>
+        <p class="dos-mech-body">Unlike anionic surfactants, non-ionic APGs carry no charge and therefore do not undergo the electrostatic precipitation and inactivation that occurs when anionic surfactants contact cationic conditioning polymers such as polyquaternium-10 or guar hydroxypropyltrimonium chloride. <strong>GlucoPure CO can serve as the primary surfactant in 2-in-1 cleanse-and-condition formulas</strong> at use concentrations where anionic-based systems would require complex charge-balancing or sequential deposition systems.</p>
+      </div>
+      <p class="dos-sec-h">Key Performance Parameters</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">Balanced</span><span class="dos-perf-lbl">Foam Character</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Universal</span><span class="dos-perf-lbl">Co-surfactant Compat.</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">&gt;100°C</span><span class="dos-perf-lbl">Flash Point</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">4.5–8.0</span><span class="dos-perf-lbl">pH Stability</span></div>
+      </div>
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <p class="dos-desc">Incorporate directly into the aqueous phase at room temperature. Optimal performance pH 5.5–7.5. At use levels of 5–15%, GlucoPure CO provides the primary cleansing and foam contribution in sulphate-free and natural formulations. <strong>Foam creaminess and stability are significantly enhanced by addition of BetaPure at 3–5%</strong>. For 2-in-1 conditioning formulas, GlucoPure CO at 8–12% as primary surfactant with cationic conditioning polymer at 0.5–1% provides effective cleanse-and-condition in a single rinse-off step.</p>
+      <div style="overflow-x:auto">
+        <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application Context</div><div class="dos-form-cell">Use Level</div><div class="dos-form-cell">Notes</div></div>
+        <div class="dos-form-row"><div class="dos-form-cell hi">Premium Facial Cleanser</div><div class="dos-form-cell mono">5 – 10%</div><div class="dos-form-cell">COSMOS-eligible primary surfactant</div></div>
+        <div class="dos-form-row"><div class="dos-form-cell hi">Natural Shampoo</div><div class="dos-form-cell mono">8 – 15%</div><div class="dos-form-cell">Combine with GlucoPure C12 for foam lift</div></div>
+        <div class="dos-form-row"><div class="dos-form-cell hi">2-in-1 Shampoo-Conditioner</div><div class="dos-form-cell mono">10 – 18%</div><div class="dos-form-cell">Compatible with cationic conditioning polymers</div></div>
+        <div class="dos-form-row"><div class="dos-form-cell hi">Body Wash</div><div class="dos-form-cell mono">6 – 12%</div><div class="dos-form-cell">With BetaPure for foam stability</div></div>
+      </div>
+      <p class="dos-sec-h">Target Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Facial Cleansers</span><span class="dos-app-tag">Body Washes</span><span class="dos-app-tag">Baby Care</span>
+        <span class="dos-app-tag">Natural Certified Products</span><span class="dos-app-tag">2-in-1 Shampoo-Conditioner</span>
+        <span class="dos-app-tag">Premium Shampoos</span><span class="dos-app-tag">Conditioning Cleansers</span>
+      </div>
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">GlucoPure CO + BetaPure</span><span class="dos-syn-desc">Premium mild system. APG non-ionic + betaine amphoteric delivers creamy, stable foam with clinical mildness profile. Reference combination for natural certified premium facial and hair care.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">GlucoPure CO + AmidoPure NF</span><span class="dos-syn-desc">Classic foam-thickening extension. CDEA thickens and stabilises APG-based cleansing systems with improved foam creaminess and improved product sensory from the batch.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Coco Glucoside</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">68515-73-1 / 141464-42-8</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Clear to slightly opalescent liquid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Active content</span><span class="dos-spec-v">50 – 60%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">HLB</span><span class="dos-spec-v">~12</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH (5% aq.)</span><span class="dos-spec-v">5.5 – 7.5</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH stability</span><span class="dos-spec-v">4.5 – 8.0</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Flash point</span><span class="dos-spec-v">&gt;100°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Solubility</span><span class="dos-spec-v">Freely water-miscible</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">3.0 – 20.0%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Biodegradability</span><span class="dos-spec-v">Readily biodegradable (OECD 301B)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Available grades</span><span class="dos-spec-v">HS818 (COSMOS) · HS425NE</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU</span><span class="dos-reg-detail">No restriction — EU Reg. 1223/2009 compliant</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">COSMOS</span><span class="dos-reg-detail">HS818 grade certified organic eligible</span><span class="dos-reg-status s-cosmos">Certified</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Brazil</span><span class="dos-reg-detail">ANVISA compliant. No restriction.</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">LATAM</span><span class="dos-reg-detail">No restriction at cosmetic use levels</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Full Documentation</div>
+        <p class="dos-req-body">Complete TDS, SDS (GHS), batch COA and COSMOS certification available on request.</p>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS + COA <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" data-nav-to="glucoc810"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 8H3M7 4L3 8l4 4"/></svg> Previous<span class="dos-docnav-name">← GlucoPure C810</span></button>
+    <button class="dos-docnav-btn" data-nav-to="glucoc10">Next Active <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg><span class="dos-docnav-name">GlucoPure C10 →</span></button>
+  </div>
+</div>
+
+<!-- ══════════ GlucoPure C10 ══════════ -->
+<div class="dos-panel" id="dos-glucoc10">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR PURE — Biosurfactants &amp; Green Cleansing Chemistry</div>
+    <h1 class="dos-ph-name">GlucoPure C10</h1>
+    <p class="dos-ph-inci">Decyl Glucoside · CAS 54549-25-6</p>
+    <div class="dos-ph-badges"><span class="dos-ph-badge b-a">APG C10</span><span class="dos-ph-badge b-d">Creamy Dense Foam</span><span class="dos-ph-badge b-d">Solid Bar Compatible</span></div>
+    <p class="dos-ph-tagline">"Single C10 chain for premium foam texture — denser, creamier lather that elevates solid cleansing bars and high-end rinse-off products beyond the reach of broader-chain APG blends."</p>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">C10</span><span class="dos-metric-lbl">Single Chain (Decyl)</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">~13</span><span class="dos-metric-lbl">HLB Value</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">50–60%</span><span class="dos-metric-lbl">Active Content</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">5–20%</span><span class="dos-metric-lbl">Recommended Dosage</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">GlucoPure C10 is <strong>Decyl Glucoside</strong> — the single C10 chain APG with a characteristically different foam profile versus mixed-chain coco glucoside. The defined single decyl chain delivers <strong>denser, creamier, more structurally stable lather</strong> with consistent foam kinetics across a wider temperature range than broader-chain APGs. The uniform chain length also provides more predictable rheology in semi-solid and solid formulation systems.</p>
+      <p class="dos-desc">GlucoPure C10 is the preferred APG for <strong>premium facial cleansing bars, solid shampoo formats and high-end liquid facial cleansers</strong> where foam texture and lather density are primary organoleptic quality differentiators. In solid bar systems, the combination of GlucoPure C10 with IsoPure SCI 85% constitutes the technical backbone of high-performance natural certified syndet shampoo bars.</p>
+      <div class="dos-mech">
+        <div class="dos-mech-title">Foam Quality — Chain Length Effect</div>
+        <p class="dos-mech-body">The superior foam texture of C10 vs. C8/C10 blends arises from the single-chain uniformity: a defined CMC and predictable micellar packing geometry produces rod-micelles with consistent dimensions under shear. Broader-chain blends produce a more polydisperse micellar population, generating foam with less uniform bubble size distribution and lower foam stability at elevated temperatures. <strong>This chain-uniformity advantage is most apparent in solid and semi-solid formulation systems</strong> where rheological consistency through temperature cycling is a manufacturing requirement.</p>
+      </div>
+      <p class="dos-sec-h">Target Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Premium Facial Cleansers</span><span class="dos-app-tag">Solid Shampoo Bars</span>
+        <span class="dos-app-tag">Foaming Facial Bars</span><span class="dos-app-tag">Natural Hair Care</span>
+        <span class="dos-app-tag">Sulphate-Free Shampoos</span><span class="dos-app-tag">High-End Body Washes</span>
+      </div>
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">GlucoPure C10 + IsoPure SCI 85%</span><span class="dos-syn-desc">Premium solid shampoo bar system. SCI provides the structural matrix and primary mild anionic cleansing; GlucoPure C10 elevates foam density, contributes mildness and enables COSMOS certification pathway for the finished bar.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">GlucoPure C10 + GlucoPure CO</span><span class="dos-syn-desc">APG blend optimisation. C10 foam density character combined with C12–C14 foam volume for premium liquid cleansers requiring both foam quality and performance breadth.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Decyl Glucoside</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">54549-25-6</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Clear to slightly hazy liquid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Active content</span><span class="dos-spec-v">50 – 60%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">HLB</span><span class="dos-spec-v">~13</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH stability</span><span class="dos-spec-v">4.5 – 8.5</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">5.0 – 20.0%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Biodegradability</span><span class="dos-spec-v">Readily biodegradable (OECD 301B)</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU</span><span class="dos-reg-detail">No restriction — 1223/2009 compliant</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">COSMOS</span><span class="dos-reg-detail">COSMOS-natural/organic eligible</span><span class="dos-reg-status s-cosmos">Eligible</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Brazil / LATAM</span><span class="dos-reg-detail">No restriction at cosmetic use levels</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Full Documentation</div>
+        <p class="dos-req-body">TDS, SDS (GHS) and batch COA available on request.</p>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS + COA <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" data-nav-to="glucoco"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 8H3M7 4L3 8l4 4"/></svg> Previous<span class="dos-docnav-name">← GlucoPure CO</span></button>
+    <button class="dos-docnav-btn" data-nav-to="glucoc12">Next <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg><span class="dos-docnav-name">GlucoPure C12 →</span></button>
+  </div>
+</div>
+
+<!-- ══════════ GlucoPure C12 ══════════ -->
+<div class="dos-panel" id="dos-glucoc12">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR PURE — Biosurfactants &amp; Green Cleansing Chemistry</div>
+    <h1 class="dos-ph-name">GlucoPure C12</h1>
+    <p class="dos-ph-inci">Lauryl Glucoside · CAS 105329-64-4</p>
+    <div class="dos-ph-badges"><span class="dos-ph-badge b-a">APG C12</span><span class="dos-ph-badge b-d">High Foam Volume</span><span class="dos-ph-badge b-d">Sulphate Replacement</span></div>
+    <p class="dos-ph-tagline">"Maximum foam power within the APG family — Lauryl Glucoside for clarifying shampoos and high-foam formats where sulphate-free claims cannot compromise the foam experience consumers expect."</p>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">C12</span><span class="dos-metric-lbl">Lauryl Chain</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">~12.5</span><span class="dos-metric-lbl">HLB Value</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">High</span><span class="dos-metric-lbl">Foam Generation</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">3–15%</span><span class="dos-metric-lbl">Recommended Dosage</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">GlucoPure C12 is <strong>Lauryl Glucoside</strong> — the C12 APG with the highest foaming performance in the glucoside series. The single C12 lauryl chain provides the optimal HLB (~12.5) and CMC balance for maximum foam generation, stability and volume in aqueous systems, making it the APG of choice for any application where the consumer foam experience is a primary purchase driver: clarifying shampoos, high-foam body washes, scalp treatments and foaming facial cleansers targeting sulphate-free positioning.</p>
+      <p class="dos-desc">Despite superior foam performance, <strong>GlucoPure C12 retains the inherent biosourced mildness characteristic of the full APG series</strong> — substantially less irritating than sodium lauryl sulphate at equivalent or higher foam levels. This combination is the commercial proposition of the sulphate-free premium shampoo category: APG-based systems now achieve foam volumes previously only available from SLS/SLES systems while remaining in the mild/natural formulation space.</p>
+      <p class="dos-sec-h">Target Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Clarifying Shampoos</span><span class="dos-app-tag">High-Foam Body Washes</span>
+        <span class="dos-app-tag">Foaming Facial Cleansers</span><span class="dos-app-tag">Scalp Treatments</span>
+        <span class="dos-app-tag">Sulphate-Free Hair Care</span><span class="dos-app-tag">Shower Gels</span>
+      </div>
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">GlucoPure C12 + BetaPure</span><span class="dos-syn-desc">Premium high-foam mild system. Betaine stabilises and densifies the APG foam structure through cosurfactant interaction. The VLYOR reference formulation for sulphate-free shampoos targeting maximum foam without sulphate compromise.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">GlucoPure C12 + SulfoPure SLES</span><span class="dos-syn-desc">Hybrid transition system. SLES provides primary foam bulk at lower cost; GlucoPure C12 addition boosts mildness profile and enables natural ingredient positioning at commercial price points.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Lauryl Glucoside</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">105329-64-4</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Active content</span><span class="dos-spec-v">50 – 70%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">HLB</span><span class="dos-spec-v">~12.5</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH stability</span><span class="dos-spec-v">4.5 – 8.5</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">3.0 – 15.0%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Biodegradability</span><span class="dos-spec-v">Readily biodegradable (OECD 301B)</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">COSMOS</span><span class="dos-reg-detail">COSMOS eligible</span><span class="dos-reg-status s-cosmos">Eligible</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Brazil / LATAM</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Full Documentation</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS + COA <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" data-nav-to="glucoc10"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 8H3M7 4L3 8l4 4"/></svg> Previous<span class="dos-docnav-name">← GlucoPure C10</span></button>
+    <button class="dos-docnav-btn" data-nav-to="glucoblend">Next <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg><span class="dos-docnav-name">GlucoPure Blend →</span></button>
+  </div>
+</div>
+
+<!-- ══════════ GlucoPure Blend ══════════ -->
+<div class="dos-panel" id="dos-glucoblend">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR PURE — Biosurfactants &amp; Green Cleansing Chemistry</div>
+    <h1 class="dos-ph-name">GlucoPure Blend</h1>
+    <p class="dos-ph-inci">Coco Glucoside &amp; Glyceryl Oleate</p>
+    <div class="dos-ph-badges"><span class="dos-ph-badge b-a">APG Self-Emulsifying</span><span class="dos-ph-badge b-d">O/W Emulsification</span><span class="dos-ph-badge b-d">Cleanse &amp; Condition</span></div>
+    <p class="dos-ph-tagline">"Single ingredient for cleansing and emulsification — the co-processed APG/glyceryl oleate blend that enables balm-to-milk, cleansing oil and lotion-cleanse formats without additional emulsifier complexity."</p>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">Coco-G + GlyOleate</span><span class="dos-metric-lbl">Active Combination</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">~9–11</span><span class="dos-metric-lbl">HLB Value</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Self-emulsifying</span><span class="dos-metric-lbl">Key Property</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">3–15%</span><span class="dos-metric-lbl">Recommended Dosage</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">GlucoPure Blend is a <strong>co-processed combination of Coco Glucoside and Glyceryl Oleate</strong> engineered to provide both surfactant cleansing and mild O/W emulsification in a single raw material. The Glyceryl Oleate component — a monoglyceride ester of oleic acid — contributes emollient skin feel and emulsification character that pure APG systems lack, enabling the <strong>lotion-like, conditioning after-feel</strong> in rinse-off cleansing that distinguishes premium cleansing concepts from commodity products. The self-emulsifying character simplifies formulation of oil-containing cleansers without additional high-HLB emulsifiers.</p>
+      <p class="dos-sec-h">Target Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Balm-to-Milk Cleansers</span><span class="dos-app-tag">Cleansing Oils</span>
+        <span class="dos-app-tag">Micellar Gel Cleansers</span><span class="dos-app-tag">Conditioning Body Washes</span>
+        <span class="dos-app-tag">2-in-1 Shower Care</span><span class="dos-app-tag">Oil-Gel Cleansers</span>
+      </div>
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">GlucoPure Blend + BetaPure</span><span class="dos-syn-desc">Premium conditioning cleansing system. Betaine stabilises foam, contributes mildness and enhances the rinse-off experience of the emulsifying APG base.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">GlucoPure Blend + PanthoActiv 98 (VITAL line)</span><span class="dos-syn-desc">Conditioning cleanse with B5 moisturisation. Clinically substantiated skin feel improvement through Panthenol in a self-emulsifying cleansing vehicle.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Coco Glucoside &amp; Glyceryl Oleate</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Slightly hazy to turbid liquid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">HLB</span><span class="dos-spec-v">~9 – 11</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Emulsification type</span><span class="dos-spec-v">O/W self-emulsifying</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH stability</span><span class="dos-spec-v">4.5 – 7.5</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">3.0 – 15.0%</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">COSMOS</span><span class="dos-reg-detail">COSMOS eligible</span><span class="dos-reg-status s-cosmos">Eligible</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Brazil / LATAM</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Full Documentation</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS + COA <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" data-nav-to="glucoc12"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 8H3M7 4L3 8l4 4"/></svg> Previous<span class="dos-docnav-name">← GlucoPure C12</span></button>
+    <button class="dos-docnav-btn" data-nav-to="solu20">Next <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg><span class="dos-docnav-name">SoluPure 20 →</span></button>
+  </div>
+</div>
+
+<!-- ══════════ SoluPure 20 ══════════ -->
+<div class="dos-panel" id="dos-solu20">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR PURE — Biosurfactants &amp; Green Cleansing Chemistry</div>
+    <h1 class="dos-ph-name">SoluPure 20</h1>
+    <p class="dos-ph-inci">Polysorbate 20 · CAS 9005-64-5</p>
+    <div class="dos-ph-badges"><span class="dos-ph-badge b-a">Non-ionic</span><span class="dos-ph-badge b-a">Solubiliser</span><span class="dos-ph-badge b-e">HLB 16.5</span></div>
+    <p class="dos-ph-tagline">"The most hydrophilic Polysorbate — POE-20 Sorbitan Monolaurate for light fragrances and essential oils in ultra-thin aqueous systems where optical clarity at low oil loads is non-negotiable."</p>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">16.5</span><span class="dos-metric-lbl">HLB Value</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">C12 Laurate</span><span class="dos-metric-lbl">Fatty Acid Ester</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">3:1–5:1</span><span class="dos-metric-lbl">PS-20:Oil Ratio</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">0.5–5%</span><span class="dos-metric-lbl">Recommended Dosage</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">SoluPure 20 provides <strong>Polysorbate 20 (POE-20 Sorbitan Monolaurate)</strong> with HLB 16.5 — the highest in the Polysorbate family. This extreme hydrophilicity makes it the preferred solubiliser for <strong>light fragrances and essential oils in aqueous systems</strong> such as face mists, hydrosols, toners and micellar waters where oil load is below 0.5% and absolute optical clarity is required. Polysorbate 20 is produced by esterification of sorbitol-derived sorbitan with lauric acid followed by ethoxylation with 20 moles of ethylene oxide.</p>
+      <p class="dos-desc">The solubilisation mechanism involves formation of <strong>small mixed micelles</strong> encapsulating the oil-soluble ingredient, maintaining it in true solution rather than as macroscopic droplets. Typical use ratio for transparent systems is 3:1 to 5:1 (PS-20 to oil). Polysorbate 20 carries universally approved regulatory status with an extensive safety record in leave-on and rinse-off applications at concentrations up to 5%.</p>
+      <p class="dos-sec-h">Target Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Fragrance in Toners &amp; Mists</span><span class="dos-app-tag">Essential Oil Solubilisation</span>
+        <span class="dos-app-tag">Micellar Waters</span><span class="dos-app-tag">Transparent Serums</span>
+        <span class="dos-app-tag">Vitamin Solubilisation (water-phase)</span>
+      </div>
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">SoluPure 20 + SoluPure 80</span><span class="dos-syn-desc">Broad-spectrum solubilisation blend. Combined use extends effective HLB range for complex oil-phase mixes containing both light (laurate) and heavier oleophilic components.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Polysorbate 20</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">9005-64-5</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Light amber viscous liquid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">HLB</span><span class="dos-spec-v">16.5</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Viscosity (25°C)</span><span class="dos-spec-v">250 – 450 mPa·s</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Saponification value</span><span class="dos-spec-v">40 – 55 mg KOH/g</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Solubility</span><span class="dos-spec-v">Freely water-miscible</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">0.5 – 5.0%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">PS-20 : Oil ratio</span><span class="dos-spec-v">3:1 – 5:1</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU</span><span class="dos-reg-detail">No restriction — 1223/2009 compliant</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">COSMOS</span><span class="dos-reg-detail">COSMOS eligible</span><span class="dos-reg-status s-cosmos">Eligible</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Brazil / LATAM</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Global</span><span class="dos-reg-detail">Universally approved. FDA GRAS status.</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Full Documentation</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS + COA <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" data-nav-to="glucoblend"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 8H3M7 4L3 8l4 4"/></svg> Previous<span class="dos-docnav-name">← GlucoPure Blend</span></button>
+    <button class="dos-docnav-btn" data-nav-to="solu40">Next <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg><span class="dos-docnav-name">SoluPure 40 →</span></button>
+  </div>
+</div>
+
+<!-- ══════════ SoluPure 40/60/80 (condensed) ══════════ -->
+<div class="dos-panel" id="dos-solu40">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR PURE — Biosurfactants &amp; Green Cleansing Chemistry</div>
+    <h1 class="dos-ph-name">SoluPure 40</h1>
+    <p class="dos-ph-inci">Polysorbate 40 · CAS 9005-66-7</p>
+    <div class="dos-ph-badges"><span class="dos-ph-badge b-a">Non-ionic</span><span class="dos-ph-badge b-a">Emulsifier</span><span class="dos-ph-badge b-e">HLB 15.6</span></div>
+    <p class="dos-ph-tagline">"The C16 palmitate-chain Polysorbate — specific solubilisation for palmitate esters and vitamin A derivatives where PS-20 provides insufficient lipophilic coverage."</p>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">15.6</span><span class="dos-metric-lbl">HLB Value</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">C16 Palmitate</span><span class="dos-metric-lbl">Fatty Acid Ester</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Moderate</span><span class="dos-metric-lbl">Lipophilic Coverage</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">0.5–4%</span><span class="dos-metric-lbl">Recommended Dosage</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">SoluPure 40 provides <strong>Polysorbate 40 (POE-20 Sorbitan Monopalmitate)</strong> — a C16 palmitate-chain Polysorbate with HLB 15.6. The palmitic acid chain provides greater lipophilicity than the laurate-based PS-20 while maintaining high HLB, making SoluPure 40 the specific choice for <strong>solubilising C16 fatty acid esters</strong> such as retinyl palmitate, isopropyl palmitate and palmitate-esterified vitamin A derivatives in aqueous formulations. It produces clearer, more stable solutions with palmitate-based oils than either PS-20 (insufficient coverage) or PS-80 (different chain match).</p>
+      <p class="dos-sec-h">Target Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Retinyl Palmitate Solubilisation</span><span class="dos-app-tag">Vitamin A Derivative Toners</span>
+        <span class="dos-app-tag">Palmitate Ester Emulsification</span><span class="dos-app-tag">Lotion Systems</span>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Polysorbate 40</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">9005-66-7</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Amber viscous liquid to soft paste</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">HLB</span><span class="dos-spec-v">15.6</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">0.5 – 4.0%</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Brazil / LATAM</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Global</span><span class="dos-reg-detail">Universally approved</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req"><div class="dos-req-title">Request Full Documentation</div><a href="index.html#contact" class="dos-req-btn">Request TDS + SDS + COA <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" data-nav-to="solu20"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 8H3M7 4L3 8l4 4"/></svg> Previous<span class="dos-docnav-name">← SoluPure 20</span></button>
+    <button class="dos-docnav-btn" data-nav-to="solu60">Next <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg><span class="dos-docnav-name">SoluPure 60 →</span></button>
+  </div>
+</div>
+
+<div class="dos-panel" id="dos-solu60">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR PURE — Biosurfactants &amp; Green Cleansing Chemistry</div>
+    <h1 class="dos-ph-name">SoluPure 60</h1>
+    <p class="dos-ph-inci">Polysorbate 60 · CAS 9005-67-8</p>
+    <div class="dos-ph-badges"><span class="dos-ph-badge b-a">Non-ionic</span><span class="dos-ph-badge b-a">O/W Emulsifier</span><span class="dos-ph-badge b-e">HLB 14.9</span></div>
+    <p class="dos-ph-tagline">"The stearate Polysorbate for creams and lotions — C18 ester with high melting point character for thermally stable O/W emulsions, often paired with its sorbitan ester counterpart."</p>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">14.9</span><span class="dos-metric-lbl">HLB Value</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">C18 Stearate</span><span class="dos-metric-lbl">Fatty Acid Ester</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">25–35°C</span><span class="dos-metric-lbl">Melting Point</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">1–5%</span><span class="dos-metric-lbl">Recommended Dosage</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">SoluPure 60 is <strong>Polysorbate 60 (POE-20 Sorbitan Monostearate)</strong> with HLB 14.9 — a semi-solid to waxy Polysorbate grade preferred as O/W emulsifier in <strong>creams and lotions requiring thermal stability</strong>. The stearic acid chain provides the solid-state character that influences emulsion microstructure at the oil-water interface. The <strong>classical PS-60 / Span-60 (SorbEssence S-60) emulsifier pair</strong> produces exceptionally stable O/W emulsions with controlled droplet size and excellent freeze-thaw and thermal cycling behaviour — the standard combination for cosmetic and pharmaceutical-grade O/W cream systems.</p>
+      <p class="dos-sec-h">Target Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">O/W Creams &amp; Lotions</span><span class="dos-app-tag">Sunscreen Emulsions</span>
+        <span class="dos-app-tag">Thermal-Stable O/W Systems</span><span class="dos-app-tag">Classical Stearate Emulsions</span>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Polysorbate 60</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">9005-67-8</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Amber waxy solid (20°C); liquid above 30°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">HLB</span><span class="dos-spec-v">14.9</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Melting point</span><span class="dos-spec-v">25 – 35°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">1.0 – 5.0%</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Brazil / LATAM</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Global</span><span class="dos-reg-detail">Universally approved</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req"><div class="dos-req-title">Request Full Documentation</div><a href="index.html#contact" class="dos-req-btn">Request TDS + SDS + COA <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" data-nav-to="solu40"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 8H3M7 4L3 8l4 4"/></svg> Previous<span class="dos-docnav-name">← SoluPure 40</span></button>
+    <button class="dos-docnav-btn" data-nav-to="solu80">Next <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg><span class="dos-docnav-name">SoluPure 80 →</span></button>
+  </div>
+</div>
+
+<div class="dos-panel" id="dos-solu80">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR PURE — Biosurfactants &amp; Green Cleansing Chemistry</div>
+    <h1 class="dos-ph-name">SoluPure 80</h1>
+    <p class="dos-ph-inci">Polysorbate 80 · CAS 9005-65-6</p>
+    <div class="dos-ph-badges"><span class="dos-ph-badge b-a">Non-ionic</span><span class="dos-ph-badge b-a">Solubiliser</span><span class="dos-ph-badge b-e">HLB 15.0</span><span class="dos-ph-badge b-d">Most Versatile PS</span></div>
+    <p class="dos-ph-tagline">"The most commercially important Polysorbate — oleate-chain C18:1 versatility for heavier oils, complex fragrances and emulsion systems across personal care and pharmaceutical-grade topicals."</p>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">15.0</span><span class="dos-metric-lbl">HLB Value</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">C18:1 Oleate</span><span class="dos-metric-lbl">Fatty Acid Ester</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Broad-range</span><span class="dos-metric-lbl">Oil Solubilisation</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">0.5–5%</span><span class="dos-metric-lbl">Recommended Dosage</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">SoluPure 80 provides <strong>Polysorbate 80 (POE-20 Sorbitan Monooleate, Tween 80)</strong> — the most commercially important Polysorbate in personal care. The <strong>C18:1 oleate chain</strong> provides greater lipophilicity than PS-20 while maintaining high HLB (15.0), allowing SoluPure 80 to solubilise and emulsify a broader range of oil-phase ingredients including heavier mineral oils, complex esters, waxes and multi-component fragrance blends where PS-20 provides insufficient coverage. <strong>Pharmacopoeia-documented</strong> in BP, USP and EP with an extensive pharmaceutical-grade safety record — the preferred Polysorbate for formulations requiring regulatory traceability beyond cosmetic standards.</p>
+      <p class="dos-desc">SoluPure 80 remains liquid at room temperature due to the oleate chain unsaturation, avoiding the crystallisation issues of fully saturated PS-60 at low storage temperatures and simplifying manufacturing handling across ambient and cool-chain distribution conditions.</p>
+      <p class="dos-sec-h">Target Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Complex Fragrance Solubilisation</span><span class="dos-app-tag">Heavier Oil Emulsification</span>
+        <span class="dos-app-tag">O/W Lotion &amp; Cream Emulsifier</span><span class="dos-app-tag">Essential Oil Mists</span>
+        <span class="dos-app-tag">Tocopherol / Vitamin E Solubilisation</span><span class="dos-app-tag">UV Filter Dispersion Aid</span>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Polysorbate 80</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">9005-65-6</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Light amber viscous liquid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">HLB</span><span class="dos-spec-v">15.0</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Viscosity (25°C)</span><span class="dos-spec-v">300 – 500 mPa·s</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Acid value</span><span class="dos-spec-v">≤2.0 mg KOH/g</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Saponification value</span><span class="dos-spec-v">45 – 55 mg KOH/g</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">0.5 – 5.0%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Pharmacopoeia</span><span class="dos-spec-v">BP / USP / EP listed</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU</span><span class="dos-reg-detail">No restriction — 1223/2009 compliant</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">COSMOS</span><span class="dos-reg-detail">COSMOS eligible</span><span class="dos-reg-status s-cosmos">Eligible</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Brazil / LATAM</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Global / Pharma</span><span class="dos-reg-detail">BP/USP/EP listed. Universally approved.</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req"><div class="dos-req-title">Request Full Documentation</div><a href="index.html#contact" class="dos-req-btn">Request TDS + SDS + COA <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" data-nav-to="solu60"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 8H3M7 4L3 8l4 4"/></svg> Previous<span class="dos-docnav-name">← SoluPure 60</span></button>
+    <button class="dos-docnav-btn" data-nav-to="betapure">Next <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg><span class="dos-docnav-name">BetaPure →</span></button>
+  </div>
+</div>
+
+<!-- ══════════ BetaPure ══════════ -->
+<div class="dos-panel" id="dos-betapure">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR PURE — Biosurfactants &amp; Green Cleansing Chemistry</div>
+    <h1 class="dos-ph-name">BetaPure</h1>
+    <p class="dos-ph-inci">Cocamidopropyl Betaine 35% · CAS 61789-40-0</p>
+    <div class="dos-ph-badges"><span class="dos-ph-badge b-a">Amphoteric</span><span class="dos-ph-badge b-d">Anti-Irritant</span><span class="dos-ph-badge b-d">Foam Stabiliser</span><span class="dos-ph-badge b-d">Viscosity Builder</span><span class="dos-ph-badge b-b">Low-DMAPA Grade</span></div>
+    <p class="dos-ph-tagline">"The most important co-surfactant in personal care — Cocamidopropyl Betaine simultaneously reduces irritation, stabilises foam, builds viscosity and buffers pH in every cleansing system it enters."</p>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">35%</span><span class="dos-metric-lbl">Active Content</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Zwitterionic</span><span class="dos-metric-lbl">Charge Type</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">&lt;0.1%</span><span class="dos-metric-lbl">Free DMAPA (low-grade)</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">2–10%</span><span class="dos-metric-lbl">Recommended Dosage</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">BetaPure is <strong>Cocamidopropyl Betaine (CAPB) at 35% active concentration</strong> in low-DMAPA specification — the most widely used amphoteric surfactant in personal care globally. Its zwitterionic charge character enables simultaneous function across four critical roles in cleansing formulations: <strong>foam booster, foam stabiliser, viscosity builder and irritation reducer</strong>.</p>
+      <div class="dos-mech">
+        <div class="dos-mech-title">Irritation Reduction Mechanism (Mixed Micelle Formation)</div>
+        <p class="dos-mech-body">The anti-irritant mechanism of CAPB is precisely characterised in surfactant literature: CAPB molecules incorporate into the micellar shell of anionic surfactants such as SLES and SLS, increasing the effective aggregate size and — critically — reducing the <em>free monomer concentration</em> of the anionic surfactant remaining in solution. It is the monomeric (non-micellar) anionic surfactant that penetrates the stratum corneum and elicits inflammatory response. <strong>By driving the equilibrium toward mixed micelles, BetaPure reduces the bioavailable fraction of anionic surfactant</strong> at the skin interface without compromising the formulation's total surfactant content or foam volume. This mechanism underpins the near-universal use of CAPB in tear-free baby shampoo formulations globally.</p>
+      </div>
+      <p class="dos-sec-h">Key Performance Parameters</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">Reduces</span><span class="dos-perf-lbl">Anionic Free Monomer</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Builds</span><span class="dos-perf-lbl">Viscosity (with SLES)</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">4.5–9.0</span><span class="dos-perf-lbl">pH Stability</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">&lt;0.1%</span><span class="dos-perf-lbl">Free DMAPA</span></div>
+      </div>
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <p class="dos-desc">BetaPure is incorporated directly into the aqueous phase at room temperature. <strong>For SLES-based systems</strong>, addition at 3–5% of active CAPB produces measurable viscosity increase through mixed rod-micelle formation and reduces irritation potential by 30–50% versus SLES alone in Zein solubilisation assay. <strong>For APG-based natural systems</strong>, addition at 3–5% provides foam stabilisation and enhanced foam density without compromising the COSMOS certification pathway.</p>
+      <div style="overflow-x:auto">
+        <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application Context</div><div class="dos-form-cell">Use Level</div><div class="dos-form-cell">Primary Effect</div></div>
+        <div class="dos-form-row"><div class="dos-form-cell hi">Baby Shampoo (tear-free)</div><div class="dos-form-cell mono">4 – 6%</div><div class="dos-form-cell">Irritation reduction + tear-free claim support</div></div>
+        <div class="dos-form-row"><div class="dos-form-cell hi">Shampoo (SLES-based)</div><div class="dos-form-cell mono">3 – 5%</div><div class="dos-form-cell">Foam stability + viscosity + irritation buffer</div></div>
+        <div class="dos-form-row"><div class="dos-form-cell hi">Natural APG Cleanser</div><div class="dos-form-cell mono">3 – 5%</div><div class="dos-form-cell">Foam stabilisation + COSMOS eligible</div></div>
+        <div class="dos-form-row"><div class="dos-form-cell hi">Facial Cleanser</div><div class="dos-form-cell mono">2 – 4%</div><div class="dos-form-cell">Mildness enhancement and foam creaminess</div></div>
+      </div>
+      <p class="dos-sec-h">Target Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">All Cleansing Systems</span><span class="dos-app-tag">Baby Shampoos (tear-free)</span>
+        <span class="dos-app-tag">Sensitive Skin Cleansers</span><span class="dos-app-tag">2-in-1 Shampoo-Conditioners</span>
+        <span class="dos-app-tag">Foaming Facial Cleansers</span><span class="dos-app-tag">Intimate Hygiene</span>
+      </div>
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">BetaPure + SulfoPure SLES</span><span class="dos-syn-desc">The most formulated cleansing combination in the world. SLES delivers foam volume and cleansing power; BetaPure reduces anionic irritation, builds viscosity through mixed micelle formation, and stabilises foam structure. The commercial backbone of global shampoo and body wash production.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">BetaPure + GlucoPure C810 / CO</span><span class="dos-syn-desc">VLYOR ultra-mild system. APG non-ionic + betaine amphoteric delivers the lowest achievable irritation index in a functional cleansing system. COSMOS-eligible. Reference formulation for baby care and certified natural cleansing.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">BetaPure + IsoPure SCI</span><span class="dos-syn-desc">Sulphate-free mild anionic + amphoteric. Premium performance for sensitive scalp, dermatologist-tested and clinical-claim personal care.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Cocamidopropyl Betaine</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">61789-40-0</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Active content</span><span class="dos-spec-v">35 ± 2%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Pale yellow to light amber clear liquid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Free amine (DMAPA)</span><span class="dos-spec-v">&lt;0.1% (low-DMAPA grade)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Sodium chloride</span><span class="dos-spec-v">≤7.0%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Solubility</span><span class="dos-spec-v">Freely water-miscible</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">2.0 – 10.0%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH (5% aq.)</span><span class="dos-spec-v">4.5 – 6.5</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH stability</span><span class="dos-spec-v">4.5 – 9.0</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU</span><span class="dos-reg-detail">No restriction. Low-DMAPA grade meets SCCS guidance on amine contamination.</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">COSMOS</span><span class="dos-reg-detail">Not COSMOS-certified. Non-petrochemical, but synthetic derivatisation limits organic certification.</span><span class="dos-reg-status s-cond">Conditional</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Brazil / LATAM</span><span class="dos-reg-detail">ANVISA compliant. No restriction.</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Global</span><span class="dos-reg-detail">Universally approved. Extensive safety record.</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Full Documentation</div>
+        <p class="dos-req-body">TDS, SDS (GHS), batch COA with DMAPA specification report available.</p>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS + COA <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" data-nav-to="solu80"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 8H3M7 4L3 8l4 4"/></svg> Previous<span class="dos-docnav-name">← SoluPure 80</span></button>
+    <button class="dos-docnav-btn" data-nav-to="isopure">Next <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg><span class="dos-docnav-name">IsoPure SCI →</span></button>
+  </div>
+</div>
+
+<!-- ══════════ IsoPure SCI ══════════ -->
+<div class="dos-panel" id="dos-isopure">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR PURE — Biosurfactants &amp; Green Cleansing Chemistry</div>
+    <h1 class="dos-ph-name">IsoPure SCI</h1>
+    <p class="dos-ph-inci">Sodium Cocoyl Isethionate · CAS 61789-32-0</p>
+    <div class="dos-ph-badges"><span class="dos-ph-badge b-a">Mild Anionic</span><span class="dos-ph-badge b-d">Sulphate-Free</span><span class="dos-ph-badge b-d">COSMOS Eligible</span><span class="dos-ph-badge b-d">80% Paste · 85% Powder</span></div>
+    <p class="dos-ph-tagline">"The benchmark mild anionic surfactant — structuring agent, primary cleanser and foam architect for solid shampoo bars, syndet bars and any premium sulphate-free cleansing format."</p>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">SCI 80%</span><span class="dos-metric-lbl">Paste — Liquid Systems</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">SCI 85%</span><span class="dos-metric-lbl">Powder — Solid Bars</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">47–52°C</span><span class="dos-metric-lbl">Melting Point (85%)</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">5–35%</span><span class="dos-metric-lbl">Recommended Dosage</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">IsoPure SCI is <strong>Sodium Cocoyl Isethionate</strong> — an acyl isethionate ester of coconut fatty acids that represents the state of the art in mild anionic surfactant technology. Structurally distinct from sulphate surfactants: the isethionate group replaces the sulphate moiety, producing an ester with a dramatically different dermatological profile. In HRIPT (Human Repeat Insult Patch Test) studies, SCI demonstrates irritation indices approaching those of pure water — a benchmark that SLS cannot approach at equivalent concentrations.</p>
+      <p class="dos-desc">The <strong>85% powder grade is the primary enabling raw material for solid shampoo bars</strong>. SCI powder's waxy, semi-crystalline character at room temperature forms the structural matrix in water-free solid cleansing formulations, providing the physical form integrity that allows solid bars to hold shape through distribution and use while delivering salon-level foam performance when activated with water. The <strong>SCI 85% + APG glucoside</strong> combination represents the technical benchmark for premium natural certified solid hair cleansers.</p>
+      <div class="dos-mech">
+        <div class="dos-mech-title">Structural Differentiation from Sulphates</div>
+        <p class="dos-mech-body">SLS and SLES are sulphate esters: the sulphate group connects directly to the fatty alcohol chain via an ether linkage, with no intermediate chain extension. In SCI, the isethionate group (2-hydroxyethane sulphonate) interposes a two-carbon ethylene unit between the sulphonate and the fatty acid ester linkage. <strong>This structural extension significantly reduces the amphiphile's ability to penetrate the stratum corneum lipid bilayers</strong>, explaining the material difference in clinical irritation data between SCI and SLS at equivalent use concentrations. The ester linkage also increases susceptibility to saponification at high pH — a relevant consideration for formulation pH targeting.</p>
+      </div>
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <p class="dos-desc">The <strong>80% paste grade</strong> is incorporated into liquid cleansing systems at 50–60°C with stirring, contributing primary mild anionic cleansing character. The <strong>85% powder grade</strong> is the standard solid bar matrix material: processed at 60–70°C with the other solid bar components, poured or pressed into bar form, and allowed to cool. Typical bar formula: SCI 85% at 40–50% as primary surfactant, GlucoPure C10 at 10%, GlucoPure C12 at 8%, BetaPure paste at 5%, with actives, preservative and fragrance completing the formula.</p>
+      <p class="dos-sec-h">Target Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Solid Shampoo Bars</span><span class="dos-app-tag">Syndet Cleansing Bars</span>
+        <span class="dos-app-tag">Sulphate-Free Liquid Cleansers</span><span class="dos-app-tag">Natural Hair Care</span>
+        <span class="dos-app-tag">Sensitive Scalp Products</span><span class="dos-app-tag">Baby Syndet Bars</span>
+      </div>
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">IsoPure SCI 85% + GlucoPure C10 + GlucoPure C12</span><span class="dos-syn-desc">The VLYOR reference solid shampoo bar system. SCI 85% at 40–50% as primary matrix and mild anionic; GlucoPure C10 for foam density; GlucoPure C12 for foam volume. The technical combination that enables certified natural, sulphate-free, high-performance solid hair cleansers.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">IsoPure SCI (paste) + BetaPure</span><span class="dos-syn-desc">Liquid sulphate-free mild cleansing system. SCI paste at 5–10% contributes mild anionic primary cleansing; betaine reduces irritation, builds foam and viscosity. Outstanding consumer test scores for sensitive scalp and dermatologist-recommended claims.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Sodium Cocoyl Isethionate</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">61789-32-0</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Grades</span><span class="dos-spec-v">80% paste · 85% powder</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance (85%)</span><span class="dos-spec-v">White to off-white waxy solid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Melting point (85%)</span><span class="dos-spec-v">47 – 52°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Active content (85%)</span><span class="dos-spec-v">≥85%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Free fatty acid</span><span class="dos-spec-v">≤1.5%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH (5% aq.)</span><span class="dos-spec-v">5.5 – 7.0</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH stability</span><span class="dos-spec-v">4.5 – 8.0</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">5.0 – 35.0% (solid bars)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU</span><span class="dos-reg-detail">No restriction — 1223/2009 compliant. Sulphate-free classification.</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">COSMOS</span><span class="dos-reg-detail">COSMOS-natural/organic eligible</span><span class="dos-reg-status s-cosmos">Eligible</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Brazil</span><span class="dos-reg-detail">ANVISA compliant. No restriction.</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">LATAM</span><span class="dos-reg-detail">No restriction at cosmetic use levels</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Full Documentation</div>
+        <p class="dos-req-body">TDS, SDS, COA with melt point and free fatty acid data. COSMOS eligibility documentation available.</p>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS + COA <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" data-nav-to="betapure"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 8H3M7 4L3 8l4 4"/></svg> Previous<span class="dos-docnav-name">← BetaPure</span></button>
+    <button class="dos-docnav-btn" data-nav-to="sulfosles">Next <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg><span class="dos-docnav-name">SulfoPure SLES →</span></button>
+  </div>
+</div>
+
+<!-- ══════════ SulfoPure SLES ══════════ -->
+<div class="dos-panel" id="dos-sulfosles">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR PURE — Biosurfactants &amp; Green Cleansing Chemistry</div>
+    <h1 class="dos-ph-name">SulfoPure SLES</h1>
+    <p class="dos-ph-inci">Sodium Lauryl Ether Sulfate 70% · CAS 68585-34-2</p>
+    <div class="dos-ph-badges"><span class="dos-ph-badge b-c">Primary Anionic</span><span class="dos-ph-badge b-e">EO2 Ethoxylated</span><span class="dos-ph-badge b-d">Hard Water Tolerant</span></div>
+    <p class="dos-ph-tagline">"The global benchmark primary anionic — SLES 70% for maximum foam, cleansing efficiency and hard water tolerance in commercial shampoo, body wash and hand soap production at any scale."</p>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">70%</span><span class="dos-metric-lbl">Active Concentration</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">EO2</span><span class="dos-metric-lbl">Ethoxylation Degree</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Milder vs. SLS</span><span class="dos-metric-lbl">Irritation Profile</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">5–20%</span><span class="dos-metric-lbl">Recommended Dosage</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">SulfoPure SLES is <strong>Sodium Lauryl Ether Sulfate at 70% active concentration</strong> — the most used primary anionic surfactant in personal care globally by manufactured volume. SLES delivers outstanding foam volume, foam density and cleansing efficiency across the full cosmetic pH range, with hard water tolerance through the ethoxylation preventing calcium salt precipitation that limits classical soap performance in high-hardness water supplies.</p>
+      <p class="dos-desc">The critical distinction from SLS is the <strong>ethoxylation with 2 moles of ethylene oxide (EO2) prior to sulphation</strong>. This modification introduces a polyethylene glycol spacer between the lauryl chain and the sulphate group, substantially reducing the surfactant's penetration through the stratum corneum lipid bilayer and its interaction with skin proteins — the two mechanisms underlying SLES's materially lower irritation potential versus SLS at equivalent or higher active concentrations.</p>
+      <div class="dos-mech">
+        <div class="dos-mech-title">EO2 Modification — Structural Significance</div>
+        <p class="dos-mech-body">The EO2 modification inserts two polyethylene oxide units between the lauryl hydrophobic chain and the sulphate head group. The effect on skin interaction is twofold: (1) the larger, more hydrophilic head group reduces the partition coefficient of the SLES monomer into skin lipid bilayers versus SLS monomer; and (2) the EO spacer reduces the density of charge interaction between the sulphate and skin proteins such as keratin and collagen. <strong>The combined effect is a surfactant that retains >95% of SLS foam and cleansing performance while delivering substantially lower scores across all standard skin irritation test methodologies</strong> (HRIPT, EpiDerm, Zein solubilisation, rabbit eye assay).</p>
+      </div>
+      <p class="dos-sec-h">Target Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Shampoos</span><span class="dos-app-tag">Body Washes</span><span class="dos-app-tag">Liquid Hand Soaps</span>
+        <span class="dos-app-tag">Bubble Baths</span><span class="dos-app-tag">2-in-1 Products</span>
+        <span class="dos-app-tag">Commercial Scale Cleansing Production</span>
+      </div>
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">SulfoPure SLES + BetaPure</span><span class="dos-syn-desc">The world's most formulated cleansing combination. SLES delivers primary foam volume and cleansing efficacy; BetaPure reduces anionic free monomer concentration (anti-irritant effect), builds viscosity through mixed rod-micelle formation, and stabilises foam density. The commercial backbone of global shampoo and body wash production — adopted universally across all geographies and production scales.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">SulfoPure SLES + AmidoPure NF + BetaPure</span><span class="dos-syn-desc">Triple-surfactant thickened formula. Classic mass-market shampoo architecture: SLES primary foam, CAPB irritation reduction and foam stabilisation, CDEA viscosity building through mixed-micelle elongation. Reduces salt thickener requirement and elevates foam creaminess.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Sodium Laureth Sulfate</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">68585-34-2 / 9004-82-4</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Active content</span><span class="dos-spec-v">70 ± 2%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Viscous pale yellow liquid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">EO content (avg.)</span><span class="dos-spec-v">2 moles ethylene oxide</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Unsulfated alcohol</span><span class="dos-spec-v">&lt;1.0%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Sodium sulphate</span><span class="dos-spec-v">&lt;1.5%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH (5% aq.)</span><span class="dos-spec-v">6.0 – 8.0</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">5.0 – 20.0%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU</span><span class="dos-reg-detail">No restriction — 1223/2009 compliant</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">COSMOS</span><span class="dos-reg-detail">Not COSMOS eligible (ethylene oxide derivative)</span><span class="dos-reg-status s-cond">Not eligible</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Brazil</span><span class="dos-reg-detail">ANVISA compliant. No restriction.</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">LATAM</span><span class="dos-reg-detail">No restriction at cosmetic use levels</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Global</span><span class="dos-reg-detail">Universally approved in all major markets</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Full Documentation</div>
+        <p class="dos-req-body">TDS, SDS (GHS), batch COA with unsulfated alcohol and Na2SO4 analysis available.</p>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS + COA <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" data-nav-to="isopure"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 8H3M7 4L3 8l4 4"/></svg> Previous<span class="dos-docnav-name">← IsoPure SCI</span></button>
+    <button class="dos-docnav-btn" data-nav-to="sulfosls">Next <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg><span class="dos-docnav-name">SulfoPure SLS →</span></button>
+  </div>
+</div>
+
+<!-- ══════════ SulfoPure SLS ══════════ -->
+<div class="dos-panel" id="dos-sulfosls">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR PURE — Biosurfactants &amp; Green Cleansing Chemistry</div>
+    <h1 class="dos-ph-name">SulfoPure SLS</h1>
+    <p class="dos-ph-inci">Sodium Lauryl Sulfate · CAS 151-21-3</p>
+    <div class="dos-ph-badges"><span class="dos-ph-badge b-c">Anionic</span><span class="dos-ph-badge b-e">30% Liquid · 95% Powder</span></div>
+    <p class="dos-ph-tagline">"Two grades covering every manufacturing context — liquid SLS for aqueous systems, 95% powder for toothpaste, dry-mix cleansers and solid applications where liquid surfactants are incompatible."</p>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">30%</span><span class="dos-metric-lbl">Liquid Grade</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">95%</span><span class="dos-metric-lbl">Powder Grade</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Maximum</span><span class="dos-metric-lbl">Cleansing Power</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">1–15%</span><span class="dos-metric-lbl">Recommended Dosage</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">SulfoPure SLS provides <strong>Sodium Lauryl Sulfate in 30% aqueous solution and 95% dry powder grades</strong>. SLS remains the most extensively studied surfactant in cosmetic and pharmaceutical science, with a published safety and efficacy database spanning decades. Despite higher irritation potential versus SLES, it remains in active use where maximum cleansing power at minimum cost are the primary selection criteria, and in applications — notably the 95% powder grade — where its specific physical properties are technically irreplaceable.</p>
+      <p class="dos-desc">The <strong>95% powder grade is the standard foam-generating agent in toothpaste globally</strong> — providing the characteristic foaming behaviour consumers associate with oral care efficacy. It is also the enabling ingredient for dry-mix cleansing powders, effervescent cleansing formats, powdered shampoos and any application requiring a solid, low-water-activity surfactant system.</p>
+      <p class="dos-sec-h">Target Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Toothpaste (95% powder)</span><span class="dos-app-tag">Classic Shampoos</span>
+        <span class="dos-app-tag">Dry Cleansing Powders</span><span class="dos-app-tag">Effervescent Formats</span><span class="dos-app-tag">Industrial Personal Care</span>
+      </div>
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">SulfoPure SLS + BetaPure</span><span class="dos-syn-desc">Irritation mitigation in liquid systems. Betaine mixed-micelle formation reduces SLS free monomer concentration and substantially lowers the irritation and eye-sting potential of SLS-based systems.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Sodium Lauryl Sulfate</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">151-21-3</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Grades</span><span class="dos-spec-v">30% solution · 95% powder</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance 30%</span><span class="dos-spec-v">Clear liquid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance 95%</span><span class="dos-spec-v">White free-flowing powder</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Active content</span><span class="dos-spec-v">30 ± 1% (liq.) · ≥95% (pwd.)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">1.0 – 15.0%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU</span><span class="dos-reg-detail">No restriction at cosmetic use levels</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Brazil / LATAM</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Global</span><span class="dos-reg-detail">Universally approved</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-alert">
+        <p class="dos-alert-t">Formulation Advisory</p>
+        <p class="dos-alert-b">SLS exhibits higher skin and eye irritation potential than SLES. Combination with BetaPure (CAPB) at 3–5% is strongly recommended for all rinse-off personal care applications.</p>
+      </div>
+      <div class="dos-req"><div class="dos-req-title">Request Full Documentation</div><a href="index.html#contact" class="dos-req-btn">Request TDS + SDS + COA <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" data-nav-to="sulfosles"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 8H3M7 4L3 8l4 4"/></svg> Previous<span class="dos-docnav-name">← SulfoPure SLES</span></button>
+    <button class="dos-docnav-btn" data-nav-to="amidopure">Next <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg><span class="dos-docnav-name">AmidoPure →</span></button>
+  </div>
+</div>
+
+<!-- ══════════ AmidoPure ══════════ -->
+<div class="dos-panel" id="dos-amidopure">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR PURE — Biosurfactants &amp; Green Cleansing Chemistry</div>
+    <h1 class="dos-ph-name">AmidoPure</h1>
+    <p class="dos-ph-inci">Cocamide DEA · CAS 61791-31-9</p>
+    <div class="dos-ph-badges"><span class="dos-ph-badge b-a">Non-ionic</span><span class="dos-ph-badge b-d">Foam Booster</span><span class="dos-ph-badge b-d">Viscosity Builder</span><span class="dos-ph-badge b-b">NF Grade Available</span></div>
+    <p class="dos-ph-tagline">"Cost-effective viscosity and foam density without salt thickeners — CDEA drives rod-micelle formation in SLES systems, building viscosity and cream-foam character at 1–3% use levels."</p>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">Standard</span><span class="dos-metric-lbl">Conventional Grade</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">NF Grade</span><span class="dos-metric-lbl">Nitrosamine-Free</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">88–92%</span><span class="dos-metric-lbl">Active Content</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">1–4%</span><span class="dos-metric-lbl">Effective Use Level</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">AmidoPure provides <strong>Cocamide DEA (Coconut Oil Diethanolamide, CDEA)</strong> in standard and NF (nitrosamine-free) grades. A fatty acid alkanolamide derived from coconut oil fatty acids by amidation with diethanolamine (DEA), CDEA functions as foam booster, foam stabiliser, viscosity builder and emollient skin feel modifier in anionic surfactant cleansing systems.</p>
+      <p class="dos-desc">The <strong>NF (nitrosamine-free) grade is the specification required for personal care applications</strong>: manufactured to eliminate free DEA below 0.3% to prevent N-nitrosodiethanolamine (NDEA) formation. NDEA can form when conventional CDEA grades containing residual free DEA contact nitrosating agents present in the formula matrix. The NF grade specification eliminates this risk and is aligned with current EU SCCS guidance and best-practice industry standards for CDEA in cosmetics.</p>
+      <div class="dos-mech">
+        <div class="dos-mech-title">Viscosity Building Mechanism (Cosurfactant)</div>
+        <p class="dos-mech-body">CDEA molecules incorporate into the hydrophobic core of SLES micelles as cosurfactant, increasing the effective hydrophobic volume of each micelle relative to the charged sulphate head group. This packing parameter shift promotes the spontaneous transition from spherical to rod-like (worm-like) micelles. Rod micelles create viscoelastic network structures that produce markedly higher solution viscosity than spherical micelles at equivalent surfactant concentration. <strong>At 1–3% CDEA in an SLES base, this mechanism typically delivers equivalent or greater viscosity than 1–2% NaCl salt thickening</strong>, while also improving foam creaminess and foam stability through the increased micellar surface rigidity.</p>
+      </div>
+      <p class="dos-sec-h">Target Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Shampoos (viscosity + foam)</span><span class="dos-app-tag">Body Washes</span>
+        <span class="dos-app-tag">Liquid Hand Soaps</span><span class="dos-app-tag">Bubble Baths</span><span class="dos-app-tag">Dishwashing Liquids</span>
+      </div>
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">AmidoPure NF + SulfoPure SLES</span><span class="dos-syn-desc">Classic thickening system via cosurfactant-driven rod-micelle formation. CDEA at 1–3% in SLES base drives viscosity increase equivalent to NaCl thickening while improving foam creaminess. Standard shampoo thickening approach in commercial production globally.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">AmidoPure NF + SulfoPure SLES + BetaPure</span><span class="dos-syn-desc">Complete triple-surfactant commercial shampoo formula. SLES primary foam, CAPB irritation reduction and foam stabilisation, CDEA viscosity and foam creaminess. The global mass-market shampoo formulation baseline.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Cocamide DEA</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">61791-31-9</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Grades</span><span class="dos-spec-v">Standard · NF (nitrosamine-free)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Amber semi-solid to paste at 20°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Active content</span><span class="dos-spec-v">88 – 92%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Free DEA (NF grade)</span><span class="dos-spec-v">&lt;0.3%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Melting point</span><span class="dos-spec-v">~40 – 50°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">1.0 – 4.0%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Incorporation</span><span class="dos-spec-v">Melt at 60°C, add to main batch</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU</span><span class="dos-reg-detail">No restriction. NF grade strongly preferred per SCCS nitrosamine guidance.</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Brazil / LATAM</span><span class="dos-reg-detail">No restriction at cosmetic use levels</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Global</span><span class="dos-reg-detail">NF grade universally acceptable</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-note">
+        <p class="dos-note-t">Grade Recommendation</p>
+        <p class="dos-note-b">The NF (nitrosamine-free) grade is the only specification recommended for personal care applications. Standard grade is supplied for non-cosmetic and industrial cleaning applications exclusively.</p>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Full Documentation</div>
+        <p class="dos-req-body">TDS, SDS, COA with free DEA analysis report for NF grade available on request.</p>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS + COA <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" data-nav-to="sulfosls"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 8H3M7 4L3 8l4 4"/></svg> Previous<span class="dos-docnav-name">← SulfoPure SLS</span></button>
+    <button class="dos-docnav-btn" data-nav-to="glucoc810">Restart Dossier <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg><span class="dos-docnav-name">↑ GlucoPure C810</span></button>
+  </div>
+</div>
+
+  </main>
+</div><!-- /dos-wrap -->
+
+<script src="js/main.js"></script>
+<script>
+// Sidebar navigation
+const btns = document.querySelectorAll('.dos-sb-btn');
+const panels = document.querySelectorAll('.dos-panel');
+
+function activatePanel(id) {
+  btns.forEach(b => b.classList.remove('active'));
+  panels.forEach(p => p.classList.remove('active'));
+  const btn = document.querySelector(`.dos-sb-btn[data-dos="${id}"]`);
+  const panel = document.getElementById('dos-' + id);
+  if (btn) btn.classList.add('active');
+  if (panel) {
+    panel.classList.add('active');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+}
+
+btns.forEach(btn => {
+  btn.addEventListener('click', () => activatePanel(btn.dataset.dos));
+});
+
+// Doc nav buttons (prev/next)
+document.querySelectorAll('.dos-docnav-btn[data-nav-to]').forEach(btn => {
+  btn.addEventListener('click', () => activatePanel(btn.dataset.navTo));
+});
+
+// Handle URL hash on load
+const hash = window.location.hash.replace('#', '');
+if (hash && document.getElementById('dos-' + hash)) {
+  activatePanel(hash);
+}
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('mainnav').classList.toggle('scrolled', window.scrollY > 40);
+}, {passive: true});
+</script>
+</body>
+</html>
