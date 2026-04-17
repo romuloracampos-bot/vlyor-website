@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>VLYOR COND — Technical Dossier | VLYOR Science</title>
+<meta name="description" content="Technical dossier for VLYOR COND conditioning systems. Complete specifications, formulation guidance and regulatory data for all 5 actives."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;500;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+:root{--acc:#C4B5FD;--acc-bg:rgba(196,181,253,.08);--acc-border:rgba(196,181,253,.22);--line-dark:#4C1D95}
+.dos-wrap{display:grid;grid-template-columns:260px 1fr;min-height:100vh;padding-top:60px}
+.dos-sidebar{background:#0A0A0A;border-right:1px solid rgba(255,255,255,.07);position:sticky;top:60px;height:calc(100vh - 60px);overflow-y:auto;display:flex;flex-direction:column}
+.dos-sb-head{padding:28px 24px 20px;border-bottom:1px solid rgba(255,255,255,.06)}
+.dos-sb-line{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);margin-bottom:8px;display:flex;align-items:center;gap:7px}
+.dos-sb-dot{width:5px;height:5px;border-radius:50%;background:var(--acc);flex-shrink:0}
+.dos-sb-title{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;letter-spacing:-.01em;line-height:1.1;margin-bottom:4px}
+.dos-sb-count{font-family:'DM Mono',monospace;font-size:9px;color:#4B5563;letter-spacing:.08em}
+.dos-sb-nav{flex:1;padding:12px 0}
+.dos-sb-grp{border-bottom:1px solid rgba(255,255,255,.05)}
+.dos-sb-grp-hd{padding:12px 24px 6px;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#374151}
+.dos-sb-btn{display:flex;align-items:center;width:100%;padding:10px 24px;background:none;border:none;color:#6B7280;font-family:'Barlow',sans-serif;font-size:12px;cursor:pointer;transition:all .18s;text-align:left;border-left:2px solid transparent;gap:10px}
+.dos-sb-btn:hover{color:#D1D5DB;background:rgba(255,255,255,.025)}
+.dos-sb-btn.active{color:#fff;background:rgba(196,181,253,.07);border-left-color:var(--acc)}
+.dos-sb-btn-name{flex:1;line-height:1.3}
+.dos-sb-tag{font-family:'DM Mono',monospace;font-size:8px;padding:2px 6px;background:rgba(196,181,253,.1);color:var(--acc);flex-shrink:0}
+.dos-sb-footer{padding:20px 24px;border-top:1px solid rgba(255,255,255,.06)}
+.dos-sb-back{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#4B5563;display:flex;align-items:center;gap:7px;transition:color .2s}
+.dos-sb-back:hover{color:var(--acc)}
+.dos-main{background:#0D0D0D;min-height:calc(100vh - 60px)}
+.dos-panel{display:none;animation:dosIn .22s ease}
+.dos-panel.active{display:block}
+@keyframes dosIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.dos-ph{padding:48px 56px 40px;border-bottom:1px solid rgba(255,255,255,.06);background:linear-gradient(135deg,rgba(76,29,149,.14) 0%,transparent 60%)}
+.dos-ph-eyebrow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:8px;margin-bottom:18px}
+.dos-ph-dot{width:5px;height:5px;border-radius:50%;background:var(--acc)}
+.dos-ph-name{font-family:'Barlow Condensed',sans-serif;font-size:clamp(42px,5vw,64px);font-weight:700;letter-spacing:-.03em;line-height:.92;margin-bottom:8px}
+.dos-ph-inci{font-family:'DM Mono',monospace;font-size:11px;color:#6B7280;font-style:italic;letter-spacing:.04em;margin-bottom:20px}
+.dos-ph-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:20px}
+.dos-ph-badge{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.04em;padding:4px 10px}
+.b-a{background:rgba(196,181,253,.1);color:var(--acc)}
+.b-b{background:rgba(167,243,208,.1);color:#A7F3D0}
+.b-c{background:rgba(126,200,218,.1);color:#7EC8DA}
+.b-d{background:rgba(76,29,149,.22);color:#C4B5FD}
+.b-e{background:rgba(217,119,6,.1);color:#FCD34D}
+.dos-ph-tagline{font-size:15px;line-height:1.7;color:#E5E7EB;font-style:italic;border-left:2px solid var(--acc);padding-left:16px;max-width:72ch}
+.dos-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06)}
+.dos-metric{background:#0D0D0D;padding:20px 24px}
+.dos-metric-val{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:700;letter-spacing:-.02em;color:var(--acc);display:block;margin-bottom:4px}
+.dos-metric-lbl{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:#4B5563}
+.dos-body{padding:48px 56px 64px;display:grid;grid-template-columns:1fr 340px;gap:56px;align-items:start}
+.dos-sec-h{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);padding-bottom:10px;border-bottom:1px solid var(--acc-border);margin-bottom:18px;margin-top:36px}
+.dos-sec-h:first-child{margin-top:0}
+.dos-desc{font-size:13.5px;line-height:1.86;color:#9CA3AF;margin-bottom:14px}
+.dos-desc strong{color:#E5E7EB;font-weight:600}
+.dos-mech{background:rgba(196,181,253,.04);border:1px solid var(--acc-border);padding:20px 24px;margin-bottom:20px}
+.dos-mech-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-bottom:10px}
+.dos-mech-body{font-size:13px;line-height:1.78;color:#D1D5DB}
+.dos-perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:24px}
+.dos-perf-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);padding:14px 16px}
+.dos-perf-val{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;letter-spacing:-.02em;display:block;color:#fff;margin-bottom:3px}
+.dos-perf-lbl{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280}
+.dos-app-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px}
+.dos-app-tag{font-family:'DM Mono',monospace;font-size:9px;padding:5px 11px;background:rgba(255,255,255,.04);color:#D1D5DB;letter-spacing:.03em;border:1px solid rgba(255,255,255,.07)}
+.dos-form-row{display:grid;grid-template-columns:1fr 90px 90px;gap:0;border-bottom:1px solid rgba(255,255,255,.05);font-size:12px}
+.dos-form-row:first-child{border-top:1px solid rgba(255,255,255,.05)}
+.dos-form-hd{background:rgba(255,255,255,.04);font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:#4B5563}
+.dos-form-cell{padding:9px 12px;color:#9CA3AF}
+.dos-form-cell.hi{color:#E5E7EB}
+.dos-form-cell.mono{font-family:'DM Mono',monospace;font-size:11px;color:var(--acc)}
+.dos-syn-list{display:flex;flex-direction:column;gap:6px;margin-bottom:8px}
+.dos-syn{padding:12px 14px;background:rgba(255,255,255,.025);border-left:2px solid var(--acc-border)}
+.dos-syn-code{font-family:'DM Mono',monospace;font-size:10px;color:var(--acc);display:block;margin-bottom:4px}
+.dos-syn-desc{font-size:12px;color:#9CA3AF;line-height:1.6}
+.dos-spec-block{background:#111;padding:24px;margin-bottom:12px}
+.dos-spec-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:4px}
+.dos-spec-row{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px}
+.dos-spec-row:last-child{border-bottom:none}
+.dos-spec-k{color:#6B7280;flex-shrink:0;padding-right:12px}
+.dos-spec-v{font-family:'DM Mono',monospace;font-size:11px;color:#fff;text-align:right;word-break:break-word}
+.dos-reg-block{background:#111;padding:24px;margin-bottom:12px}
+.dos-reg-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06)}
+.dos-reg-row{display:grid;grid-template-columns:auto 1fr auto;gap:0 16px;align-items:start;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:11px}
+.dos-reg-row:last-child{border-bottom:none}
+.dos-reg-mkt{color:#6B7280;white-space:nowrap}
+.dos-reg-detail{color:#9CA3AF;font-size:11px;line-height:1.5}
+.dos-reg-status{font-family:'DM Mono',monospace;font-size:9px;padding:2px 7px;white-space:nowrap}
+.s-ok{background:rgba(196,181,253,.1);color:var(--acc)}
+.s-cond{background:rgba(217,119,6,.1);color:#FCD34D}
+.s-cosmos{background:rgba(167,243,208,.1);color:#A7F3D0}
+.dos-req{background:var(--line-dark);padding:20px 24px;display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.dos-req-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;margin-bottom:2px}
+.dos-req-body{font-size:12px;color:rgba(255,255,255,.55);line-height:1.55}
+.dos-req-btn{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:rgba(196,181,253,.12);color:var(--acc);border:1px solid var(--acc-border);font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .22s;text-decoration:none}
+.dos-req-btn:hover{background:rgba(196,181,253,.22);border-color:var(--acc)}
+.dos-req-btn svg{width:13px;height:13px;flex-shrink:0}
+.dos-docnav{display:flex;align-items:center;justify-content:space-between;padding:20px 56px;border-top:1px solid rgba(255,255,255,.06);margin-top:48px}
+.dos-docnav-btn{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#4B5563;display:flex;align-items:center;gap:8px;cursor:pointer;background:none;border:none;transition:color .2s;padding:8px 0}
+.dos-docnav-btn:hover{color:var(--acc)}
+.dos-docnav-name{font-size:13px;font-family:'Barlow',sans-serif;font-weight:600;color:#E5E7EB;display:block;margin-top:2px;letter-spacing:0}
+@media(max-width:1100px){.dos-body{grid-template-columns:1fr;gap:0;padding:36px 40px 56px}.dos-right{margin-top:32px}.dos-ph{padding:36px 40px 32px}}
+@media(max-width:860px){.dos-wrap{grid-template-columns:1fr}.dos-sidebar{display:none}.dos-body{padding:28px 20px 48px}.dos-ph{padding:28px 20px 24px}.dos-docnav{padding:20px}.dos-metrics{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.dos-metrics{grid-template-columns:1fr}.dos-perf-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav id="mainnav">
+  <a class="logo" href="index.html"><span class="logo-m">VLYOR</span><span class="logo-s">Science <span class="logo-p">|</span> Global Bioactives Hub</span></a>
+  <div class="nav-links">
+    <a href="cond.html">← VLYOR COND</a>
+    <a href="index.html#lines">Portfolio</a>
+    <a href="portal.html" class="nav-portal">Technical Portal →</a>
+  </div>
+</nav>
+
+<div class="dos-wrap">
+  <aside class="dos-sidebar">
+    <div class="dos-sb-head">
+      <div class="dos-sb-line"><div class="dos-sb-dot"></div>Technical Dossier</div>
+      <div class="dos-sb-title">VLYOR COND</div>
+      <div class="dos-sb-count">6 Conditioning System Actives</div>
+    </div>
+    <nav class="dos-sb-nav">
+      <div class="dos-sb-grp">
+        <div class="dos-sb-grp-hd">Cationic Polymers</div>
+        <button class="dos-sb-btn active" data-dos="cond7"><span class="dos-sb-btn-name">CondiFlex 7</span><span class="dos-sb-tag">PQ-7</span></button>
+        <button class="dos-sb-btn" data-dos="cond10"><span class="dos-sb-btn-name">CondiFlex 10</span><span class="dos-sb-tag">PQ-10</span></button>
+        <button class="dos-sb-btn" data-dos="cond39"><span class="dos-sb-btn-name">CondiFlex 39</span><span class="dos-sb-tag">PQ-39</span></button>
+      </div>
+      <div class="dos-sb-grp">
+        <div class="dos-sb-grp-hd">Cationic Surfactant Conditioners</div>
+        <button class="dos-sb-btn" data-dos="condic16"><span class="dos-sb-btn-name">CondiFlex C16</span><span class="dos-sb-tag">CTAC 30/50%</span></button>
+      </div>
+      <div class="dos-sb-grp">
+        <div class="dos-sb-grp-hd">Emulsifying Conditioners</div>
+        <button class="dos-sb-btn" data-dos="condibtms"><span class="dos-sb-btn-name">CondiSoft BTMS</span><span class="dos-sb-tag">BTMS 25%</span></button>
+      </div>
+      <div class="dos-sb-grp">
+        <div class="dos-sb-grp-hd">Silicone Conditioning</div>
+        <button class="dos-sb-btn" data-dos="condiveil"><span class="dos-sb-btn-name">CondiVeil 949</span><span class="dos-sb-tag">Amodimethicone</span></button>
+      </div>
+    </nav>
+    <div class="dos-sb-footer">
+      <a href="cond.html" class="dos-sb-back">← Back to VLYOR COND</a>
+    </div>
+  </aside>
+
+  <main class="dos-main">
+
+<!-- ══════════════ PRODUCT 01 — CondiFlex 7 / PQ-7 ══════════════ -->
+<div class="dos-panel active" id="dos-cond7">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR COND — Cationic Polymer</div>
+    <div class="dos-ph-name">CondiFlex 7</div>
+    <div class="dos-ph-inci">Polyquaternium-7 · CAS 26590-05-6</div>
+    <div class="dos-ph-badges">
+      <span class="dos-ph-badge b-a">Cationic Polymer</span>
+      <span class="dos-ph-badge b-d">Skin &amp; Hair</span>
+      <span class="dos-ph-badge b-d">Universal</span>
+      <span class="dos-ph-badge b-d">Anionic Compatible</span>
+    </div>
+    <div class="dos-ph-tagline">"The most versatile conditioning polymer in personal care — substantive deposition on hair and skin across every rinse-off format without precipitating in anionic surfactant systems."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">High</span><span class="dos-metric-lbl">Cationic charge density</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">0.1–1.0%</span><span class="dos-metric-lbl">Active use level</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">~10%</span><span class="dos-metric-lbl">Active content in water</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">pH 3–9</span><span class="dos-metric-lbl">Stability range</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">CondiFlex 7 is <strong>Polyquaternium-7 — a cationic graft copolymer of acrylamide and diallyldimethylammonium chloride (DADMAC)</strong>, the most commercially used conditioning polymer in rinse-off personal care globally by formulation frequency. Its high permanent positive charge density, derived from the quaternary ammonium groups on the DADMAC monomers, enables strong substantive deposition onto the negatively charged surface of damaged hair (from bleaching, heat or mechanical stress) and skin, surviving the rinse step to deliver conditioning benefit in the dry product.</p>
+      <p class="dos-desc">The defining commercial advantage of PQ-7 is its <strong>compatibility with anionic surfactant systems</strong>. Most cationic actives form insoluble coacervates with anionic surfactants like SLES at formulation concentrations, causing precipitation and heterogeneous conditioning deposition. PQ-7's acrylamide content moderates charge density sufficiently to remain in solution within typical anionic surfactant cleansing bases — enabling direct incorporation into shampoos, body washes and conditioning cleansers without phase separation or precipitate formation.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Mechanism of Action — Coacervate Deposition</p>
+        <p class="dos-mech-body">During application in a shampoo or cleansing product, PQ-7 exists in solution within the concentrated surfactant system at formulation concentration. As the product is diluted with rinse water, the surfactant concentration decreases below the critical micelle concentration, and the charge ratio between cationic polymer and anionic surfactant micelles shifts — causing formation of a coacervate (polymer-rich phase) that deposits onto the anionic sites of the hair surface. This dilution-triggered deposition mechanism ensures that the polymer delivers its conditioning benefit specifically during the rinse step, where contact with the hair surface is maximised. The deposited PQ-7 film reduces cuticle-to-cuticle friction during wet combing, reduces flyaway charge in the dry state and provides a smooth, silky tactile experience.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">DADMAC / Acrylamide</span><span class="dos-perf-lbl">Monomer composition</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Rinse-triggered</span><span class="dos-perf-lbl">Deposition mechanism</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Anionic compat.</span><span class="dos-perf-lbl">Key advantage vs. alternatives</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Hair + Skin</span><span class="dos-perf-lbl">Substrate range</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">Active dose</div><div class="dos-form-cell">Priority</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">2-in-1 shampoo</div><div class="dos-form-cell mono">0.3–0.6%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Conditioning cleanser</div><div class="dos-form-cell mono">0.5–1.0%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Body wash</div><div class="dos-form-cell mono">0.2–0.5%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Baby / sensitive skin</div><div class="dos-form-cell mono">0.1–0.3%</div><div class="dos-form-cell mono">Mild dose</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Deep conditioner boost</div><div class="dos-form-cell mono">0.2–0.5%</div><div class="dos-form-cell mono">Additive</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">2-in-1 Shampoos</span>
+        <span class="dos-app-tag">Conditioning Cleansers</span>
+        <span class="dos-app-tag">Body Washes</span>
+        <span class="dos-app-tag">Rinse-Off Treatments</span>
+        <span class="dos-app-tag">Baby Shampoos</span>
+        <span class="dos-app-tag">Sensitive Skin Body Washes</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+SulfoPure SLES + BetaPure (PURE) — 2-in-1 foundation system</span><span class="dos-syn-desc">PQ-7 at 0.5% in SLES/CAPB cleansing base creates the classic 2-in-1 coacervate mechanism. SLES provides cleansing; betaine reduces irritation potential; PQ-7 deposits conditioning polymer during rinse. The reference 2-in-1 shampoo starting formula.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+CondiVeil 949 — Enhanced 2-in-1 system</span><span class="dos-syn-desc">PQ-7 polymer smoothing + amodimethicone targeted silicone deposition at damage sites. Combined in a 2-in-1 shampoo approaches the conditioning performance of a separate rinse-out conditioner for damaged or colour-treated hair.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+CondiSoft BTMS — Deep conditioner additive</span><span class="dos-syn-desc">Adding PQ-7 (0.2–0.5%) to a BTMS-based conditioner creates an additional electrostatic polymer conditioning layer on the hair surface, complementing the BTMS cationic film and improving wet slip and anti-static performance.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Polyquaternium-7</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">26590-05-6</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Composition</span><span class="dos-spec-v">Acrylamide / DADMAC copolymer</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Clear to slightly hazy viscous solution</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Active content</span><span class="dos-spec-v">~10% in water</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Charge type</span><span class="dos-spec-v">Cationic (permanent quaternary)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Charge density</span><span class="dos-spec-v">High (DADMAC-derived)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Solubility</span><span class="dos-spec-v">Freely water-miscible</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">0.1 – 1.0% (active basis)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Incorporation</span><span class="dos-spec-v">Aqueous phase, ambient temperature</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH stability</span><span class="dos-spec-v">3.0 – 9.0</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Surfactant compat.</span><span class="dos-spec-v">Anionic, amphoteric, non-ionic</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU 1223/2009</span><span class="dos-reg-detail">No restriction — approved conditioning polymer</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Colombia / Peru / Argentina</span><span class="dos-reg-detail">Approved per ANVISA harmonisation</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">USA / Global</span><span class="dos-reg-detail">Universally approved</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">China IECIC</span><span class="dos-reg-detail">Listed</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">Full TDS, SDS (GHS 16-section), CoA and IECIC listing documentation available on request.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <div></div>
+    <button class="dos-docnav-btn" onclick="showDos('cond10')">Next →<span class="dos-docnav-name">CondiFlex 10</span></button>
+  </div>
+</div>
+
+<!-- ══════════════ PRODUCT 02 — CondiFlex 10 / PQ-10 ══════════════ -->
+<div class="dos-panel" id="dos-cond10">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR COND — Cationic Cellulose Polymer</div>
+    <div class="dos-ph-name">CondiFlex 10</div>
+    <div class="dos-ph-inci">Polyquaternium-10 · CAS 68610-92-4</div>
+    <div class="dos-ph-badges">
+      <span class="dos-ph-badge b-a">Cationic Cellulose</span>
+      <span class="dos-ph-badge b-d">Film Former</span>
+      <span class="dos-ph-badge b-d">Leave-On Specialist</span>
+      <span class="dos-ph-badge b-d">Natural Origin</span>
+    </div>
+    <div class="dos-ph-tagline">"Cellulose-derived cationic conditioning polymer — outstanding film formation and substantivity for sustained between-wash hair conditioning, anti-breakage protection and heat defence."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">Cellulosic</span><span class="dos-metric-lbl">Natural-derived backbone</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">0.1–0.5%</span><span class="dos-metric-lbl">Use level</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Film-forming</span><span class="dos-metric-lbl">Primary function</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Leave-on</span><span class="dos-metric-lbl">Primary format</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">CondiFlex 10 is <strong>Polyquaternium-10 — cationic hydroxyethylcellulose</strong> produced by reacting hydroxyethylcellulose (HEC, a cellulose derivative) with a glycidyltrimethylammonium chloride quaternising agent. The cellulosic backbone provides structural rigidity and exceptional film-forming ability on hair fibres; the grafted quaternary ammonium groups provide substantive deposition onto the negatively charged hair surface through electrostatic attraction. The resulting polymer combines the film-forming architecture of cellulosics with the conditioning function of cationic polyelectrolytes.</p>
+      <p class="dos-desc">PQ-10 is the <strong>preferred conditioning polymer for leave-on hair formulations</strong> — sprays, serums, masks, heat protectants and leave-in conditioners — where sustained conditioning benefit between washes is the primary product objective. The cellulosic film persists on the hair shaft between washes without the greasy build-up associated with high-MW dimethicone, maintaining combing ease and surface smoothness over multiple days. The natural-origin cellulose backbone also makes it compatible with COSMOS-certified natural formulations when sourced appropriately.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Mechanism of Action — Film Formation + Substantive Deposition</p>
+        <p class="dos-mech-body">PQ-10's mechanism combines electrostatic and structural elements. The cationic quaternary ammonium groups adsorb electrostatically onto negatively charged hair surface sites — particularly concentrated at zones of cuticle damage (raised or missing cuticle scales). Once adsorbed, the cellulosic polymer backbone extends across the hair surface, forming a continuous flexible film that bridges multiple cuticle cells simultaneously. This film formation — absent in solution-state polymers like PQ-7 which deposit as discontinuous molecular layers — provides structural reinforcement that reduces cuticle cracking under combing tension, measurably improving fibre tensile strength and break resistance. <strong>Heat protection mechanism</strong>: the cellulosic polymer film provides a thermal barrier that reduces the heat flux reaching the cortex during blow-drying and styling, reducing thermal denaturation of cortical proteins at the same applied temperature. Maximum protection is achieved at 0.3–0.5% with heat protection sprays applied before styling.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">Natural origin</span><span class="dos-perf-lbl">Cellulose backbone</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">High</span><span class="dos-perf-lbl">Film formation index</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Anti-breakage</span><span class="dos-perf-lbl">Structural benefit</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">COSMOS</span><span class="dos-perf-lbl">Natural cert. eligible</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">Dose</div><div class="dos-form-cell">Priority</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Leave-on conditioner</div><div class="dos-form-cell mono">0.2–0.4%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Heat protectant spray</div><div class="dos-form-cell mono">0.3–0.5%</div><div class="dos-form-cell mono">Required</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Hair mask</div><div class="dos-form-cell mono">0.1–0.3%</div><div class="dos-form-cell mono">Additive</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Styling spray + conditioning</div><div class="dos-form-cell mono">0.1–0.2%</div><div class="dos-form-cell mono">Optional</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Leave-On Conditioners</span>
+        <span class="dos-app-tag">Heat Protectant Sprays</span>
+        <span class="dos-app-tag">Hair Masks</span>
+        <span class="dos-app-tag">Styling Sprays</span>
+        <span class="dos-app-tag">Anti-Breakage Serums</span>
+        <span class="dos-app-tag">Dry Shampoo-Conditioner</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+CondiVeil 949 — Premium leave-on colour-protection system</span><span class="dos-syn-desc">PQ-10 cellulosic film provides structural surface protection and heat barrier; CondiVeil 949 amino silicone deposits at damage sites for targeted frizz control and shine. Combined in a lightweight leave-in spray for colour-treated or chemically processed hair — the VLYOR COND reference leave-on system.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+PanthoActiv 98 (VITAL) — Surface + cortex repair</span><span class="dos-syn-desc">PQ-10 coats and reinforces the hair cuticle surface; panthenol penetrates the hair shaft cortex. Complementary surface and structural repair mechanisms for deep conditioning mask and anti-breakage treatment formulations.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+HyalActiv (VITAL) — Anti-humidity frizz system</span><span class="dos-syn-desc">PQ-10 film formation creates a humidity-resistive cuticle barrier; hyaluronate regulates moisture exchange at the hair surface. Effective in leave-on anti-frizz serums for LATAM tropical humidity conditions where uncontrolled moisture uptake causes cuticle swelling and frizz.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Polyquaternium-10</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">68610-92-4</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Backbone</span><span class="dos-spec-v">Hydroxyethylcellulose (natural origin)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">White to off-white powder</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Charge type</span><span class="dos-spec-v">Cationic (quaternary ammonium)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Grades available</span><span class="dos-spec-v">Low / medium / high DS (substitution)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Solubility</span><span class="dos-spec-v">Water-dispersible (cold water addition)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Dissolution note</span><span class="dos-spec-v">Disperse slowly under agitation; avoid lumps</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">0.1 – 0.5%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH stability</span><span class="dos-spec-v">3.0 – 9.0</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU 1223/2009</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">COSMOS / Ecocert</span><span class="dos-reg-detail">Natural origin — COSMOS-eligible</span><span class="dos-reg-status s-cosmos">Natural eligible</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Global</span><span class="dos-reg-detail">Universally approved</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">TDS, SDS (GHS 16-section), CoA and natural origin declaration available on request.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('cond7')">← Previous<span class="dos-docnav-name">CondiFlex 7</span></button>
+    <button class="dos-docnav-btn" onclick="showDos('cond39')">Next →<span class="dos-docnav-name">CondiFlex 39</span></button>
+  </div>
+</div>
+
+<!-- ══════════════ PRODUCT 03 — CondiFlex 39 / PQ-39 ══════════════ -->
+<div class="dos-panel" id="dos-cond39">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR COND — Cationic Terpolymer</div>
+    <div class="dos-ph-name">CondiFlex 39</div>
+    <div class="dos-ph-inci">Polyquaternium-39 · CAS 25136-75-8</div>
+    <div class="dos-ph-badges">
+      <span class="dos-ph-badge b-a">Cationic Terpolymer</span>
+      <span class="dos-ph-badge b-d">Conditioning + Thickening</span>
+      <span class="dos-ph-badge b-d">Amphoteric</span>
+      <span class="dos-ph-badge b-d">Salt-Free</span>
+    </div>
+    <div class="dos-ph-tagline">"The conditioning thickener — amphoteric polyelectrolyte architecture that simultaneously builds viscosity and deposits conditioning polymer, simplifying conditioning shampoo formulation."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">High MW</span><span class="dos-metric-lbl">Terpolymer architecture</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">0.05–0.5%</span><span class="dos-metric-lbl">Use level</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Dual function</span><span class="dos-metric-lbl">Conditioning + thickening</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Salt-free</span><span class="dos-metric-lbl">Thickening compatible</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">CondiFlex 39 is <strong>Polyquaternium-39 — a high-molecular-weight cationic terpolymer</strong> of acrylamide, acrylic acid and diallyldimethylammonium chloride. This amphoteric polyelectrolyte structure — combining anionic carboxylate groups from acrylic acid with cationic quaternary ammonium groups from DADMAC in a single polymer chain — enables PQ-39 to function simultaneously as a conditioning agent, viscosity builder and suspension polymer in aqueous personal care systems.</p>
+      <p class="dos-desc">PQ-39 is particularly valuable in <strong>conditioning shampoo formulations where viscosity is required alongside conditioning</strong> — providing both functions from a single polymer addition. Where a conventional formula might require a salt thickening system (NaCl/NaCitrate) plus a separate conditioning polymer (PQ-7), PQ-39 at 0.1–0.3% delivers both effects with greater salt-independence and across a wider pH range. Its amphoteric character also enables useful suspension properties for pearlescent agents and physical exfoliants.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Dual-Function Mechanism — Thickening + Conditioning</p>
+        <p class="dos-mech-body"><strong>Thickening mechanism</strong>: PQ-39's high-MW polymer chains bridge between anionic surfactant micelles through electrostatic interaction between the DADMAC cationic groups and micelle surfaces, forming a transient polymer-surfactant network that increases macroscopic viscosity. Unlike salt thickening (which works by reducing electrostatic repulsion between charged micelles), PQ-39 thickening is effective across a broader pH range and is compatible with salt-free formulation briefs — increasingly important in premium and professional hair care where sodium chloride is avoided due to cuticle swelling concerns. <strong>Conditioning mechanism</strong>: the same cationic DADMAC groups that interact with surfactant micelles also interact with the negatively charged hair surface, with the coacervate-deposition mechanism analogous to PQ-7. The high-MW architecture and amphoteric character provide slightly different deposition kinetics from PQ-7, with PQ-39 tending to deposit more readily in moderate-surfactant-concentration environments typical of conditioning shampoos.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">Acrylamide / AA / DADMAC</span><span class="dos-perf-lbl">Terpolymer composition</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">~30%</span><span class="dos-perf-lbl">Active content in water</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Salt-free</span><span class="dos-perf-lbl">Thickening mechanism</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">pH 4–9</span><span class="dos-perf-lbl">Stability range</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">Dose</div><div class="dos-form-cell">Function</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Conditioning shampoo</div><div class="dos-form-cell mono">0.1–0.3%</div><div class="dos-form-cell mono">Cond. + thick.</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">2-in-1 shampoo</div><div class="dos-form-cell mono">0.15–0.35%</div><div class="dos-form-cell mono">Primary</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Salt-free body wash</div><div class="dos-form-cell mono">0.1–0.2%</div><div class="dos-form-cell mono">Thickener</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Cleansing conditioner</div><div class="dos-form-cell mono">0.2–0.5%</div><div class="dos-form-cell mono">Conditioning</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Conditioning Shampoos</span>
+        <span class="dos-app-tag">2-in-1 Shampoo &amp; Conditioner</span>
+        <span class="dos-app-tag">Body Wash with Viscosity</span>
+        <span class="dos-app-tag">Salt-Free Shampoos</span>
+        <span class="dos-app-tag">Cleansing Conditioners</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+SulfoPure SLES + BetaPure (PURE) — Complete conditioning shampoo</span><span class="dos-syn-desc">PQ-39 at 0.2% in SLES/CAPB base replaces both salt thickener and separate conditioning polymer. Single addition delivers target viscosity through polymer-surfactant network and deposits conditioning during rinse through coacervation. Simplified formula; reduced ingredient count; compatible with salt-free positioning.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+CondiVeil 949 — 2-in-1 with silicone conditioning</span><span class="dos-syn-desc">PQ-39 thickens and provides polymer conditioning; CondiVeil 949 adds targeted amodimethicone deposition at damage sites. The combination delivers a 2-in-1 product with noticeably superior silicone shine and frizz control versus polymer-only conditioning shampoos.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Polyquaternium-39</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">25136-75-8</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Composition</span><span class="dos-spec-v">Acrylamide / acrylic acid / DADMAC terpolymer</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Clear to hazy viscous solution</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Active content</span><span class="dos-spec-v">~30% in water</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Charge character</span><span class="dos-spec-v">Amphoteric (cationic + anionic)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">0.05 – 0.5%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Incorporation</span><span class="dos-spec-v">Aqueous phase; ambient temperature</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH stability</span><span class="dos-spec-v">4.0 – 9.0</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Surfactant compat.</span><span class="dos-spec-v">Anionic, amphoteric, non-ionic</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU 1223/2009</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">LATAM General</span><span class="dos-reg-detail">Approved per ANVISA harmonisation</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Global</span><span class="dos-reg-detail">Universally approved</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">TDS, SDS (GHS 16-section), CoA and IECIC listing documentation available on request.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('cond10')">← Previous<span class="dos-docnav-name">CondiFlex 10</span></button>
+    <button class="dos-docnav-btn" onclick="showDos('condic16')">Next →<span class="dos-docnav-name">CondiFlex C16</span></button>
+  </div>
+</div>
+
+<!-- ══════════════ PRODUCT 04 — CondiFlex C16 / Cetrimonium Chloride ══════════════ -->
+<div class="dos-panel" id="dos-condic16">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR COND — Cationic Surfactant Conditioner</div>
+    <div class="dos-ph-name">CondiFlex C16</div>
+    <div class="dos-ph-inci">Cetrimonium Chloride · CAS 112-02-7 · MW 320.0 g/mol · Available: 30% &amp; 50%</div>
+    <div class="dos-ph-badges">
+      <span class="dos-ph-badge b-a">Cetrimonium Chloride</span>
+      <span class="dos-ph-badge b-d">Two Grades: 30% / 50%</span>
+      <span class="dos-ph-badge b-d">Conditioning Surfactant</span>
+      <span class="dos-ph-badge b-d">Mild Antimicrobial</span>
+    </div>
+    <div class="dos-ph-tagline">"The foundational cationic conditioning surfactant — Cetrimonium Chloride (CTAC) in 30% and 50% active grades, forming the lamellar gel structure of conditioners with fatty alcohols and delivering substantive hair conditioning through quaternary ammonium charge-driven adsorption."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">30% / 50%</span><span class="dos-metric-lbl">Active grades available</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">pH 6–8</span><span class="dos-metric-lbl">Solution pH (10% aq.)</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">≤1.5%</span><span class="dos-metric-lbl">Free amine (both grades)</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">1–3%</span><span class="dos-metric-lbl">Conditioner use level</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">CondiFlex C16 is <strong>Cetrimonium Chloride (Hexadecyltrimethylammonium Chloride) — a long-chain quaternary ammonium salt</strong> supplied in two active concentration grades: CTAC-30 (≥30% active) and CTAC-50 (≥50% active). As a cationic surfactant with a C16 hexadecyl chain, it is the fundamental conditioning-active building block of personal care — the ingredient responsible for the adsorption of conditioning agents onto the hair shaft and the lamellar gel structuring of rinse-out conditioner emulsions.</p>
+      <p class="dos-desc">CTAC differs commercially from CondiSoft BTMS in that it is supplied as the pure cationic active in aqueous solution, giving formulators independent control over active concentration, fatty alcohol ratio and emulsion structure. <strong>Combined with cetearyl alcohol (4–8%), CTAC at 1–3% creates the ternary surfactant/fatty alcohol/water lamellar system</strong> that is the structural foundation of every rinse-out conditioner — the thick, spreadable gel that deposits conditioning film during rinse-off. Both the 30% and 50% grades meet identical quality specifications for active content, pH (6–8), free amine (≤1.5%) and colour.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Mechanism of Action — Lamellar Gel Formation + Cationic Adsorption</p>
+        <p class="dos-mech-body"><strong>Lamellar gel mechanism</strong>: In the ternary system (CTAC / fatty alcohol / water), the cationic surfactant headgroup and the fatty alcohol hydroxyl group form hydrogen-bonded mixed bilayers — interdigitated lamellar structures that create a gel-phase network throughout the aqueous conditioner. This lamellar structure is responsible for the characteristic viscosity, spreadability and sensory richness of conditioner products; it is also the delivery mechanism for conditioning deposition. As the conditioner dilutes with rinse water, the lamellar gel collapses, releasing CTAC cations that adsorb onto the negatively charged hair surface via electrostatic attraction. <strong>Cationic adsorption mechanism</strong>: The permanent positive charge of the trimethylammonium headgroup is attracted to the net-negative surface charge of damaged hair cuticle (from oxidative damage, mechanical stress or alkaline processing that removes the natural 18-MEA fatty acid surface layer). The C16 hexadecyl chain orients away from the surface, creating a monomolecular conditioning film that reduces cuticle-to-cuticle friction, reduces static charge build-up and imparts the characteristic post-conditioning softness and manageability. <strong>Antimicrobial contribution</strong>: At cosmetic use concentrations, CTAC provides mild antimicrobial activity against bacteria and fungi — an intrinsic property of quaternary ammonium compounds that contributes to the overall preservation efficiency of conditioner formulas, reducing the total preservative load required for ISO 11930 compliance.</p>
+      </div>
+
+      <p class="dos-sec-h">Grade Selection Guide</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">CTAC-30</span><span class="dos-perf-lbl">≥30% active · easier handling</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">CTAC-50</span><span class="dos-perf-lbl">≥50% active · lower transport cost</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">≤1.5%</span><span class="dos-perf-lbl">Free amine — both grades</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">pH 6–8</span><span class="dos-perf-lbl">10% aq. solution — both grades</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">CTAC dose</div><div class="dos-form-cell">+Fatty alcohol</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Light rinse-out conditioner</div><div class="dos-form-cell mono">1.0 – 1.5%</div><div class="dos-form-cell mono">4 – 5%</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Standard conditioner</div><div class="dos-form-cell mono">1.5 – 2.5%</div><div class="dos-form-cell mono">5 – 7%</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Deep conditioning mask</div><div class="dos-form-cell mono">2.0 – 3.0%</div><div class="dos-form-cell mono">6 – 8%</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">2-in-1 shampoo additive</div><div class="dos-form-cell mono">0.5 – 1.0%</div><div class="dos-form-cell mono">—</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Anti-static leave-on spray</div><div class="dos-form-cell mono">0.1 – 0.5%</div><div class="dos-form-cell mono">—</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Rinse-Out Conditioner Bases</span>
+        <span class="dos-app-tag">Deep Conditioning Masks</span>
+        <span class="dos-app-tag">2-in-1 Shampoos</span>
+        <span class="dos-app-tag">Leave-On Anti-Static Sprays</span>
+        <span class="dos-app-tag">Scalp Conditioning Products</span>
+        <span class="dos-app-tag">Fabric Softeners</span>
+        <span class="dos-app-tag">Skin Conditioning Emulsions</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+Cetearyl / Cetyl Alcohol — Classic conditioner base</span><span class="dos-syn-desc">CTAC (1.5–2.5%) + cetearyl alcohol (5–7%) + water forms the lamellar liquid crystal phase that creates conditioner gel structure and conditioning deposition. This ternary system is the structural foundation of every rinse-out conditioner globally. Add at oil phase (≥70°C); emulsify with water phase at equivalent temperature.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+CondiVeil 949 — Silicone enhancement</span><span class="dos-syn-desc">CTAC/fatty alcohol base conditioning + targeted amodimethicone deposition at damage sites. CondiVeil 949 at 0.5–1.5% in the CTAC conditioner base provides frizz control, shine and colour protection for colour-treated and chemically processed hair.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+PreserFlex EHG + ChelaGuard 2 (FUNC) — Conditioner preservation</span><span class="dos-syn-desc">CTAC's intrinsic mild antimicrobial character assists but does not alone satisfy ISO 11930 preservation requirements. PreserFlex EHG (0.7%) + ChelaGuard 2 (0.1%) provides complete broad-spectrum challenge-test compliant preservation for aqueous conditioner formulations.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Technical Specifications — Both Grades</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Cetrimonium Chloride</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Chemical name</span><span class="dos-spec-v">Hexadecyltrimethylammonium chloride</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">112-02-7</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">EC Number</span><span class="dos-spec-v">203-928-6</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Molecular weight</span><span class="dos-spec-v">320.00 g/mol</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Colourless to pale yellow clear liquid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CTAC-30 active content</span><span class="dos-spec-v">≥30.0%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CTAC-50 active content</span><span class="dos-spec-v">≥50.0%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH (10% aq.)</span><span class="dos-spec-v">6.0 – 8.0</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Free amine</span><span class="dos-spec-v">≤1.5%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Colour No. (CTAC-30)</span><span class="dos-spec-v">≤70 APHA</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Colour No. (CTAC-50)</span><span class="dos-spec-v">≤150 APHA</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Density</span><span class="dos-spec-v">~0.92 g/mL</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Solubility</span><span class="dos-spec-v">Water-miscible; soluble in EtOH, MeOH</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">1.0 – 3.0% (conditioner)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Incorporation temp.</span><span class="dos-spec-v">≥70°C (oil phase with fatty alcohol)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Packaging</span><span class="dos-spec-v">200 L drum / 1000 L IBC</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Storage</span><span class="dos-spec-v">Cool, dry, sealed — 1 year shelf life</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU 1223/2009</span><span class="dos-reg-detail">No restriction at cosmetic concentrations</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">No restriction — listed cosmetic ingredient</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Colombia / Peru / Argentina</span><span class="dos-reg-detail">Approved per ANVISA harmonisation</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">China IECSC</span><span class="dos-reg-detail">Listed — IECIC inventory</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Korea KECL</span><span class="dos-reg-detail">Listed</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Philippines / Vietnam / NZ</span><span class="dos-reg-detail">Listed in respective inventories</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">GHS Transport</span><span class="dos-reg-detail">UN1760 · Class 8 · PG II/III (grade-dep.)</span><span class="dos-reg-status s-cond">Corrosive liquid — handle with PPE</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">Full TDS (CTAC-30 and CTAC-50), GHS SDS (16-section), CoA and IECIC listing available. Both grades in stock.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('cond39')">← Previous<span class="dos-docnav-name">CondiFlex 39</span></button>
+    <button class="dos-docnav-btn" onclick="showDos('condibtms')">Next →<span class="dos-docnav-name">CondiSoft BTMS</span></button>
+  </div>
+</div>
+
+<!-- ══════════════ PRODUCT 05 — CondiSoft BTMS ══════════════ -->
+<div class="dos-panel" id="dos-condibtms">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR COND — Emulsifying Conditioner</div>
+    <div class="dos-ph-name">CondiSoft BTMS</div>
+    <div class="dos-ph-inci">Behentrimonium Methosulfate (and) Cetearyl Alcohol · CAS 81646-13-1</div>
+    <div class="dos-ph-badges">
+      <span class="dos-ph-badge b-a">Emulsifying Conditioner</span>
+      <span class="dos-ph-badge b-d">Cationic O/W Emulsifier</span>
+      <span class="dos-ph-badge b-d">COSMOS-Eligible</span>
+      <span class="dos-ph-badge b-d">All Hair Types</span>
+    </div>
+    <div class="dos-ph-tagline">"The cationic emulsifier that makes rinse-out conditioners possible — BTMS 25% provides structural emulsification, rich sensory texture and substantive cationic conditioning deposition in a single raw material."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">25% BTMS</span><span class="dos-metric-lbl">Active in cetearyl alcohol</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">3–10%</span><span class="dos-metric-lbl">Use level</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">HLB ~11</span><span class="dos-metric-lbl">Emulsification value</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">65–70°C</span><span class="dos-metric-lbl">Melting point</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">CondiSoft BTMS is <strong>Behentrimonium Methosulfate (BTMS) at 25% in cetearyl alcohol</strong> — the definitive cationic emulsifier for rinse-out hair conditioners, deep conditioning masks and leave-in cream treatments. Behentrimonium methosulfate is a quaternary ammonium compound with a C22 (behenyl) fatty chain — the long alkyl chain provides the hydrophobic membrane insertion that anchors the conditioning molecule to the hair surface, while the permanent positive charge of the quaternary ammonium head provides electrostatic attraction to the negatively charged damaged hair cuticle.</p>
+      <p class="dos-desc">BTMS's functional differentiation from non-ionic emulsifiers is fundamental to conditioner product architecture: <strong>a BTMS-emulsified O/W emulsion inherently deposits conditioning as the emulsion is diluted by rinse water</strong>. As the conditioner dilutes from concentrated product (~5–8% BTMS) to dilute rinse water, the cationic BTMS headgroups adsorb onto the anionic hair surface, leaving a substantive quaternary ammonium conditioning film — the source of the post-conditioning slip, softness and manageability that consumers experience. This combined emulsification and conditioning deposition in a single material is BTMS's commercial raison d'être.</p>
+      <p class="dos-desc">The cetearyl alcohol co-component (75% of the blend) contributes essential lamellar liquid crystal structure to the conditioner emulsion — forming a bilayer arrangement with the BTMS that creates the <strong>thick, creamy, stable emulsion texture</strong> characteristic of premium conditioners and the rich sensory profile that consumers associate with intensive conditioning products.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Mechanism of Action — Cationic Emulsification + Rinse-Deposition</p>
+        <p class="dos-mech-body">BTMS forms stable O/W emulsions through a combination of geometric packing and electrostatic stabilisation. The C22 behenyl chain provides a large hydrophobic tail that favours formation of lamellar (bilayer) structures with cetearyl alcohol; the quaternary ammonium headgroup protrudes into the aqueous phase, creating a positively charged emulsion surface that provides electrostatic stability against droplet coalescence at typical cosmetic pH (3–5). During rinse-out application, as the product dilutes with water, three simultaneous processes occur: (1) the emulsion destabilises as the lipid concentration falls below the critical lamellar concentration; (2) the BTMS cationic headgroups — no longer shielded within the emulsion structure — present directly to the anionic hair surface; (3) electrostatic adsorption deposits the BTMS molecule onto the hair cuticle, with the C22 behenyl chain oriented away from the surface, creating a monomolecular conditioning film. This film reduces cuticle friction and provides slip during wet combing and detangling, and softness and manageability in the dry state.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">C22 behenyl</span><span class="dos-perf-lbl">Fatty chain length</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Lamellar</span><span class="dos-perf-lbl">Emulsion architecture</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Rinse-deposit</span><span class="dos-perf-lbl">Conditioning mechanism</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">COSMOS</span><span class="dos-perf-lbl">Natural cert. eligible</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">BTMS dose</div><div class="dos-form-cell">Priority</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Standard rinse-out conditioner</div><div class="dos-form-cell mono">4 – 6%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Deep conditioning mask</div><div class="dos-form-cell mono">6 – 10%</div><div class="dos-form-cell mono">Rich texture</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Leave-in cream</div><div class="dos-form-cell mono">3 – 5%</div><div class="dos-form-cell mono">Lighter</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Conditioner bar</div><div class="dos-form-cell mono">25 – 40%</div><div class="dos-form-cell mono">Anhydrous</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Rinse-Out Conditioners</span>
+        <span class="dos-app-tag">Deep Conditioning Masks</span>
+        <span class="dos-app-tag">Leave-In Cream Conditioners</span>
+        <span class="dos-app-tag">Natural Hair Conditioning</span>
+        <span class="dos-app-tag">Conditioner Bars</span>
+        <span class="dos-app-tag">Scalp Treatments</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+CondiVeil 949 — Premium rinse-out conditioner system</span><span class="dos-syn-desc">The VLYOR COND reference conditioner system. CondiSoft BTMS (5–8%) provides cationic emulsifier matrix, lamellar texture and baseline conditioning; CondiVeil 949 (1.0–1.5%) delivers targeted amino silicone deposition at damage zones for frizz control, shine and colour protection. This combination is the formulation standard for prestige rinse-out conditioners for chemically treated hair.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+PanthoActiv 98 (VITAL) — Repair conditioning mask</span><span class="dos-syn-desc">BTMS conditioning + panthenol cortex penetration in a deep conditioning mask format. At 8% BTMS + 2–3% panthenol, the system delivers intense surface conditioning (BTMS) and measurable cortical repair (panthenol), combining for a product with both immediate sensory and cumulative structural repair claims.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+CondiFlex 7 — Enhanced substantivity</span><span class="dos-syn-desc">Adding PQ-7 (0.3–0.5%) to a BTMS conditioner creates a secondary polymer conditioning layer complementing the BTMS cationic film — improving dry combability and anti-static performance without altering the emulsion texture or stability.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Behentrimonium Methosulfate (and) Cetearyl Alcohol</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS (BTMS)</span><span class="dos-spec-v">81646-13-1</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Composition</span><span class="dos-spec-v">25% BTMS / 75% cetearyl alcohol</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">White to off-white waxy solid / flakes</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Melting point</span><span class="dos-spec-v">65 – 70°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">HLB</span><span class="dos-spec-v">~11</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Emulsification type</span><span class="dos-spec-v">Cationic O/W</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">3.0 – 10.0%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Phase incorporation</span><span class="dos-spec-v">Oil phase — melt at ≥75°C before mixing</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH of emulsion</span><span class="dos-spec-v">Target 3.5 – 5.0 for optimal deposition</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU 1223/2009</span><span class="dos-reg-detail">No restriction at cosmetic use concentrations</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">COSMOS / Ecocert</span><span class="dos-reg-detail">COSMOS-eligible emulsifying conditioner</span><span class="dos-reg-status s-cosmos">COSMOS eligible</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">LATAM / Global</span><span class="dos-reg-detail">Universally approved</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">TDS, SDS (GHS 16-section), CoA, COSMOS eligibility documentation and IECIC listing available on request.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('condic16')">← Previous<span class="dos-docnav-name">CondiFlex C16</span></button>
+    <button class="dos-docnav-btn" onclick="showDos('condiveil')">Next →<span class="dos-docnav-name">CondiVeil 949</span></button>
+  </div>
+</div>
+
+<!-- ══════════════ PRODUCT 05 — CondiVeil 949 / Amodimethicone ══════════════ -->
+<div class="dos-panel" id="dos-condiveil">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR COND — Silicone Conditioning Active</div>
+    <div class="dos-ph-name">CondiVeil 949</div>
+    <div class="dos-ph-inci">Amodimethicone (and) Cetrimonium Chloride (and) Trideceth-12 · CAS 106842-44-8</div>
+    <div class="dos-ph-badges">
+      <span class="dos-ph-badge b-a">Silicone Conditioner</span>
+      <span class="dos-ph-badge b-d">Targeted Deposition</span>
+      <span class="dos-ph-badge b-d">Amino-Functional</span>
+      <span class="dos-ph-badge b-d">Anionic Compatible</span>
+    </div>
+    <div class="dos-ph-tagline">"Reactive amino silicone with damage-targeted deposition — delivering frizz control, shine and colour protection preferentially at the high-charge zones of chemically treated hair with full anionic surfactant compatibility."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">Amino-functional</span><span class="dos-metric-lbl">Reactive silicone type</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Targeted</span><span class="dos-metric-lbl">Damage-zone deposition</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">~20–30%</span><span class="dos-metric-lbl">Active silicone content</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">0.5–2.0%</span><span class="dos-metric-lbl">Rinse-off use level</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">CondiVeil 949 is a <strong>pre-formulated conditioning emulsion combining Amodimethicone, Cetrimonium Chloride and Trideceth-12</strong> — a precision delivery system providing highly substantive silicone conditioning with inherent anionic surfactant compatibility. Standard polydimethylsiloxane (PDMS) fluids distribute non-selectively across the hair shaft and gradually build up on undamaged sections; CondiVeil 949 contains <strong>amodimethicone — an amino-functional polysiloxane</strong> where primary and secondary amine groups on the silicone backbone provide affinity for the high-density negative charge zones of damaged hair cuticle.</p>
+      <p class="dos-desc">The <strong>damage-targeted deposition mechanism</strong> is amodimethicone's defining commercial property: silicone conditioning is delivered with highest intensity at the damaged cuticle zones — bleached, colour-treated or heat-damaged sections with the greatest negative charge density — rather than coating uniformly. This selectivity prevents build-up on undamaged hair sections while concentrating the conditioning benefit exactly where performance is most needed. The cetrimonium chloride and Trideceth-12 delivery vehicle enable dispersion and stability of the otherwise-insoluble silicone in both aqueous conditioner matrices and anionic surfactant 2-in-1 systems — a compatibility that standard amino silicone emulsions without this delivery system cannot achieve.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Mechanism of Action — Targeted Amino Silicone Deposition</p>
+        <p class="dos-mech-body">Hair damage from chemical processing (bleaching, colouring, permanent waving) and mechanical/thermal stress creates high-density sites of negative charge on the cuticle surface — primarily from denatured or degraded surface-bound 18-MEA (18-methyleicosanoic acid) fatty acid layer and exposed anionic amino acid residues. Amodimethicone's primary amine groups (–NH₂) carry positive charge at the slightly acidic pH of conditioning products (3.5–5.0), enabling strong electrostatic interaction with these anionic damage sites. Once adsorbed, the silicone backbone — a flexible polysiloxane chain — spreads laterally across the cuticle surface, filling microscopic surface defects and creating a smooth, hydrophobic coating that reduces cuticle friction and repels atmospheric moisture. The <strong>reactive nature of the amine groups</strong> also enables formation of semi-covalent bonds with carboxylic and aldehydic groups on severely damaged hair, creating a more durable conditioning film than non-reactive silicones. This durability translates into better wash-fastness — CondiVeil 949-based conditioning survives more wash cycles than equivalent non-functional silicone treatments — and into sustained colour protection between salon visits (silicone film retards outward diffusion of dye molecules from the cortex).</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">Damage sites</span><span class="dos-perf-lbl">Primary deposition target</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Wash-fast</span><span class="dos-perf-lbl">Durability vs. PDMS</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Anionic compat.</span><span class="dos-perf-lbl">Formulation advantage</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Frizz + shine</span><span class="dos-perf-lbl">Primary sensory benefits</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">Dose</div><div class="dos-form-cell">Priority</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Rinse-out conditioner</div><div class="dos-form-cell mono">1.0 – 2.0%</div><div class="dos-form-cell mono">Primary</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">2-in-1 shampoo</div><div class="dos-form-cell mono">0.5 – 1.0%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Leave-in spray</div><div class="dos-form-cell mono">0.2 – 0.5%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Deep conditioning mask</div><div class="dos-form-cell mono">1.5 – 2.5%</div><div class="dos-form-cell mono">Intensive</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Premium Rinse-Out Conditioners</span>
+        <span class="dos-app-tag">Colour-Treated Hair Products</span>
+        <span class="dos-app-tag">2-in-1 Shampoos</span>
+        <span class="dos-app-tag">Damage-Repair Systems</span>
+        <span class="dos-app-tag">Leave-In Treatments</span>
+        <span class="dos-app-tag">Anti-Frizz Heat Protectants</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+CondiSoft BTMS — Complete premium conditioner system</span><span class="dos-syn-desc">CondiSoft BTMS provides the cationic emulsifier matrix, lamellar cream texture and baseline conditioning; CondiVeil 949 delivers targeted amino silicone at damage sites for frizz control, shine and colour protection. This combination is the VLYOR COND reference architecture for prestige rinse-out conditioners targeting chemically treated hair in the LATAM premium market.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+CondiFlex 10 — Leave-on protection system</span><span class="dos-syn-desc">PQ-10 cellulosic film provides structural surface protection, heat barrier and anti-breakage benefits; CondiVeil 949 amino silicone targets frizz control and shine at damage zones. Combined in lightweight leave-in spray as the complete between-wash hair protection system for colour-treated hair.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+SilkLume (SILK line) — Maximum shine system</span><span class="dos-syn-desc">Amodimethicone's high refractive index at damage zones + phenyl trimethicone's superior gloss-imparting character from SilkLume creates a stacked silicone system with maximum optical gloss for finishing products and shine serums.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Amodimethicone (and) Cetrimonium Chloride (and) Trideceth-12</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS (amodimethicone)</span><span class="dos-spec-v">106842-44-8</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">White opaque liquid emulsion</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Active silicone content</span><span class="dos-spec-v">~20 – 30%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Silicone type</span><span class="dos-spec-v">Amino-functional polysiloxane (reactive)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Amine content</span><span class="dos-spec-v">0.2 – 0.6 meq/g (grade-dependent)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">0.5–2.0% (rinse-off) / 0.2–0.5% (leave-on)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Incorporation</span><span class="dos-spec-v">Aqueous phase — add ≤45°C post-emulsification</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Surfactant compat.</span><span class="dos-spec-v">Anionic, amphoteric, non-ionic</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Storage</span><span class="dos-spec-v">Store &lt;25°C; avoid freezing</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU 1223/2009</span><span class="dos-reg-detail">No restriction at cosmetic use concentrations</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Colombia / Peru / Argentina</span><span class="dos-reg-detail">Approved per ANVISA harmonisation</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">USA / Global</span><span class="dos-reg-detail">Universally approved</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">China IECIC</span><span class="dos-reg-detail">All components listed</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">TDS, SDS (GHS 16-section), CoA and full component IECIC documentation available on request.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('condibtms')">← Previous<span class="dos-docnav-name">CondiSoft BTMS</span></button>
+    <div></div>
+  </div>
+</div>
+
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+function showDos(id) {
+  document.querySelectorAll('.dos-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.dos-sb-btn').forEach(b => b.classList.remove('active'));
+  const panel = document.getElementById('dos-' + id);
+  const btn = document.querySelector('[data-dos="' + id + '"]');
+  if (panel) { panel.classList.add('active'); window.scrollTo({top: 0, behavior: 'smooth'}); }
+  if (btn) btn.classList.add('active');
+}
+document.querySelectorAll('.dos-sb-btn').forEach(btn => {
+  btn.addEventListener('click', () => showDos(btn.dataset.dos));
+});
+function activateFromHash() {
+  const hash = window.location.hash.replace('#', '');
+  if (hash) showDos(hash);
+}
+window.addEventListener('hashchange', activateFromHash);
+activateFromHash();
+window.addEventListener('scroll', () => {
+  document.getElementById('mainnav').classList.toggle('scrolled', window.scrollY > 40);
+}, {passive: true});
+</script>
+</body>
+</html>
