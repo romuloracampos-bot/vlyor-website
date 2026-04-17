@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>VLYOR SILK — Technical Dossier | VLYOR Science</title>
+<meta name="description" content="Technical dossier for VLYOR SILK silicone technologies. Complete specifications, formulation guidance and regulatory data for all 8 actives."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;500;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+:root{--acc:#CBD5E1;--acc-bg:rgba(203,213,225,.07);--acc-border:rgba(203,213,225,.2);--line-dark:#1E293B}
+.dos-wrap{display:grid;grid-template-columns:260px 1fr;min-height:100vh;padding-top:60px}
+.dos-sidebar{background:#0A0A0A;border-right:1px solid rgba(255,255,255,.07);position:sticky;top:60px;height:calc(100vh - 60px);overflow-y:auto;display:flex;flex-direction:column}
+.dos-sb-head{padding:28px 24px 20px;border-bottom:1px solid rgba(255,255,255,.06)}
+.dos-sb-line{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);margin-bottom:8px;display:flex;align-items:center;gap:7px}
+.dos-sb-dot{width:5px;height:5px;border-radius:50%;background:var(--acc);flex-shrink:0}
+.dos-sb-title{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;letter-spacing:-.01em;line-height:1.1;margin-bottom:4px}
+.dos-sb-count{font-family:'DM Mono',monospace;font-size:9px;color:#4B5563;letter-spacing:.08em}
+.dos-sb-nav{flex:1;padding:12px 0}
+.dos-sb-grp{border-bottom:1px solid rgba(255,255,255,.05)}
+.dos-sb-grp-hd{padding:12px 24px 6px;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#374151}
+.dos-sb-btn{display:flex;align-items:center;width:100%;padding:10px 24px;background:none;border:none;color:#6B7280;font-family:'Barlow',sans-serif;font-size:12px;cursor:pointer;transition:all .18s;text-align:left;border-left:2px solid transparent;gap:10px}
+.dos-sb-btn:hover{color:#D1D5DB;background:rgba(255,255,255,.025)}
+.dos-sb-btn.active{color:#fff;background:rgba(203,213,225,.07);border-left-color:var(--acc)}
+.dos-sb-btn-name{flex:1;line-height:1.3}
+.dos-sb-tag{font-family:'DM Mono',monospace;font-size:8px;padding:2px 6px;background:rgba(203,213,225,.1);color:var(--acc);flex-shrink:0}
+.dos-sb-footer{padding:20px 24px;border-top:1px solid rgba(255,255,255,.06)}
+.dos-sb-back{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#4B5563;display:flex;align-items:center;gap:7px;transition:color .2s}
+.dos-sb-back:hover{color:var(--acc)}
+.dos-main{background:#0D0D0D;min-height:calc(100vh - 60px)}
+.dos-panel{display:none;animation:dosIn .22s ease}
+.dos-panel.active{display:block}
+@keyframes dosIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.dos-ph{padding:48px 56px 40px;border-bottom:1px solid rgba(255,255,255,.06);background:linear-gradient(135deg,rgba(30,41,59,.16) 0%,transparent 60%)}
+.dos-ph-eyebrow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:8px;margin-bottom:18px}
+.dos-ph-dot{width:5px;height:5px;border-radius:50%;background:var(--acc)}
+.dos-ph-name{font-family:'Barlow Condensed',sans-serif;font-size:clamp(42px,5vw,64px);font-weight:700;letter-spacing:-.03em;line-height:.92;margin-bottom:8px}
+.dos-ph-inci{font-family:'DM Mono',monospace;font-size:11px;color:#6B7280;font-style:italic;letter-spacing:.04em;margin-bottom:20px}
+.dos-ph-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:20px}
+.dos-ph-badge{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.04em;padding:4px 10px}
+.b-a{background:rgba(203,213,225,.1);color:var(--acc)}
+.b-b{background:rgba(167,243,208,.1);color:#A7F3D0}
+.b-c{background:rgba(126,200,218,.1);color:#7EC8DA}
+.b-d{background:rgba(30,41,59,.3);color:#CBD5E1}
+.b-e{background:rgba(217,119,6,.1);color:#FCD34D}
+.dos-ph-tagline{font-size:15px;line-height:1.7;color:#E5E7EB;font-style:italic;border-left:2px solid var(--acc);padding-left:16px;max-width:72ch}
+.dos-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06)}
+.dos-metric{background:#0D0D0D;padding:20px 24px}
+.dos-metric-val{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:700;letter-spacing:-.02em;color:var(--acc);display:block;margin-bottom:4px}
+.dos-metric-lbl{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:#4B5563}
+.dos-body{padding:48px 56px 64px;display:grid;grid-template-columns:1fr 340px;gap:56px;align-items:start}
+.dos-sec-h{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);padding-bottom:10px;border-bottom:1px solid var(--acc-border);margin-bottom:18px;margin-top:36px}
+.dos-sec-h:first-child{margin-top:0}
+.dos-desc{font-size:13.5px;line-height:1.86;color:#9CA3AF;margin-bottom:14px}
+.dos-desc strong{color:#E5E7EB;font-weight:600}
+.dos-mech{background:rgba(203,213,225,.04);border:1px solid var(--acc-border);padding:20px 24px;margin-bottom:20px}
+.dos-mech-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-bottom:10px}
+.dos-mech-body{font-size:13px;line-height:1.78;color:#D1D5DB}
+.dos-perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:24px}
+.dos-perf-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);padding:14px 16px}
+.dos-perf-val{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;letter-spacing:-.02em;display:block;color:#fff;margin-bottom:3px}
+.dos-perf-lbl{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280}
+.dos-app-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px}
+.dos-app-tag{font-family:'DM Mono',monospace;font-size:9px;padding:5px 11px;background:rgba(255,255,255,.04);color:#D1D5DB;letter-spacing:.03em;border:1px solid rgba(255,255,255,.07)}
+.dos-form-row{display:grid;grid-template-columns:1fr 90px 90px;gap:0;border-bottom:1px solid rgba(255,255,255,.05);font-size:12px}
+.dos-form-row:first-child{border-top:1px solid rgba(255,255,255,.05)}
+.dos-form-hd{background:rgba(255,255,255,.04);font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:#4B5563}
+.dos-form-cell{padding:9px 12px;color:#9CA3AF}
+.dos-form-cell.hi{color:#E5E7EB}
+.dos-form-cell.mono{font-family:'DM Mono',monospace;font-size:11px;color:var(--acc)}
+.dos-syn-list{display:flex;flex-direction:column;gap:6px;margin-bottom:8px}
+.dos-syn{padding:12px 14px;background:rgba(255,255,255,.025);border-left:2px solid var(--acc-border)}
+.dos-syn-code{font-family:'DM Mono',monospace;font-size:10px;color:var(--acc);display:block;margin-bottom:4px}
+.dos-syn-desc{font-size:12px;color:#9CA3AF;line-height:1.6}
+.dos-spec-block{background:#111;padding:24px;margin-bottom:12px}
+.dos-spec-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:4px}
+.dos-spec-row{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px}
+.dos-spec-row:last-child{border-bottom:none}
+.dos-spec-k{color:#6B7280;flex-shrink:0;padding-right:12px}
+.dos-spec-v{font-family:'DM Mono',monospace;font-size:11px;color:#fff;text-align:right;word-break:break-word}
+.dos-reg-block{background:#111;padding:24px;margin-bottom:12px}
+.dos-reg-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06)}
+.dos-reg-row{display:grid;grid-template-columns:auto 1fr auto;gap:0 16px;align-items:start;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:11px}
+.dos-reg-row:last-child{border-bottom:none}
+.dos-reg-mkt{color:#6B7280;white-space:nowrap}
+.dos-reg-detail{color:#9CA3AF;font-size:11px;line-height:1.5}
+.dos-reg-status{font-family:'DM Mono',monospace;font-size:9px;padding:2px 7px;white-space:nowrap}
+.s-ok{background:rgba(203,213,225,.1);color:var(--acc)}
+.s-cond{background:rgba(217,119,6,.1);color:#FCD34D}
+.s-cosmos{background:rgba(167,243,208,.1);color:#A7F3D0}
+.dos-alert{padding:14px 16px;background:rgba(217,119,6,.06);border:1px solid rgba(217,119,6,.2);margin-bottom:10px}
+.dos-alert-t{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:#FCD34D;margin-bottom:6px}
+.dos-alert-b{font-size:12px;line-height:1.65;color:#D1D5DB}
+.dos-note{padding:14px 16px;background:var(--acc-bg);border:1px solid var(--acc-border);margin-bottom:10px}
+.dos-note-t{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);margin-bottom:6px}
+.dos-note-b{font-size:12px;line-height:1.65;color:#D1D5DB}
+.dos-req{background:var(--line-dark);padding:20px 24px;display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.dos-req-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;margin-bottom:2px}
+.dos-req-body{font-size:12px;color:rgba(255,255,255,.55);line-height:1.55}
+.dos-req-btn{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:rgba(203,213,225,.1);color:var(--acc);border:1px solid var(--acc-border);font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .22s;text-decoration:none}
+.dos-req-btn:hover{background:rgba(203,213,225,.2);border-color:var(--acc)}
+.dos-req-btn svg{width:13px;height:13px;flex-shrink:0}
+.dos-docnav{display:flex;align-items:center;justify-content:space-between;padding:20px 56px;border-top:1px solid rgba(255,255,255,.06);margin-top:48px}
+.dos-docnav-btn{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#4B5563;display:flex;align-items:center;gap:8px;cursor:pointer;background:none;border:none;transition:color .2s;padding:8px 0}
+.dos-docnav-btn:hover{color:var(--acc)}
+.dos-docnav-name{font-size:13px;font-family:'Barlow',sans-serif;font-weight:600;color:#E5E7EB;display:block;margin-top:2px;letter-spacing:0}
+@media(max-width:1100px){.dos-body{grid-template-columns:1fr;gap:0;padding:36px 40px 56px}.dos-right{margin-top:32px}.dos-ph{padding:36px 40px 32px}}
+@media(max-width:860px){.dos-wrap{grid-template-columns:1fr}.dos-sidebar{display:none}.dos-body{padding:28px 20px 48px}.dos-ph{padding:28px 20px 24px}.dos-docnav{padding:20px}.dos-metrics{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.dos-metrics{grid-template-columns:1fr}.dos-perf-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav id="mainnav">
+  <a class="logo" href="index.html"><span class="logo-m">VLYOR</span><span class="logo-s">Science <span class="logo-p">|</span> Global Bioactives Hub</span></a>
+  <div class="nav-links">
+    <a href="silk.html">← VLYOR SILK</a>
+    <a href="index.html#lines">Portfolio</a>
+    <a href="portal.html" class="nav-portal">Technical Portal →</a>
+  </div>
+</nav>
+
+<div class="dos-wrap">
+  <aside class="dos-sidebar">
+    <div class="dos-sb-head">
+      <div class="dos-sb-line"><div class="dos-sb-dot"></div>Technical Dossier</div>
+      <div class="dos-sb-title">VLYOR SILK</div>
+      <div class="dos-sb-count">8 Silicone Technology Actives</div>
+    </div>
+    <nav class="dos-sb-nav">
+      <div class="dos-sb-grp">
+        <div class="dos-sb-grp-hd">Dimethicone Fluids</div>
+        <button class="dos-sb-btn active" data-dos="silk100"><span class="dos-sb-btn-name">SilkFluid 100</span><span class="dos-sb-tag">100 cSt</span></button>
+        <button class="dos-sb-btn" data-dos="silk350"><span class="dos-sb-btn-name">SilkFluid 350</span><span class="dos-sb-tag">350 cSt</span></button>
+        <button class="dos-sb-btn" data-dos="silk1000"><span class="dos-sb-btn-name">SilkFluid 1000</span><span class="dos-sb-tag">1000 cSt</span></button>
+        <button class="dos-sb-btn" data-dos="silk12500"><span class="dos-sb-btn-name">SilkFluid 12500</span><span class="dos-sb-tag">12500 cSt</span></button>
+      </div>
+      <div class="dos-sb-grp">
+        <div class="dos-sb-grp-hd">Volatile Carrier</div>
+        <button class="dos-sb-btn" data-dos="silkveil"><span class="dos-sb-btn-name">SilkVeil</span><span class="dos-sb-tag">D5</span></button>
+      </div>
+      <div class="dos-sb-grp">
+        <div class="dos-sb-grp-hd">Specialty Silicones</div>
+        <button class="dos-sb-btn" data-dos="silklume"><span class="dos-sb-btn-name">SilkLume</span><span class="dos-sb-tag">Ph Trimeth.</span></button>
+        <button class="dos-sb-btn" data-dos="silkaqua"><span class="dos-sb-btn-name">SilkAqua</span><span class="dos-sb-tag">PEG-12 Dim.</span></button>
+        <button class="dos-sb-btn" data-dos="silkmatrix"><span class="dos-sb-btn-name">SilkMatrix</span><span class="dos-sb-tag">Elastomer</span></button>
+      </div>
+    </nav>
+    <div class="dos-sb-footer">
+      <a href="silk.html" class="dos-sb-back">← Back to VLYOR SILK</a>
+    </div>
+  </aside>
+
+  <main class="dos-main">
+
+<!-- ══════ SILK 01 — SilkFluid 100 ══════ -->
+<div class="dos-panel active" id="dos-silk100">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR SILK — Dimethicone Fluid</div>
+    <div class="dos-ph-name">SilkFluid 100</div>
+    <div class="dos-ph-inci">Dimethicone · 100 cSt · Polydimethylsiloxane</div>
+    <div class="dos-ph-badges"><span class="dos-ph-badge b-a">PDMS 100 cSt</span><span class="dos-ph-badge b-d">Lightest Grade</span><span class="dos-ph-badge b-d">100% Active</span><span class="dos-ph-badge b-d">Dry-Touch</span></div>
+    <div class="dos-ph-tagline">"The lightest dimethicone — maximum spread rate, dry-touch sensory profile, and the lowest friction coefficient of the fluid range. First choice for aerosol carriers, lightweight day care and UV filter dispersion."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">100 cSt</span><span class="dos-metric-lbl">Kinematic viscosity</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">0.965</span><span class="dos-metric-lbl">Specific gravity (25°C)</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">~20 mN/m</span><span class="dos-metric-lbl">Surface tension</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">100%</span><span class="dos-metric-lbl">Active — undiluted</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">SilkFluid 100 is <strong>100% active polydimethylsiloxane at 100 cSt viscosity</strong> — the lightest standard cosmetic-grade dimethicone fluid. At this molecular weight, the silicone chain is short enough to behave with near-water fluidity in handling, while retaining the complete suite of silicone performance properties: extraordinary lubricity, surface tension of ~20 mN/m, breathable semi-occlusive film formation and exceptional thermal stability. This combination makes it the primary emollient ingredient for formulation types where fast, non-greasy application experience is non-negotiable.</p>
+      <p class="dos-desc">The 100 cSt grade is the <strong>standard carrier for UV filter and pigment dispersion</strong> — its low viscosity ensures homogeneous mixing of crystalline and waxy UV filter actives (AVB, BEMT, EHT) and cosmetic pigments into the oil phase before emulsification, preventing agglomeration and ensuring uniform active distribution throughout the finished product. Additive quantities as small as 0.1% produce measurable reductions in formula soaping and tack.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Mechanism — Lubricity, Film Formation and Sensory Profile</p>
+        <p class="dos-mech-body">PDMS derives its extraordinary lubricity from the unique geometry of the siloxane backbone. The Si-O bond length (1.64 Å) and bond angle (143°) are significantly larger than C-C equivalents, creating a polymer backbone that is <strong>freely rotating and highly flexible</strong>. This rotational freedom keeps the non-polar methyl groups (–CH₃) constantly presented at the outer surface regardless of the polymer's conformation on skin, creating a permanently hydrophobic, low-friction surface. At 100 cSt, the polymer chains are short enough that this dynamic methyl presentation produces the fastest lateral spreading rate of the PDMS range — the fluid self-levels across the skin surface in milliseconds, distributing actives uniformly before any evaporation or absorption occurs. The semi-occlusive film formed on evaporation reduces TEWL by ~20–30% (measured by TEWL meters) without the complete occlusion of petrolatum, maintaining skin's natural gas exchange while reducing moisture loss.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">100 cSt</span><span class="dos-perf-lbl">Kinematic viscosity (25°C)</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">1.403</span><span class="dos-perf-lbl">Refractive index</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">&gt;300°C</span><span class="dos-perf-lbl">Flash point</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">0.965</span><span class="dos-perf-lbl">Specific gravity</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">Dose</div><div class="dos-form-cell">Priority</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Spray/aerosol AP carrier</div><div class="dos-form-cell mono">20–40%</div><div class="dos-form-cell mono">Primary</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Lightweight day moisturiser</div><div class="dos-form-cell mono">3–8%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">UV filter dispersion aid</div><div class="dos-form-cell mono">5–15%</div><div class="dos-form-cell mono">Required</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">De-tackification additive</div><div class="dos-form-cell mono">0.5–3%</div><div class="dos-form-cell mono">Additive</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Serum / facial primer</div><div class="dos-form-cell mono">5–10%</div><div class="dos-form-cell mono">Standard</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Antiperspirant/Deodorant Aerosols</span>
+        <span class="dos-app-tag">Spray Sunscreens</span>
+        <span class="dos-app-tag">Lightweight Day Moisturisers</span>
+        <span class="dos-app-tag">Facial Primers</span>
+        <span class="dos-app-tag">UV Filter Dispersion</span>
+        <span class="dos-app-tag">Serum Formulations</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+SilkFluid 12500 (SILK) — Viscosity blend for depth-of-gloss systems</span><span class="dos-syn-desc">3:1 SilkFluid 100:SilkFluid 12500 — the ratio recommended in Dow benchmark technical guidance for skin polish and hair gloss formulations. Low-viscosity fluid provides spreadability; high-viscosity provides depth of emolliency and gloss.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+Shield UV filters (SHIELD) — Homogeneous SPF dispersion</span><span class="dos-syn-desc">SilkFluid 100 dissolves and disperses oil-soluble UV filters (AVB, BEMT, EHT) uniformly in the oil phase before emulsification — ensuring homogeneous SPF performance across the finished product and preventing filter agglomeration that reduces SPF efficiency.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Dimethicone</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Chemical name</span><span class="dos-spec-v">Polydimethylsiloxane (PDMS)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Viscosity (25°C)</span><span class="dos-spec-v">100 cSt ± 10%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Active content</span><span class="dos-spec-v">100% — no dilution</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Clear, colourless, odourless fluid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Specific gravity (25°C)</span><span class="dos-spec-v">0.965</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Refractive index (25°C)</span><span class="dos-spec-v">1.403</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Flash point</span><span class="dos-spec-v">&gt;300°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Surface tension (20°C)</span><span class="dos-spec-v">~20 mN/m</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Pour point</span><span class="dos-spec-v">–60°C (approx.)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Water solubility</span><span class="dos-spec-v">Insoluble (&lt;100 ppb)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Thermal stability</span><span class="dos-spec-v">Stable to &gt;200°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">0.5 – 40% (type-dependent)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Packaging</span><span class="dos-spec-v">25 kg / 200 kg drum / IBC</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU 1223/2009</span><span class="dos-reg-detail">No restriction — linear PDMS, not cyclosiloxane</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU REACH 2024/1328</span><span class="dos-reg-detail">Not affected — D4/D5/D6 restriction applies only to cyclosiloxanes</span><span class="dos-reg-status s-ok">Not affected</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">LATAM General</span><span class="dos-reg-detail">No restriction across all markets</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">China IECIC</span><span class="dos-reg-detail">Listed — standard cosmetic ingredient</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">USA / Japan / Global</span><span class="dos-reg-detail">Universally approved</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">TDS, SDS (GHS 16-section), CoA and IECIC listing documentation available on request.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <div></div>
+    <button class="dos-docnav-btn" onclick="showDos('silk350')">Next →<span class="dos-docnav-name">SilkFluid 350</span></button>
+  </div>
+</div>
+
+<!-- ══════ SILK 02 — SilkFluid 350 ══════ -->
+<div class="dos-panel" id="dos-silk350">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR SILK — Dimethicone Fluid</div>
+    <div class="dos-ph-name">SilkFluid 350</div>
+    <div class="dos-ph-inci">Dimethicone · 350 cSt · Polydimethylsiloxane · Reference Grade</div>
+    <div class="dos-ph-badges"><span class="dos-ph-badge b-a">PDMS 350 cSt</span><span class="dos-ph-badge b-d">Reference Grade</span><span class="dos-ph-badge b-d">100% Active</span><span class="dos-ph-badge b-d">All-Purpose</span></div>
+    <div class="dos-ph-tagline">"The reference dimethicone — 350 cSt is specified by more cosmetic formulators globally than any other PDMS viscosity. The balanced all-purpose grade for skin care emulsions, conditioners, sun care and colour cosmetics."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">350 cSt</span><span class="dos-metric-lbl">Kinematic viscosity</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">0.970</span><span class="dos-metric-lbl">Specific gravity (25°C)</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Balanced</span><span class="dos-metric-lbl">Sensory profile</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">100%</span><span class="dos-metric-lbl">Active — undiluted</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">SilkFluid 350 is <strong>100% active polydimethylsiloxane at 350 cSt</strong> — equivalent to the benchmark Dow DOWSIL 200 Fluid 350 cSt (XIAMETER PMX-200 350 cSt), the most commercially specified dimethicone viscosity grade in personal care globally. At 350 cSt, the PDMS molecular weight produces an ideal balance: the fluid is light enough to spread comfortably and uniformly across skin without requiring significant application force, while being viscous enough to provide a richer, more substantive emollient character than the 100 cSt grade — delivering a satisfying skin feel that consumers read as moisturising and protective.</p>
+      <p class="dos-desc">Beyond emolliency, SilkFluid 350 is the <strong>standard dimethicone for formula de-tackification</strong>. Many cosmetic formulations contain ingredients that leave a sticky or tacky after-feel — carbomers, certain film-forming polymers, humectants at high concentrations. Adding 2–5% SilkFluid 350 dramatically reduces this tack without altering pH, active concentration or formulation stability. It is also the primary silicone for <strong>de-soaping creams and lotions</strong> — the characteristic soap-like after-feel of personal care products containing anionic surfactants is eliminated by SilkFluid 350's interfacial activity.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Mechanism — De-Tackification + Balanced Emolliency</p>
+        <p class="dos-mech-body">At 350 cSt, SilkFluid interacts with skin through a combination of viscous spreading and surface adsorption. The polymer chains partially align along the skin surface, presenting methyl groups outward and creating a low-friction, low-surface-energy layer that physically reduces the tackiness of hydrophilic polymers beneath. This de-tackification mechanism is primarily physical — silicone intercalates between tacky polymer chains and skin, preventing their direct adhesion — and operates at very low concentrations (0.5–2%). The balanced emolliency at 350 cSt produces a skin feel that panellists consistently rate as "moisturised but not greasy" — the optimal sensory positioning for broad-market skin care and sun care products. Thermally processable at up to 200°C with no degradation — compatible with all standard cosmetic emulsification temperatures.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">350 cSt</span><span class="dos-perf-lbl">Kinematic viscosity</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">1.403</span><span class="dos-perf-lbl">Refractive index</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">De-tack</span><span class="dos-perf-lbl">Key functional benefit</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">&gt;300°C</span><span class="dos-perf-lbl">Flash point</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">Dose</div><div class="dos-form-cell">Priority</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Standard skin care emulsion</div><div class="dos-form-cell mono">3–8%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Hair conditioner</div><div class="dos-form-cell mono">2–5%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Sun care lotion</div><div class="dos-form-cell mono">3–7%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">De-tackification additive</div><div class="dos-form-cell mono">0.5–5%</div><div class="dos-form-cell mono">Functional</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Colour cosmetics (foundation)</div><div class="dos-form-cell mono">2–8%</div><div class="dos-form-cell mono">Standard</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Skin Care Emulsions (all types)</span>
+        <span class="dos-app-tag">Hair Conditioners</span>
+        <span class="dos-app-tag">Sun Care</span>
+        <span class="dos-app-tag">Colour Cosmetics</span>
+        <span class="dos-app-tag">Body Lotions</span>
+        <span class="dos-app-tag">De-tackification</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+SilkFluid 12500 (SILK) — Performance emollient blend</span><span class="dos-syn-desc">3:1 SilkFluid 350:SilkFluid 12500. The higher-viscosity component adds depth of emolliency and improved water-repellence without substantially changing the light feel. Standard for premium moisturisers targeting intensive-care positioning.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+SilkLume (SILK) — Colour cosmetic system</span><span class="dos-syn-desc">SilkFluid 350 de-tackification + SilkLume optical enhancement for colour cosmetics — reduces formula tack while adding the gloss and pigment dispersion improvements of phenyl trimethicone.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Dimethicone</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Viscosity (25°C)</span><span class="dos-spec-v">350 cSt ± 10%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Active content</span><span class="dos-spec-v">100%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Clear, colourless, odourless fluid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Specific gravity (25°C)</span><span class="dos-spec-v">0.970</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Refractive index</span><span class="dos-spec-v">1.403</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Flash point</span><span class="dos-spec-v">&gt;300°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Surface tension</span><span class="dos-spec-v">~20 mN/m</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Water solubility</span><span class="dos-spec-v">Insoluble</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Thermal stability</span><span class="dos-spec-v">Stable to &gt;200°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">0.5 – 20%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU 1223/2009</span><span class="dos-reg-detail">No restriction — linear PDMS</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU REACH 2024/1328</span><span class="dos-reg-detail">Not affected by cyclosiloxane restriction</span><span class="dos-reg-status s-ok">Not affected</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">LATAM / Global</span><span class="dos-reg-detail">Universally approved</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">TDS, SDS, CoA and IECIC listing available on request.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('silk100')">← Previous<span class="dos-docnav-name">SilkFluid 100</span></button>
+    <button class="dos-docnav-btn" onclick="showDos('silk1000')">Next →<span class="dos-docnav-name">SilkFluid 1000</span></button>
+  </div>
+</div>
+
+<!-- ══════ SILK 03 — SilkFluid 1000 ══════ -->
+<div class="dos-panel" id="dos-silk1000">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR SILK — Dimethicone Fluid</div>
+    <div class="dos-ph-name">SilkFluid 1000</div>
+    <div class="dos-ph-inci">Dimethicone · 1000 cSt · Polydimethylsiloxane</div>
+    <div class="dos-ph-badges"><span class="dos-ph-badge b-a">PDMS 1000 cSt</span><span class="dos-ph-badge b-d">High Substantivity</span><span class="dos-ph-badge b-d">100% Active</span><span class="dos-ph-badge b-d">Rich Conditioning</span></div>
+    <div class="dos-ph-tagline">"High-viscosity dimethicone for rich conditioning and superior substantivity — the grade for hair serums, night care, intensive treatments and formulations where a durable silicone film is the therapeutic objective."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">1000 cSt</span><span class="dos-metric-lbl">Kinematic viscosity</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">0.973</span><span class="dos-metric-lbl">Specific gravity (25°C)</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Rich</span><span class="dos-metric-lbl">Sensory profile</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">100%</span><span class="dos-metric-lbl">Active — undiluted</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">SilkFluid 1000 is <strong>100% active polydimethylsiloxane at 1000 cSt</strong>. At this viscosity, the PDMS chains are substantially longer than the 350 cSt grade, producing a more viscous fluid with distinctly different formulation properties: <strong>higher substantivity</strong> (the polymer film persists longer on the substrate), <strong>greater film coherence</strong> (longer chains produce a more continuous, coherent film), and a <strong>richer, slower-spreading sensory profile</strong> that consumers associate with intensive conditioning and protective treatment products.</p>
+      <p class="dos-desc">In hair care, SilkFluid 1000 is the preferred dimethicone for leave-on treatments targeting damaged, coarse or high-porosity hair types — common in the Brazilian, Colombian and Peruvian markets where chemical relaxing, bleaching and Brazilian Blowout treatments are prevalent. The more substantive silicone film provides better combing friction reduction between wash cycles, better heat protection during blow-drying and better frizz control in high-humidity LATAM conditions versus lighter viscosity grades.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Mechanism — Substantivity and Film Durability</p>
+        <p class="dos-mech-body">Substantivity increases with molecular weight in PDMS fluids because longer polymer chains have more points of interaction with substrate surfaces, increasing the total adsorption energy per molecule. At 1000 cSt, the PDMS chains are long enough to adopt a partially coiled conformation on the hair surface, with multiple siloxane units interacting with the substrate simultaneously. This multi-point adsorption is significantly more resistant to wash-off than the single-contact-point adsorption of shorter-chain 100–350 cSt grades. The result is a conditioning film that survives multiple wash cycles better than lighter silicone grades — measurable in repeat-use combing friction studies as a maintained friction reduction over 3–5 wash cycles versus 1–2 cycles for 350 cSt. In skin care, the more coherent film provides enhanced barrier function, making SilkFluid 1000 the preferred grade for intensive night treatment formulations where extended moisture retention is the therapeutic goal.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">1000 cSt</span><span class="dos-perf-lbl">Kinematic viscosity</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">High</span><span class="dos-perf-lbl">Substantivity vs. 350 cSt</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Durable film</span><span class="dos-perf-lbl">Wash-cycle resistance</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">1.404</span><span class="dos-perf-lbl">Refractive index</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">Dose</div><div class="dos-form-cell">Priority</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Leave-on hair serum</div><div class="dos-form-cell mono">5–20%</div><div class="dos-form-cell mono">Primary</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Night cream / intensive care</div><div class="dos-form-cell mono">3–8%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Deep conditioning hair mask</div><div class="dos-form-cell mono">3–6%</div><div class="dos-form-cell mono">Standard</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Anti-frizz leave-in spray</div><div class="dos-form-cell mono">2–5%</div><div class="dos-form-cell mono">Standard</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Leave-On Hair Serums</span>
+        <span class="dos-app-tag">Night Creams</span>
+        <span class="dos-app-tag">Deep Conditioning Masks</span>
+        <span class="dos-app-tag">Anti-Frizz Treatments</span>
+        <span class="dos-app-tag">Dry Oil Body Sprays</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+SilkFluid 100 (SILK) — Viscosity blending</span><span class="dos-syn-desc">Blending SilkFluid 1000 with SilkFluid 100 at various ratios enables precise sensory tuning without reformulation. 70:30 (100 cSt:1000 cSt) creates a light serum; 50:50 a medium-weight treatment; 30:70 an intensive conditioning oil.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+CondiVeil 949 (COND) — Premium hair treatment</span><span class="dos-syn-desc">SilkFluid 1000 provides uniform, substantive silicone conditioning across the hair shaft; CondiVeil 949 amino silicone deposits targeted at damage zones for frizz control and shine enhancement. Combined for professional-grade leave-on hair treatment systems.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Dimethicone</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Viscosity (25°C)</span><span class="dos-spec-v">1000 cSt ± 10%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Active content</span><span class="dos-spec-v">100%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Clear, colourless, odourless fluid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Specific gravity (25°C)</span><span class="dos-spec-v">0.973</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Refractive index</span><span class="dos-spec-v">1.404</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Flash point</span><span class="dos-spec-v">&gt;300°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">1.0 – 15%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU 1223/2009</span><span class="dos-reg-detail">No restriction — linear PDMS</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">LATAM / Global</span><span class="dos-reg-detail">Universally approved</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">TDS, SDS, CoA and IECIC documentation available.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('silk350')">← Previous<span class="dos-docnav-name">SilkFluid 350</span></button>
+    <button class="dos-docnav-btn" onclick="showDos('silk12500')">Next →<span class="dos-docnav-name">SilkFluid 12500</span></button>
+  </div>
+</div>
+
+<!-- ══════ SILK 04 — SilkFluid 12500 ══════ -->
+<div class="dos-panel" id="dos-silk12500">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR SILK — Dimethicone Fluid</div>
+    <div class="dos-ph-name">SilkFluid 12500</div>
+    <div class="dos-ph-inci">Dimethicone · 12500 cSt · High-Viscosity Polydimethylsiloxane</div>
+    <div class="dos-ph-badges"><span class="dos-ph-badge b-a">PDMS 12500 cSt</span><span class="dos-ph-badge b-d">Structure Builder</span><span class="dos-ph-badge b-d">Hair Gloss</span><span class="dos-ph-badge b-d">100% Active</span></div>
+    <div class="dos-ph-tagline">"Structured high-viscosity dimethicone — the silicone body-builder for hair gloss serums, split-end treatments, structured emollient gels and formulations where the silicone itself provides texture and depth."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">12500 cSt</span><span class="dos-metric-lbl">Kinematic viscosity</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">0.975</span><span class="dos-metric-lbl">Specific gravity (25°C)</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Structured</span><span class="dos-metric-lbl">Sensory profile</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">100%</span><span class="dos-metric-lbl">Active — undiluted</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">SilkFluid 12500 is <strong>100% active polydimethylsiloxane at 12500 cSt</strong> — equivalent to the Dow XIAMETER PMX-200 12500 cSt benchmark grade. At this viscosity, the PDMS chains are long enough to contribute substantially to formulation structure — not just emolliency. SilkFluid 12500 <strong>imparts viscosity, body and a controlled, slow-spreading character</strong> to formulations at concentrations where lower-viscosity grades would be invisible in texture terms. This structural contribution makes it the essential ingredient in high-viscosity hair serums, where the silicone itself provides the product body alongside its conditioning function.</p>
+      <p class="dos-desc">The long PDMS chains at 12500 cSt also provide measurable <strong>split-end smoothing</strong>: the viscous polymer bridges between mechanically separated hair fibre ends, coating and temporarily fusing the splayed cuticle with a coherent silicone film. The result — visible reduction in the ragged appearance of split ends and a measurable improvement in hair fibre cohesion under light — is the primary commercial claim of premium hair treatment serums globally, and SilkFluid 12500 is the silicone grade that delivers it.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Mechanism — Film Depth, Split-End Bridging and Viscosity Contribution</p>
+        <p class="dos-mech-body">At 12500 cSt, the weight-average molecular weight of the PDMS is approximately 90,000–100,000 g/mol. Chains of this length adopt a partially entangled, coiled conformation in the bulk fluid. When spread onto hair fibres, they partially unfold and orient along the fibre axis, creating a film of measurably greater thickness and coherence than lower-MW grades. This thicker film provides superior mechanical protection during styling (measurable as reduced combing force and breakage rate) and enhanced water resistance (the thick hydrophobic film is more resistant to humidity-driven swelling of the hair cortex). <strong>Split-end bridging</strong>: at the mechanically damaged tips of split-end fibres, the viscous, tacky character of 12500 cSt silicone enables capillary wetting of the narrow gap between separated fibre ends, followed by coalescence of the silicone film across the gap as the product is spread along the hair. The result is a temporary but visually significant cosmetic repair of the split-end appearance — the basis of "split-end repair serum" product claims.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">12500 cSt</span><span class="dos-perf-lbl">Kinematic viscosity</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">~95K</span><span class="dos-perf-lbl">Approx. Mw (g/mol)</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Split-end</span><span class="dos-perf-lbl">Cosmetic repair benefit</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Structure</span><span class="dos-perf-lbl">Formulation contribution</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">Dose</div><div class="dos-form-cell">Function</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Hair gloss serum (oil base)</div><div class="dos-form-cell mono">30–60%</div><div class="dos-form-cell mono">Primary emollient</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Split-end treatment serum</div><div class="dos-form-cell mono">15–40%</div><div class="dos-form-cell mono">Repair film</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Blend with SilkFluid 100</div><div class="dos-form-cell mono">5–20%</div><div class="dos-form-cell mono">Richness</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Structured barrier cream</div><div class="dos-form-cell mono">5–15%</div><div class="dos-form-cell mono">Structure</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Hair Gloss &amp; Shine Serums</span>
+        <span class="dos-app-tag">Split-End Treatment Products</span>
+        <span class="dos-app-tag">Structured Barrier Creams</span>
+        <span class="dos-app-tag">Viscosity Blending with 100 cSt</span>
+        <span class="dos-app-tag">Silicone Polish Systems</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+SilkFluid 100 (SILK) — 3:1 viscosity blend (Dow reference ratio)</span><span class="dos-syn-desc">3 parts SilkFluid 100 + 1 part SilkFluid 12500 — the ratio referenced in Dow Corning benchmark technical guidance for achieving optimal application ease (100 cSt) combined with depth-of-gloss (12500 cSt). Standard starting point for hair polish and serum development.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+SilkLume (SILK) — Maximum hair shine system</span><span class="dos-syn-desc">SilkFluid 12500 provides the protective, thick conditioning coating on the hair shaft; SilkLume's high refractive index phenyl groups amplify light reflection from that coating surface. Combined for the highest achievable hair gloss in a silicone serum format.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Dimethicone</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Viscosity (25°C)</span><span class="dos-spec-v">12500 cSt ± 20%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Active content</span><span class="dos-spec-v">100%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Clear, very viscous, colourless fluid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Specific gravity (25°C)</span><span class="dos-spec-v">0.975</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Refractive index</span><span class="dos-spec-v">1.404</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Flash point</span><span class="dos-spec-v">&gt;300°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Thermal stability</span><span class="dos-spec-v">Stable to &gt;200°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">0.5–10% (blending); 20–60% (serums)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU 1223/2009</span><span class="dos-reg-detail">No restriction — linear PDMS</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">LATAM / Global</span><span class="dos-reg-detail">Universally approved</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">TDS, SDS, CoA available on request.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('silk1000')">← Previous<span class="dos-docnav-name">SilkFluid 1000</span></button>
+    <button class="dos-docnav-btn" onclick="showDos('silkveil')">Next →<span class="dos-docnav-name">SilkVeil</span></button>
+  </div>
+</div>
+
+<!-- ══════ SILK 05 — SilkVeil ══════ -->
+<div class="dos-panel" id="dos-silkveil">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR SILK — Volatile Silicone Carrier</div>
+    <div class="dos-ph-name">SilkVeil</div>
+    <div class="dos-ph-inci">Cyclopentasiloxane (D5) · CAS 541-02-6 · MW 370.8 g/mol</div>
+    <div class="dos-ph-badges"><span class="dos-ph-badge b-a">Volatile Silicone</span><span class="dos-ph-badge b-d">Dry-Down Carrier</span><span class="dos-ph-badge b-d">100% Active</span><span class="dos-ph-badge b-e">EU Restriction 2027</span></div>
+    <div class="dos-ph-tagline">"The benchmark volatile carrier — Cyclopentasiloxane (D5) delivers a powder-dry, non-greasy finish impossible to replicate with organic ingredients. First choice for all non-EU markets and EU reformulation planning support available."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">~210°C</span><span class="dos-metric-lbl">Boiling point</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">3.9 cSt</span><span class="dos-metric-lbl">Viscosity (water-like)</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">0.959</span><span class="dos-metric-lbl">Specific gravity</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Dry-touch</span><span class="dos-metric-lbl">Defining sensory benefit</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">SilkVeil is <strong>Cyclopentasiloxane (Decamethylcyclopentasiloxane, D5) — the benchmark volatile silicone</strong> for cosmetic application. Its cyclic pentameric siloxane structure creates a compound with a boiling point of ~210°C but measurable evaporation rate at skin temperature (37°C) — the characteristic that produces the dry-down, non-greasy finish of modern personal care. SilkVeil evaporates from the skin surface within seconds to minutes of application depending on film thickness and ambient temperature, leaving no residual silicone film beyond the materials it was carrying.</p>
+      <p class="dos-desc">As a <strong>precision delivery carrier</strong>, SilkVeil's water-like low viscosity (~3.9 cSt) enables exceptionally rapid and uniform spreading of dissolved actives, UV filters, pigments and non-volatile silicones across the skin surface. During the evaporation phase, these materials are concentrated and deposited precisely where they are needed. This delivery mechanism produces a fundamentally better active distribution profile than non-volatile carriers — and the dry finish after evaporation creates the product experience that drives repurchase in LATAM cosmetic categories where skin feel is the primary sensory driver.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Mechanism — Evaporative Delivery + Dry-Touch Finish</p>
+        <p class="dos-mech-body">D5 evaporates through a diffusion-driven process at skin temperature. The low surface tension (~18 mN/m) and water-like viscosity enable the compound to spread rapidly across the skin surface before significant evaporation occurs, ensuring complete coverage. As evaporation proceeds, the dissolved active cargo is progressively concentrated in the thinning film until the D5 has completely departed, leaving only the deposited materials. This two-stage spreading-then-evaporation mechanism ensures that every region of applied skin receives an equal deposit of active — far superior uniformity than viscous non-volatile carriers that pool in skin depressions. The final dry skin feel arises from the complete absence of residual silicone film — unlike non-volatile emollients that remain on skin continuously, D5-based systems leave skin dry, breathable and without the greasy or sticky character of organic oil-based carriers.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">~3.9 cSt</span><span class="dos-perf-lbl">Viscosity — near-water</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">~18 mN/m</span><span class="dos-perf-lbl">Surface tension</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Volatile</span><span class="dos-perf-lbl">No residual film</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">370.8</span><span class="dos-perf-lbl">Molecular weight</span></div>
+      </div>
+
+      <p class="dos-sec-h">Regulatory Status — EU REACH 2024/1328 (Critical Update)</p>
+      <div class="dos-alert">
+        <p class="dos-alert-t">EU Restriction — Effective June 2027</p>
+        <p class="dos-alert-b">EU REACH Regulation 2024/1328 (published May 2024) restricts Cyclopentasiloxane (D5) to ≤0.1% in all rinse-off and leave-on cosmetic products sold in the EU market, effective June 2027. D5 cannot function as a carrier at concentrations below 0.1% — any EU market cosmetic currently using D5 will need reformulation before this date. LATAM markets (Brazil, Colombia, Argentina, Peru, Mexico) have no equivalent restriction under current frameworks — D5 remains fully permitted at functional concentrations. VLYOR SILK provides reformulation support for EU-market clients including alternative volatile and semi-volatile carrier systems. Please contact our formulation team to begin the transition planning process.</p>
+      </div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Aerosol AP/Deodorant (non-EU)</span>
+        <span class="dos-app-tag">Spray Sunscreens (non-EU rinse-off)</span>
+        <span class="dos-app-tag">Foundations &amp; Primers</span>
+        <span class="dos-app-tag">Hair Serums (LATAM)</span>
+        <span class="dos-app-tag">Body Care Sprays</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+SilkFluid 350 (SILK) — Classic dry-touch system</span><span class="dos-syn-desc">SilkVeil (D5) as volatile carrier + SilkFluid 350 as the deposited emollient. D5 evaporates leaving a clean 350 cSt PDMS conditioning film. The reference dry-touch formulation architecture for sunscreens, moisturisers and body care.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+SilkLume (SILK) — Dry-touch shine spray</span><span class="dos-syn-desc">SilkVeil disperses SilkLume uniformly across hair fibres and evaporates, leaving a dry-finish, high-shine phenyl trimethicone coating. For LATAM hair shine sprays and finishing products where dry-touch + optical gloss is the brief.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Cyclopentasiloxane</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Common name</span><span class="dos-spec-v">D5 (Decamethylcyclopentasiloxane)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">CAS Number</span><span class="dos-spec-v">541-02-6</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Molecular weight</span><span class="dos-spec-v">370.77 g/mol</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Active content</span><span class="dos-spec-v">100%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Clear, colourless, mobile liquid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Boiling point</span><span class="dos-spec-v">~210°C</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Viscosity (25°C)</span><span class="dos-spec-v">~3.9 cSt</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Specific gravity (25°C)</span><span class="dos-spec-v">0.959</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Surface tension</span><span class="dos-spec-v">~18 mN/m</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Incorporation temp.</span><span class="dos-spec-v">Add below 60°C — volatile component</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">5 – 40% (formulation dependent)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status by Market</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU REACH 2024/1328</span><span class="dos-reg-detail">≤0.1% all cosmetics — from June 2027</span><span class="dos-reg-status s-cond">Restricted (2027)</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU — current (pre-2027)</span><span class="dos-reg-detail">≤0.1% in rinse-off only (since 2020)</span><span class="dos-reg-status s-cond">Conditional</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">No restriction under current framework</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Colombia / Peru / Argentina</span><span class="dos-reg-detail">No restriction (current)</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">Mexico / LATAM</span><span class="dos-reg-detail">No restriction (current)</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">USA / Canada</span><span class="dos-reg-detail">No restriction currently</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">China IECIC</span><span class="dos-reg-detail">Listed — no restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">TDS, SDS (GHS), CoA, IECIC listing and EU reformulation support consultation available.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('silk12500')">← Previous<span class="dos-docnav-name">SilkFluid 12500</span></button>
+    <button class="dos-docnav-btn" onclick="showDos('silklume')">Next →<span class="dos-docnav-name">SilkLume</span></button>
+  </div>
+</div>
+
+<!-- ══════ SILK 06 — SilkLume ══════ -->
+<div class="dos-panel" id="dos-silklume">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR SILK — Specialty Silicone</div>
+    <div class="dos-ph-name">SilkLume</div>
+    <div class="dos-ph-inci">Phenyl Trimethicone · Polyphenylmethylsiloxane · ~14 cSt</div>
+    <div class="dos-ph-badges"><span class="dos-ph-badge b-a">Phenyl Silicone</span><span class="dos-ph-badge b-d">Optical Shine</span><span class="dos-ph-badge b-d">SPF Boost</span><span class="dos-ph-badge b-d">EU-Compliant</span></div>
+    <div class="dos-ph-tagline">"The optical performance silicone — Phenyl Trimethicone's high refractive index (~1.46 vs 1.40 PDMS) delivers measurably brighter hair, improved SPF efficacy and superior colour cosmetic gloss. Equivalent to Dow DOWSIL 556 Cosmetic Grade Fluid."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">~1.46</span><span class="dos-metric-lbl">Refractive index (vs 1.40 PDMS)</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">~14 cSt</span><span class="dos-metric-lbl">Viscosity (20°C)</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">~1.07</span><span class="dos-metric-lbl">Specific gravity</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">50% EtOH</span><span class="dos-metric-lbl">Ethanol solubility (4°C)</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">SilkLume is <strong>Phenyl Trimethicone — a polyphenylmethylsiloxane</strong> equivalent to the benchmark Dow DOWSIL 556 Cosmetic Grade Fluid. The substitution of phenyl groups (C₆H₅–) onto the PDMS siloxane backbone fundamentally transforms the optical properties of the molecule: the aromatic phenyl ring's high electron density produces a refractive index of ~1.46 — substantially higher than the 1.40 of standard PDMS — and this optical differentiation is directly measurable in finished product performance.</p>
+      <p class="dos-desc"><strong>Hair shine enhancement</strong>: when applied to hair, SilkLume reflects more light from the hair surface than equivalent PDMS applications — the higher refractive index produces a perceptibly brighter, glossier appearance that consumers and panel evaluators consistently score as "healthier" and "more luminous" than PDMS-treated hair at equivalent doses. This optical benefit is the primary commercial value driver for premium hair serum and hair spray formulations globally, and the reason phenyl trimethicone commands a significant price premium versus dimethicone in these applications.</p>
+      <p class="dos-desc"><strong>SPF enhancement</strong>: the higher refractive index also improves UV scattering efficiency from inorganic UV filters (titanium dioxide, zinc oxide), increasing measured SPF values by 10–20% at equivalent filter loading versus PDMS-based formulations. This "SPF booster" function enables formulators to either achieve target SPF at lower filter loading (reducing white cast and cost) or achieve higher SPF values at equivalent loading.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Mechanism — Optical Enhancement via Refractive Index and Phenyl Aromaticity</p>
+        <p class="dos-mech-body">Light interaction with surfaces is governed by the refractive index difference between the material and its surrounding medium. At the air/hair surface interface, a higher refractive index material reflects more incident light specularly (mirror-like reflection) and diffusely (surface scattering). The phenyl groups on SilkLume's backbone, with their conjugated π-electron systems, create local regions of high polarisability that increase the molecular refractive index from the PDMS baseline of 1.40 to approximately 1.46. When SilkLume coats the hair cuticle, this creates an optical interface with measurably higher reflectance across the visible spectrum, perceived by observers as enhanced gloss and brightness. <strong>SPF mechanism</strong>: the higher refractive index of the silicone phase surrounding TiO₂ or ZnO particles modifies the effective optical path length through the particle, increasing the scattering cross-section for UV radiation per unit mass of filter — effectively making each gram of inorganic filter work harder. Studies on DOWSIL 556 equivalents consistently demonstrate 10–20% SPF improvement in mineral filter formulations versus equivalent PDMS vehicles. <strong>Oxidation stability</strong>: phenyl groups on silicones are significantly more resistant to thermal and UV oxidation than methyl groups — the aromatic ring system provides radical stabilisation that methyl carbons cannot. SilkLume-containing formulations maintain their optical performance over shelf life better than PDMS-only systems.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">~1.46</span><span class="dos-perf-lbl">Refractive index</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">~14 cSt</span><span class="dos-perf-lbl">Viscosity (20°C)</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">10–20%</span><span class="dos-perf-lbl">SPF enhancement (vs PDMS)</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">50% EtOH</span><span class="dos-perf-lbl">Ethanol solubility (4°C)</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">Dose</div><div class="dos-form-cell">Function</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Hair shine serum</div><div class="dos-form-cell mono">2–10%</div><div class="dos-form-cell mono">Optical shine</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">SPF inorganic filter system</div><div class="dos-form-cell mono">5–15%</div><div class="dos-form-cell mono">SPF booster</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Colour cosmetics</div><div class="dos-form-cell mono">5–20%</div><div class="dos-form-cell mono">Gloss + pigment</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">EtOH hair spray</div><div class="dos-form-cell mono">2–5%</div><div class="dos-form-cell mono">Shine</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Skin care illuminator</div><div class="dos-form-cell mono">1–5%</div><div class="dos-form-cell mono">Luminosity</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Hair Gloss Serums</span>
+        <span class="dos-app-tag">SPF Mineral Filter Systems</span>
+        <span class="dos-app-tag">Colour Cosmetics</span>
+        <span class="dos-app-tag">Hair Sprays (EtOH base)</span>
+        <span class="dos-app-tag">Skin Illuminating Products</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+SilkFluid 12500 (SILK) — Maximum hair shine</span><span class="dos-syn-desc">SilkFluid 12500 provides the thick, coherent protective silicone film on the hair shaft; SilkLume's phenyl groups amplify light reflection from that surface. The stack creates the maximum achievable optical hair shine in a silicone-based system.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+CondiVeil 949 (COND) — Premium colour-treated hair system</span><span class="dos-syn-desc">Amino silicone targeted conditioning at damage sites (CondiVeil 949) + optical shine amplification (SilkLume) for premium colour-treated hair serums. The combination delivers both structural conditioning and optical performance.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Phenyl Trimethicone</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Chemical class</span><span class="dos-spec-v">Polyphenylmethylsiloxane</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Clear, colourless to pale yellow fluid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Refractive index (25°C)</span><span class="dos-spec-v">~1.46</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Specific gravity (25°C)</span><span class="dos-spec-v">~1.07</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Viscosity (20°C)</span><span class="dos-spec-v">~14 cSt</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Active content</span><span class="dos-spec-v">100%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">EtOH solubility (4°C)</span><span class="dos-spec-v">Up to 50% in 95% ethanol</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Oxidation stability</span><span class="dos-spec-v">Excellent (phenyl aromaticity)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">0.5–5% (hair/skin) / 5–20% (CC)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU 1223/2009</span><span class="dos-reg-detail">No restriction — not cyclosiloxane</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU REACH 2024/1328</span><span class="dos-reg-detail">Not affected — linear/branched phenyl silicone</span><span class="dos-reg-status s-ok">Not affected</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">LATAM / Global</span><span class="dos-reg-detail">Universally approved</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">China IECIC</span><span class="dos-reg-detail">Listed</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">TDS, SDS (GHS 16-section), CoA and IECIC documentation available on request.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('silkveil')">← Previous<span class="dos-docnav-name">SilkVeil</span></button>
+    <button class="dos-docnav-btn" onclick="showDos('silkaqua')">Next →<span class="dos-docnav-name">SilkAqua</span></button>
+  </div>
+</div>
+
+<!-- ══════ SILK 07 — SilkAqua ══════ -->
+<div class="dos-panel" id="dos-silkaqua">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR SILK — Specialty Silicone</div>
+    <div class="dos-ph-name">SilkAqua</div>
+    <div class="dos-ph-inci">PEG-12 Dimethicone · Polyether-Modified Polydimethylsiloxane</div>
+    <div class="dos-ph-badges"><span class="dos-ph-badge b-a">Water-Soluble Silicone</span><span class="dos-ph-badge b-d">Clear Serums</span><span class="dos-ph-badge b-d">Silicone Emulsifier</span><span class="dos-ph-badge b-d">Aqueous Compatible</span></div>
+    <div class="dos-ph-tagline">"The water-soluble silicone — PEG-12 Dimethicone brings silicone slip, conditioning and emolliency to clear aqueous serums and gels where conventional silicones are completely incompatible."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">Water-misc.</span><span class="dos-metric-lbl">Unique aqueous compatibility</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">PEG-12</span><span class="dos-metric-lbl">Polyether modification</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">~12</span><span class="dos-metric-lbl">HLB value (amphiphilic)</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Clear</span><span class="dos-metric-lbl">System compatibility</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">SilkAqua is <strong>PEG-12 Dimethicone — a polyether-modified polydimethylsiloxane</strong> produced by reacting PDMS segments with polyethylene glycol chains. The resulting amphiphilic copolymer is the only ingredient in the SILK portfolio that is <strong>freely water-miscible</strong>, enabling silicone functionality to be delivered from aqueous-continuous formulations — transparent serums, clear gels, toners, micellar waters and conditioning body washes — where conventional dimethicone would separate immediately and require emulsification to incorporate.</p>
+      <p class="dos-desc">In aqueous formulations, SilkAqua provides the characteristic silicone slip (reduced friction, smooth spreading) and breathable film-forming properties of PDMS without requiring an oil phase or emulsification process. This dramatically simplifies the formulation of aqueous premium skin serums: a clear, lightweight serum can deliver genuine silicone conditioning with a single raw material addition to the water phase, without any emulsification technology. SilkAqua also functions as a <strong>silicone-in-water emulsifier</strong>, enabling higher loading of non-water-soluble silicones (SilkFluid grades) in water-continuous systems while maintaining clarity and stability.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Mechanism — Amphiphilic Silicone Self-Assembly in Aqueous Systems</p>
+        <p class="dos-mech-body">PEG-12 Dimethicone is an ABA-type or comb-type copolymer with hydrophobic PDMS segments and hydrophilic PEG segments. In water, these segments self-organise into micellar or lamellar structures that minimise contact between the hydrophobic PDMS domains and the aqueous phase, producing a macroscopically homogeneous, clear solution. This self-assembly is the basis of water-miscibility — the PEG segments provide the hydration energy that overcomes the PDMS segments' incompatibility with water. On skin application, the amphiphilic structure enables the molecule to interact with both the aqueous surface layer of skin and the lipid-rich sebum layer, delivering the PDMS conditioning benefit across both skin environment types. The film formed is semi-occlusive (like conventional PDMS) but of lower thickness — appropriate for lightweight serum applications where a breathable, non-occlusive moisturisation mechanism is preferred. The emulsification function operates by the same amphiphilic mechanism: SilkAqua molecules adsorb at the interface between PDMS droplets and water, reducing interfacial tension and stabilising the emulsion against coalescence.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">Water-misc.</span><span class="dos-perf-lbl">Unique property</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Slip + film</span><span class="dos-perf-lbl">Silicone functions delivered</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Clear</span><span class="dos-perf-lbl">Aqueous system compat.</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">pH 4–9</span><span class="dos-perf-lbl">Stability range</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">Dose</div><div class="dos-form-cell">Function</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Clear aqueous serum</div><div class="dos-form-cell mono">1–3%</div><div class="dos-form-cell mono">Silicone slip</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Toner / facial mist</div><div class="dos-form-cell mono">0.5–1.5%</div><div class="dos-form-cell mono">Skin feel</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Body wash conditioning</div><div class="dos-form-cell mono">1–3%</div><div class="dos-form-cell mono">Skin feel</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Silicone emulsification aid</div><div class="dos-form-cell mono">1–3%</div><div class="dos-form-cell mono">Emulsifier</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Clear Aqueous Serums</span>
+        <span class="dos-app-tag">Toners with Silicone Feel</span>
+        <span class="dos-app-tag">Water-Based Hair Mists</span>
+        <span class="dos-app-tag">Body Wash Conditioning</span>
+        <span class="dos-app-tag">Silicone Emulsion Aid</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+HyalActiv (VITAL) — Premium aqueous serum system</span><span class="dos-syn-desc">HA moisture-binding and hydration + SilkAqua silicone slip and breathable film in a clear water-based serum. The combination achieves a uniquely smooth, hydrating sensory profile — SilkAqua provides the silky application feel; HA provides the sustained moisturisation signal.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+SilkFluid 350 (SILK) — Aqueous-phase silicone loading</span><span class="dos-syn-desc">SilkAqua as emulsification aid enables higher levels of SilkFluid 350 to be incorporated into water-continuous formulations while maintaining system clarity and stability — expanding the silicone emolliency range available to clear serum formats.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">PEG-12 Dimethicone</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Chemical class</span><span class="dos-spec-v">Polyether-modified PDMS (PEG-12)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Clear to slightly hazy liquid</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Solubility</span><span class="dos-spec-v">Freely water-miscible</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">HLB</span><span class="dos-spec-v">~12 (amphiphilic)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Active content</span><span class="dos-spec-v">100%</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">0.5 – 5% (serum/toner)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">pH stability</span><span class="dos-spec-v">4.0 – 9.0</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU 1223/2009</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">LATAM / Global</span><span class="dos-reg-detail">No restriction — universally approved</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">TDS, SDS, CoA and IECIC documentation available on request.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('silklume')">← Previous<span class="dos-docnav-name">SilkLume</span></button>
+    <button class="dos-docnav-btn" onclick="showDos('silkmatrix')">Next →<span class="dos-docnav-name">SilkMatrix</span></button>
+  </div>
+</div>
+
+<!-- ══════ SILK 08 — SilkMatrix ══════ -->
+<div class="dos-panel" id="dos-silkmatrix">
+  <div class="dos-ph">
+    <div class="dos-ph-eyebrow"><div class="dos-ph-dot"></div>VLYOR SILK — Specialty Silicone</div>
+    <div class="dos-ph-name">SilkMatrix</div>
+    <div class="dos-ph-inci">Dimethicone Crosspolymer (and) Dimethicone · Silicone Elastomer Gel</div>
+    <div class="dos-ph-badges"><span class="dos-ph-badge b-a">Elastomer Gel</span><span class="dos-ph-badge b-d">Velvet Feel</span><span class="dos-ph-badge b-d">Pore-Blur</span><span class="dos-ph-badge b-d">Rheology Modifier</span></div>
+    <div class="dos-ph-tagline">"The velvet architecture — crosslinked silicone elastomer gel delivers a powder-dry, instantly-smooth, pore-blurring skin feel that cannot be replicated by any fluid silicone or organic ingredient."</div>
+  </div>
+  <div class="dos-metrics">
+    <div class="dos-metric"><span class="dos-metric-val">Elastomer</span><span class="dos-metric-lbl">Crosslinked 3D network</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Velvet</span><span class="dos-metric-lbl">Defining skin feel</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">Pore-blur</span><span class="dos-metric-lbl">Optical soft-focus effect</span></div>
+    <div class="dos-metric"><span class="dos-metric-val">2–5%</span><span class="dos-metric-lbl">Rheology modification dose</span></div>
+  </div>
+  <div class="dos-body">
+    <div class="dos-left">
+      <p class="dos-sec-h">Product Overview</p>
+      <p class="dos-desc">SilkMatrix is a <strong>Dimethicone Crosspolymer silicone elastomer gel</strong> — crosslinked PDMS swollen in a silicone carrier fluid, producing a three-dimensional polymer network that behaves as a soft, deformable solid. This crosslinked architecture — fundamentally different from the linear chain structure of fluid silicones — creates a material with unique mechanical properties: it deforms elastically under shear (spreads easily), but recovers immediately when shear is removed (maintains product structure). These rheological properties, combined with the inherent silicone surface properties, produce the <strong>distinctive velvet, powder-dry, matte skin feel</strong> that is SilkMatrix's commercial signature and the defining sensory experience of modern prestige primers and foundation bases.</p>
+      <p class="dos-desc">As a <strong>rheology modifier</strong>, SilkMatrix provides multiple simultaneous formulation functions from a single addition: thickens serum-type formulations into smooth, glossy gels; imparts structure and body to emulsions without the use of conventional thickeners; provides oil-absorption that reduces formula shine without the matte chalkiness of powder systems; and delivers the pore-blurring optical effect that is the premium commercial positioning feature of prestige skin care and colour cosmetic products globally.</p>
+
+      <div class="dos-mech">
+        <p class="dos-mech-title">Mechanism — Elastomeric Network + Soft-Focus Optical Effect</p>
+        <p class="dos-mech-body">SilkMatrix's crosslinked polymer network is formed by reactive crosslinking of vinyl-terminated PDMS chains with Si-H functional crosslinker molecules (hydrosilylation reaction). The resulting three-dimensional network is swollen (expanded) by the carrier silicone fluid, which occupies the mesh voids — analogous to a swollen hydrogel but silicone-continuous. This swollen network structure has a gel-like rheology: it flows under the shear stress of application and spreading, but the crosslinked network provides elastic recovery that gives the characteristic instant-recovery, powder-dry feel when shear stops. <strong>Pore-blurring optical mechanism</strong>: the elastomer particles (micron-scale spherical gel particles dispersed in the carrier) scatter incident light in a diffuse, angle-independent manner — known as optical soft-focus. When applied to skin, these particles create a scattering layer at the skin surface that reduces the specular reflection contrast between pore openings and flat skin — the optical phenomenon that makes pores appear smaller and skin appear smoother without any physical change. This is a genuine optical effect measurable by imaging systems as reduced surface roughness appearance, and it is the primary scientific basis for "pore-minimising" and "blurring" claims in premium primer and concealer formulations.</p>
+      </div>
+
+      <p class="dos-sec-h">Performance Grid</p>
+      <div class="dos-perf-grid">
+        <div class="dos-perf-card"><span class="dos-perf-val">Elastomeric</span><span class="dos-perf-lbl">Network architecture</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Soft-focus</span><span class="dos-perf-lbl">Optical mechanism</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">2–5%</span><span class="dos-perf-lbl">Rheology modification dose</span></div>
+        <div class="dos-perf-card"><span class="dos-perf-val">Oil-absorb</span><span class="dos-perf-lbl">Matte function</span></div>
+      </div>
+
+      <p class="dos-sec-h">Formulation Guidance</p>
+      <div class="dos-form-row dos-form-hd"><div class="dos-form-cell">Application</div><div class="dos-form-cell">Dose</div><div class="dos-form-cell">Function</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Primer / pore-minimiser</div><div class="dos-form-cell mono">15–30%</div><div class="dos-form-cell mono">Primary base</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Foundation / BB cream</div><div class="dos-form-cell mono">5–15%</div><div class="dos-form-cell mono">Texture + blur</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Premium serum — gel texture</div><div class="dos-form-cell mono">3–8%</div><div class="dos-form-cell mono">Rheology</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">Mattifying moisturiser</div><div class="dos-form-cell mono">2–5%</div><div class="dos-form-cell mono">Oil absorption</div></div>
+      <div class="dos-form-row"><div class="dos-form-cell hi">SPF serum (prestige)</div><div class="dos-form-cell mono">5–15%</div><div class="dos-form-cell mono">Sensory + finish</div></div>
+
+      <p class="dos-sec-h">Applications</p>
+      <div class="dos-app-tags">
+        <span class="dos-app-tag">Primers &amp; Pore-Minimisers</span>
+        <span class="dos-app-tag">Premium Foundations</span>
+        <span class="dos-app-tag">Luxury Skin Care Serums</span>
+        <span class="dos-app-tag">Mattifying Moisturisers</span>
+        <span class="dos-app-tag">CC / BB Creams</span>
+        <span class="dos-app-tag">Anti-Ageing Eye Creams</span>
+      </div>
+
+      <p class="dos-sec-h">Synergistic Combinations</p>
+      <div class="dos-syn-list">
+        <div class="dos-syn"><span class="dos-syn-code">+SilkFluid 350 (SILK) — Complete primer architecture</span><span class="dos-syn-desc">SilkMatrix elastomer gel (15–25%) provides texture structure, velvet skin feel and pore-blur effect; SilkFluid 350 (5–8%) provides the silicone emollient character and improved spreadability. The combination is the standard commercial architecture for prestige silicone-based primers globally.</span></div>
+        <div class="dos-syn"><span class="dos-syn-code">+SilkLume (SILK) — Pore-blur + glow combination</span><span class="dos-syn-desc">SilkMatrix scatters light diffusely (soft-focus pore blur); SilkLume amplifies reflectance (optical glow). The stack creates a dual optical system — simultaneously minimising pore visibility and maximising luminosity — for prestige skin perfecting and illuminating serums.</span></div>
+      </div>
+    </div>
+    <div class="dos-right">
+      <div class="dos-spec-block">
+        <p class="dos-spec-title">Full Technical Specifications</p>
+        <div class="dos-spec-row"><span class="dos-spec-k">INCI Name</span><span class="dos-spec-v">Dimethicone Crosspolymer (and) Dimethicone</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Type</span><span class="dos-spec-v">Silicone elastomer gel in PDMS carrier</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Appearance</span><span class="dos-spec-v">Translucent to white soft gel</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Elastomer content</span><span class="dos-spec-v">~10–20% crosspolymer in carrier</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Carrier</span><span class="dos-spec-v">Dimethicone (grade-dependent)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Skin feel</span><span class="dos-spec-v">Velvet, powder-dry, matte, bouncy</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Optical function</span><span class="dos-spec-v">Soft-focus / pore-blur (light scattering)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Recommended dosage</span><span class="dos-spec-v">2–8% (sensory); 15–30% (primer base)</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">Incorporation</span><span class="dos-spec-v">Oil phase — add before emulsification</span></div>
+        <div class="dos-spec-row"><span class="dos-spec-k">IECIC Listed</span><span class="dos-spec-v">Yes</span></div>
+      </div>
+      <div class="dos-reg-block">
+        <p class="dos-reg-title">Regulatory Status</p>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU 1223/2009</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">EU REACH 2024/1328</span><span class="dos-reg-detail">Not affected — crosspolymer, not cyclosiloxane</span><span class="dos-reg-status s-ok">Not affected</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">ANVISA / Brazil</span><span class="dos-reg-detail">No restriction</span><span class="dos-reg-status s-ok">Approved</span></div>
+        <div class="dos-reg-row"><span class="dos-reg-mkt">LATAM / Global</span><span class="dos-reg-detail">No restriction — universally approved</span><span class="dos-reg-status s-ok">Approved</span></div>
+      </div>
+      <div class="dos-req">
+        <div class="dos-req-title">Request Documentation</div>
+        <div class="dos-req-body">Full TDS, SDS (GHS 16-section), CoA and IECIC listing available on request.</div>
+        <a href="index.html#contact" class="dos-req-btn">Request TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="dos-docnav">
+    <button class="dos-docnav-btn" onclick="showDos('silkaqua')">← Previous<span class="dos-docnav-name">SilkAqua</span></button>
+    <div></div>
+  </div>
+</div>
+
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+function showDos(id) {
+  document.querySelectorAll('.dos-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.dos-sb-btn').forEach(b => b.classList.remove('active'));
+  const panel = document.getElementById('dos-' + id);
+  const btn = document.querySelector('[data-dos="' + id + '"]');
+  if (panel) { panel.classList.add('active'); window.scrollTo({top: 0, behavior: 'smooth'}); }
+  if (btn) btn.classList.add('active');
+}
+document.querySelectorAll('.dos-sb-btn').forEach(btn => {
+  btn.addEventListener('click', () => showDos(btn.dataset.dos));
+});
+function activateFromHash() {
+  const hash = window.location.hash.replace('#', '');
+  if (hash) showDos(hash);
+}
+window.addEventListener('hashchange', activateFromHash);
+activateFromHash();
+window.addEventListener('scroll', () => {
+  document.getElementById('mainnav').classList.toggle('scrolled', window.scrollY > 40);
+}, {passive: true});
+</script>
+</body>
+</html>

@@ -1,126 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>VLYOR SILK — Silicone Technologies — 8 Sensory Actives | VLYOR Science</title>
+<meta name="description" content="VLYOR SILK — 8 silicone actives. Dimethicone fluids, volatile carriers, high-shine phenyl trimethicone, water-soluble silicone and elastomer gel for unmatched sensory performance in every formulation category."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;500;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="css/style.css"/>
 <style>
-:root{--acc:#CBD5E1;--acc-bg:color-mix(in srgb,#CBD5E1 10%,transparent);--acc-border:color-mix(in srgb,#CBD5E1 25%,transparent)}
+:root{--acc:#CBD5E1;--acc-bg:rgba(203,213,225,.07);--acc-border:rgba(203,213,225,.2);--line-dark:#1E293B}
 .sh-hero{min-height:78vh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;padding:0 40px 64px}
 .sh-bg{position:absolute;inset:0;background-image:url('images/silk.jpg');background-size:cover;background-position:center}
-.sh-ov{position:absolute;inset:0;background:linear-gradient(to top,#0D0D0D 0%,rgba(13,13,13,.72) 40%,rgba(13,13,13,.3) 100%)}
+.sh-ov{position:absolute;inset:0;background:linear-gradient(to top,#0D0D0D 0%,rgba(13,13,13,.72) 40%,rgba(30,41,59,.22) 100%)}
 .sh-grid{position:absolute;inset:0;display:flex;justify-content:space-around}
 .sh-grid span{width:1px;background:rgba(255,255,255,.035)}
 .sh-cnt{position:relative;z-index:2;max-width:860px}
-.sh-bc{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#6B7280;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.sh-bc{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#6B7280;margin-bottom:18px;display:flex;align-items:center;gap:10px}
 .sh-bc a{color:#6B7280;transition:color .2s}.sh-bc a:hover{color:#fff}
-.sh-tag{display:inline-flex;align-items:center;gap:8px;font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc-border);padding:5px 12px;margin-bottom:18px}
+.sh-tag{display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc-border);padding:5px 12px;margin-bottom:18px}
 .sh-dot{width:6px;height:6px;border-radius:50%;background:var(--acc);flex-shrink:0}
-.sh-h1{font-family:"Barlow Condensed",sans-serif;font-size:clamp(52px,9vw,96px);font-weight:700;line-height:.92;letter-spacing:-.025em;margin-bottom:8px}
+.sh-h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(52px,9vw,96px);font-weight:700;line-height:.92;letter-spacing:-.025em;margin-bottom:8px}
 .sh-h1 em{font-style:italic;font-weight:300;color:var(--acc)}
 .sh-sub{font-size:15px;line-height:1.72;color:#D1D5DB;max-width:62ch;margin-bottom:32px}
 .sh-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
 .sh-stats{display:flex;gap:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
-.lh-stat{display:flex;flex-direction:column;gap:3px}
-.lh-n{font-family:"Barlow Condensed",sans-serif;font-size:30px;font-weight:700;letter-spacing:-.02em}
-.lh-l{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280}
-.sh-intro{display:grid;grid-template-columns:repeat(3,1fr);gap:1px}
-.lh-in{background:rgba(255,255,255,.04);padding:32px;border-left:1px solid rgba(255,255,255,.05)}
-.lh-in:first-child{border-left:none}
-.lh-in-n{font-family:"Barlow Condensed",sans-serif;font-size:44px;font-weight:700;letter-spacing:-.02em;color:var(--acc);display:block;margin-bottom:6px}
-.lh-in-h{font-size:13px;font-weight:600;margin-bottom:7px}
-.lh-in-b{font-size:12px;line-height:1.7;color:#6B7280}
+.sh-stat{display:flex;flex-direction:column;gap:3px}
+.sh-stat-n{font-family:'Barlow Condensed',sans-serif;font-size:30px;font-weight:700;letter-spacing:-.02em}
+.sh-stat-l{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280}
+.sh-intro{background:var(--line-dark);display:grid;grid-template-columns:repeat(4,1fr);gap:1px}
+.sh-in{background:rgba(0,0,0,.3);padding:32px;border-left:1px solid rgba(255,255,255,.07)}
+.sh-in:first-child{border-left:none}
+.sh-in-n{font-family:'Barlow Condensed',sans-serif;font-size:44px;font-weight:700;letter-spacing:-.02em;color:var(--acc);display:block;margin-bottom:6px}
+.sh-in-h{font-size:13px;font-weight:600;margin-bottom:7px}
+.sh-in-b{font-size:12px;line-height:1.7;color:rgba(255,255,255,.5)}
 .sh-comm{padding:88px 40px;display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:start}
 .sh-comm-body{font-size:14px;line-height:1.82;color:#D1D5DB;margin-bottom:16px}
 .sh-comm-body strong{color:#fff;font-weight:600}
 .sh-quote{border-left:3px solid var(--acc);padding:14px 20px;margin:24px 0;background:var(--acc-bg)}
-.sh-quote p{font-family:"Barlow Condensed",sans-serif;font-size:20px;font-weight:500;line-height:1.35;font-style:italic}
-.sh-quote cite{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;display:block;margin-top:9px;font-style:normal}
-.chart-title{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;margin-bottom:18px}
+.sh-quote p{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:500;line-height:1.35;font-style:italic}
+.sh-quote cite{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;display:block;margin-top:9px;font-style:normal}
+.chart-title{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;margin-bottom:18px}
 .bar-row{display:flex;align-items:center;gap:11px;margin-bottom:9px}
-.bar-lbl{font-family:"DM Mono",monospace;font-size:9px;color:#6B7280;width:112px;flex-shrink:0;text-align:right}
+.bar-lbl{font-family:'DM Mono',monospace;font-size:9px;color:#6B7280;width:150px;flex-shrink:0;text-align:right}
 .bar-track{flex:1;height:5px;background:rgba(255,255,255,.07)}
-.bar-fill{height:100%;background:var(--acc);opacity:.75;width:0;transition:width 1.1s cubic-bezier(0,.8,.2,1)}
-.bar-val{font-family:"DM Mono",monospace;font-size:9px;color:var(--acc);width:28px;flex-shrink:0}
+.bar-fill{height:100%;background:var(--acc);opacity:.78;width:0;transition:width 1.1s cubic-bezier(0,.8,.2,1)}
+.bar-val{font-family:'DM Mono',monospace;font-size:9px;color:var(--acc);width:28px;flex-shrink:0}
+.chart-note{font-size:10px;color:#4B5563;font-family:'DM Mono',monospace;margin-top:10px}
 .sh-explorer{padding:0 0 88px}
 .sh-exp-hdr{padding:0 40px 40px}
 .sh-exp-layout{display:grid;grid-template-columns:280px 1fr;min-height:680px}
 .sh-sidebar{background:#111;border-right:1px solid rgba(255,255,255,.07);padding:0}
 .sh-sb-grp{border-bottom:1px solid rgba(255,255,255,.06)}
-.sh-sb-grp-hd{padding:14px 22px;font-family:"DM Mono",monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#4B5563}
-.sh-sb-btn{display:flex;align-items:center;gap:11px;width:100%;padding:12px 22px;background:none;border:none;color:#9CA3AF;font-family:"Barlow",sans-serif;font-size:13px;cursor:pointer;transition:all .2s;text-align:left;border-left:2px solid transparent}
+.sh-sb-grp-hd{padding:14px 22px;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#4B5563}
+.sh-sb-btn{display:flex;align-items:center;gap:11px;width:100%;padding:13px 22px;background:none;border:none;color:#9CA3AF;font-family:'Barlow',sans-serif;font-size:13px;cursor:pointer;transition:all .2s;text-align:left;border-left:2px solid transparent}
 .sh-sb-btn:hover{color:#fff;background:rgba(255,255,255,.03)}
-.sh-sb-btn.active{color:#fff;background:var(--acc-bg);border-left-color:var(--acc)}
+.sh-sb-btn.active{color:#fff;background:rgba(203,213,225,.07);border-left-color:var(--acc)}
 .sh-sb-spectrum{display:flex;align-items:center;gap:4px;margin-left:auto;flex-wrap:wrap;justify-content:flex-end}
-.sh-sb-sp{font-family:"DM Mono",monospace;font-size:8px;padding:2px 5px}
-.sp-a{background:var(--acc-bg);color:var(--acc)}
-.sp-b{background:rgba(167,243,208,.1);color:#A7F3D0}
-.sp-c{background:rgba(196,181,253,.1);color:#C4B5FD}
-.sh-panels{flex:1}
+.sh-sb-sp{font-family:'DM Mono',monospace;font-size:8px;padding:2px 5px}
+.sp-fluid{background:rgba(203,213,225,.14);color:var(--acc)}
+.sp-vol{background:rgba(253,211,77,.08);color:#FCD34D}
+.sp-spec{background:rgba(167,243,208,.1);color:#A7F3D0}
 .sh-panel{display:none;animation:fadeIn .25s ease}
 .sh-panel.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 .sh-panel-inner{display:grid;grid-template-columns:1fr 380px;min-height:680px}
 .sh-pl{padding:40px 40px 40px 36px}
-.sh-pr{background:#0D0D0D;padding:36px 32px;display:flex;flex-direction:column;gap:24px;border-left:1px solid rgba(255,255,255,.06)}
-.sh-panel-tag{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:6px;margin-bottom:12px}
-.sh-panel-name{font-family:"Barlow Condensed",sans-serif;font-size:44px;font-weight:700;letter-spacing:-.025em;line-height:.95;margin-bottom:6px}
-.sh-panel-inci{font-family:"DM Mono",monospace;font-size:10px;color:#6B7280;letter-spacing:.04em;margin-bottom:18px;font-style:italic}
+.sh-pr{background:#0D0D0D;padding:36px 32px;display:flex;flex-direction:column;gap:28px;border-left:1px solid rgba(255,255,255,.06)}
+.sh-panel-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:6px;margin-bottom:12px}
+.sh-panel-name{font-family:'Barlow Condensed',sans-serif;font-size:44px;font-weight:700;letter-spacing:-.025em;line-height:.95;margin-bottom:6px}
+.sh-panel-inci{font-family:'DM Mono',monospace;font-size:10px;color:#6B7280;letter-spacing:.04em;margin-bottom:18px;font-style:italic}
 .sh-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px}
-.sh-badge{font-family:"DM Mono",monospace;font-size:8.5px;letter-spacing:.04em;padding:4px 9px}
-.b-a{background:var(--acc-bg);color:var(--acc)}
+.sh-badge{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.04em;padding:4px 9px}
+.b-a{background:rgba(203,213,225,.1);color:var(--acc)}
 .b-b{background:rgba(167,243,208,.1);color:#A7F3D0}
-.b-c{background:rgba(196,181,253,.1);color:#C4B5FD}
-.b-d{background:rgba(6,95,70,.15);color:#A7F3D0}
+.b-c{background:rgba(126,200,218,.1);color:#7EC8DA}
+.b-d{background:rgba(30,41,59,.3);color:#CBD5E1}
 .b-e{background:rgba(217,119,6,.1);color:#FCD34D}
 .sh-tagline{font-size:16px;line-height:1.65;color:#E5E7EB;margin-bottom:22px;font-style:italic;border-left:2px solid var(--acc);padding-left:16px}
 .sh-body{font-size:13px;line-height:1.82;color:#9CA3AF;margin-bottom:16px}
 .sh-body strong{color:#E5E7EB;font-weight:600}
-.sh-section-h{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;margin-bottom:13px;margin-top:28px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06)}
+.sh-section-h{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;margin-bottom:13px;margin-top:28px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06)}
 .sh-app-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
-.sh-app-tag{font-family:"DM Mono",monospace;font-size:9px;padding:4px 10px;background:rgba(255,255,255,.05);color:#D1D5DB;letter-spacing:.03em}
+.sh-app-tag{font-family:'DM Mono',monospace;font-size:9px;padding:4px 10px;background:rgba(255,255,255,.05);color:#D1D5DB;letter-spacing:.03em}
 .sh-syn-list{display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
 .sh-syn{display:flex;align-items:baseline;gap:10px;padding:8px 12px;background:rgba(255,255,255,.025);border-left:2px solid var(--acc-border)}
-.sh-syn-code{font-family:"DM Mono",monospace;font-size:10px;color:var(--acc);flex-shrink:0;white-space:nowrap}
+.sh-syn-code{font-family:'DM Mono',monospace;font-size:10px;color:var(--acc);flex-shrink:0;white-space:nowrap}
 .sh-syn-desc{font-size:12px;color:#9CA3AF}
 .sh-perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
 .sh-perf-card{background:rgba(255,255,255,.03);padding:14px;border:1px solid rgba(255,255,255,.06)}
-.sh-perf-val{font-family:"Barlow Condensed",sans-serif;font-size:22px;font-weight:700;letter-spacing:-.02em;display:block;margin-bottom:3px}
-.sh-perf-lbl{font-family:"DM Mono",monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280}
-.sh-spec-title{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#6B7280;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:4px}
-.sh-spec-row{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px}
+.sh-perf-val{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:700;letter-spacing:-.02em;display:block;margin-bottom:3px}
+.sh-perf-lbl{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280}
+.sh-spec-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#6B7280;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:4px}
+.sh-spec-row{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px}
 .sh-spec-row:last-child{border-bottom:none}
 .sh-spec-k{color:#6B7280}
-.sh-spec-v{font-family:"DM Mono",monospace;font-size:11px;color:#fff;text-align:right;max-width:190px;word-break:break-word}
+.sh-spec-v{font-family:'DM Mono',monospace;font-size:11px;color:#fff;text-align:right;max-width:190px;word-break:break-word}
 .sh-reg-block{background:rgba(255,255,255,.025);padding:16px}
-.sh-reg-title{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;margin-bottom:10px}
+.sh-reg-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;margin-bottom:10px}
 .sh-reg-row{display:flex;justify-content:space-between;font-size:11px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04)}
 .sh-reg-row:last-child{border-bottom:none}
 .sh-reg-k{color:#6B7280}
-.sh-reg-v{font-family:"DM Mono",monospace;font-size:10px;color:#fff}
+.sh-reg-v{font-family:'DM Mono',monospace;font-size:10px;color:#fff}
 .sh-alert{padding:14px 16px;background:rgba(217,119,6,.08);border:1px solid rgba(217,119,6,.2);margin-bottom:8px}
-.sh-alert-t{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#FCD34D;margin-bottom:7px}
+.sh-alert-t{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#FCD34D;margin-bottom:7px}
 .sh-alert-b{font-size:12px;line-height:1.65;color:#D1D5DB}
 .sh-note{padding:14px 16px;background:var(--acc-bg);border:1px solid var(--acc-border);margin-bottom:8px}
-.sh-note-t{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin-bottom:7px}
+.sh-note-t{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin-bottom:7px}
 .sh-note-b{font-size:12px;line-height:1.65;color:#D1D5DB}
-.sh-cta-btn{display:flex;align-items:center;justify-content:space-between;padding:13px 18px;background:rgba(255,255,255,.04);color:var(--acc);border:1px solid var(--acc-border);font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .25s;width:100%}
+.sh-cta-btn{display:flex;align-items:center;justify-content:space-between;padding:13px 18px;background:var(--line-dark);color:var(--acc);border:1px solid var(--acc-border);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .25s;width:100%}
 .sh-cta-btn:hover{background:var(--acc-bg);border-color:var(--acc)}
 .sh-cta-btn svg{width:14px;height:14px;flex-shrink:0}
 .sh-form-sec{padding:88px 40px;background:#111}
 .sh-form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07);margin-top:48px}
 .sh-form-card{background:#111;padding:32px;transition:background .3s}
 .sh-form-card:hover{background:#161616}
-.sh-fc-num{font-family:"DM Mono",monospace;font-size:10px;color:var(--acc);letter-spacing:.08em;margin-bottom:14px;display:block}
-.sh-fc-title{font-family:"Barlow Condensed",sans-serif;font-size:22px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px;line-height:1.2}
+.sh-fc-num{font-family:'DM Mono',monospace;font-size:10px;color:var(--acc);letter-spacing:.08em;margin-bottom:14px;display:block}
+.sh-fc-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px;line-height:1.2}
 .sh-fc-body{font-size:12px;line-height:1.72;color:#6B7280;margin-bottom:16px}
 .sh-fc-prods{display:flex;flex-direction:column;gap:4px}
-.sh-fc-prod{font-family:"DM Mono",monospace;font-size:10px;color:#D1D5DB;padding:5px 8px;background:rgba(255,255,255,.03);display:flex;align-items:center;gap:7px}
-.sh-fc-prod::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--acc);flex-shrink:0}
-.sh-fc-spf{font-family:"Barlow Condensed",sans-serif;font-size:26px;font-weight:700;color:var(--acc);margin-top:12px;display:block}
+.sh-fc-prod{font-family:'DM Mono',monospace;font-size:10px;color:#D1D5DB;padding:5px 8px;background:rgba(255,255,255,.03);display:flex;align-items:center;gap:7px}
+.sh-fc-prod::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--acc);flex-shrink:0}
+.sh-fc-spf{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:700;color:var(--acc);margin-top:12px;display:block}
 .sh-reg-sec{padding:88px 40px}
 .sh-reg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);margin-top:48px}
 .sh-reg-card{background:#0D0D0D;padding:24px;transition:background .3s}
@@ -128,8 +130,8 @@
 .sh-rc-flag{font-size:20px;margin-bottom:12px;display:block}
 .sh-rc-title{font-size:13px;font-weight:600;margin-bottom:7px}
 .sh-rc-body{font-size:12px;line-height:1.65;color:#6B7280}
-.sh-cta-sec{background:rgba(255,255,255,.03);border-top:1px solid rgba(255,255,255,.07);padding:72px 40px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
-.sh-cta-sec h2{font-family:"Barlow Condensed",sans-serif;font-size:clamp(30px,4vw,48px);font-weight:700;letter-spacing:-.02em;line-height:1.05;margin-bottom:10px}
+.sh-cta-sec{background:var(--line-dark);padding:72px 40px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.sh-cta-sec h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(30px,4vw,48px);font-weight:700;letter-spacing:-.02em;line-height:1.05;margin-bottom:10px}
 .sh-cta-sec p{font-size:14px;color:rgba(255,255,255,.6);max-width:52ch}
 .sh-cta-btns{display:flex;gap:12px;flex-shrink:0;flex-wrap:wrap}
 @media(max-width:1100px){.sh-exp-layout{grid-template-columns:240px 1fr}.sh-panel-inner{grid-template-columns:1fr 320px}}
@@ -141,7 +143,7 @@
   .sh-cta-sec{grid-template-columns:1fr}.sh-explorer,.sh-form-sec,.sh-reg-sec{padding-left:20px;padding-right:20px}
   .sh-exp-hdr{padding-left:20px;padding-right:20px}
 }
-@media(max-width:600px){.sh-reg-grid{grid-template-columns:1fr}.sh-intro{grid-template-columns:1fr}.sh-stats{gap:24px}}
+@media(max-width:600px){.sh-reg-grid{grid-template-columns:1fr}.sh-intro{grid-template-columns:1fr 1fr}.sh-stats{gap:24px}}
 </style>
 </head>
 <body>
@@ -154,38 +156,73 @@
     <a href="portal.html" class="nav-portal">Technical Portal →</a>
   </div>
 </nav>
+
 <section class="sh-hero">
   <div class="sh-bg"></div><div class="sh-ov"></div>
   <div class="sh-grid"><span></span><span></span><span></span><span></span><span></span></div>
   <div class="sh-cnt">
     <div class="sh-bc"><a href="index.html">VLYOR Science</a><span>→</span><a href="index.html#lines">Portfolio</a><span>→</span><span style="color:#fff">VLYOR SILK</span></div>
-    <div class="sh-tag"><div class="sh-dot"></div>Silicone Technologies — 8 Sensory Actives</div>
-    <h1 class="sh-h1">Sensory<br/><em>Refinement.</em></h1>
-    <p class="sh-sub">Eight silicone technologies spanning volatile carriers, fixed emollient fluids, reactive conditioning silicones and elastomer gels. The chemistry of premium sensory experience.</p>
+    <div class="sh-tag"><div class="sh-dot"></div>Silicone Technologies — 8 Sensory Engineering Actives</div>
+    <h1 class="sh-h1">Sensory<br/><em>Precision.</em></h1>
+    <p class="sh-sub">Eight silicone actives covering the complete sensory engineering toolkit — from lightweight dimethicone fluids that define slip and spreadability, to volatile carriers that deliver and disappear, to high-refractive-index phenyl trimethicone for optical shine and elastomer gels for velvety skin feel. The chemistry behind the tactile and visual experience that consumers remember.</p>
     <div class="sh-actions">
-      <a href="#explorer" class="btn-p">Explore the Portfolio ↓</a>
-      <a href="index.html#contact" class="btn-g">Request Technical Dossier</a>
+      <a href="#explorer" class="btn-p">Explore 8 Actives ↓</a>
+      <a href="silk-dossier.html" class="btn-g">Request Technical Dossier</a>
     </div>
-    <div class="sh-stats"><div class="lh-stat"><span class="lh-n">8</span><span class="lh-l">Silicone Technologies</span></div><div class="lh-stat"><span class="lh-n">100–12500 cSt</span><span class="lh-l">Viscosity Range</span></div><div class="lh-stat"><span class="lh-n">Volatile + Fixed</span><span class="lh-l">Both Types</span></div><div class="lh-stat"><span class="lh-n">Skin + Hair</span><span class="lh-l">Applications</span></div></div>
+    <div class="sh-stats">
+      <div class="sh-stat"><span class="sh-stat-n">8</span><span class="sh-stat-l">Silicone Actives</span></div>
+      <div class="sh-stat"><span class="sh-stat-n">100%</span><span class="sh-stat-l">Active — No Dilution</span></div>
+      <div class="sh-stat"><span class="sh-stat-n">Skin + Hair</span><span class="sh-stat-l">Application Coverage</span></div>
+      <div class="sh-stat"><span class="sh-stat-n">IECIC</span><span class="sh-stat-l">All Grades Listed</span></div>
+    </div>
   </div>
 </section>
-<div class="sh-intro"><div class="lh-in"><span class="lh-in-n">Tactile</span><p class="lh-in-h">Engineering by Design</p><p class="lh-in-b">The sensory profile of a premium moisturiser or hair product is not an accident — it is the result of precise silicone selection. SILK provides the complete toolkit.</p></div><div class="lh-in"><span class="lh-in-n">Optical</span><p class="lh-in-h">Performance Beyond Touch</p><p class="lh-in-b">SilkLume's high refractive index delivers measurable optical shine enhancement. SilkMatrix scatters light for a soft-focus skin appearance. Silicones work at the optical level as well as the tactile.</p></div><div class="lh-in"><span class="lh-in-n">Carrier</span><p class="lh-in-h">Technology Platform</p><p class="lh-in-b">SilkVeil and SilkDuo series function as precision delivery vehicles — dispersing actives uniformly across skin and hair, then evaporating to leave only the deposited benefit.</p></div></div>
+
+<div class="sh-intro">
+  <div class="sh-in"><span class="sh-in-n">Tactile</span><p class="sh-in-h">Engineering by Viscosity</p><p class="sh-in-b">The sensory profile of a premium moisturiser is not an accident. It is the result of precise dimethicone viscosity selection — 100 cSt for feather-light fluid, 12500 cSt for structured, spreadable richness. SILK provides the full viscosity range.</p></div>
+  <div class="sh-in"><span class="sh-in-n">Optical</span><p class="sh-in-h">Performance Beyond Touch</p><p class="sh-in-b">SilkLume's phenyl groups produce a measurably higher refractive index than PDMS — delivering the optical shine enhancement that hair serum and colour cosmetic consumers pay a premium for.</p></div>
+  <div class="sh-in"><span class="sh-in-n">Volatile</span><p class="sh-in-h">Carrier Technology</p><p class="sh-in-b">SilkVeil (Cyclopentasiloxane) evaporates at skin temperature, dispersing actives uniformly then disappearing to leave only the deposited benefit — the mechanism behind dry-touch, non-greasy formulations.</p></div>
+  <div class="sh-in"><span class="sh-in-n">≤0.1%</span><p class="sh-in-h">EU D5 Restriction — 2027</p><p class="sh-in-b">EU REACH 2024/1328 restricts D5/D6 to ≤0.1% in all cosmetics from June 2027. VLYOR SILK provides both compliant SilkVeil grades and the linear silicone alternatives for reformulation-ready supply.</p></div>
+</div>
+
 <section class="sh-comm">
   <div>
     <p class="eyebrow">The Silicone Argument</p>
-    <h2 class="sec-title">Premium feel is<br/>a material property,<br/>not a claim.</h2>
-    <p class="sh-comm-body">The luxury cosmetics consumer interacts with a product first through touch and second through vision. Before any active ingredient has time to work, the consumer has already formed a quality judgment based on how the product spreads, how quickly it absorbs, what feel it leaves and what optical effect it produces. <strong>This judgment is determined almost entirely by silicone selection.</strong></p>
-    <p class="sh-comm-body">No other ingredient category provides the range of sensory outcomes available through silicone technology: the ultra-dry evaporative finish of volatile cyclopentasiloxane; the extraordinary slip of standard dimethicone; the powdery-velvety signature of elastomer gels; the intense specular shine of high-refractive phenyl trimethicone. <strong>VLYOR SILK provides all of these — and the technical guidance to combine them intelligently.</strong></p>
-    <div class="sh-quote"><p>"The consumer cannot identify the silicone in the formula. But they describe the product as 'luxurious', 'silky', 'professional'. SILK is the ingredient that earns those words."</p><cite>VLYOR Science — Silicone Technical Position</cite></div>
-    <p class="sh-comm-body">In LATAM prestige and professional skin and hair care — a market that is growing rapidly and where brand equity is built on sensory differentiation — access to the full silicone toolkit at pharmaceutical purity standards is a formulation advantage that translates directly to commercial outcomes.</p>
+    <h2 class="sec-title">The ingredient that<br/>performs at the<br/>molecular level.</h2>
+    <p class="sh-comm-body">No organic oil or ester delivers what silicone delivers. The siloxane backbone — alternating Si-O bonds with methyl side chains — gives silicones a combination of properties that organic chemistry cannot replicate in a single molecule: <strong>a friction coefficient lower than any natural oil, a surface tension of ~20 mN/m (versus 30+ for organic esters), heat stability to 200°C+, and near-zero biological reactivity</strong>. These are not incidental properties — they are the structural consequences of the Si-O bond's unique geometry and bond energy, which organic C-C and C-O bonds cannot match.</p>
+    <p class="sh-comm-body">In formulation practice, silicone selection is sensory engineering. A moisturiser with <strong>SilkFluid 100 cSt</strong> spreads instantly and dries to a clean, breathable skin feel. The same formula with <strong>SilkFluid 12500 cSt</strong> becomes rich, structured and slow-spreading — a completely different sensory identity from a single ingredient change. Add <strong>SilkLume</strong> and every surface the formula contacts reflects more light. Replace part of the oil phase with <strong>SilkVeil</strong> and the formula dries in seconds to a powder-dry finish that no organic ingredient can produce.</p>
+    <div class="sh-quote"><p>"Silicone selection is sensory architecture. You are not choosing an emollient — you are deciding how fast the product spreads, how it feels at noon, whether it shines, and whether it disappears. These are creative decisions with molecular instruments."</p><cite>VLYOR Science — Silicone Technologies Technical Position</cite></div>
+    <p class="sh-comm-body">VLYOR SILK sources all eight actives to cosmetic-grade purity standards — 100% active, no dilution, consistent viscosity grade specifications aligned with the benchmark Dow Corning / DOWSIL reference standards. Every grade is IECIC-listed for seamless LATAM and cross-border supply chain documentation.</p>
   </div>
   <div>
-    <p class="chart-title">Silicone Sensory Profile — Key Properties</p>
-    <div id="sbars"><div class="bar-row"><span class="bar-lbl">SilkLume (Shine)</span><div class="bar-track"><div class="bar-fill" data-w="98"></div></div><span class="bar-val">98</span></div><div class="bar-row"><span class="bar-lbl">SilkMatrix (Velvet feel)</span><div class="bar-track"><div class="bar-fill" data-w="95"></div></div><span class="bar-val">95</span></div><div class="bar-row"><span class="bar-lbl">SilkVeil (Dry-touch)</span><div class="bar-track"><div class="bar-fill" data-w="92"></div></div><span class="bar-val">92</span></div><div class="bar-row"><span class="bar-lbl">SilkDuo 1501 (Conditioning)</span><div class="bar-track"><div class="bar-fill" data-w="88"></div></div><span class="bar-val">88</span></div><div class="bar-row"><span class="bar-lbl">SilkFluid 350cSt (Slip)</span><div class="bar-track"><div class="bar-fill" data-w="90"></div></div><span class="bar-val">90</span></div><div class="bar-row"><span class="bar-lbl">SilkAqua (Aqueous compat.)</span><div class="bar-track"><div class="bar-fill" data-w="80"></div></div><span class="bar-val">80</span></div></div>
-    <div style="font-size:10px;color:#4B5563;font-family:'DM Mono',monospace;margin-top:9px">Performance index — relative reference for formulation guidance</div>
-    
+    <p class="chart-title">Sensory Performance Profile — by Active</p>
+    <div id="sbars">
+      <div class="bar-row"><span class="bar-lbl">SilkLume (optical shine)</span><div class="bar-track"><div class="bar-fill" data-w="98"></div></div><span class="bar-val">98</span></div>
+      <div class="bar-row"><span class="bar-lbl">SilkMatrix (velvet feel)</span><div class="bar-track"><div class="bar-fill" data-w="96"></div></div><span class="bar-val">96</span></div>
+      <div class="bar-row"><span class="bar-lbl">SilkVeil (dry-down speed)</span><div class="bar-track"><div class="bar-fill" data-w="94"></div></div><span class="bar-val">94</span></div>
+      <div class="bar-row"><span class="bar-lbl">SilkFluid 12500 (richness)</span><div class="bar-track"><div class="bar-fill" data-w="90"></div></div><span class="bar-val">90</span></div>
+      <div class="bar-row"><span class="bar-lbl">SilkFluid 350 (slip)</span><div class="bar-track"><div class="bar-fill" data-w="87"></div></div><span class="bar-val">87</span></div>
+      <div class="bar-row"><span class="bar-lbl">SilkAqua (aq. compat.)</span><div class="bar-track"><div class="bar-fill" data-w="82"></div></div><span class="bar-val">82</span></div>
+    </div>
+    <p class="chart-note">Relative sensory index — panel reference for formulation guidance.</p>
+
+    <p class="chart-title" style="margin-top:32px">Dimethicone Viscosity — Sensory Profile Map</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px">
+      <div style="background:rgba(203,213,225,.06);border:1px solid var(--acc-border);padding:14px">
+        <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:6px">100 cSt → Light, dry-touch</div>
+        <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#6B7280;margin-bottom:6px">350 cSt → Balanced slip</div>
+        <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#6B7280;margin-bottom:6px">1000 cSt → Silky richness</div>
+        <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#6B7280">12500 cSt → Structured glide</div>
+      </div>
+      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);padding:14px">
+        <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;margin-bottom:6px">Surface tension</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:700;color:var(--acc)">~20 mN/m</div>
+        <div style="font-size:11px;color:#6B7280;margin-top:4px">All PDMS grades — vs 30+ organic oils</div>
+      </div>
+    </div>
   </div>
 </section>
+
 <section id="explorer" class="sh-explorer">
   <div class="sh-exp-hdr">
     <p class="eyebrow">The SILK Portfolio</p>
@@ -193,237 +230,460 @@
     <p class="sec-sub">Select any active to access its full commercial profile, technical specifications, performance data and formulation guidance.</p>
   </div>
   <div class="sh-exp-layout">
-    <aside class="sh-sidebar"><div class="sh-sb-grp"><div class="sh-sb-grp-hd">Emollient Fluids</div><button class="sh-sb-btn active" data-prod="silkfluid">SilkFluid Series<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-a">PDMS</span></div></button><button class="sh-sb-btn" data-prod="silkduo503">SilkDuo 503<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-a">Non-volatile</span></div></button></div><div class="sh-sb-grp"><div class="sh-sb-grp-hd">Volatile Carriers</div><button class="sh-sb-btn" data-prod="silkveil">SilkVeil (D5)<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-b">Volatile</span></div></button><button class="sh-sb-btn" data-prod="silkduo1501">SilkDuo 1501<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-b">D5+Diol</span></div></button><button class="sh-sb-btn" data-prod="silkduo1401">SilkDuo 1401<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-b">D4/D5+Diol</span></div></button></div><div class="sh-sb-grp"><div class="sh-sb-grp-hd">Specialty Silicones</div><button class="sh-sb-btn" data-prod="silkaqua">SilkAqua<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-a">Water-soluble</span></div></button><button class="sh-sb-btn" data-prod="silklume">SilkLume<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-a">High-shine</span></div></button><button class="sh-sb-btn" data-prod="silkmatrix">SilkMatrix<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-b">Elastomer gel</span></div></button></div></aside>
-    <div class="sh-panels"><div class="sh-panel active" id="prod-silkfluid">
-<div class="sh-panel-inner">
-<div class="sh-pl">
+    <aside class="sh-sidebar">
+      <div class="sh-sb-grp">
+        <div class="sh-sb-grp-hd">Dimethicone Fluids (PDMS)</div>
+        <button class="sh-sb-btn active" data-prod="silk100">SilkFluid 100<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-fluid">100 cSt</span></div></button>
+        <button class="sh-sb-btn" data-prod="silk350">SilkFluid 350<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-fluid">350 cSt</span></div></button>
+        <button class="sh-sb-btn" data-prod="silk1000">SilkFluid 1000<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-fluid">1000 cSt</span></div></button>
+        <button class="sh-sb-btn" data-prod="silk12500">SilkFluid 12500<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-fluid">12500 cSt</span></div></button>
+      </div>
+      <div class="sh-sb-grp">
+        <div class="sh-sb-grp-hd">Volatile Carrier</div>
+        <button class="sh-sb-btn" data-prod="silkveil">SilkVeil<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-vol">D5 · Volatile</span></div></button>
+      </div>
+      <div class="sh-sb-grp">
+        <div class="sh-sb-grp-hd">Specialty Silicones</div>
+        <button class="sh-sb-btn" data-prod="silklume">SilkLume<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-spec">High-Shine</span></div></button>
+        <button class="sh-sb-btn" data-prod="silkaqua">SilkAqua<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-spec">Water-Soluble</span></div></button>
+        <button class="sh-sb-btn" data-prod="silkmatrix">SilkMatrix<div class="sh-sb-spectrum"><span class="sh-sb-sp sp-spec">Elastomer Gel</span></div></button>
+      </div>
+    </aside>
+
+    <div class="sh-panels">
+
+<!-- ===== SilkFluid 100 ===== -->
+<div class="sh-panel active" id="prod-silk100"><div class="sh-panel-inner"><div class="sh-pl">
   <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SILK — Silicone Technologies</div>
-  <h2 class="sh-panel-name">SilkFluid Series</h2>
-  <p class="sh-panel-inci">Dimethicone</p>
-  <div class="sh-badges"><span class="sh-badge b-a">Emollient Silicone</span><span class="sh-badge b-d">4 Viscosity Grades</span><span class="sh-badge b-d">Foundation of Sensory Design</span></div>
-  <p class="sh-tagline">"The most used cosmetic silicone — viscosity-selectable from lightweight serum fluidity to rich cream density."</p>
-  <p class="sh-body">SilkFluid Series provides <strong>Dimethicone (polydimethylsiloxane, PDMS) in four viscosity grades: 100, 350, 1000 and 12500 cSt</strong> — covering the full range from ultra-light fluid to viscous silicone that anchors heavy textures. Dimethicone is the most used silicone in cosmetics, present in virtually every formulation category from primers and foundations to moisturisers, hair serums and sunscreens.</p><p class="sh-body">Its cosmetic value is defined by three properties: <strong>extraordinary skin slip</strong> (silicone's friction coefficient against skin is lower than any organic oil), <strong>breathable moisture retention</strong> (it forms a semi-occlusive film that reduces TEWL without the complete occlusion of petrolatum), and <strong>exceptional compatibility</strong> with virtually all cosmetic ingredients. The viscosity grade selection determines the sensory profile: 100 cSt for dry-touch fluid application; 350 cSt for balanced all-purpose emolliency; 1000 cSt for rich, silky textures; 12500 cSt for structured, spreadable systems.</p>
-  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">100–12500 cSt</span><span class="sh-perf-lbl">4 Viscosity Grades</span></div><div class="sh-perf-card"><span class="sh-perf-val">Breathable</span><span class="sh-perf-lbl">Film Type</span></div><div class="sh-perf-card"><span class="sh-perf-val">Exceptional</span><span class="sh-perf-lbl">Compatibility</span></div><div class="sh-perf-card"><span class="sh-perf-val">Low CoF</span><span class="sh-perf-lbl">Skin Slip</span></div></div>
+  <h2 class="sh-panel-name">SilkFluid 100</h2>
+  <p class="sh-panel-inci">Dimethicone (100 cSt)</p>
+  <div class="sh-badges"><span class="sh-badge b-a">PDMS Fluid</span><span class="sh-badge b-d">Light Touch</span><span class="sh-badge b-d">100% Active</span><span class="sh-badge b-d">Dry Feel</span></div>
+  <p class="sh-tagline">"The lightest dimethicone — 100 cSt polydimethylsiloxane delivering maximum slip with the driest, most water-like sensory profile of the PDMS fluid range."</p>
+  <p class="sh-body">SilkFluid 100 is <strong>Dimethicone at 100 cSt viscosity — a 100% active, linear polydimethylsiloxane (PDMS) fluid</strong> equivalent to the benchmark Dow XIAMETER PMX-200 100 cSt grade. At this viscosity, the silicone chain length produces a fluid that behaves more like water than oil in handling — spreading instantly across skin, delivering immediate slip and lubricity, then settling to a clean, breathable, non-greasy skin feel within seconds. The surface tension of ~20 mN/m — well below any organic oil — drives this extraordinary initial spread.</p>
+  <p class="sh-body">SilkFluid 100 is the <strong>primary dimethicone grade for antiperspirant/deodorant aerosols, spray sunscreens, facial primers and lightweight day moisturisers</strong> where a fast-spreading, non-heavy application experience is non-negotiable. It is also the standard carrier for dissolving and uniformly dispersing UV filters, pigments and active ingredients in the oil phase before emulsification, where its low viscosity ensures homogeneous distribution before the manufacturing process.</p>
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">100 cSt</span><span class="sh-perf-lbl">Kinematic viscosity</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">100%</span><span class="sh-perf-lbl">Active — undiluted</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">~20 mN/m</span><span class="sh-perf-lbl">Surface tension</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Dry-touch</span><span class="sh-perf-lbl">Sensory profile</span></div>
+  </div>
+  <p class="sh-section-h">Performance Detail</p>
+  <p class="sh-body">The 100 cSt grade provides the <strong>highest spreadability and lowest tack</strong> of the dimethicone fluid range. The coefficient of friction against skin is measurably lower than mineral oil or organic esters at equivalent concentrations, explaining silicone's characteristic sensation of frictionlessness. It forms a semi-occlusive, breathable film that reduces transepidermal water loss (TEWL) without the complete occlusion of petrolatum — maintaining skin hydration while allowing gas exchange. Thermally stable to over 200°C — it can be processed in hot-process emulsification without degradation.</p>
   <p class="sh-section-h">Formulation Applications</p>
-  <div class="sh-app-tags"><span class="sh-app-tag">Moisturisers & Creams</span><span class="sh-app-tag">Foundations & Primers</span><span class="sh-app-tag">Sunscreens</span><span class="sh-app-tag">Hair Serums & Oils</span><span class="sh-app-tag">Body Lotions</span><span class="sh-app-tag">Antiperspirant Sticks</span></div>
-  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+SilkVeil</span><span class="sh-syn-desc">Dry-touch combination — volatile D5 evaporates to leave SilkFluid emollient deposit.</span></div><div class="sh-syn"><span class="sh-syn-code">+SilkLume</span><span class="sh-syn-desc">Shine enhancement — dimethicone base + phenyl trimethicone optical effect.</span></div><div class="sh-syn"><span class="sh-syn-code">+EsterSilk IPM (FORM)</span><span class="sh-syn-desc">Combined emollient — dimethicone dryness + IPM spreadability.</span></div></div>
-  
-</div>
-<div class="sh-pr">
-  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number (PDMS)</span><span class="sh-spec-v">9006-65-9</span></div><div class="sh-spec-row"><span class="sh-spec-k">Viscosity grades</span><span class="sh-spec-v">100 · 350 · 1000 · 12500 cSt</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear colourless fluid</span></div><div class="sh-spec-row"><span class="sh-spec-k">Refractive index</span><span class="sh-spec-v">1.400–1.405</span></div><div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Insoluble in water · miscible with oils</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">1.0 – 15.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Incorporation</span><span class="sh-spec-v">Oil phase · any temperature</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
-  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil / LATAM</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved</span></div></div>
-  
-  
-  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
-</div>
-</div>
-</div><div class="sh-panel" id="prod-silkveil">
-<div class="sh-panel-inner">
-<div class="sh-pl">
+  <div class="sh-app-tags"><span class="sh-app-tag">Antiperspirant/Deodorant Aerosols</span><span class="sh-app-tag">Spray Sunscreens</span><span class="sh-app-tag">Lightweight Day Moisturisers</span><span class="sh-app-tag">Facial Primers</span><span class="sh-app-tag">UV Filter Dispersions</span><span class="sh-app-tag">Serum Formulations</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p>
+  <div class="sh-syn-list">
+    <div class="sh-syn"><span class="sh-syn-code">+SilkFluid 12500 (SILK)</span><span class="sh-syn-desc">Classic viscosity blend — low-viscosity (100 cSt) + high-viscosity (12500 cSt) dimethicone at 3:1 ratio creates the optimal combination of spreadability and depth of emolliency for premium skin care.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+SilkLume (SILK)</span><span class="sh-syn-desc">SilkFluid 100 as the carrier base for SilkLume — the lightweight silicone disperses the phenyl trimethicone uniformly for a dry-touch, high-shine hair serum system.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+Shield UV filters (SHIELD)</span><span class="sh-syn-desc">SilkFluid 100 dissolves and disperses oil-soluble UV filters (AVB, BEMT, EHT) uniformly in the oil phase before emulsification — ensuring homogeneous SPF performance across the finished product.</span></div>
+  </div>
+</div><div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p>
+  <div class="sh-spec-row"><span class="sh-spec-k">INCI Name</span><span class="sh-spec-v">Dimethicone</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Chemical name</span><span class="sh-spec-v">Polydimethylsiloxane (PDMS)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Viscosity</span><span class="sh-spec-v">100 cSt (±10% tolerance)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Active content</span><span class="sh-spec-v">100% (undiluted)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear, colourless, odourless fluid</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Specific gravity (25°C)</span><span class="sh-spec-v">0.965</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Refractive index</span><span class="sh-spec-v">1.403</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Flash point</span><span class="sh-spec-v">&gt;300°C</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Surface tension</span><span class="sh-spec-v">~20 mN/m (20°C)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Solubility in water</span><span class="sh-spec-v">Insoluble</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Thermal stability</span><span class="sh-spec-v">Stable to &gt;200°C</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">0.5 – 15% (formulation dependent)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Status</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU 1223/2009</span><span class="sh-reg-v">No restriction — linear dimethicone</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">ANVISA / Brazil</span><span class="sh-reg-v">No restriction</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">LATAM General</span><span class="sh-reg-v">No restriction</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">China IECIC</span><span class="sh-reg-v">Listed</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Note</span><span class="sh-reg-v">Linear PDMS — not subject to D4/D5/D6 cyclosiloxane restrictions</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='silk-dossier.html#silk100'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div></div></div>
+
+<!-- ===== SilkFluid 350 ===== -->
+<div class="sh-panel" id="prod-silk350"><div class="sh-panel-inner"><div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SILK — Silicone Technologies</div>
+  <h2 class="sh-panel-name">SilkFluid 350</h2>
+  <p class="sh-panel-inci">Dimethicone (350 cSt)</p>
+  <div class="sh-badges"><span class="sh-badge b-a">PDMS Fluid</span><span class="sh-badge b-d">All-Purpose</span><span class="sh-badge b-d">100% Active</span><span class="sh-badge b-d">Reference Grade</span></div>
+  <p class="sh-tagline">"The reference dimethicone — 350 cSt is the industry-standard all-purpose grade, the silicone fluid specified by more cosmetic formulators globally than any other viscosity."</p>
+  <p class="sh-body">SilkFluid 350 is <strong>Dimethicone at 350 cSt — the most commercially used dimethicone viscosity in cosmetics globally</strong>, equivalent to the benchmark Dow XIAMETER PMX-200 350 cSt (DOWSIL 200 Fluid 350 cSt). At this viscosity, the silicone occupies the optimal balance between the light, fast-spreading character of 100 cSt and the richer, more substantive feel of higher viscosity grades — providing a <strong>balanced, all-purpose emolliency that works across the widest range of formulation types</strong> without the extreme sensory profile of either end of the range.</p>
+  <p class="sh-body">SilkFluid 350 is the <strong>default silicone grade for skin care emulsions, hair conditioners, sun care products and colour cosmetics</strong> where no specific sensory extreme is required. It is also the standard choice where dimensional de-tackification is needed: adding 2–5% SilkFluid 350 to formulas containing sticky polymers (carbomers, xanthan) or high sugar-content actives dramatically reduces formulation tack without altering pH, viscosity or efficacy.</p>
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">350 cSt</span><span class="sh-perf-lbl">Kinematic viscosity</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Balanced</span><span class="sh-perf-lbl">Sensory profile</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">100%</span><span class="sh-perf-lbl">Active — undiluted</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">De-tack</span><span class="sh-perf-lbl">Key additional function</span></div>
+  </div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Skin Care Emulsions (all types)</span><span class="sh-app-tag">Hair Conditioners</span><span class="sh-app-tag">Sun Care Products</span><span class="sh-app-tag">Colour Cosmetics</span><span class="sh-app-tag">Body Lotions</span><span class="sh-app-tag">De-tackification Systems</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p>
+  <div class="sh-syn-list">
+    <div class="sh-syn"><span class="sh-syn-code">+SilkFluid 12500 (SILK)</span><span class="sh-syn-desc">Performance blend — 3 parts SilkFluid 350 + 1 part SilkFluid 12500 creates a balanced emollient system combining spreadability with richer skin feel and improved depth of moisturisation.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+CondiVeil 949 (COND)</span><span class="sh-syn-desc">Hair conditioner system — SilkFluid 350 provides baseline silicone emolliency; CondiVeil 949 adds targeted amino silicone deposition at damage sites. Combined for a premium rinse-out conditioning profile.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+SilkLume (SILK)</span><span class="sh-syn-desc">De-tackification + shine system for colour cosmetic formulations. SilkFluid 350 reduces organic ingredient tack; SilkLume provides the optical gloss enhancement.</span></div>
+  </div>
+</div><div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p>
+  <div class="sh-spec-row"><span class="sh-spec-k">INCI Name</span><span class="sh-spec-v">Dimethicone</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Chemical name</span><span class="sh-spec-v">Polydimethylsiloxane (PDMS)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Viscosity</span><span class="sh-spec-v">350 cSt (±10% tolerance)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Active content</span><span class="sh-spec-v">100% (undiluted)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear, colourless, odourless fluid</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Specific gravity (25°C)</span><span class="sh-spec-v">0.970</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Refractive index</span><span class="sh-spec-v">1.403</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Flash point</span><span class="sh-spec-v">&gt;300°C</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Surface tension</span><span class="sh-spec-v">~20 mN/m (20°C)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">1.0 – 20% (formulation dependent)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Status</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU 1223/2009</span><span class="sh-reg-v">No restriction — linear PDMS</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">ANVISA / Brazil</span><span class="sh-reg-v">No restriction</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">No restriction — universally approved</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='silk-dossier.html#silk350'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div></div></div>
+
+<!-- ===== SilkFluid 1000 ===== -->
+<div class="sh-panel" id="prod-silk1000"><div class="sh-panel-inner"><div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SILK — Silicone Technologies</div>
+  <h2 class="sh-panel-name">SilkFluid 1000</h2>
+  <p class="sh-panel-inci">Dimethicone (1000 cSt)</p>
+  <div class="sh-badges"><span class="sh-badge b-a">PDMS Fluid</span><span class="sh-badge b-d">Rich Texture</span><span class="sh-badge b-d">100% Active</span><span class="sh-badge b-d">Conditioning</span></div>
+  <p class="sh-tagline">"High-viscosity dimethicone for rich, conditioning textures — 1000 cSt delivers the silky weight and substantivity demanded by premium hair serums, night creams and intensive treatment products."</p>
+  <p class="sh-body">SilkFluid 1000 is <strong>Dimethicone at 1000 cSt</strong> — equivalent to the Dow XIAMETER PMX-200 1000 cSt benchmark grade. At this viscosity, the PDMS polymer chains are substantially longer than the 350 cSt grade, creating a <strong>noticeably richer, more substantive sensory profile</strong>: slower initial spread, a more cushioned skin feel during application, and a more durable conditioning film on both skin and hair after the application phase. This higher substantivity makes it the grade of choice where conditioning persistence — not just initial slip — is the formulation objective.</p>
+  <p class="sh-body">In hair care, SilkFluid 1000 is the <strong>preferred dimethicone for leave-on serums and conditioning sprays</strong> targeting damaged, coarse or high-porosity hair, where a more substantive silicone film is needed to provide measurable combing friction reduction and frizz control between washes. In skin care, it is used in <strong>night creams and intensive body butters</strong> where a richer emollient character is formulation-appropriate.</p>
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">1000 cSt</span><span class="sh-perf-lbl">Kinematic viscosity</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Rich</span><span class="sh-perf-lbl">Sensory profile</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">High</span><span class="sh-perf-lbl">Substantivity</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">100%</span><span class="sh-perf-lbl">Active — undiluted</span></div>
+  </div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Leave-On Hair Serums</span><span class="sh-app-tag">Premium Night Creams</span><span class="sh-app-tag">Intensive Body Butters</span><span class="sh-app-tag">Conditioning Hair Masks</span><span class="sh-app-tag">Anti-Frizz Treatments</span><span class="sh-app-tag">Dry Oil Sprays</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p>
+  <div class="sh-syn-list">
+    <div class="sh-syn"><span class="sh-syn-code">+SilkFluid 100 (SILK)</span><span class="sh-syn-desc">Viscosity blending — SilkFluid 1000 provides substantive conditioning; SilkFluid 100 lightens the overall sensory profile. Blending at various ratios enables precise tuning of the texture profile without reformulation.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+CondiVeil 949 (COND)</span><span class="sh-syn-desc">High-performance hair serum system. SilkFluid 1000 provides uniform conditioning film across the hair shaft; CondiVeil 949 provides targeted amino silicone deposition at damage zones for frizz control and shine.</span></div>
+  </div>
+</div><div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p>
+  <div class="sh-spec-row"><span class="sh-spec-k">INCI Name</span><span class="sh-spec-v">Dimethicone</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Viscosity</span><span class="sh-spec-v">1000 cSt (±10% tolerance)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Active content</span><span class="sh-spec-v">100% (undiluted)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear, colourless, odourless fluid</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Specific gravity (25°C)</span><span class="sh-spec-v">0.973</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Refractive index</span><span class="sh-spec-v">1.404</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Flash point</span><span class="sh-spec-v">&gt;300°C</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">1.0 – 15%</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Status</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU 1223/2009</span><span class="sh-reg-v">No restriction — linear PDMS</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">ANVISA / Brazil</span><span class="sh-reg-v">No restriction</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='silk-dossier.html#silk1000'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div></div></div>
+
+<!-- ===== SilkFluid 12500 ===== -->
+<div class="sh-panel" id="prod-silk12500"><div class="sh-panel-inner"><div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SILK — Silicone Technologies</div>
+  <h2 class="sh-panel-name">SilkFluid 12500</h2>
+  <p class="sh-panel-inci">Dimethicone (12500 cSt)</p>
+  <div class="sh-badges"><span class="sh-badge b-a">High-Viscosity PDMS</span><span class="sh-badge b-d">Structure Builder</span><span class="sh-badge b-d">100% Active</span><span class="sh-badge b-d">Hair Protection</span></div>
+  <p class="sh-tagline">"Structured dimethicone for textured, high-performance products — 12500 cSt creates the viscous, spreadable silicone body that defines premium hair gloss serums, silicone-thickened gels and protective skin formulations."</p>
+  <p class="sh-body">SilkFluid 12500 is <strong>Dimethicone at 12500 cSt — the highest standard-grade dimethicone fluid in the SILK portfolio</strong>, equivalent to the Dow XIAMETER PMX-200 12500 cSt benchmark grade. At this viscosity, the polymer chains are long enough to create substantial structural contribution to formulations — imparting thickening, body and a distinctly different sensory character from lower-viscosity grades: a <strong>slow, controlled spread that feels deliberately rich and protective</strong>, rather than the quick, dry glide of light-viscosity grades.</p>
+  <p class="sh-body">SilkFluid 12500 is the <strong>essential ingredient in high-viscosity hair gloss serums and shine treatments</strong>, where the structured silicone body is required to coat the hair shaft with a durable, high-gloss film. The long PDMS chains also provide measurable split-end smoothing — bridging and temporarily fusing mechanically separated hair fibres with a silicone film that reduces the visual appearance of damage. In skin care, it is used in structured barrier creams and ointment-type formulations where occlusive protection is the primary function.</p>
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">12500 cSt</span><span class="sh-perf-lbl">Kinematic viscosity</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Structured</span><span class="sh-perf-lbl">Sensory profile</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Split-end</span><span class="sh-perf-lbl">Smoothing benefit</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">100%</span><span class="sh-perf-lbl">Active — undiluted</span></div>
+  </div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Hair Gloss &amp; Shine Serums</span><span class="sh-app-tag">Split-End Treatment Products</span><span class="sh-app-tag">Structured Barrier Creams</span><span class="sh-app-tag">Ointment-Type Formulations</span><span class="sh-app-tag">Silicone Gel Thickeners</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p>
+  <div class="sh-syn-list">
+    <div class="sh-syn"><span class="sh-syn-code">+SilkFluid 100 (SILK) — Viscosity blending system</span><span class="sh-syn-desc">3:1 SilkFluid 100:SilkFluid 12500 blend — the optimised ratio recommended in Dow technical guidance for skin polish and hair gloss formulations, combining spread ease (100 cSt) with depth of gloss (12500 cSt).</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+SilkLume (SILK)</span><span class="sh-syn-desc">Maximum hair shine system — SilkFluid 12500 provides the protective coating film; SilkLume's phenyl groups deliver optical shine amplification through refractive index enhancement.</span></div>
+  </div>
+</div><div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p>
+  <div class="sh-spec-row"><span class="sh-spec-k">INCI Name</span><span class="sh-spec-v">Dimethicone</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Viscosity</span><span class="sh-spec-v">12500 cSt (±20% tolerance)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Active content</span><span class="sh-spec-v">100% (undiluted)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear, viscous, colourless fluid</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Specific gravity (25°C)</span><span class="sh-spec-v">0.975</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Refractive index</span><span class="sh-spec-v">1.404</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Flash point</span><span class="sh-spec-v">&gt;300°C</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">0.5 – 10% (hair); 5–30% (serums)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Status</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU 1223/2009</span><span class="sh-reg-v">No restriction — linear PDMS</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">ANVISA / Brazil</span><span class="sh-reg-v">No restriction</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='silk-dossier.html#silk12500'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div></div></div>
+
+<!-- ===== SilkVeil ===== -->
+<div class="sh-panel" id="prod-silkveil"><div class="sh-panel-inner"><div class="sh-pl">
   <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SILK — Silicone Technologies</div>
   <h2 class="sh-panel-name">SilkVeil</h2>
-  <p class="sh-panel-inci">Cyclopentasiloxane</p>
-  <div class="sh-badges"><span class="sh-badge b-a">Volatile Silicone</span><span class="sh-badge b-d">Dry-Touch Carrier</span><span class="sh-badge b-d">D5</span></div>
-  <p class="sh-tagline">"The carrier that disappears — delivering actives to skin with a dry, powdery finish and no residual feel."</p>
-  <p class="sh-body">SilkVeil is <strong>Cyclopentasiloxane (D5) — the benchmark volatile silicone</strong> for cosmetic application. Its exceptional volatility at skin temperature (boiling point ~210°C, significant evaporation rate at 37°C) means that SilkVeil <strong>evaporates from the skin surface within seconds to minutes of application</strong>, leaving no residual film — a property that enables the "dry-touch" sensory experience that defines modern moisturisers, foundations, sunscreens and body care products.</p><p class="sh-body">SilkVeil's primary function is as a <strong>high-performance cosmetic carrier</strong>: it dissolves and uniformly disperses non-volatile actives, pigments, UV filters and emollients across the skin surface during the evaporation phase, then disappears to leave only the deposited material. This delivery mechanism produces significantly better active distribution and a dramatically lighter skin feel than equivalent formulations based on organic solvents or non-volatile silicone fluids.</p>
-  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">~210°C</span><span class="sh-perf-lbl">Boiling Point</span></div><div class="sh-perf-card"><span class="sh-perf-val">Full evaporation</span><span class="sh-perf-lbl">On-skin behaviour</span></div><div class="sh-perf-card"><span class="sh-perf-val">Dry-touch</span><span class="sh-perf-lbl">Finish</span></div><div class="sh-perf-card"><span class="sh-perf-val">Excellent</span><span class="sh-perf-lbl">Active carrier</span></div></div>
+  <p class="sh-panel-inci">Cyclopentasiloxane (D5)</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Volatile Silicone</span><span class="sh-badge b-d">Carrier / Delivery</span><span class="sh-badge b-d">Dry-Down</span><span class="sh-badge b-e">EU Restriction 2027</span></div>
+  <p class="sh-tagline">"The volatile silicone carrier — Cyclopentasiloxane (D5) disperses actives across skin uniformly then evaporates completely, leaving only the deposited benefit and a powder-dry sensory finish impossible to replicate with organic ingredients."</p>
+  <p class="sh-body">SilkVeil is <strong>Cyclopentasiloxane (D5) — the benchmark volatile silicone</strong> for cosmetic application. Its cyclic siloxane structure creates a compound with a boiling point of ~210°C but significant evaporation at skin temperature (37°C) — the evaporation rate at body temperature produces the characteristic dry, instantly non-greasy finish of modern skincare, sunscreen and body care products. SilkVeil <strong>evaporates from the skin surface within seconds to minutes of application</strong>, leaving no residual film beyond the materials it has deposited.</p>
+  <p class="sh-body">As a <strong>precision delivery carrier</strong>, SilkVeil dissolves and disperses non-volatile actives, pigments, UV filters and emollients uniformly across skin during the evaporation phase, then disappears to leave only the deposited material. This mechanism produces fundamentally better active distribution and a dramatically lighter skin feel than equivalent formulations using non-volatile silicone fluids or organic solvents as carriers. It is the ingredient behind the dry-touch, transfer-resistant finish of modern foundations, the light application of spray sunscreens and the non-greasy feel of premium body care.</p>
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">~210°C</span><span class="sh-perf-lbl">Boiling point</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Dry-down</span><span class="sh-perf-lbl">Key sensory benefit</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Carrier</span><span class="sh-perf-lbl">Primary delivery function</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">100%</span><span class="sh-perf-lbl">Active</span></div>
+  </div>
+  <p class="sh-section-h">Regulatory Note — EU REACH 2024/1328</p>
+  <div class="sh-alert"><p class="sh-alert-t">EU Restriction — Effective June 2027</p><p class="sh-alert-b">EU REACH Regulation 2024/1328 restricts D5 (Cyclopentasiloxane) to ≤0.1% in all rinse-off and leave-on cosmetic products from June 2027. This restriction applies across the EU market. LATAM markets (Brazil, Colombia, Argentina, Peru, Mexico) are not subject to this restriction under current regulatory frameworks — D5 remains fully permitted at functional concentrations in LATAM. VLYOR recommends that EU-market clients begin reformulation planning now. For alternative volatile silicone and non-silicone dry-touch carrier systems, consult our formulation team.</p></div>
   <p class="sh-section-h">Formulation Applications</p>
-  <div class="sh-app-tags"><span class="sh-app-tag">Dry-Touch Moisturisers</span><span class="sh-app-tag">Foundations & BB Creams</span><span class="sh-app-tag">Lightweight Sunscreens</span><span class="sh-app-tag">Hair Anti-Frizz Sprays</span><span class="sh-app-tag">Body Mists with Actives</span><span class="sh-app-tag">Deodorant Sticks</span></div>
-  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+SilkFluid 350 cSt</span><span class="sh-syn-desc">Volatile + fixed silicone combination — the classic dry-feel emollient system.</span></div><div class="sh-syn"><span class="sh-syn-code">+SilkLume</span><span class="sh-syn-desc">Volatile carrier + high-shine phenyl trimethicone — dry spray with optical shine effect.</span></div></div>
-  
-</div>
-<div class="sh-pr">
-  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">541-02-6</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear colourless fluid</span></div><div class="sh-spec-row"><span class="sh-spec-k">Viscosity (25°C)</span><span class="sh-spec-v">3.87 cSt</span></div><div class="sh-spec-row"><span class="sh-spec-k">Boiling point</span><span class="sh-spec-v">~210°C</span></div><div class="sh-spec-row"><span class="sh-spec-k">Vapour pressure</span><span class="sh-spec-v">~0.01 kPa at 25°C</span></div><div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Insoluble in water</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">5.0 – 30.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Incorporation</span><span class="sh-spec-v">Oil phase · cold or warm process</span></div>
-  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction (not Annex-restricted)</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil / LATAM</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">No restriction</span></div></div>
-  
-  
-  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
-</div>
-</div>
-</div><div class="sh-panel" id="prod-silkduo1501">
-<div class="sh-panel-inner">
-<div class="sh-pl">
-  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SILK — Silicone Technologies</div>
-  <h2 class="sh-panel-name">SilkDuo 1501</h2>
-  <p class="sh-panel-inci">Cyclopentasiloxane &amp; Dimethiconol</p>
-  <div class="sh-badges"><span class="sh-badge b-a">Silicone Blend</span><span class="sh-badge b-d">Volatile + Fixed</span></div>
-  <p class="sh-tagline">"Volatile carrier + substantive conditioning film — the pre-blended combination for conditioner and hair serum development."</p>
-  <p class="sh-body">SilkDuo 1501 is a <strong>pre-optimised blend of Cyclopentasiloxane (D5) and Dimethiconol</strong> — combining the evaporative carrier function of D5 with the substantive, non-volatile conditioning film of high-MW dimethiconol in a single formulation-ready raw material. The D5 component ensures smooth, even initial distribution across hair or skin; as it evaporates, the <strong>dimethiconol remains behind as a durable conditioning film</strong> that provides slip, frizz control, moisture retention and protection from mechanical damage.</p><p class="sh-body">SilkDuo 1501 is widely used in rinse-out conditioners, leave-in treatments and styling products where a non-greasy conditioning deposit is the desired outcome. Its pre-blended nature simplifies formulation and ensures consistent volatile/fixed silicone ratios across production batches.</p>
-  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">D5 + Dimethiconol</span><span class="sh-perf-lbl">Composition</span></div><div class="sh-perf-card"><span class="sh-perf-val">Pre-blended</span><span class="sh-perf-lbl">Format</span></div><div class="sh-perf-card"><span class="sh-perf-val">Durable film</span><span class="sh-perf-lbl">On-skin/hair deposit</span></div><div class="sh-perf-card"><span class="sh-perf-val">Standard</span><span class="sh-perf-lbl">Hair care use</span></div></div>
-  <p class="sh-section-h">Formulation Applications</p>
-  <div class="sh-app-tags"><span class="sh-app-tag">Rinse-Out Conditioners</span><span class="sh-app-tag">Leave-In Treatments</span><span class="sh-app-tag">Hair Serums</span><span class="sh-app-tag">Styling Smoothers</span><span class="sh-app-tag">Anti-Frizz Products</span></div>
-  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+CondiVeil 949 (COND)</span><span class="sh-syn-desc">Dual silicone conditioning — SilkDuo 1501 provides baseline film; CondiVeil adds targeted amino silicone deposition.</span></div><div class="sh-syn"><span class="sh-syn-code">+SilkLume</span><span class="sh-syn-desc">Conditioning + shine system for high-gloss hair care.</span></div></div>
-  
-</div>
-<div class="sh-pr">
-  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS (D5)</span><span class="sh-spec-v">541-02-6</span></div><div class="sh-spec-row"><span class="sh-spec-k">CAS (Dimethiconol)</span><span class="sh-spec-v">70131-67-8</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear fluid</span></div><div class="sh-spec-row"><span class="sh-spec-k">Ratio</span><span class="sh-spec-v">Typically 80:20 D5:Dimethiconol</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">2.0 – 10.0%</span></div>
-  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil / LATAM</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">No restriction</span></div></div>
-  
-  
-  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
-</div>
-</div>
-</div><div class="sh-panel" id="prod-silkduo1401">
-<div class="sh-panel-inner">
-<div class="sh-pl">
-  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SILK — Silicone Technologies</div>
-  <h2 class="sh-panel-name">SilkDuo 1401</h2>
-  <p class="sh-panel-inci">Cyclotetrasiloxane, Cyclopentasiloxane &amp; Dimethiconol</p>
-  <div class="sh-badges"><span class="sh-badge b-a">Complex Silicone Blend</span><span class="sh-badge b-d">D4/D5 + Dimethiconol</span></div>
-  <p class="sh-tagline">"Three-component silicone blend with enhanced spread and more nuanced evaporation profile."</p>
-  <p class="sh-body">SilkDuo 1401 combines <strong>Cyclotetrasiloxane (D4), Cyclopentasiloxane (D5) and Dimethiconol</strong> in a pre-blended system that provides a more complex evaporation kinetics compared to SilkDuo 1501. The addition of D4 (lower boiling point than D5) creates a <strong>two-stage evaporation profile</strong>: rapid initial D4 evaporation provides immediate dry-down and active deposition, followed by slower D5 evaporation for sustained conditioning feel, leaving the dimethiconol conditioning film as the final skin/hair deposit.</p><p class="sh-body">Preferred in premium hair treatment formulations where a more sophisticated, progressive sensory transition is desired, and in facial primers where a two-stage dry-down creates a distinctive application experience.</p>
-  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">D4+D5+Dimethiconol</span><span class="sh-perf-lbl">Three-component blend</span></div><div class="sh-perf-card"><span class="sh-perf-val">Staged</span><span class="sh-perf-lbl">Evaporation profile</span></div><div class="sh-perf-card"><span class="sh-perf-val">Premium</span><span class="sh-perf-lbl">Sensory design</span></div></div>
-  <p class="sh-section-h">Formulation Applications</p>
-  <div class="sh-app-tags"><span class="sh-app-tag">Premium Hair Serums</span><span class="sh-app-tag">Facial Primers</span><span class="sh-app-tag">High-Sensory Hair Treatments</span><span class="sh-app-tag">Professional Salon Products</span></div>
-  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+SilkLume</span><span class="sh-syn-desc">Complex silicone + phenyl trimethicone for premium textured shine product.</span></div><div class="sh-syn"><span class="sh-syn-code">+EsterSilk IPM (FORM)</span><span class="sh-syn-desc">Spreadability enhancement in the initial application phase.</span></div></div>
-  <p class="sh-section-h">Formulation Notes</p><p class="sh-body">Note: D4 (Cyclotetrasiloxane) is subject to restriction in the EU under REACH regulation in wash-off cosmetics above 0.1%. Verify current EU regulatory status before use in rinse-off products targeting the European market. No restriction in leave-on applications.</p>
-</div>
-<div class="sh-pr">
-  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear fluid</span></div><div class="sh-spec-row"><span class="sh-spec-k">Components</span><span class="sh-spec-v">D4 · D5 · Dimethiconol</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">2.0 – 10.0%</span></div>
-  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">D4 restricted — ring siloxane regulations apply; check current EU compliance</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil / LATAM</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Verify D4 status in target market</span></div></div>
-  
-  
-  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
-</div>
-</div>
-</div><div class="sh-panel" id="prod-silkduo503">
-<div class="sh-panel-inner">
-<div class="sh-pl">
-  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SILK — Silicone Technologies</div>
-  <h2 class="sh-panel-name">SilkDuo 503</h2>
-  <p class="sh-panel-inci">Dimethicone &amp; Dimethiconol</p>
-  <div class="sh-badges"><span class="sh-badge b-a">Fixed Silicone Blend</span><span class="sh-badge b-d">Non-Volatile</span><span class="sh-badge b-d">Long-lasting</span></div>
-  <p class="sh-tagline">"Non-volatile silicone combination for lasting conditioning — the fixed silicone system for products with no dry-touch requirement."</p>
-  <p class="sh-body">SilkDuo 503 is a <strong>blend of Dimethicone and Dimethiconol</strong> — both non-volatile silicone components — providing a durable, persistent emollient conditioning film without the evaporation step. This non-volatile character makes it the preferred silicone for <strong>heavy-duty emollient systems, barrier creams, occlusive body butters and extremely dry skin care</strong>, where the sustained presence of the silicone film is the therapeutic mechanism rather than a sensory limitation.</p><p class="sh-body">The dimethiconol component provides cross-linking potential on the skin/hair surface, creating a more substantive, coherent film compared to dimethicone alone — improving water-resistance and durability of the emollient deposit.</p>
-  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">Non-volatile</span><span class="sh-perf-lbl">Evaporation profile</span></div><div class="sh-perf-card"><span class="sh-perf-val">Durable film</span><span class="sh-perf-lbl">On-skin deposit</span></div><div class="sh-perf-card"><span class="sh-perf-val">Occlusive</span><span class="sh-perf-lbl">Barrier function</span></div><div class="sh-perf-card"><span class="sh-perf-val">Long-lasting</span><span class="sh-perf-lbl">Conditioning effect</span></div></div>
-  <p class="sh-section-h">Formulation Applications</p>
-  <div class="sh-app-tags"><span class="sh-app-tag">Barrier Creams</span><span class="sh-app-tag">Extremely Dry Skin Care</span><span class="sh-app-tag">Occlusive Body Butters</span><span class="sh-app-tag">Waterproof Sunscreens</span><span class="sh-app-tag">Lip Balms & Masks</span></div>
-  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+SilkFluid 12500 cSt</span><span class="sh-syn-desc">Maximum viscosity non-volatile system for structured emollient products.</span></div><div class="sh-syn"><span class="sh-syn-code">+TricaPure (FORM)</span><span class="sh-syn-desc">Non-volatile emollient combination — silicone + triglyceride for balanced skin feel.</span></div></div>
-  
-</div>
-<div class="sh-pr">
-  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear to slightly hazy fluid or gel</span></div><div class="sh-spec-row"><span class="sh-spec-k">Volatility</span><span class="sh-spec-v">Non-volatile</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">2.0 – 15.0%</span></div>
-  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil / LATAM</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved</span></div></div>
-  
-  
-  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
-</div>
-</div>
-</div><div class="sh-panel" id="prod-silkaqua">
-<div class="sh-panel-inner">
-<div class="sh-pl">
-  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SILK — Silicone Technologies</div>
-  <h2 class="sh-panel-name">SilkAqua</h2>
-  <p class="sh-panel-inci">PEG-12 Dimethicone</p>
-  <div class="sh-badges"><span class="sh-badge b-a">Hydrophilic Silicone</span><span class="sh-badge b-d">Water-Compatible</span><span class="sh-badge b-d">O/W Systems</span></div>
-  <p class="sh-tagline">"The water-compatible silicone — bridging the phase barrier for silicone inclusion in aqueous and emulsion systems."</p>
-  <p class="sh-body">SilkAqua is <strong>PEG-12 Dimethicone — a polyether-modified silicone</strong> with the unique property of being both water-soluble and silicone-functional. Standard dimethicone is incompatible with aqueous phases, limiting its direct use in water-based serums and gels. SilkAqua's PEG modification makes it <strong>freely water-miscible</strong>, enabling the inclusion of silicone's slip, conditioning and emollient properties in clear aqueous formulations, water-based serums and gel textures where conventional silicones cannot be incorporated.</p><p class="sh-body">SilkAqua also functions as an <strong>emulsifier and wetting agent</strong> in silicone-in-water systems, stabilising silicone emulsions and improving the spreadability and wettability of formulations containing non-polar components.</p>
-  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">Water-soluble</span><span class="sh-perf-lbl">Unique property</span></div><div class="sh-perf-card"><span class="sh-perf-val">Aqueous compatible</span><span class="sh-perf-lbl">Phase behaviour</span></div><div class="sh-perf-card"><span class="sh-perf-val">PEG-12 modified</span><span class="sh-perf-lbl">Structure</span></div><div class="sh-perf-card"><span class="sh-perf-val">Clear systems</span><span class="sh-perf-lbl">Application</span></div></div>
-  <p class="sh-section-h">Formulation Applications</p>
-  <div class="sh-app-tags"><span class="sh-app-tag">Clear Aqueous Serums with Silicone</span><span class="sh-app-tag">Water-Based Hair Sprays</span><span class="sh-app-tag">Silicone-Compatible Toners</span><span class="sh-app-tag">Gel Moisturisers</span><span class="sh-app-tag">Hybrid Aqueous-Silicone Systems</span></div>
-  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+SilkVeil</span><span class="sh-syn-desc">Combining water-phase and oil-phase silicone for comprehensive silicone coverage.</span></div><div class="sh-syn"><span class="sh-syn-code">+HyalActiv (VITAL)</span><span class="sh-syn-desc">Water-based serum combining HA hydration with silicone slip.</span></div></div>
-  
-</div>
-<div class="sh-pr">
-  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">68937-55-3</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear liquid or gel</span></div><div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Water-miscible</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">0.5 – 5.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Incorporation</span><span class="sh-spec-v">Aqueous phase · ambient temperature</span></div>
-  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil / LATAM</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved</span></div></div>
-  
-  
-  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
-</div>
-</div>
-</div><div class="sh-panel" id="prod-silklume">
-<div class="sh-panel-inner">
-<div class="sh-pl">
+  <div class="sh-app-tags"><span class="sh-app-tag">Spray Sunscreens (non-EU)</span><span class="sh-app-tag">Foundations &amp; Primers</span><span class="sh-app-tag">Antiperspirant Aerosols</span><span class="sh-app-tag">Hair Serums (non-EU leave-on)</span><span class="sh-app-tag">Body Care Sprays</span><span class="sh-app-tag">Make-Up Setting Sprays</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p>
+  <div class="sh-syn-list">
+    <div class="sh-syn"><span class="sh-syn-code">+SilkFluid 350 (SILK)</span><span class="sh-syn-desc">Classic dry-feel emollient system — SilkVeil evaporates leaving SilkFluid 350 as the conditioning deposit. The volatile carrier + non-volatile emollient combination is the standard architecture for dry-touch moisturisers and sunscreens.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+SilkLume (SILK)</span><span class="sh-syn-desc">Dry-touch shine spray — SilkVeil disperses SilkLume (phenyl trimethicone) uniformly across hair fibres then evaporates, leaving an optically bright, dry-finish shine coating without residual weight.</span></div>
+  </div>
+</div><div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p>
+  <div class="sh-spec-row"><span class="sh-spec-k">INCI Name</span><span class="sh-spec-v">Cyclopentasiloxane</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">541-02-6</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Common name</span><span class="sh-spec-v">D5 (Decamethylcyclopentasiloxane)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Molecular weight</span><span class="sh-spec-v">370.8 g/mol</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear, colourless, mobile liquid</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Boiling point</span><span class="sh-spec-v">~210°C</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Specific gravity (25°C)</span><span class="sh-spec-v">0.959</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Viscosity</span><span class="sh-spec-v">~3.9 cSt (water-like)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Active content</span><span class="sh-spec-v">100%</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">5 – 40% (formulation dependent)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Incorporation</span><span class="sh-spec-v">Oil phase — add below 60°C</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Status by Market</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU (REACH 2024/1328)</span><span class="sh-reg-v">≤0.1% all cosmetics — effective June 2027</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">ANVISA / Brazil</span><span class="sh-reg-v">No restriction (current)</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Colombia / Peru / Argentina</span><span class="sh-reg-v">No restriction (current)</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Mexico</span><span class="sh-reg-v">No restriction (current)</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">China IECIC</span><span class="sh-reg-v">Listed — no restriction</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">USA / Canada</span><span class="sh-reg-v">No restriction (current)</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='silk-dossier.html#silkveil'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div></div></div>
+
+<!-- ===== SilkLume ===== -->
+<div class="sh-panel" id="prod-silklume"><div class="sh-panel-inner"><div class="sh-pl">
   <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SILK — Silicone Technologies</div>
   <h2 class="sh-panel-name">SilkLume</h2>
   <p class="sh-panel-inci">Phenyl Trimethicone</p>
-  <div class="sh-badges"><span class="sh-badge b-a">High-Refractive Silicone</span><span class="sh-badge b-d">Optical Shine</span><span class="sh-badge b-d">Luxury Hair &amp; Skin</span></div>
-  <p class="sh-tagline">"The optical silicone — light refraction engineered into a liquid for maximum shine in every application."</p>
-  <p class="sh-body">SilkLume is <strong>Phenyl Trimethicone</strong> — a phenyl-modified silicone with a refractive index of ~1.460–1.465, significantly higher than standard dimethicone (1.400). This elevated refractive index means <strong>SilkLume interacts differently with visible light</strong>: it produces a stronger, more intense specular reflection when applied as a film on hair or skin, delivering a "wet look" shine and optical vibrancy that conventional silicone fluids cannot achieve.</p><p class="sh-body">In hair care, SilkLume is the <strong>primary active in salon-quality shine serums, gloss sprays and glossy leave-in treatments</strong> — the ingredient behind the "salon-freshly-blown-out" optical appearance that consumers associate with premium hair care. In skin care, it provides a subtle luminous glow effect in facial moisturisers and body oils where optical enhancement is a desired aesthetic benefit without the white-cast of mica-based luminisers.</p>
-  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">~1.462</span><span class="sh-perf-lbl">Refractive Index</span></div><div class="sh-perf-card"><span class="sh-perf-val">Maximum</span><span class="sh-perf-lbl">Optical Shine</span></div><div class="sh-perf-card"><span class="sh-perf-val">Non-volatile</span><span class="sh-perf-lbl">Film persistence</span></div><div class="sh-perf-card"><span class="sh-perf-val">Premium</span><span class="sh-perf-lbl">Market positioning</span></div></div>
+  <div class="sh-badges"><span class="sh-badge b-a">Phenyl Silicone</span><span class="sh-badge b-d">Optical Shine</span><span class="sh-badge b-d">SPF Booster</span><span class="sh-badge b-d">Colour Enhancer</span></div>
+  <p class="sh-tagline">"The optical performance silicone — Phenyl Trimethicone's high refractive index delivers measurable hair shine enhancement, SPF boosting and colour cosmetic gloss that polydimethylsiloxane fluids cannot provide."</p>
+  <p class="sh-body">SilkLume is <strong>Phenyl Trimethicone — a polyphenylmethylsiloxane</strong> equivalent to the benchmark Dow DOWSIL 556 Cosmetic Grade Fluid. The substitution of phenyl groups onto the siloxane backbone fundamentally changes the optical properties of the molecule: phenyl groups have a significantly higher refractive index (~1.50) than the methyl groups of PDMS (~1.40), producing a finished fluid with a refractive index of ~1.46 — substantially higher than dimethicone. This optical differentiation is the basis of SilkLume's commercial value: <strong>when applied to hair or skin, it reflects more light, creating a measurably brighter, glossier appearance</strong> that consumers perceive as healthy, youthful and luminous.</p>
+  <p class="sh-body">Beyond optical performance, SilkLume provides <strong>SPF enhancement in sun care formulations</strong> — its higher refractive index improves UV scatter from inorganic filters (titanium dioxide, zinc oxide), increasing SPF values by 10–20% at equivalent filter concentrations. It also <strong>improves pigment dispersion and colour intensity in colour cosmetics</strong> through its superior organic ingredient compatibility and wetting properties compared to PDMS. Additionally, its excellent solubility in ethanol (up to 50% at 4°C) makes it uniquely suitable for alcohol-based hair spray formulations.</p>
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">~1.46</span><span class="sh-perf-lbl">Refractive index (vs 1.40 PDMS)</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Optical shine</span><span class="sh-perf-lbl">Primary benefit</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">SPF boost</span><span class="sh-perf-lbl">Sun care benefit</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">EtOH soluble</span><span class="sh-perf-lbl">Formulation advantage</span></div>
+  </div>
+  <p class="sh-section-h">Performance Detail</p>
+  <p class="sh-body">SilkLume's phenyl groups also provide <strong>superior oxidation resistance</strong> versus PDMS — the phenyl ring system is more resistant to thermal and UV-induced oxidative degradation than methyl groups. This means formulations containing SilkLume maintain their optical performance over shelf life better than PDMS-only systems. Additionally, the <strong>non-oily, dry-touch emolliency</strong> characteristic of Phenyl Trimethicone — despite its high refractive index — enables optical shine without the heavy, greasy feel that high-loading PDMS systems produce, making it ideal for fine hair applications and lightweight leave-on serums where performance without weight is the brief.</p>
   <p class="sh-section-h">Formulation Applications</p>
-  <div class="sh-app-tags"><span class="sh-app-tag">Hair Shine Serums</span><span class="sh-app-tag">Gloss Sprays</span><span class="sh-app-tag">Premium Leave-In Treatments</span><span class="sh-app-tag">Luminous Body Oils</span><span class="sh-app-tag">Radiance Moisturisers</span><span class="sh-app-tag">Lip Glosses</span></div>
-  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+SilkVeil</span><span class="sh-syn-desc">Volatile carrier + phenyl silicone — dry-application shine system.</span></div><div class="sh-syn"><span class="sh-syn-code">+SilkFluid 100 cSt</span><span class="sh-syn-desc">Lightweight shine fluid for non-greasy hair oils.</span></div><div class="sh-syn"><span class="sh-syn-code">+CondiVeil 949 (COND)</span><span class="sh-syn-desc">Conditioning + high-shine premium hair treatment.</span></div></div>
-  
-</div>
-<div class="sh-pr">
-  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">CAS Number</span><span class="sh-spec-v">2116-84-9</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear colourless fluid</span></div><div class="sh-spec-row"><span class="sh-spec-k">Refractive index</span><span class="sh-spec-v">1.460 – 1.465</span></div><div class="sh-spec-row"><span class="sh-spec-k">Viscosity (25°C)</span><span class="sh-spec-v">~22 cSt</span></div><div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Insoluble in water</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">0.5 – 5.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
-  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil / LATAM</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved</span></div></div>
-  
-  
-  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
-</div>
-</div>
-</div><div class="sh-panel" id="prod-silkmatrix">
-<div class="sh-panel-inner">
-<div class="sh-pl">
+  <div class="sh-app-tags"><span class="sh-app-tag">Hair Gloss Serums</span><span class="sh-app-tag">SPF Sun Care (inorganic filter)</span><span class="sh-app-tag">Colour Cosmetics</span><span class="sh-app-tag">Hair Sprays (EtOH base)</span><span class="sh-app-tag">Skin Illuminating Products</span><span class="sh-app-tag">Make-Up Setting Sprays</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p>
+  <div class="sh-syn-list">
+    <div class="sh-syn"><span class="sh-syn-code">+SilkFluid 350 (SILK)</span><span class="sh-syn-desc">Hair conditioning + shine system — SilkFluid 350 provides PDMS emolliency and slip; SilkLume adds the optical shine enhancement. Combined at 5% SilkFluid 350 + 2% SilkLume for premium hair serum positioning.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+CondiVeil 949 (COND)</span><span class="sh-syn-desc">Complete hair performance system — amino silicone (targeted conditioning at damage sites) + phenyl trimethicone (optical shine amplification). The premium stack for colour-treated hair care.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+Shield-MBBT / TiO2 (SHIELD)</span><span class="sh-syn-desc">SPF enhancement system. SilkLume improves inorganic UV filter dispersion and increases UV scattering efficiency — a 2–5% addition can boost SPF by 10–20% at equivalent filter loading.</span></div>
+  </div>
+</div><div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p>
+  <div class="sh-spec-row"><span class="sh-spec-k">INCI Name</span><span class="sh-spec-v">Phenyl Trimethicone</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Chemical class</span><span class="sh-spec-v">Polyphenylmethylsiloxane</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear, colourless to pale yellow fluid</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Refractive index (25°C)</span><span class="sh-spec-v">~1.46 (vs 1.40 for PDMS)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Specific gravity (25°C)</span><span class="sh-spec-v">~1.07</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Viscosity</span><span class="sh-spec-v">~14 cSt (20°C)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Active content</span><span class="sh-spec-v">100%</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">EtOH solubility</span><span class="sh-spec-v">Up to 50% in 95% ethanol at 4°C</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">0.5 – 5% (hair/skin); 2–10% (colour cosmetics)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Oxidation stability</span><span class="sh-spec-v">Excellent (phenyl ring protection)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Status</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU 1223/2009</span><span class="sh-reg-v">No restriction — not cyclosiloxane</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">ANVISA / Brazil</span><span class="sh-reg-v">No restriction</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">LATAM General</span><span class="sh-reg-v">No restriction</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Note</span><span class="sh-reg-v">Not subject to D4/D5/D6 restriction — linear/branched phenyl silicone</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='silk-dossier.html#silklume'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div></div></div>
+
+<!-- ===== SilkAqua ===== -->
+<div class="sh-panel" id="prod-silkaqua"><div class="sh-panel-inner"><div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SILK — Silicone Technologies</div>
+  <h2 class="sh-panel-name">SilkAqua</h2>
+  <p class="sh-panel-inci">PEG-12 Dimethicone</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Water-Soluble Silicone</span><span class="sh-badge b-d">Aqueous Systems</span><span class="sh-badge b-d">Silicone Emulsifier</span><span class="sh-badge b-d">Clear Serums</span></div>
+  <p class="sh-tagline">"The silicone that dissolves in water — PEG-12 Dimethicone brings silicone slip, conditioning and emolliency to clear aqueous serums, gels and water-based formulations where conventional silicones cannot go."</p>
+  <p class="sh-body">SilkAqua is <strong>PEG-12 Dimethicone — a polyether-modified silicone</strong> produced by the copolymerisation of PDMS segments with polyethylene glycol chains. This hybrid architecture gives SilkAqua a unique property: <strong>it is simultaneously silicone-functional and freely water-miscible</strong>. Standard dimethicone is completely incompatible with aqueous phases — it separates immediately and requires emulsification. SilkAqua disperses homogeneously into water, enabling the silicone's slip, conditioning and breathable film properties to be delivered directly from aqueous formulations — clear gels, water serums, toners and lotion systems — without emulsification or any special processing.</p>
+  <p class="sh-body">SilkAqua also functions as a <strong>silicone emulsifier and wetting agent</strong> — its amphiphilic PEG-dimethicone structure lowers the interfacial tension between silicone and water phases, acting as a compatibiliser that stabilises silicone-in-water emulsions. This enables formulators to incorporate higher levels of non-water-soluble silicones into aqueous formulations while maintaining clarity and stability.</p>
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">Water-misc.</span><span class="sh-perf-lbl">Unique property</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">PEG-12 modified</span><span class="sh-perf-lbl">Structure type</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Clear systems</span><span class="sh-perf-lbl">Primary format</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Amphiphilic</span><span class="sh-perf-lbl">Emulsifier function</span></div>
+  </div>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Clear Aqueous Serums</span><span class="sh-app-tag">Toners with Silicone Feel</span><span class="sh-app-tag">Water-Based Hair Mists</span><span class="sh-app-tag">Shower Gels with Conditioning</span><span class="sh-app-tag">Silicone Emulsion Stabilisation</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p>
+  <div class="sh-syn-list">
+    <div class="sh-syn"><span class="sh-syn-code">+HyalActiv (VITAL)</span><span class="sh-syn-desc">Premium aqueous serum — HA hydration and moisture-binding + silicone slip and breathable film in a clear water-based formulation. The combination achieves a uniquely smooth, hydrating sensory profile impossible with either ingredient alone.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+SilkFluid 350 (SILK)</span><span class="sh-syn-desc">SilkAqua as emulsifier — adds SilkFluid 350 compatibility in aqueous systems. SilkAqua enables higher PDMS loading in water-continuous formulations while maintaining system clarity and stability.</span></div>
+  </div>
+</div><div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p>
+  <div class="sh-spec-row"><span class="sh-spec-k">INCI Name</span><span class="sh-spec-v">PEG-12 Dimethicone</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Chemical class</span><span class="sh-spec-v">Polyether-modified polydimethylsiloxane</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear to slightly hazy liquid</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Freely water-miscible</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">HLB</span><span class="sh-spec-v">~12 (amphiphilic)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Active content</span><span class="sh-spec-v">100%</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">0.5 – 5% (serum); 1–3% (emulsifier)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">pH stability</span><span class="sh-spec-v">4.0 – 9.0</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Status</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU 1223/2009</span><span class="sh-reg-v">No restriction</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">ANVISA / Brazil</span><span class="sh-reg-v">No restriction</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">LATAM / Global</span><span class="sh-reg-v">No restriction — universally approved</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='silk-dossier.html#silkaqua'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div></div></div>
+
+<!-- ===== SilkMatrix ===== -->
+<div class="sh-panel" id="prod-silkmatrix"><div class="sh-panel-inner"><div class="sh-pl">
   <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR SILK — Silicone Technologies</div>
   <h2 class="sh-panel-name">SilkMatrix</h2>
-  <p class="sh-panel-inci">Cyclopentasiloxane &amp; Dimethicone Crosspolymer</p>
-  <div class="sh-badges"><span class="sh-badge b-a">Silicone Elastomer</span><span class="sh-badge b-d">Sensory Gel</span><span class="sh-badge b-d">Texture Modifier</span></div>
-  <p class="sh-tagline">"The silicone elastomer that transforms textures — creating the distinctive powdery-velvety feel of premium skin care."</p>
-  <p class="sh-body">SilkMatrix is a <strong>silicone elastomer gel comprising Dimethicone Crosspolymer dispersed in Cyclopentasiloxane</strong> — the ingredient responsible for the distinctive powdery, velvety, silky skin feel that defines premium skin care textures. The crosslinked dimethicone polymer forms a three-dimensional elastomer network that, when incorporated into formulations, creates a <strong>distinctive "second-skin" sensory effect</strong> — a smooth, velvety, powdery-dry finish that no other cosmetic ingredient replicates.</p><p class="sh-body">SilkMatrix is used in premium facial moisturisers, primers, sunscreens and body lotions to deliver the sensory signature that consumers associate with luxury cosmetics. It also functions as a <strong>physical mattifier</strong> — the elastomer particles scatter light and absorb excess sebum, providing an immediate soft-focus, pore-minimising visual effect in addition to its unique tactile properties.</p>
-  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">Powdery-velvety</span><span class="sh-perf-lbl">Unique skin feel</span></div><div class="sh-perf-card"><span class="sh-perf-val">Soft-focus</span><span class="sh-perf-lbl">Optical effect</span></div><div class="sh-perf-card"><span class="sh-perf-val">Sebum absorption</span><span class="sh-perf-lbl">Mattifying function</span></div><div class="sh-perf-card"><span class="sh-perf-val">0.5–5%</span><span class="sh-perf-lbl">Use level</span></div></div>
-  <p class="sh-section-h">Formulation Applications</p>
-  <div class="sh-app-tags"><span class="sh-app-tag">Premium Moisturisers</span><span class="sh-app-tag">Foundation Primers</span><span class="sh-app-tag">Luxury Sunscreens</span><span class="sh-app-tag">Soft-Focus Body Lotions</span><span class="sh-app-tag">Mattifying Formulas</span><span class="sh-app-tag">BB & CC Creams</span></div>
-  <p class="sh-section-h">Synergistic Combinations</p><div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+SilkVeil</span><span class="sh-syn-desc">Elastomer in volatile carrier — the classic dry-touch premium skin feel system.</span></div><div class="sh-syn"><span class="sh-syn-code">+SilkFluid 350 cSt</span><span class="sh-syn-desc">Combined elastomer + conventional dimethicone for controlled texture systems.</span></div></div>
-  
-</div>
-<div class="sh-pr">
-  <p class="sh-spec-title">Technical Specifications</p><div class="sh-spec-row"><span class="sh-spec-k">Composition</span><span class="sh-spec-v">Dimethicone Crosspolymer in Cyclopentasiloxane</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Translucent gel</span></div><div class="sh-spec-row"><span class="sh-spec-k">Active content</span><span class="sh-spec-v">~12–15% crosspolymer</span></div><div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">0.5 – 5.0%</span></div><div class="sh-spec-row"><span class="sh-spec-k">Incorporation</span><span class="sh-spec-v">Oil phase · any temperature</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
-  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Concentration Limits</p><div class="sh-reg-row"><span class="sh-reg-k">EU</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Brazil / LATAM</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved</span></div></div>
-  
-  
-  <button class="sh-cta-btn" onclick="window.location='index.html#contact'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
-</div>
-</div>
-</div></div>
+  <p class="sh-panel-inci">Dimethicone Crosspolymer (Silicone Elastomer Gel)</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Elastomer Gel</span><span class="sh-badge b-d">Velvet Skin Feel</span><span class="sh-badge b-d">Pore-Blur Effect</span><span class="sh-badge b-d">Rheology Modifier</span></div>
+  <p class="sh-tagline">"The velvet architecture — Dimethicone Crosspolymer elastomer gel delivers the unique powder-dry, instantly-smooth, pore-blurring skin feel that defines modern primers, luxury foundations and prestige skin care serums."</p>
+  <p class="sh-body">SilkMatrix is a <strong>Dimethicone Crosspolymer silicone elastomer gel</strong> — crosslinked dimethicone swollen in a silicone carrier fluid, producing a three-dimensional network of silicone polymer that behaves as a soft, deformable solid. This unique physical structure — neither a fluid nor a solid but an elastic gel — delivers <strong>a distinctly different and commercially unmatched sensory profile</strong>: it absorbs quickly onto skin (faster than any silicone fluid), dries to a soft, matte, powder-like finish that physically fills and blurs the appearance of pores and fine lines, and imparts a velvety slip entirely unlike the lubricious feel of fluid silicones.</p>
+  <p class="sh-body">As a <strong>rheology modifier</strong>, SilkMatrix fundamentally changes formula texture with small additions. At 2–5%, it transforms watery serums into smooth, glossy gels; it converts creamy emulsions into structured, bouncy textures; and it provides oil-absorbing properties that reduce formula shine without the matte chalkiness of powder-based oil absorbers. This multi-function — sensory modifier, texture builder, pore-filler — makes SilkMatrix one of the most commercially versatile single ingredients in premium cosmetic formulation.</p>
+  <div class="sh-perf-grid">
+    <div class="sh-perf-card"><span class="sh-perf-val">Elastomer</span><span class="sh-perf-lbl">Crosslinked architecture</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Velvet</span><span class="sh-perf-lbl">Defining skin feel</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">Pore-blur</span><span class="sh-perf-lbl">Optical benefit</span></div>
+    <div class="sh-perf-card"><span class="sh-perf-val">2–5%</span><span class="sh-perf-lbl">Rheology modification dose</span></div>
   </div>
+  <p class="sh-section-h">Performance Detail</p>
+  <p class="sh-body">SilkMatrix's pore-blurring mechanism operates optically — the elastomer particles scatter light diffusely from the skin surface, reducing the specular reflection that makes pores and wrinkles visually prominent. This <strong>soft-focus optical effect</strong> is entirely distinct from physical filling (as with fillers) or film occlusion — it is a light-interaction phenomenon at the skin surface that creates the visual impression of smoothness without altering skin structure. The effect is immediate on application and lasts for the duration of wear.</p>
+  <p class="sh-section-h">Formulation Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Primers &amp; Pore-Minimisers</span><span class="sh-app-tag">Luxury Foundations</span><span class="sh-app-tag">Premium Skin Care Serums</span><span class="sh-app-tag">Mattifying Moisturisers</span><span class="sh-app-tag">CC/BB Creams</span><span class="sh-app-tag">Anti-Ageing Eye Creams</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p>
+  <div class="sh-syn-list">
+    <div class="sh-syn"><span class="sh-syn-code">+SilkFluid 350 (SILK)</span><span class="sh-syn-desc">Texture architecture — SilkMatrix elastomer gel + SilkFluid 350 emollient creates the characteristic smooth, bouncy, gel-cream texture of premium serums and primers. SilkMatrix controls texture; SilkFluid 350 provides the silicone emolliency.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+SilkLume (SILK)</span><span class="sh-syn-desc">Pore-blur + glow — SilkMatrix scatters light diffusely (soft-focus), SilkLume amplifies reflectance (glow). The combination creates a skin-perfecting optical system that simultaneously minimises pores and maximises luminosity.</span></div>
+    <div class="sh-syn"><span class="sh-syn-code">+Shield UV filters (SHIELD)</span><span class="sh-syn-desc">Premium SPF serum system — SilkMatrix elastomer texture in a lightweight SPF serum; the pore-blur effect creates a natural skin finish that heavy sunscreen films typically destroy.</span></div>
+  </div>
+</div><div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p>
+  <div class="sh-spec-row"><span class="sh-spec-k">INCI Name</span><span class="sh-spec-v">Dimethicone Crosspolymer (and) Dimethicone</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Type</span><span class="sh-spec-v">Silicone elastomer gel in carrier</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Carrier</span><span class="sh-spec-v">Dimethicone (grade-dependent)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Translucent to white soft gel</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Elastomer content</span><span class="sh-spec-v">~10–20% crosspolymer in carrier</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Skin feel</span><span class="sh-spec-v">Velvet, powder-dry, matte</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Recommended dosage</span><span class="sh-spec-v">2 – 15% (sensory); 5–30% (primer base)</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">Incorporation</span><span class="sh-spec-v">Oil phase; add before emulsification</span></div>
+  <div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Status</p>
+    <div class="sh-reg-row"><span class="sh-reg-k">EU 1223/2009</span><span class="sh-reg-v">No restriction</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">ANVISA / Brazil</span><span class="sh-reg-v">No restriction</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">LATAM / Global</span><span class="sh-reg-v">No restriction — universally approved</span></div>
+    <div class="sh-reg-row"><span class="sh-reg-k">Note</span><span class="sh-reg-v">Crosspolymer — not affected by cyclosiloxane (D4/D5/D6) restrictions</span></div>
+  </div>
+  <button class="sh-cta-btn" onclick="window.location='silk-dossier.html#silkmatrix'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div></div></div>
+
+    </div><!-- /panels -->
+  </div><!-- /exp-layout -->
 </section>
+
 <section class="sh-form-sec">
   <div>
     <p class="eyebrow">Formulation Systems</p>
-    <h2 class="sec-title">Ready-to-use systems<br/>for every formulation brief.</h2>
-    <p class="sec-sub">Application-ready combinations from the SILK portfolio for the most common formulation challenges.</p>
+    <h2 class="sec-title">Ready-to-use systems<br/>for every sensory brief.</h2>
+    <p class="sec-sub">Application-ready silicone combinations from the SILK portfolio for the most commercially critical sensory engineering challenges in premium LATAM skin and hair care.</p>
   </div>
-  <div class="sh-form-grid"><div class="sh-form-card">
+  <div class="sh-form-grid">
+    <div class="sh-form-card">
       <span class="sh-fc-num">System 01</span>
-      <h3 class="sh-fc-title">Dry-Touch Premium Moisturiser</h3>
-      <p class="sh-fc-body">The signature premium moisturiser texture — volatile carrier evaporates to reveal a non-greasy emollient deposit with soft velvet finish.</p>
-      <div class="sh-fc-prods"><div class="sh-fc-prod">SilkVeil (D5) · 15–20%</div><div class="sh-fc-prod">SilkFluid 350 cSt · 3–5%</div><div class="sh-fc-prod">SilkMatrix · 1–2%</div></div>
-      <span class="sh-fc-spf">Dry-Touch Luxury</span>
-    </div><div class="sh-form-card">
+      <h3 class="sh-fc-title">Premium Hair Gloss Serum</h3>
+      <p class="sh-fc-body">Maximum optical shine + conditioning + split-end smoothing. The complete professional-grade hair serum architecture for colour-treated and chemically processed hair in the LATAM premium market.</p>
+      <div class="sh-fc-prods">
+        <div class="sh-fc-prod">SilkFluid 12500 · 20%</div>
+        <div class="sh-fc-prod">SilkLume · 3%</div>
+        <div class="sh-fc-prod">SilkFluid 350 · 10%</div>
+        <div class="sh-fc-prod">CondiVeil 949 (COND) · 1%</div>
+      </div>
+      <span class="sh-fc-spf">Prestige Hair Serum</span>
+    </div>
+    <div class="sh-form-card">
       <span class="sh-fc-num">System 02</span>
-      <h3 class="sh-fc-title">Premium Hair Shine Serum</h3>
-      <p class="sh-fc-body">Maximum optical shine system for hair — combined volatile carrier and high-refractive phenyl trimethicone.</p>
-      <div class="sh-fc-prods"><div class="sh-fc-prod">SilkVeil (D5) · 50–60%</div><div class="sh-fc-prod">SilkLume · 5–10%</div><div class="sh-fc-prod">SilkDuo 1501 · 5%</div></div>
-      <span class="sh-fc-spf">Salon Shine</span>
-    </div><div class="sh-form-card">
+      <h3 class="sh-fc-title">Premium Skin Primer — Pore-Blur</h3>
+      <p class="sh-fc-body">Velvet skin feel + soft-focus optical effect + light emolliency. The complete silicone architecture for a high-performance skin primer that blurs pores and creates the luminous, refined base that modern colour cosmetics require.</p>
+      <div class="sh-fc-prods">
+        <div class="sh-fc-prod">SilkMatrix · 25%</div>
+        <div class="sh-fc-prod">SilkFluid 350 · 8%</div>
+        <div class="sh-fc-prod">SilkLume · 2%</div>
+      </div>
+      <span class="sh-fc-spf">Pore-Blur Primer Base</span>
+    </div>
+    <div class="sh-form-card">
       <span class="sh-fc-num">System 03</span>
-      <h3 class="sh-fc-title">Rinse-Out Silicone Conditioning</h3>
-      <p class="sh-fc-body">Complete silicone conditioning system for rinse-out conditioners — conditioning film formation with substantive deposition.</p>
-      <div class="sh-fc-prods"><div class="sh-fc-prod">SilkDuo 1501 · 3–5%</div><div class="sh-fc-prod">SilkFluid 1000 cSt · 2%</div><div class="sh-fc-prod">CondiVeil 949 (COND) · 1%</div></div>
-      <span class="sh-fc-spf">Conditioning System</span>
-    </div></div>
+      <h3 class="sh-fc-title">Dry-Touch Sunscreen Emollient</h3>
+      <p class="sh-fc-body">Lightweight, non-greasy SPF emollient system — the silicone foundation for spray and lotion sunscreens targeting the LATAM active and sport market where non-greasy skin feel is the primary consumer requirement.</p>
+      <div class="sh-fc-prods">
+        <div class="sh-fc-prod">SilkFluid 100 · 8%</div>
+        <div class="sh-fc-prod">SilkFluid 350 · 4%</div>
+        <div class="sh-fc-prod">SilkLume · 1.5%</div>
+        <div class="sh-fc-prod">Shield UV filters (SHIELD) · variable</div>
+      </div>
+      <span class="sh-fc-spf">Light-Touch SPF System</span>
+    </div>
+  </div>
 </section>
+
 <section class="sh-reg-sec">
   <div>
     <p class="eyebrow">Global Compliance</p>
     <h2 class="sec-title">Every market.<br/>Every standard.</h2>
+    <p class="sec-sub">Linear dimethicones, Phenyl Trimethicone, PEG-12 Dimethicone and Dimethicone Crosspolymer are not subject to the EU cyclosiloxane restrictions. Full documentation available.</p>
   </div>
-  <div class="sh-reg-grid"><div class="sh-reg-card"><span class="sh-rc-flag">🇪🇺</span><h4 class="sh-rc-title">EU Cosmetics Regulation</h4><p class="sh-rc-body">All SILK actives comply with EU Regulation 1223/2009. Note: D4 (SilkDuo 1401) is restricted in wash-off products in EU — verify current status.</p></div><div class="sh-reg-card"><span class="sh-rc-flag">🇧🇷</span><h4 class="sh-rc-title">ANVISA — Brazil</h4><p class="sh-rc-body">All silicone actives approved for cosmetic use under Brazilian regulation.</p></div><div class="sh-reg-card"><span class="sh-rc-flag">🌏</span><h4 class="sh-rc-title">Asia Pacific</h4><p class="sh-rc-body">All SILK actives IECIC-listed. Compliant with Japanese and Korean cosmetic regulation.</p></div><div class="sh-reg-card"><span class="sh-rc-flag">🌍</span><h4 class="sh-rc-title">Global Markets</h4><p class="sh-rc-body">No restriction for primary silicone grades across LATAM, North American and global markets.</p></div></div>
+  <div class="sh-reg-grid">
+    <div class="sh-reg-card"><span class="sh-rc-flag">🇪🇺</span><h4 class="sh-rc-title">EU — Linear Silicones Safe</h4><p class="sh-rc-body">EU REACH 2024/1328 restricts only cyclic silicones D4, D5 and D6. All SILK linear dimethicones, Phenyl Trimethicone, PEG-12 Dimethicone and elastomer gel remain unrestricted. Full EU Cosmetics Regulation compliance documentation available.</p></div>
+    <div class="sh-reg-card"><span class="sh-rc-flag">🇧🇷</span><h4 class="sh-rc-title">ANVISA — Brazil &amp; LATAM</h4><p class="sh-rc-body">All 8 SILK actives including SilkVeil (D5) are unrestricted under ANVISA guidelines. No cyclosiloxane restrictions apply in Brazil, Colombia, Argentina, Peru or Mexico under current regulatory frameworks.</p></div>
+    <div class="sh-reg-card"><span class="sh-rc-flag">⚠️</span><h4 class="sh-rc-title">EU D5 Transition — 2027</h4><p class="sh-rc-body">SilkVeil (Cyclopentasiloxane D5) is restricted to ≤0.1% in all EU cosmetics from June 2027. EU-market formulators currently using D5 should initiate reformulation planning. VLYOR formulation support available for alternative system design.</p></div>
+    <div class="sh-reg-card"><span class="sh-rc-flag">🇨🇳</span><h4 class="sh-rc-title">China IECIC — All Listed</h4><p class="sh-rc-body">All 8 SILK actives are IECIC-listed for the Chinese cosmetics market. Batch IECIC listing documentation available with each supply for cross-border compliance. GHS SDS available in Chinese for import documentation.</p></div>
+  </div>
 </section>
+
 <section class="sh-cta-sec">
   <div>
-    <h2>Ready to engineer<br/>premium sensory<br/>performance?</h2>
-    <p>Our silicone technology team provides sensory design guidance, formulation system recommendations and technical documentation for luxury skin care and professional hair care development.</p>
+    <h2>Ready to engineer<br/>the sensory experience<br/>consumers remember?</h2>
+    <p>Our silicone formulation team provides grade selection guidance, viscosity blending protocols, pore-blur system design and complete regulatory documentation for every SILK active across LATAM and global markets.</p>
   </div>
   <div class="sh-cta-btns">
     <a href="portal.html" class="btn-g">Full Technical Portal →</a>
     <a href="index.html#contact" class="btn-p">Request Samples →</a>
   </div>
 </section>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-brand"><span class="logo-m">VLYOR</span><br/><span class="logo-s">Science</span><p class="footer-tag">Molecular Integrity. Aesthetic Performance.</p></div>
@@ -453,29 +713,32 @@
 </footer>
 <script src="js/main.js"></script>
 <script>
-const btns=document.querySelectorAll('.sh-sb-btn');
-const panels=document.querySelectorAll('.sh-panel');
-btns.forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    btns.forEach(b=>b.classList.remove('active'));
-    panels.forEach(p=>p.classList.remove('active'));
+const btns = document.querySelectorAll('.sh-sb-btn');
+const panels = document.querySelectorAll('.sh-panel');
+btns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btns.forEach(b => b.classList.remove('active'));
+    panels.forEach(p => p.classList.remove('active'));
     btn.classList.add('active');
-    document.getElementById('prod-'+btn.dataset.prod).classList.add('active');
-    document.getElementById('explorer').scrollIntoView({behavior:'smooth'});
+    document.getElementById('prod-' + btn.dataset.prod).classList.add('active');
+    document.getElementById('explorer').scrollIntoView({behavior: 'smooth', block: 'start'});
   });
 });
-const bObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
+const bObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
     if(e.isIntersecting){
-      e.target.querySelectorAll('.bar-fill').forEach((f,i)=>{
-        setTimeout(()=>{f.style.width=f.dataset.w+'%';},i*110);
+      e.target.querySelectorAll('.bar-fill').forEach((f, i) => {
+        setTimeout(() => { f.style.width = f.dataset.w + '%'; }, i * 110);
       });
       bObs.unobserve(e.target);
     }
   });
-},{threshold:0.3});
-const sb=document.getElementById('sbars');
-if(sb)bObs.observe(sb);
-window.addEventListener('scroll',()=>{document.getElementById('mainnav').classList.toggle('scrolled',window.scrollY>40);},{passive:true});
+}, {threshold: 0.3});
+const sb = document.getElementById('sbars');
+if(sb) bObs.observe(sb);
+window.addEventListener('scroll', () => {
+  document.getElementById('mainnav').classList.toggle('scrolled', window.scrollY > 40);
+}, {passive: true});
 </script>
-</body></html>
+</body>
+</html>
