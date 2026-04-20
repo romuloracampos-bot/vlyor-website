@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Philosophy — VLYOR Science</title>
+<meta name="description" content="The philosophy behind VLYOR Science — why we build the way we build, what we believe about cosmetic chemistry, and the standard we hold every ingredient to."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;500;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+/* ── PHILOSOPHY PAGE ── */
+.ph-hero{min-height:90vh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;padding:0 40px 72px}
+.ph-hero-bg{position:absolute;inset:0;background-image:url('images/manifesto.jpg');background-size:cover;background-position:center 30%}
+.ph-hero-ov{position:absolute;inset:0;background:linear-gradient(to top,#0D0D0D 0%,rgba(13,13,13,.7) 50%,rgba(13,13,13,.2) 100%)}
+.ph-hero-grid{position:absolute;inset:0;display:flex;justify-content:space-around}
+.ph-hero-grid span{width:1px;background:rgba(255,255,255,.03)}
+.ph-hero-cnt{position:relative;z-index:2;max-width:900px}
+.ph-eyebrow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#6B7280;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.ph-eyebrow::before{content:'';width:32px;height:1px;background:#6B7280}
+.ph-h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(60px,10vw,120px);font-weight:700;line-height:.88;letter-spacing:-.03em;margin-bottom:24px}
+.ph-h1 em{font-style:italic;font-weight:300;display:block;color:rgba(255,255,255,.6)}
+.ph-hero-sub{font-size:16px;line-height:1.75;color:#9CA3AF;max-width:56ch;border-left:2px solid rgba(255,255,255,.12);padding-left:20px}
+
+/* ── MANIFESTO ── */
+.ph-manifesto{padding:100px 40px;display:grid;grid-template-columns:1fr 1fr;gap:80px;max-width:1200px;margin:0 auto}
+.ph-mani-h{font-family:'Barlow Condensed',sans-serif;font-size:clamp(32px,4vw,52px);font-weight:700;line-height:1.05;letter-spacing:-.025em;margin-bottom:32px}
+.ph-mani-h em{font-style:italic;font-weight:300;color:rgba(255,255,255,.5)}
+.ph-mani-body p{font-size:15px;line-height:1.85;color:#9CA3AF;margin-bottom:18px}
+.ph-mani-body p strong{color:#E5E7EB;font-weight:600}
+.ph-mani-body p:last-child{margin-bottom:0}
+.ph-pull{font-family:'Barlow Condensed',sans-serif;font-size:clamp(22px,3vw,32px);font-weight:500;font-style:italic;line-height:1.25;color:#E5E7EB;border-left:3px solid rgba(255,255,255,.15);padding-left:24px;margin:40px 0}
+
+/* ── PRINCIPLES ── */
+.ph-principles{padding:0 40px 100px;max-width:1200px;margin:0 auto}
+.ph-section-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#4B5563;margin-bottom:40px;display:flex;align-items:center;gap:16px}
+.ph-section-label::after{content:'';flex:1;height:1px;background:rgba(255,255,255,.07)}
+.ph-prin-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.07)}
+.ph-prin-card{background:#0D0D0D;padding:44px 40px;transition:background .3s}
+.ph-prin-card:hover{background:#111}
+.ph-prin-n{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;color:#4B5563;margin-bottom:16px;display:block}
+.ph-prin-title{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:700;letter-spacing:-.02em;margin-bottom:14px}
+.ph-prin-body{font-size:13px;line-height:1.82;color:#6B7280}
+.ph-prin-body strong{color:#9CA3AF}
+
+/* ── DARK STATEMENT ── */
+.ph-statement{background:#fff;color:#0D0D0D;padding:88px 40px;text-align:center}
+.ph-statement-inner{max-width:900px;margin:0 auto}
+.ph-statement-pre{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#9CA3AF;margin-bottom:24px}
+.ph-statement-big{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,6vw,72px);font-weight:700;letter-spacing:-.03em;line-height:.95;margin-bottom:28px}
+.ph-statement-big em{font-style:italic;font-weight:300;color:#6B7280}
+.ph-statement-sub{font-size:15px;line-height:1.75;color:#6B7280;max-width:60ch;margin:0 auto}
+
+/* ── PROCESS ── */
+.ph-process{padding:100px 40px;max-width:1200px;margin:0 auto}
+.ph-proc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(255,255,255,.07);margin-top:40px}
+.ph-proc-step{background:#0D0D0D;padding:32px 24px;position:relative;transition:background .3s}
+.ph-proc-step:hover{background:#111}
+.ph-proc-n{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;color:#4B5563;margin-bottom:20px;display:block}
+.ph-proc-name{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
+.ph-proc-desc{font-size:12px;line-height:1.75;color:#4B5563}
+.ph-proc-arr{position:absolute;right:-1px;top:50%;transform:translateY(-50%);width:16px;height:16px;border-top:1px solid rgba(255,255,255,.15);border-right:1px solid rgba(255,255,255,.15);transform:translateY(-50%) rotate(45deg);z-index:1;background:#0D0D0D}
+
+/* ── ORIGIN ── */
+.ph-origin{display:grid;grid-template-columns:1fr 1fr;min-height:520px}
+.ph-origin-img{background-image:url('images/about.jpg');background-size:cover;background-position:center}
+.ph-origin-txt{background:#111;padding:72px 56px;display:flex;flex-direction:column;justify-content:center}
+.ph-origin-eyebrow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#4B5563;margin-bottom:20px}
+.ph-origin-h{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:700;letter-spacing:-.025em;line-height:1.05;margin-bottom:20px}
+.ph-origin-body p{font-size:14px;line-height:1.82;color:#6B7280;margin-bottom:14px}
+.ph-origin-body p strong{color:#E5E7EB}
+.ph-origin-body p:last-child{margin-bottom:0}
+.ph-origin-sig{margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08)}
+.ph-origin-sig-name{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;display:block;letter-spacing:-.01em}
+.ph-origin-sig-sub{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#4B5563;display:block;margin-top:4px}
+
+/* ── CTA ── */
+.ph-cta{padding:88px 40px;text-align:center;border-top:1px solid rgba(255,255,255,.07)}
+.ph-cta h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(32px,5vw,60px);font-weight:700;letter-spacing:-.03em;line-height:.95;margin-bottom:16px}
+.ph-cta h2 em{font-style:italic;font-weight:300;color:rgba(255,255,255,.5)}
+.ph-cta p{font-size:14px;line-height:1.75;color:#6B7280;max-width:52ch;margin:0 auto 36px}
+.ph-cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+@media(max-width:1000px){.ph-manifesto{grid-template-columns:1fr;gap:40px;padding:60px 20px}.ph-principles{padding:0 20px 60px}.ph-process{padding:60px 20px}.ph-prin-grid{grid-template-columns:1fr}.ph-proc-grid{grid-template-columns:1fr;gap:1px}.ph-proc-arr{display:none}.ph-origin{grid-template-columns:1fr}.ph-origin-img{min-height:300px}.ph-origin-txt{padding:48px 28px}.ph-hero{padding:0 20px 56px}.ph-cta{padding:60px 20px}.ph-statement{padding:60px 20px}}
+</style>
+</head>
+<body>
+
+<nav id="mainnav">
+  <a class="logo" href="index.html"><span class="logo-m">VLYOR</span><span class="logo-s">Science <span class="logo-p">|</span> Global Bioactives Hub</span></a>
+  <div class="nav-links">
+    <a href="index.html#lines">Portfolio</a>
+    <a href="philosophy.html" class="nav-active">Philosophy</a>
+    <a href="index.html#standards">Standards</a>
+    <a href="portal.html" class="nav-portal">Technical Portal &rarr;</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="ph-hero">
+  <div class="ph-hero-bg"></div>
+  <div class="ph-hero-ov"></div>
+  <div class="ph-hero-grid"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="ph-hero-cnt">
+    <p class="ph-eyebrow">The VLYOR Philosophy</p>
+    <h1 class="ph-h1">Precision<br/>is not a<br/>feature.<br/><em>It is the standard.</em></h1>
+    <p class="ph-hero-sub">We build ingredients for formulators who understand that the difference between a formula that works and a formula that performs is not the brief — it is the raw material behind it.</p>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<div class="ph-manifesto">
+  <div>
+    <h2 class="ph-mani-h">The most important<br/>ingredient is the<br/>one that<br/><em>disappears.</em></h2>
+    <div class="ph-pull">"A formula is only as honest as its least-documented ingredient."</div>
+  </div>
+  <div class="ph-mani-body" data-reveal>
+    <p>The consumer never reads the INCI list. They pick up the product, apply it, and within seconds have formed an opinion that will determine whether they buy it again. That opinion is shaped entirely by the performance of the ingredients inside — ingredients they will never name, never know, never think about.</p>
+    <p>This invisibility is not a failure of cosmetic chemistry. <strong>It is the highest measure of its success.</strong> When a UV filter absorbs precisely at the right wavelength and degrades without generating photoproducts that change the skin, the consumer simply doesn't get sunburned. When a conditioning polymer deposits uniformly on damaged hair cortex, the consumer simply says the product makes their hair feel soft. They don't know why. They don't need to.</p>
+    <p>VLYOR exists for the chemist who does know why — and demands that every ingredient in the formula is documented, characterised and specified to a standard that makes the consumer's invisible experience possible with consistency, batch after batch, market after market.</p>
+    <p>This is not a philosophy about premium positioning or brand differentiation. <strong>It is a philosophy about the relationship between molecular integrity and the consumer experience that depends on it.</strong></p>
+  </div>
+</div>
+
+<!-- PRINCIPLES -->
+<div class="ph-principles">
+  <p class="ph-section-label">Four operating principles</p>
+  <div class="ph-prin-grid">
+
+    <div class="ph-prin-card" data-reveal>
+      <span class="ph-prin-n">01</span>
+      <h3 class="ph-prin-title">Document everything.<br/>Assume nothing.</h3>
+      <p class="ph-prin-body">Every VLYOR active ships with a TDS, GHS SDS (16-section), Certificate of Analysis and regulatory mapping for the target market. This is not a service — it is the minimum standard we hold ourselves to. A formulator should never have to ask for documentation. <strong>It should arrive before they think to ask.</strong> Incomplete documentation is not an administrative failure. It is a formulation risk that the formulator will carry alone.</p>
+    </div>
+
+    <div class="ph-prin-card" data-reveal data-delay="1">
+      <span class="ph-prin-n">02</span>
+      <h3 class="ph-prin-title">The supply chain<br/>is part of the formula.</h3>
+      <p class="ph-prin-body">Origin traceability, batch-to-batch consistency and supply reliability are not logistics questions. They are formulation questions. A UV filter with outstanding photostability on paper delivers nothing if the batch purity is inconsistent across orders. <strong>VLYOR's direct China sourcing model eliminates the distributor margin and the documentation gap</strong> that grows in every intermediary step between the manufacturer and the lab.</p>
+    </div>
+
+    <div class="ph-prin-card" data-reveal data-delay="2">
+      <span class="ph-prin-n">03</span>
+      <h3 class="ph-prin-title">Respond with data,<br/>not catalogues.</h3>
+      <p class="ph-prin-body">When a formulator contacts VLYOR with a challenge, the response is a targeted TDS matched to the specific application — not a product list. The distinction matters: a product list asks the formulator to do the matching work. A targeted response demonstrates that <strong>we understood the brief before answering it.</strong> Formulators working on tight development timelines need partners who can accelerate the iteration cycle, not add to it.</p>
+    </div>
+
+    <div class="ph-prin-card" data-reveal data-delay="3">
+      <span class="ph-prin-n">04</span>
+      <h3 class="ph-prin-title">Molecular precision<br/>scales to market reality.</h3>
+      <p class="ph-prin-body">Premium technical positioning without operational accessibility is not a value proposition — it is a catalogue. VLYOR maintains 500 g minimum orders, 7–12 day LATAM air freight and CIF/FOB/EXW incoterms specifically because <strong>the innovation cycle in cosmetics requires fast, small iteration before scale commitment.</strong> A lab that cannot prototype efficiently cannot innovate. The supply model exists to serve the work, not constrain it.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- STATEMENT -->
+<div class="ph-statement">
+  <div class="ph-statement-inner">
+    <p class="ph-statement-pre">What we believe</p>
+    <h2 class="ph-statement-big">The formulator's work<br/>is only as good<br/>as the ingredients<br/><em>beneath it.</em></h2>
+    <p class="ph-statement-sub">We don't make products. We make the raw materials that make products possible — and we hold those materials to the same standard we expect the finished formula to meet.</p>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<div class="ph-process">
+  <p class="ph-section-label">How we work</p>
+  <div class="ph-proc-grid">
+    <div class="ph-proc-step" data-reveal>
+      <span class="ph-proc-n">01</span>
+      <p class="ph-proc-name">Source</p>
+      <p class="ph-proc-desc">Direct manufacturer relationships in Suzhou — the world's most concentrated specialty chemical manufacturing hub. No intermediary. Full origin traceability from synthesis to shipment.</p>
+    </div>
+    <div class="ph-proc-step" data-reveal data-delay="1">
+      <span class="ph-proc-n">02</span>
+      <p class="ph-proc-name">Qualify</p>
+      <p class="ph-proc-desc">Every incoming batch is qualified against a complete specification. COA cross-verification, INCI confirmation, CAS validation and regulatory mapping completed before the product enters the VLYOR portfolio.</p>
+    </div>
+    <div class="ph-proc-step" data-reveal data-delay="2">
+      <span class="ph-proc-n">03</span>
+      <p class="ph-proc-name">Document</p>
+      <p class="ph-proc-desc">TDS, GHS SDS, COA and IECIC listing compiled for each active. Regulatory documentation maps each ingredient to EU 1223/2009, ANVISA, and China GB standards. Nothing ships without a complete documentation package.</p>
+    </div>
+    <div class="ph-proc-step" data-reveal data-delay="3">
+      <span class="ph-proc-n">04</span>
+      <p class="ph-proc-name">Support</p>
+      <p class="ph-proc-desc">Technical inquiries answered by chemists. Formulation guidance matched to the specific application brief. Regulatory questions routed to the correct market framework. The support cycle is part of the product.</p>
+    </div>
+    <div class="ph-proc-step" data-reveal data-delay="4">
+      <span class="ph-proc-n">05</span>
+      <p class="ph-proc-name">Deliver</p>
+      <p class="ph-proc-desc">CIF air freight to LATAM in 7–12 business days. From 500 g samples to commercial volumes. Every shipment arrives with the same documentation package — regardless of order size.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ORIGIN -->
+<div class="ph-origin">
+  <div class="ph-origin-img"></div>
+  <div class="ph-origin-txt">
+    <p class="ph-origin-eyebrow">Where we operate</p>
+    <h2 class="ph-origin-h">Suzhou to LATAM.<br/>Chemistry to consumer.</h2>
+    <div class="ph-origin-body" data-reveal>
+      <p>VLYOR Science operates from Suzhou, China — one of the world's most significant specialty chemical manufacturing hubs, with access to the production infrastructure that supplies the majority of the global cosmetic raw materials market.</p>
+      <p>Our position at the origin of the supply chain is not a cost advantage. <strong>It is a quality advantage.</strong> Direct manufacturer relationships mean full access to production documentation, batch traceability, and specification discussions that are impossible three steps down a distribution chain.</p>
+      <p>The LATAM market is our primary focus not because it is the easiest market to serve — it is not — but because <strong>it is the market most underserved by this level of technical rigour.</strong> Brazil, Colombia, Mexico, Argentina, Peru and Chile all have sophisticated cosmetic industries demanding ingredients with documentation standards that match the quality of the finished products they produce. VLYOR was built to serve that specific demand.</p>
+    </div>
+    <div class="ph-origin-sig">
+      <span class="ph-origin-sig-name">VLYOR Science</span>
+      <span class="ph-origin-sig-sub">Global Bioactives Hub &mdash; Suzhou, China</span>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="ph-cta">
+  <h2>Ready to start<br/>a technical<br/><em>conversation?</em></h2>
+  <p>Explore the full VLYOR portfolio across 8 product lines and 100+ ingredients, or contact us directly with your formulation challenge.</p>
+  <div class="ph-cta-btns">
+    <a href="index.html#lines" class="btn-p">Explore Portfolio →</a>
+    <a href="portal.html" class="btn-g">Technical Portal →</a>
+    <a href="index.html#contact" class="btn-g">Contact →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><span class="logo-m">VLYOR</span><br/><span class="logo-s">Science</span><p class="footer-tag">Molecular Integrity. Aesthetic Performance.</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h5>Portfolio</h5><ul>
+        <li><a href="shield.html">VLYOR SHIELD</a></li><li><a href="vital.html">VLYOR VITAL</a></li>
+        <li><a href="pure.html">VLYOR PURE</a></li><li><a href="func.html">VLYOR FUNC</a></li>
+        <li><a href="cond.html">VLYOR COND</a></li><li><a href="silk.html">VLYOR SILK</a></li>
+        <li><a href="form.html">VLYOR FORM</a></li><li><a href="hydra.html">VLYOR HYDRA</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Company</h5><ul>
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="portal.html">Technical Portal</a></li>
+        <li><a href="index.html#standards">Standards</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul>
+        <li><a href="mailto:science@vlyor.com">science@vlyor.com</a></li>
+        <li>Global Bioactives Hub</li><li>Suzhou, China</li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="ft-code">V3.0 &mdash; 2026</span>
+    <span>&copy; VLYOR Science. All rights reserved.</span>
+    <span class="ft-code">REACH &middot; IECIC &middot; GHS</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('mainnav').classList.toggle('scrolled', window.scrollY > 40);
+}, {passive: true});
+</script>
+</body>
+</html>

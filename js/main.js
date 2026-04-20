@@ -240,3 +240,37 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
   });
 });
+
+// ── Card image parallax ───────────────────────────────────────────────────────
+(function initParallax() {
+  const imgs = document.querySelectorAll('.card-img');
+  if (!imgs.length) return;
+
+  // Respect reduced-motion preference
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  let ticking = false;
+  function updateParallax() {
+    imgs.forEach(img => {
+      const rect = img.closest('.card-img-link')?.getBoundingClientRect()
+                || img.getBoundingClientRect();
+      const vh = window.innerHeight;
+      // progress: 0 when card top hits bottom of viewport, 1 when card bottom hits top
+      const progress = 1 - (rect.bottom / (vh + rect.height));
+      // Shift background-position-y between 35% (card entering) and 65% (card leaving)
+      const yPct = 35 + progress * 30;
+      img.style.backgroundPositionY = yPct.toFixed(1) + '%';
+    });
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  }, {passive: true});
+
+  // Run once on load
+  updateParallax();
+})();
