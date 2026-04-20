@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>VLYOR HYDRA — Humectants &amp; Film Agents | VLYOR Science</title>
+<meta name="description" content="VLYOR HYDRA — 7 humectant and film-forming actives: PEG series, glycols and PVP film formers. The hydration foundation of every effective cosmetic formula."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;500;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+:root{--acc:#7DD3FC;--acc-bg:rgba(125,211,252,.07);--acc-border:rgba(125,211,252,.2);--line-dark:#0C4A6E}
+.sh-hero{min-height:78vh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;padding:0 40px 64px}
+.sh-bg{position:absolute;inset:0;background-image:url('images/hydra.jpg');background-size:cover;background-position:center}
+.sh-ov{position:absolute;inset:0;background:linear-gradient(to top,#0D0D0D 0%,rgba(13,13,13,.72) 40%,rgba(12,74,110,.35) 100%)}
+.sh-grid{position:absolute;inset:0;display:flex;justify-content:space-around}
+.sh-grid span{width:1px;background:rgba(255,255,255,.035)}
+.sh-cnt{position:relative;z-index:2;max-width:860px}
+.sh-bc{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#6B7280;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.sh-bc a{color:#6B7280;transition:color .2s}.sh-bc a:hover{color:#fff}
+.sh-tag{display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc-border);padding:5px 12px;margin-bottom:18px}
+.sh-dot{width:6px;height:6px;border-radius:50%;background:var(--acc);flex-shrink:0}
+.sh-h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(52px,9vw,96px);font-weight:700;line-height:.92;letter-spacing:-.025em;margin-bottom:8px}
+.sh-h1 em{font-style:italic;font-weight:300;color:var(--acc)}
+.sh-sub{font-size:15px;line-height:1.72;color:#D1D5DB;max-width:62ch;margin-bottom:32px}
+.sh-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+.sh-stats{display:flex;gap:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
+.sh-stat{display:flex;flex-direction:column;gap:3px}
+.sh-stat-n{font-family:'Barlow Condensed',sans-serif;font-size:30px;font-weight:700;letter-spacing:-.02em}
+.sh-stat-l{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280}
+.sh-intro{background:var(--line-dark);display:grid;grid-template-columns:repeat(4,1fr);gap:1px}
+.sh-in{background:rgba(0,0,0,.3);padding:32px;border-left:1px solid rgba(255,255,255,.07)}
+.sh-in:first-child{border-left:none}
+.sh-in-n{font-family:'Barlow Condensed',sans-serif;font-size:44px;font-weight:700;letter-spacing:-.02em;color:var(--acc);display:block;margin-bottom:6px}
+.sh-in-h{font-size:13px;font-weight:600;margin-bottom:7px}
+.sh-in-b{font-size:12px;line-height:1.7;color:rgba(255,255,255,.5)}
+.sh-comm{padding:88px 40px;display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:start}
+.sh-comm-body{font-size:14px;line-height:1.82;color:#D1D5DB;margin-bottom:16px}
+.sh-comm-body strong{color:#fff;font-weight:600}
+.sh-quote{border-left:3px solid var(--acc);padding:14px 20px;margin:24px 0;background:var(--acc-bg)}
+.sh-quote p{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:500;line-height:1.35;font-style:italic}
+.sh-quote cite{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;display:block;margin-top:9px;font-style:normal}
+.bar-row{display:flex;align-items:center;gap:11px;margin-bottom:9px}
+.bar-lbl{font-family:'DM Mono',monospace;font-size:9px;color:#6B7280;width:140px;flex-shrink:0;text-align:right}
+.bar-track{flex:1;height:5px;background:rgba(255,255,255,.07)}
+.bar-fill{height:100%;background:var(--acc);opacity:.78;width:0;transition:width 1.1s cubic-bezier(0,.8,.2,1)}
+.bar-val{font-family:'DM Mono',monospace;font-size:9px;color:var(--acc);width:50px;flex-shrink:0}
+.chart-title{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;margin-bottom:18px}
+.chart-note{font-size:10px;color:#4B5563;font-family:'DM Mono',monospace;margin-top:10px}
+.sh-explorer{padding:0 0 88px}
+.sh-exp-hdr{padding:0 40px 40px}
+.sh-exp-layout{display:grid;grid-template-columns:260px 1fr;min-height:600px}
+.sh-sidebar{background:#111;border-right:1px solid rgba(255,255,255,.07);padding:0;overflow-y:auto}
+.sh-sb-grp{border-bottom:1px solid rgba(255,255,255,.06)}
+.sh-sb-grp-hd{padding:14px 22px;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#4B5563}
+.sh-sb-btn{display:flex;align-items:center;justify-content:space-between;width:100%;padding:11px 22px;background:none;border:none;color:#9CA3AF;font-family:'Barlow',sans-serif;font-size:12.5px;cursor:pointer;transition:all .2s;text-align:left;border-left:2px solid transparent}
+.sh-sb-btn:hover{color:#fff;background:rgba(255,255,255,.03)}
+.sh-sb-btn.active{color:#fff;background:rgba(125,211,252,.07);border-left-color:var(--acc)}
+.sh-sb-tag{font-family:'DM Mono',monospace;font-size:8px;padding:2px 6px;background:rgba(125,211,252,.12);color:var(--acc)}
+.sh-panel{display:none;animation:fadeIn .25s ease}
+.sh-panel.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.sh-panel-inner{display:grid;grid-template-columns:1fr 380px;min-height:600px}
+.sh-pl{padding:40px 40px 40px 36px}
+.sh-pr{background:#0D0D0D;padding:36px 32px;display:flex;flex-direction:column;gap:28px;border-left:1px solid rgba(255,255,255,.06)}
+.sh-panel-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:6px;margin-bottom:12px}
+.sh-panel-name{font-family:'Barlow Condensed',sans-serif;font-size:44px;font-weight:700;letter-spacing:-.025em;line-height:.95;margin-bottom:6px}
+.sh-panel-inci{font-family:'DM Mono',monospace;font-size:10px;color:#6B7280;letter-spacing:.04em;margin-bottom:18px;font-style:italic}
+.sh-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px}
+.sh-badge{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.04em;padding:4px 9px}
+.b-a{background:rgba(125,211,252,.1);color:var(--acc)}
+.b-b{background:rgba(167,243,208,.1);color:#A7F3D0}
+.b-d{background:rgba(12,74,110,.35);color:#7DD3FC}
+.b-e{background:rgba(253,211,77,.08);color:#FCD34D}
+.sh-tagline{font-size:16px;line-height:1.65;color:#E5E7EB;margin-bottom:22px;font-style:italic;border-left:2px solid var(--acc);padding-left:16px}
+.sh-body{font-size:13px;line-height:1.82;color:#9CA3AF;margin-bottom:16px}
+.sh-body strong{color:#E5E7EB;font-weight:600}
+.sh-section-h{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#6B7280;margin-bottom:13px;margin-top:28px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06)}
+.sh-app-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+.sh-app-tag{font-family:'DM Mono',monospace;font-size:9px;padding:4px 10px;background:rgba(255,255,255,.05);color:#D1D5DB;letter-spacing:.03em}
+.sh-syn-list{display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
+.sh-syn{display:flex;align-items:baseline;gap:10px;padding:8px 12px;background:rgba(255,255,255,.025);border-left:2px solid var(--acc-border)}
+.sh-syn-code{font-family:'DM Mono',monospace;font-size:10px;color:var(--acc);flex-shrink:0;white-space:nowrap}
+.sh-syn-desc{font-size:12px;color:#9CA3AF}
+.sh-perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.sh-perf-card{background:rgba(255,255,255,.03);padding:14px;border:1px solid rgba(255,255,255,.06)}
+.sh-perf-val{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:700;letter-spacing:-.02em;display:block;margin-bottom:3px}
+.sh-perf-lbl{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280}
+.sh-spec-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#6B7280;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:4px}
+.sh-spec-row{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px}
+.sh-spec-row:last-child{border-bottom:none}
+.sh-spec-k{color:#6B7280}
+.sh-spec-v{font-family:'DM Mono',monospace;font-size:11px;color:#fff;text-align:right;max-width:200px;word-break:break-word}
+.sh-reg-block{background:rgba(255,255,255,.025);padding:16px}
+.sh-reg-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;margin-bottom:10px}
+.sh-reg-row{display:flex;justify-content:space-between;font-size:11px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.sh-reg-row:last-child{border-bottom:none}
+.sh-reg-k{color:#6B7280}
+.sh-reg-v{font-family:'DM Mono',monospace;font-size:10px;color:#fff}
+.sh-cta-btn{display:flex;align-items:center;justify-content:space-between;padding:13px 18px;background:var(--line-dark);color:var(--acc);border:1px solid var(--acc-border);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .25s;width:100%}
+.sh-cta-btn:hover{background:var(--acc-bg);border-color:var(--acc)}
+.sh-cta-btn svg{width:14px;height:14px;flex-shrink:0}
+.sh-reg-sec{padding:88px 40px}
+.sh-reg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);margin-top:48px}
+.sh-reg-card{background:#0D0D0D;padding:24px;transition:background .3s}
+.sh-reg-card:hover{background:#111}
+.sh-rc-flag{font-size:20px;margin-bottom:12px;display:block}
+.sh-rc-title{font-size:13px;font-weight:600;margin-bottom:7px}
+.sh-rc-body{font-size:12px;line-height:1.65;color:#6B7280}
+.sh-cta-sec{background:var(--line-dark);padding:72px 40px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.sh-cta-sec h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(30px,4vw,48px);font-weight:700;letter-spacing:-.02em;line-height:1.05;margin-bottom:10px}
+.sh-cta-sec p{font-size:14px;color:rgba(255,255,255,.6);max-width:52ch}
+.sh-cta-btns{display:flex;gap:12px;flex-shrink:0;flex-wrap:wrap}
+@media(max-width:1100px){.sh-exp-layout{grid-template-columns:220px 1fr}.sh-panel-inner{grid-template-columns:1fr 320px}}
+@media(max-width:900px){.sh-hero{padding:0 20px 48px}.sh-comm{grid-template-columns:1fr;gap:40px;padding:56px 20px}.sh-exp-layout{grid-template-columns:1fr}.sh-sidebar{display:none}.sh-panel-inner{grid-template-columns:1fr}.sh-pr{display:none}.sh-reg-grid{grid-template-columns:1fr 1fr}.sh-cta-sec{grid-template-columns:1fr}.sh-explorer,.sh-reg-sec{padding-left:20px;padding-right:20px}.sh-exp-hdr{padding-left:20px;padding-right:20px}}
+@media(max-width:600px){.sh-reg-grid{grid-template-columns:1fr}.sh-intro{grid-template-columns:1fr 1fr}.sh-stats{gap:24px}}
+</style>
+</head>
+<body>
+<nav id="mainnav">
+  <a class="logo" href="index.html"><span class="logo-m">VLYOR</span><span class="logo-s">Science <span class="logo-p">|</span> Global Bioactives Hub</span></a>
+  <div class="nav-links">
+    <a href="index.html#lines">Portfolio</a>
+    <a href="index.html#about">Philosophy</a>
+    <a href="index.html#standards">Standards</a>
+    <a href="portal.html" class="nav-portal">Technical Portal &rarr;</a>
+  </div>
+</nav>
+
+<section class="sh-hero">
+  <div class="sh-bg"></div><div class="sh-ov"></div>
+  <div class="sh-grid"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="sh-cnt">
+    <div class="sh-bc"><a href="index.html">VLYOR Science</a><span>&rarr;</span><a href="index.html#lines">Portfolio</a><span>&rarr;</span><span style="color:#fff">VLYOR HYDRA</span></div>
+    <div class="sh-tag"><div class="sh-dot"></div>Humectants &amp; Film Agents &mdash; 7 Actives Across 3 Families</div>
+    <h1 class="sh-h1">Moisture by<br/><em>Architecture.</em></h1>
+    <p class="sh-sub">Seven actives that define how formulations retain water, bind moisture to the skin and hold structure in hair. From classical glycols spanning the full molecular weight spectrum to high-performance PVP film formers &mdash; the hydration foundation beneath every effective cosmetic formula.</p>
+    <div class="sh-actions">
+      <a href="#explorer" class="btn-p">Explore 7 Actives &darr;</a>
+      <a href="hydra-dossier.html" class="btn-g">Technical Dossier &rarr;</a>
+    </div>
+    <div class="sh-stats">
+      <div class="sh-stat"><span class="sh-stat-n">7</span><span class="sh-stat-l">Humectant &amp; Film-Former Actives</span></div>
+      <div class="sh-stat"><span class="sh-stat-n">PEG 200&ndash;8000</span><span class="sh-stat-l">Full MW Spectrum</span></div>
+      <div class="sh-stat"><span class="sh-stat-n">USP/NF</span><span class="sh-stat-l">Pharmacopoeial Quality</span></div>
+      <div class="sh-stat"><span class="sh-stat-n">IECIC</span><span class="sh-stat-l">All Actives Listed</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="sh-intro">
+  <div class="sh-in"><span class="sh-in-n">PEG</span><p class="sh-in-h">Full Molecular Weight Spectrum</p><p class="sh-in-b">AquaForm PEG Series covers PEG 200 to PEG 8000 &mdash; from mobile clear liquids for humectancy and solubilisation through waxy solid grades for ointment bases, consistency modification and sustained moisture release. Eight grades, one family, every application covered.</p></div>
+  <div class="sh-in"><span class="sh-in-n">4 Glycols</span><p class="sh-in-h">Glycol Architecture</p><p class="sh-in-b">HydraBase Glyc (Glycerin), PG (Propylene Glycol), DPG (Dipropylene Glycol) and PDO (1,3-Propanediol) form the complete classical humectant toolkit &mdash; moisture binding, solvent function and skin feel engineering from three complementary molecular architectures.</p></div>
+  <div class="sh-in"><span class="sh-in-n">PVP</span><p class="sh-in-h">Film-Former Architecture</p><p class="sh-in-b">AquaFilm K30 and K90 &mdash; Polyvinylpyrrolidone in medium (K30) and high (K90) molecular weight grades. The reference nonionic film former for hair styling: stiff, transparent, glossy films from K30; high-hold, high-viscosity performance from K90.</p></div>
+  <div class="sh-in"><span class="sh-in-n">USP/NF</span><p class="sh-in-h">Pharmacopoeial Standard</p><p class="sh-in-b">Every HYDRA active is supplied to USP/NF or equivalent pharmacopoeial quality &mdash; glycerin BP/USP, propylene glycol USP, PEG grades meeting pharmacopoeial specifications. The documentation standard demanded by regulated markets across LATAM.</p></div>
+</div>
+
+<section class="sh-comm">
+  <div>
+    <p class="eyebrow">The Hydration Argument</p>
+    <h2 class="sec-title">Moisture retention is<br/>not a claim. It is<br/>a formulation decision.</h2>
+    <p class="sh-comm-body">Every cosmetic formula exists in a constant battle with water loss. Emulsions lose water to evaporation. Gels lose water to the environment. Hair loses water under thermal stress. The ingredients that determine whether a formula wins or loses this battle are humectants and film formers &mdash; the invisible hydration infrastructure of personal care.</p>
+    <p class="sh-comm-body"><strong>VLYOR HYDRA</strong> provides the complete humectant and film-former toolkit for LATAM formulation: the AquaForm PEG series spanning every molecular weight from mobile liquid to waxy solid; the HydraBase glycol family covering the four most commercially important humectant glycols; and the AquaFilm PVP series delivering transparent, shiny, adjustable-hold film-forming performance for hair care across the full styling spectrum.</p>
+    <div class="sh-quote"><p>"A humectant is the formula's promise to the skin: I will draw moisture to you and hold it there. Every other moisturisation mechanism depends on this first, foundational commitment."</p><cite>VLYOR Science &mdash; Hydration Architecture Technical Position</cite></div>
+    <p class="sh-comm-body">In the LATAM climate &mdash; where humidity varies from the tropical moisture of S&atilde;o Paulo and Bogot&aacute; to the arid conditions of Mexico City and Santiago &mdash; humectant selection is not neutral. The wrong humectant at the wrong concentration produces sticky, heavy skin feel in humid conditions, or insufficient moisturisation in dry conditions. <strong>VLYOR HYDRA provides the molecular toolkit to engineer moisture behaviour precisely for the target climate.</strong></p>
+  </div>
+  <div>
+    <p class="chart-title">Water Binding at 50% Relative Humidity</p>
+    <div id="sbars">
+      <div class="bar-row"><span class="bar-lbl">Glycerin (HydraBase Glyc)</span><div class="bar-track"><div class="bar-fill" data-w="85"></div></div><span class="bar-val">25% w/w</span></div>
+      <div class="bar-row"><span class="bar-lbl">Propylene Glycol (HydraBase PG)</span><div class="bar-track"><div class="bar-fill" data-w="67"></div></div><span class="bar-val">20% w/w</span></div>
+      <div class="bar-row"><span class="bar-lbl">PEG 400 (AquaForm 400)</span><div class="bar-track"><div class="bar-fill" data-w="55"></div></div><span class="bar-val">~16% w/w</span></div>
+      <div class="bar-row"><span class="bar-lbl">Dipropylene Glycol (HydraBase DPG)</span><div class="bar-track"><div class="bar-fill" data-w="45"></div></div><span class="bar-val">~13% w/w</span></div>
+      <div class="bar-row"><span class="bar-lbl">PDO 1,3 (HydraBase PDO)</span><div class="bar-track"><div class="bar-fill" data-w="60"></div></div><span class="bar-val">~18% w/w</span></div>
+    </div>
+    <p class="chart-note">Equilibrium hygroscopicity at 50% RH / 25&deg;C. Higher = more water binding at ambient conditions.</p>
+    <div style="margin-top:28px;background:rgba(125,211,252,.04);border:1px solid var(--acc-border);padding:20px">
+      <p class="chart-title" style="margin-bottom:12px">PEG MW &mdash; Physical Form &amp; Function</p>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="display:flex;align-items:center;gap:10px;font-size:11px">
+          <span style="font-family:'DM Mono',monospace;font-size:9px;color:#6B7280;width:90px;flex-shrink:0">PEG 200&ndash;600</span>
+          <div style="flex:1;height:4px;background:var(--acc);opacity:.7;border-radius:2px"></div>
+          <span style="font-family:'DM Mono',monospace;font-size:9px;color:var(--acc)">Liquid &mdash; humectant / solvent</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;font-size:11px">
+          <span style="font-family:'DM Mono',monospace;font-size:9px;color:#6B7280;width:90px;flex-shrink:0">PEG 1000&ndash;1500</span>
+          <div style="flex:1;height:4px;background:var(--acc);opacity:.5;border-radius:2px"></div>
+          <span style="font-family:'DM Mono',monospace;font-size:9px;color:var(--acc)">Paste &mdash; transition range</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;font-size:11px">
+          <span style="font-family:'DM Mono',monospace;font-size:9px;color:#6B7280;width:90px;flex-shrink:0">PEG 4000&ndash;8000</span>
+          <div style="flex:1;height:4px;background:var(--acc);opacity:.35;border-radius:2px"></div>
+          <span style="font-family:'DM Mono',monospace;font-size:9px;color:var(--acc)">Solid flake &mdash; consistency / binder</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="explorer" class="sh-explorer">
+  <div class="sh-exp-hdr">
+    <p class="eyebrow">The HYDRA Portfolio</p>
+    <h2 class="sec-title">7 actives.<br/>One hydration system.</h2>
+    <p class="sec-sub">Select any active to access its full commercial profile, technical specifications, water-binding data and formulation guidance.</p>
+  </div>
+  <div class="sh-exp-layout">
+    <aside class="sh-sidebar">
+      <div class="sh-sb-grp">
+        <div class="sh-sb-grp-hd">PEG Series &mdash; Humectants</div>
+        <button class="sh-sb-btn active" data-prod="peg400">AquaForm PEG Series<span class="sh-sb-tag">PEG 200&ndash;8000</span></button>
+      </div>
+      <div class="sh-sb-grp">
+        <div class="sh-sb-grp-hd">Glycol Humectants</div>
+        <button class="sh-sb-btn" data-prod="glyc">HydraBase Glyc<span class="sh-sb-tag">Glycerin</span></button>
+        <button class="sh-sb-btn" data-prod="pg">HydraBase PG<span class="sh-sb-tag">Prop. Glycol</span></button>
+        <button class="sh-sb-btn" data-prod="dpg">HydraBase DPG<span class="sh-sb-tag">Diprop. Glycol</span></button>
+        <button class="sh-sb-btn" data-prod="pdo">HydraBase PDO<span class="sh-sb-tag">1,3-Propanediol</span></button>
+      </div>
+      <div class="sh-sb-grp">
+        <div class="sh-sb-grp-hd">PVP Film Formers</div>
+        <button class="sh-sb-btn" data-prod="pvpk30">AquaFilm K30<span class="sh-sb-tag">Medium MW</span></button>
+        <button class="sh-sb-btn" data-prod="pvpk90">AquaFilm K90<span class="sh-sb-tag">High MW</span></button>
+      </div>
+    </aside>
+    <div class="sh-panels">
+
+<div class="sh-panel active" id="prod-peg400"><div class="sh-panel-inner"><div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR HYDRA &mdash; Humectants &amp; Film Agents</div>
+  <h2 class="sh-panel-name">AquaForm PEG</h2>
+  <p class="sh-panel-inci">Polyethylene Glycol (PEG) &middot; CAS 25322-68-3 &middot; Grades: PEG 200 &middot; 400 &middot; 600 &middot; 1000 &middot; 1500 &middot; 4000 &middot; 6000 &middot; 8000</p>
+  <div class="sh-badges"><span class="sh-badge b-a">PEG Humectant</span><span class="sh-badge b-d">8 Grades</span><span class="sh-badge b-d">PEG 200&ndash;8000</span><span class="sh-badge b-d">Liquid to Solid</span></div>
+  <p class="sh-tagline">"Eight grades of Polyethylene Glycol spanning molecular weight 200 to 8000 &mdash; from mobile clear liquids for humectancy and solubilisation through waxy solid flakes for consistency modification, ointment bases and sustained moisture release."</p>
+  <p class="sh-body">AquaForm PEG Series is <strong>Polyethylene Glycol (PEG) &mdash; a family of linear polyether polymers produced by polymerisation of ethylene oxide</strong> with repeating &mdash;CH&sub;2;&mdash;CH&sub;2;&mdash;O&mdash; units. The molecular weight and consequent physical form change systematically with chain length: <strong>PEG 200, 400, 600</strong> are clear, colourless liquids with increasing viscosity; <strong>PEG 1000&ndash;1500</strong> are pastes or soft solids; <strong>PEG 4000, 6000 and 8000</strong> are white waxy flakes with melting points of approximately 55&ndash;65&deg;C. This molecular weight spectrum produces fundamentally different formulation functions from a single INCI chemistry.</p>
+  <p class="sh-body">Liquid grades (PEG 200&ndash;600) act as <strong>humectants, solvents and solubilisers</strong> &mdash; attracting moisture from the environment through multiple hydroxyl groups, dissolving polar actives that are insoluble in water or glycols, and reducing the stickiness of high-glycerin formulations when blended in. <strong>PEG 400</strong> is the most commercially used grade globally, providing balanced humectancy with low viscosity and broad compatibility. Solid grades (PEG 4000&ndash;8000) function as <strong>consistency factors, ointment bases, tablet binders and water-washable bases</strong> &mdash; providing waxy structure in anhydrous formulations, improving skin feel in cold cream systems and acting as water-soluble alternatives to traditional waxes. All grades meet USP/NF pharmacopoeial standards as supplied.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">8 grades</span><span class="sh-perf-lbl">PEG 200 &rarr; 8000</span></div><div class="sh-perf-card"><span class="sh-perf-val">200&ndash;8000</span><span class="sh-perf-lbl">Molecular weight range</span></div><div class="sh-perf-card"><span class="sh-perf-val">USP/NF</span><span class="sh-perf-lbl">All grades pharmacopoeial</span></div><div class="sh-perf-card"><span class="sh-perf-val">pH 4.5&ndash;7.5</span><span class="sh-perf-lbl">Stable range</span></div></div>
+  <p class="sh-section-h">Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Humectant in Creams &amp; Lotions (PEG 200&ndash;600)</span><span class="sh-app-tag">Active Solubilisation (PEG 400)</span><span class="sh-app-tag">Ointment Bases &amp; Consistency (PEG 4000&ndash;8000)</span><span class="sh-app-tag">Cold Cream / Water-Washable Bases</span><span class="sh-app-tag">Tablet Binder (PEG 6000)</span><span class="sh-app-tag">Fragrance Carrier</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p>
+  <div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+HydraBase Glyc (HYDRA) &mdash; Blended humectant system</span><span class="sh-syn-desc">PEG 400 (3&ndash;5%) + Glycerin (3&ndash;5%) creates a balanced humectant blend: glycerin provides superior water binding; PEG 400 reduces the stickiness of high-glycerin formulations, improving skin feel at equivalent total humectant loading. Standard humectant architecture for body lotions and lightweight moisturisers.</span></div><div class="sh-syn"><span class="sh-syn-code">+RheoForm 940/980 (FORM) &mdash; Clear gel hydration base</span><span class="sh-syn-desc">PEG 400 dissolved in carbomer gel provides a polymer humectant with excellent compatibility &mdash; PEG enhances the water-retention of clear gel serums and toners without affecting gel clarity, carbomer viscosity or formulation pH when added at 3&ndash;8%.</span></div></div>
+</div><div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p>
+  <div class="sh-spec-row"><span class="sh-spec-k">INCI</span><span class="sh-spec-v">Polyethylene Glycol / PEG-n</span></div><div class="sh-spec-row"><span class="sh-spec-k">CAS</span><span class="sh-spec-v">25322-68-3</span></div><div class="sh-spec-row"><span class="sh-spec-k">Grades</span><span class="sh-spec-v">PEG 200 &middot; 400 &middot; 600 &middot; 1000 &middot; 1500 &middot; 4000 &middot; 6000 &middot; 8000</span></div><div class="sh-spec-row"><span class="sh-spec-k">Physical form</span><span class="sh-spec-v">Liquid (PEG 200&ndash;600) &rarr; Solid flake (PEG 4000+)</span></div><div class="sh-spec-row"><span class="sh-spec-k">Melting point (PEG 4000)</span><span class="sh-spec-v">~55&deg;C</span></div><div class="sh-spec-row"><span class="sh-spec-k">Melting point (PEG 6000)</span><span class="sh-spec-v">~60&deg;C</span></div><div class="sh-spec-row"><span class="sh-spec-k">Water solubility</span><span class="sh-spec-v">Fully miscible in water (all grades)</span></div><div class="sh-spec-row"><span class="sh-spec-k">Pharmacopoeial</span><span class="sh-spec-v">USP/NF &mdash; all grades</span></div><div class="sh-spec-row"><span class="sh-spec-k">pH (10% aq. solution)</span><span class="sh-spec-v">4.5 &ndash; 7.5</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes &mdash; all grades</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Status</p><div class="sh-reg-row"><span class="sh-reg-k">EU 1223/2009</span><span class="sh-reg-v">No restriction &mdash; all grades</span></div><div class="sh-reg-row"><span class="sh-reg-k">ANVISA / Brazil</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">USP/NF</span><span class="sh-reg-v">Pharmacopoeial monograph compliant</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved</span></div></div>
+  <button class="sh-cta-btn" onclick="window.location='hydra-dossier.html#peg400'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div></div></div>
+<div class="sh-panel" id="prod-glyc"><div class="sh-panel-inner"><div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR HYDRA &mdash; Humectants &amp; Film Agents</div>
+  <h2 class="sh-panel-name">HydraBase Glyc</h2>
+  <p class="sh-panel-inci">Glycerin (Glycerol) &middot; CAS 56-81-5 &middot; USP / BP / EP &middot; Vegetable Origin</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Humectant</span><span class="sh-badge b-b">Natural Origin</span><span class="sh-badge b-d">25% water binding</span><span class="sh-badge b-d">USP / BP / EP</span></div>
+  <p class="sh-tagline">"Glycerin &mdash; the most widely used humectant in cosmetics globally. USP / BP / EP pharmacopoeial quality from vegetable origin, providing the highest water-binding capacity of all glycols at 25% of its weight at 50% relative humidity."</p>
+  <p class="sh-body">HydraBase Glyc is <strong>Glycerin (Glycerol) &mdash; the triol humectant</strong> with three hydroxyl groups per molecule, CAS 56-81-5. Glycerin is the most commercially important humectant in personal care, present in the majority of moisturisers, creams, lotions, shampoos and body washes globally. Its three &mdash;OH groups provide the highest water-binding capacity of any standard cosmetic glycol: at 50% relative humidity, glycerin absorbs approximately 25% of its own weight in water from the environment &mdash; drawing moisture continuously from the ambient air into the formulation and skin surface.</p>
+  <p class="sh-body">HydraBase Glyc is supplied to <strong>USP / BP / EP pharmacopoeial quality</strong> from vegetable origin (primarily a by-product of biodiesel / fatty acid production from plant oils), making it appropriate for natural-positioned, organic and COSMOS-eligible formulations. The principal formulation challenge of glycerin is its pronounced stickiness at high concentrations (&gt;5&ndash;8% in leave-on products) &mdash; which is managed by blending with PEG 400 (AquaForm), propylene glycol (HydraBase PG) or other humectants that reduce perceived stickiness without reducing water binding. In rinse-off products (shampoos, conditioners, body washes), glycerin concentrations of 1&ndash;3% provide effective moisturisation without stickiness issues.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">25% w/w</span><span class="sh-perf-lbl">Water binding @ 50% RH</span></div><div class="sh-perf-card"><span class="sh-perf-val">Highest</span><span class="sh-perf-lbl">Water binding of all glycols</span></div><div class="sh-perf-card"><span class="sh-perf-val">USP/BP/EP</span><span class="sh-perf-lbl">Pharmacopoeial quality</span></div><div class="sh-perf-card"><span class="sh-perf-val">Natural origin</span><span class="sh-perf-lbl">Vegetable-derived</span></div></div>
+  <p class="sh-section-h">Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Moisturisers &amp; Creams (1&ndash;8%)</span><span class="sh-app-tag">Shampoos &amp; Conditioners (1&ndash;3%)</span><span class="sh-app-tag">Body Washes &amp; Cleansers</span><span class="sh-app-tag">Natural / COSMOS Formulations</span><span class="sh-app-tag">Serums &amp; Toners</span><span class="sh-app-tag">Sunscreen Hydration</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p>
+  <div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+HydraBase PG (HYDRA) &mdash; Anti-stickiness blend</span><span class="sh-syn-desc">Glycerin (3&ndash;5%) + PG (2&ndash;3%) blended humectant. Propylene glycol provides comparable humectancy to glycerin while reducing the stickiness of high-glycerin formulations. The combination achieves higher total humectant loading without sticky skin feel &mdash; essential for premium leave-on moisturisers targeting humid LATAM climates.</span></div><div class="sh-syn"><span class="sh-syn-code">+HyalActiv (VITAL) &mdash; Layered hydration system</span><span class="sh-syn-desc">Glycerin (3&ndash;5%) + Hyaluronic Acid (0.1&ndash;0.3%) creates a multi-mechanism hydration system: glycerin provides surface humectancy and water binding; HA provides deep humectancy and barrier-reinforcing film. The combination is commercially the most common premium hydration architecture globally.</span></div></div>
+</div><div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p>
+  <div class="sh-spec-row"><span class="sh-spec-k">INCI</span><span class="sh-spec-v">Glycerin</span></div><div class="sh-spec-row"><span class="sh-spec-k">CAS</span><span class="sh-spec-v">56-81-5</span></div><div class="sh-spec-row"><span class="sh-spec-k">Origin</span><span class="sh-spec-v">Vegetable (plant oil derived)</span></div><div class="sh-spec-row"><span class="sh-spec-k">Purity</span><span class="sh-spec-v">&ge;99.5% (USP grade)</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear, colourless, viscous liquid</span></div><div class="sh-spec-row"><span class="sh-spec-k">Viscosity (25&deg;C)</span><span class="sh-spec-v">~1,490 mPa&middot;s</span></div><div class="sh-spec-row"><span class="sh-spec-k">Water binding @ 50% RH</span><span class="sh-spec-v">~25% w/w</span></div><div class="sh-spec-row"><span class="sh-spec-k">Pharmacopoeial</span><span class="sh-spec-v">USP / BP / EP compliant</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Status</p><div class="sh-reg-row"><span class="sh-reg-k">EU 1223/2009</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">ANVISA / Brazil</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Natural cert.</span><span class="sh-reg-v">COSMOS-eligible (vegetable origin)</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved &mdash; food grade (E422)</span></div></div>
+  <button class="sh-cta-btn" onclick="window.location='hydra-dossier.html#glyc'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div></div></div>
+<div class="sh-panel" id="prod-pg"><div class="sh-panel-inner"><div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR HYDRA &mdash; Humectants &amp; Film Agents</div>
+  <h2 class="sh-panel-name">HydraBase PG</h2>
+  <p class="sh-panel-inci">Propylene Glycol (1,2-Propanediol) &middot; CAS 57-55-6 &middot; USP Grade</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Humectant / Solvent</span><span class="sh-badge b-d">20% water binding</span><span class="sh-badge b-d">USP Grade</span><span class="sh-badge b-d">Low Viscosity</span></div>
+  <p class="sh-tagline">"Propylene Glycol &mdash; the workhorse multifunctional humectant. USP quality, low viscosity, outstanding solubilisation of fragrances and actives, non-sticky feel and exceptional compatibility across the full cosmetic formulation range."</p>
+  <p class="sh-body">HydraBase PG is <strong>Propylene Glycol (1,2-Propanediol) &mdash; the diol humectant</strong> with two hydroxyl groups per molecule, CAS 57-55-6. It is the second most widely used humectant in cosmetics after glycerin, providing water-binding at 50% RH of approximately 20% of its weight &mdash; slightly below glycerin but without glycerin's stickiness at comparable concentrations. Its low molecular weight (76 g/mol), low viscosity (~56 mPa&middot;s at 25&deg;C) and outstanding compatibility with a broad range of cosmetic ingredients make it the most versatile multifunctional humectant available.</p>
+  <p class="sh-body">Beyond humectancy, HydraBase PG provides <strong>three additional formulation functions simultaneously</strong>: it acts as a <strong>solubiliser</strong> for fragrance materials and lipophilic actives that are insoluble in water; as an <strong>antimicrobial agent</strong> at concentrations &gt;15%, improving preservation efficacy of primary preservatives; and as a <strong>penetration enhancer</strong>, improving the transdermal delivery of solubilised actives at concentrations of 5&ndash;15%. This combination of functions from a single, cost-effective ingredient explains its position as the cosmetic industry's most widely used multifunctional active.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">20% w/w</span><span class="sh-perf-lbl">Water binding @ 50% RH</span></div><div class="sh-perf-card"><span class="sh-perf-val">~56 mPa&middot;s</span><span class="sh-perf-lbl">Low viscosity</span></div><div class="sh-perf-card"><span class="sh-perf-val">USP grade</span><span class="sh-perf-lbl">Pharmacopoeial</span></div><div class="sh-perf-card"><span class="sh-perf-val">Multifunctional</span><span class="sh-perf-lbl">Humectant + solvent + preserv.</span></div></div>
+  <p class="sh-section-h">Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">All Cosmetic Formulations (humectant)</span><span class="sh-app-tag">Fragrance Solubilisation</span><span class="sh-app-tag">Active Delivery Vehicle</span><span class="sh-app-tag">Preservation Boost</span><span class="sh-app-tag">Shampoo &amp; Conditioner</span><span class="sh-app-tag">Sunscreen Vehicles</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p>
+  <div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+HydraBase Glyc (HYDRA) &mdash; Standard humectant blend</span><span class="sh-syn-desc">PG (3&ndash;5%) + Glycerin (3&ndash;5%). The global standard humectant combination: glycerin provides higher water binding; PG provides anti-stickiness and solvent function. The majority of commercial moisturisers and body lotions use this exact combination as the humectant base.</span></div><div class="sh-syn"><span class="sh-syn-code">+PreserFlex EHG (FUNC) &mdash; Enhanced preservation</span><span class="sh-syn-desc">PG (3&ndash;8%) enhances the antimicrobial activity of phenoxyethanol/ethylhexylglycerin preservation systems, enabling lower preservative loading while maintaining broad-spectrum efficacy. PG at 5% can reduce PreserFlex EHG requirement by 20&ndash;30% without compromising challenge test outcomes.</span></div></div>
+</div><div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p>
+  <div class="sh-spec-row"><span class="sh-spec-k">INCI</span><span class="sh-spec-v">Propylene Glycol</span></div><div class="sh-spec-row"><span class="sh-spec-k">CAS</span><span class="sh-spec-v">57-55-6</span></div><div class="sh-spec-row"><span class="sh-spec-k">Molecular weight</span><span class="sh-spec-v">76.09 g/mol</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear, colourless, low-viscosity liquid</span></div><div class="sh-spec-row"><span class="sh-spec-k">Viscosity (25&deg;C)</span><span class="sh-spec-v">~56 mPa&middot;s</span></div><div class="sh-spec-row"><span class="sh-spec-k">Water binding @ 50% RH</span><span class="sh-spec-v">~20% w/w</span></div><div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Fully miscible in water, ethanol, most organic solvents</span></div><div class="sh-spec-row"><span class="sh-spec-k">Pharmacopoeial</span><span class="sh-spec-v">USP / EP compliant</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Status</p><div class="sh-reg-row"><span class="sh-reg-k">EU 1223/2009</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">ANVISA / Brazil</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">USP / EP</span><span class="sh-reg-v">Pharmacopoeial compliant</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved &mdash; GRAS (food)</span></div></div>
+  <button class="sh-cta-btn" onclick="window.location='hydra-dossier.html#pg'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div></div></div>
+<div class="sh-panel" id="prod-dpg"><div class="sh-panel-inner"><div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR HYDRA &mdash; Humectants &amp; Film Agents</div>
+  <h2 class="sh-panel-name">HydraBase DPG</h2>
+  <p class="sh-panel-inci">Dipropylene Glycol (DPG) &middot; CAS 25265-71-8 &middot; Fragrance Grade</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Humectant / Fragrance Carrier</span><span class="sh-badge b-d">Premium Feel</span><span class="sh-badge b-d">Fragrance Grade</span><span class="sh-badge b-d">Low Odour</span></div>
+  <p class="sh-tagline">"Dipropylene Glycol &mdash; the premium humectant and fragrance carrier. Higher molecular weight than Propylene Glycol produces a lighter, drier skin feel with less tackiness and superior fragrance-carrying capacity. Standard carrier for perfume concentrates in personal care."</p>
+  <p class="sh-body">HydraBase DPG is <strong>Dipropylene Glycol (DPG) &mdash; a mixture of three isomers of dipropylene glycol</strong> produced as a by-product of propylene glycol manufacture, CAS 25265-71-8. Its higher molecular weight versus PG (134 g/mol vs. 76 g/mol) produces a liquid with slightly higher viscosity (~110 mPa&middot;s at 25&deg;C) and a markedly lighter, less tacky skin feel than propylene glycol at equivalent concentrations. This improved aesthetic profile makes DPG the preferred humectant for premium skin care formulations and products where skin feel is a primary commercial differentiator.</p>
+  <p class="sh-body">DPG is also the <strong>standard carrier solvent for fragrance concentrates</strong> in personal care: its low odour, excellent solubilisation of essential oils and synthetic fragrance materials, and compatibility with both water-soluble and oil-soluble perfume components make it the industry-standard fragrance carrier in fine fragrance, body mist and eau de toilette formulations. In personal care products more broadly, it is used as a dual-function ingredient &mdash; simultaneously providing humectancy and serving as the fragrance delivery vehicle &mdash; reducing total ingredient count while delivering both functions.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">134 g/mol</span><span class="sh-perf-lbl">Higher MW vs. PG</span></div><div class="sh-perf-card"><span class="sh-perf-val">Dry touch</span><span class="sh-perf-lbl">Lower stickiness vs. PG</span></div><div class="sh-perf-card"><span class="sh-perf-val">Fragrance carrier</span><span class="sh-perf-lbl">Primary application</span></div><div class="sh-perf-card"><span class="sh-perf-val">~110 mPa&middot;s</span><span class="sh-perf-lbl">Viscosity @ 25&deg;C</span></div></div>
+  <p class="sh-section-h">Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Premium Skin Care Humectant</span><span class="sh-app-tag">Fragrance Carrier / Perfume Diluent</span><span class="sh-app-tag">Body Mist &amp; Eau de Toilette</span><span class="sh-app-tag">Deodorant &amp; Antiperspirant Base</span><span class="sh-app-tag">Toners &amp; Essences</span><span class="sh-app-tag">Aftershave Formulations</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p>
+  <div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+HydraBase PG (HYDRA) &mdash; Feel-optimised humectant blend</span><span class="sh-syn-desc">DPG (2&ndash;4%) + PG (2&ndash;3%). DPG provides better skin feel and fragrance carrying; PG provides solubilisation and preservation enhancement. The combination is the premium humectant blend for fine fragrance-adjacent body care products.</span></div><div class="sh-syn"><span class="sh-syn-code">+Fragrance materials &mdash; Standard carrier system</span><span class="sh-syn-desc">DPG as the primary diluent for perfume concentrates at 80&ndash;95% DPG + 5&ndash;20% fragrance oil. Provides stable, clear fragrance solution that disperses homogeneously in aqueous formulations. Lower odour and higher compatibility than ethanol for products requiring alcohol-free fragrance delivery.</span></div></div>
+</div><div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p>
+  <div class="sh-spec-row"><span class="sh-spec-k">INCI</span><span class="sh-spec-v">Dipropylene Glycol</span></div><div class="sh-spec-row"><span class="sh-spec-k">CAS</span><span class="sh-spec-v">25265-71-8</span></div><div class="sh-spec-row"><span class="sh-spec-k">Molecular weight</span><span class="sh-spec-v">134.17 g/mol</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear, colourless, mobile liquid</span></div><div class="sh-spec-row"><span class="sh-spec-k">Viscosity (25&deg;C)</span><span class="sh-spec-v">~110 mPa&middot;s</span></div><div class="sh-spec-row"><span class="sh-spec-k">Odour</span><span class="sh-spec-v">Very low odour &mdash; fragrance grade</span></div><div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Miscible with water, ethanol, oils</span></div><div class="sh-spec-row"><span class="sh-spec-k">Flash point</span><span class="sh-spec-v">~124&deg;C</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Status</p><div class="sh-reg-row"><span class="sh-reg-k">EU 1223/2009</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">ANVISA / Brazil</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved</span></div></div>
+  <button class="sh-cta-btn" onclick="window.location='hydra-dossier.html#dpg'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div></div></div>
+<div class="sh-panel" id="prod-pdo"><div class="sh-panel-inner"><div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR HYDRA &mdash; Humectants &amp; Film Agents</div>
+  <h2 class="sh-panel-name">HydraBase PDO</h2>
+  <p class="sh-panel-inci">1,3-Propanediol (Propanediol) &middot; CAS 504-63-2 &middot; Bio-Based Origin Available</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Humectant</span><span class="sh-badge b-b">Bio-Based Origin</span><span class="sh-badge b-d">~18% water binding</span><span class="sh-badge b-d">PG Alternative</span></div>
+  <p class="sh-tagline">"1,3-Propanediol &mdash; the bio-based Propylene Glycol alternative with superior skin feel and clean-label positioning. Same molecular formula as PG but different structure: lighter, less tacky and naturally derivable from corn sugar fermentation."</p>
+  <p class="sh-body">HydraBase PDO is <strong>1,3-Propanediol (Propanediol) &mdash; a diol humectant isomeric to propylene glycol</strong>, CAS 504-63-2. While it shares the molecular formula C&sub;3;H&sub;8;O&sub;2; with propylene glycol (1,2-Propanediol), the hydroxyl groups are positioned at carbons 1 and 3 rather than 1 and 2, producing a molecule with different physical-chemical properties: <strong>lower viscosity, lighter skin feel, reduced tackiness and superior skin moisturisation</strong> compared to PG at equivalent loading.</p>
+  <p class="sh-body">The defining commercial differentiator of PDO is its <strong>bio-based origin</strong>: 1,3-Propanediol can be produced by fermentation of corn sugar (glucose), providing a plant-derived equivalent to the traditionally petroleum-derived propylene glycol. This bio-origin makes HydraBase PDO the correct specification for natural-positioned, COSMOS-formulated and clean-label products where petroleum-derived propylene glycol is excluded from the ingredient brief. At equivalent concentrations, PDO provides comparable water-binding to PG with a meaningfully improved sensory profile &mdash; lighter, drier and less tacky &mdash; enabling higher humectant loading without consumer perception of stickiness.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">~18% w/w</span><span class="sh-perf-lbl">Water binding @ 50% RH</span></div><div class="sh-perf-card"><span class="sh-perf-val">Bio-based</span><span class="sh-perf-lbl">Corn sugar fermentation</span></div><div class="sh-perf-card"><span class="sh-perf-val">Lighter feel</span><span class="sh-perf-lbl">vs. PG at equivalent dose</span></div><div class="sh-perf-card"><span class="sh-perf-val">PG alternative</span><span class="sh-perf-lbl">Direct substitution</span></div><div class="sh-perf-card"><span class="sh-perf-val">COSMOS-eligible</span><span class="sh-perf-lbl">Natural-origin available</span></div></div>
+  <p class="sh-section-h">Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Natural / COSMOS Formulations</span><span class="sh-app-tag">Clean-Label Skin Care</span><span class="sh-app-tag">Premium Moisturisers</span><span class="sh-app-tag">Natural Hair Care</span><span class="sh-app-tag">Active Solubilisation</span><span class="sh-app-tag">PG-Free Formulations</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p>
+  <div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+HydraBase Glyc (HYDRA) &mdash; Natural humectant system</span><span class="sh-syn-desc">PDO (3&ndash;5%) + Glycerin (3&ndash;5%). The natural-origin humectant combination for COSMOS-eligible formulations: both derivable from plant sources, both excellent humectants, PDO providing the anti-stickiness that PG provides in conventional formulations but with natural origin credentials.</span></div><div class="sh-syn"><span class="sh-syn-code">+HyalActiv (VITAL) &mdash; Premium natural hydration</span><span class="sh-syn-desc">PDO (3&ndash;5%) + Hyaluronic Acid (0.1&ndash;0.2%) + Glycerin (3%). The complete natural-origin hydration system for premium COSMOS-positioned serums and moisturisers. PDO provides surface humectancy and improved skin feel; HA provides barrier-reinforcing film; glycerin provides the foundational water-binding layer.</span></div></div>
+</div><div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p>
+  <div class="sh-spec-row"><span class="sh-spec-k">INCI</span><span class="sh-spec-v">Propanediol</span></div><div class="sh-spec-row"><span class="sh-spec-k">CAS</span><span class="sh-spec-v">504-63-2</span></div><div class="sh-spec-row"><span class="sh-spec-k">Molecular weight</span><span class="sh-spec-v">76.09 g/mol</span></div><div class="sh-spec-row"><span class="sh-spec-k">Isomer</span><span class="sh-spec-v">1,3-Propanediol (vs. 1,2 for PG)</span></div><div class="sh-spec-row"><span class="sh-spec-k">Origin</span><span class="sh-spec-v">Bio-based (corn fermentation) or synthetic</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">Clear, colourless, low-viscosity liquid</span></div><div class="sh-spec-row"><span class="sh-spec-k">Skin feel</span><span class="sh-spec-v">Lighter, less tacky than PG</span></div><div class="sh-spec-row"><span class="sh-spec-k">Water binding @ 50% RH</span><span class="sh-spec-v">~18% w/w</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Status</p><div class="sh-reg-row"><span class="sh-reg-k">EU 1223/2009</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">ANVISA / Brazil</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Natural cert.</span><span class="sh-reg-v">COSMOS-eligible (bio-based fermentation)</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved</span></div></div>
+  <button class="sh-cta-btn" onclick="window.location='hydra-dossier.html#pdo'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div></div></div>
+<div class="sh-panel" id="prod-pvpk30"><div class="sh-panel-inner"><div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR HYDRA &mdash; Humectants &amp; Film Agents</div>
+  <h2 class="sh-panel-name">AquaFilm K30</h2>
+  <p class="sh-panel-inci">Polyvinylpyrrolidone K30 &middot; CAS 9003-39-8 &middot; MW ~40,000&ndash;58,000 &middot; Film Former</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Film Former</span><span class="sh-badge b-d">PVP K30</span><span class="sh-badge b-d">Medium MW</span><span class="sh-badge b-d">Hair Styling</span></div>
+  <p class="sh-tagline">"PVP K30 &mdash; the medium molecular weight polyvinylpyrrolidone for spray and liquid styling applications. Produces stiff, transparent, shiny films from clear solution at 3&ndash;6% loading. The reference film former for pump sprays, styling lotions and setting preparations."</p>
+  <p class="sh-body">AquaFilm K30 is <strong>Polyvinylpyrrolidone at K-value 30 (PVP K30) &mdash; a nonionic, water-soluble homopolymer of N-vinylpyrrolidone</strong> with molecular weight approximately 40,000&ndash;58,000 g/mol. The K-value is a measure of relative viscosity in dilute solution &mdash; K30 designating the medium molecular weight grade. PVP is the reference nonionic hair styling polymer globally, having been the first synthetic polymer applied as a hair fixative in the 1950s as a replacement for shellac. It forms <strong>stiff, transparent, highly glossy films</strong> on hair fibres when the water carrier evaporates after product application.</p>
+  <p class="sh-body">The medium molecular weight of K30 produces the <strong>ideal viscosity-performance balance for spray applications</strong>: at 3&ndash;6% in water or water-alcohol vehicle, K30 solutions remain sufficiently low viscosity to pass through pump sprays, aerosol valves and fine mist nozzles without clogging, while delivering adequate film-forming molecular weight for hair hold performance. PVP K30 is fully soluble in water and most polar organic solvents including ethanol &mdash; compatible with alcohol-containing hair spray formulations &mdash; and compatible with a broad range of cosmetic co-polymers, polyquaternium conditioning polymers and fixative boosters. Films formed at low relative humidity are crisp and stiff; at high humidity they absorb atmospheric moisture and soften, which can be managed through blending with less hygroscopic co-formers.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">K30 grade</span><span class="sh-perf-lbl">MW ~40,000&ndash;58,000</span></div><div class="sh-perf-card"><span class="sh-perf-val">3&ndash;6%</span><span class="sh-perf-lbl">Typical use level</span></div><div class="sh-perf-card"><span class="sh-perf-val">Spray-grade</span><span class="sh-perf-lbl">Low viscosity solution</span></div><div class="sh-perf-card"><span class="sh-perf-val">Transparent</span><span class="sh-perf-lbl">Glossy, clear film</span></div></div>
+  <p class="sh-section-h">Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Pump Spray Hair Stylers</span><span class="sh-app-tag">Hair Setting Lotions</span><span class="sh-app-tag">Styling Mousses &amp; Gels</span><span class="sh-app-tag">Wet-Look Gel Systems</span><span class="sh-app-tag">Hair Spray (alcohol-based)</span><span class="sh-app-tag">Pigment Dispersant in Colour Cosmetics</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p>
+  <div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+AquaFilm K90 (HYDRA) &mdash; Hold-range blending</span><span class="sh-syn-desc">K30 (2&ndash;4%) + K90 (0.5&ndash;1%). K30 provides sprayable viscosity and transparency; K90 adds high-MW film strength and hold without excessive viscosity. Blending at different K30:K90 ratios enables continuous adjustment of hold level from light to strong within a single formula architecture.</span></div><div class="sh-syn"><span class="sh-syn-code">+CondiFlex 7 or CondiFlex 10 (COND) &mdash; Styling + conditioning</span><span class="sh-syn-desc">PVP K30 (4%) + Polyquaternium-7 or -10 (0.3&ndash;0.5%). The reference 2-in-1 styling and conditioning system: PVP film provides hold and shine; PQ cationic polymer provides conditioning deposit, anti-static and detangling. Compatible in aqueous systems at standard formulation pH 4&ndash;6.</span></div></div>
+</div><div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p>
+  <div class="sh-spec-row"><span class="sh-spec-k">INCI</span><span class="sh-spec-v">PVP</span></div><div class="sh-spec-row"><span class="sh-spec-k">Full name</span><span class="sh-spec-v">Polyvinylpyrrolidone</span></div><div class="sh-spec-row"><span class="sh-spec-k">CAS</span><span class="sh-spec-v">9003-39-8</span></div><div class="sh-spec-row"><span class="sh-spec-k">Grade</span><span class="sh-spec-v">K30 (K-value 29&ndash;32)</span></div><div class="sh-spec-row"><span class="sh-spec-k">Molecular weight</span><span class="sh-spec-v">~40,000 &ndash; 58,000 g/mol</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">White to off-white free-flowing powder</span></div><div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Water, ethanol, most polar solvents</span></div><div class="sh-spec-row"><span class="sh-spec-k">Typical use level</span><span class="sh-spec-v">3 &ndash; 6%</span></div><div class="sh-spec-row"><span class="sh-spec-k">pH stability</span><span class="sh-spec-v">3 &ndash; 7.5</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Status</p><div class="sh-reg-row"><span class="sh-reg-k">EU 1223/2009</span><span class="sh-reg-v">No restriction &mdash; hair fixative</span></div><div class="sh-reg-row"><span class="sh-reg-k">ANVISA / Brazil</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved</span></div></div>
+  <button class="sh-cta-btn" onclick="window.location='hydra-dossier.html#pvpk30'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div></div></div>
+<div class="sh-panel" id="prod-pvpk90"><div class="sh-panel-inner"><div class="sh-pl">
+  <div class="sh-panel-tag"><div class="sh-dot"></div>VLYOR HYDRA &mdash; Humectants &amp; Film Agents</div>
+  <h2 class="sh-panel-name">AquaFilm K90</h2>
+  <p class="sh-panel-inci">Polyvinylpyrrolidone K90 &middot; CAS 9003-39-8 &middot; MW ~900,000&ndash;1,500,000 &middot; High-Hold Film Former</p>
+  <div class="sh-badges"><span class="sh-badge b-a">Film Former</span><span class="sh-badge b-d">PVP K90</span><span class="sh-badge b-d">High MW</span><span class="sh-badge b-d">Maximum Hold</span></div>
+  <p class="sh-tagline">"PVP K90 &mdash; the high molecular weight polyvinylpyrrolidone for maximum hold and viscosity-critical styling applications. Higher MW produces stronger, more durable hair films with significantly greater hold force than K30 at equivalent concentration."</p>
+  <p class="sh-body">AquaFilm K90 is <strong>Polyvinylpyrrolidone at K-value 90 (PVP K90) &mdash; the high molecular weight grade of PVP</strong> with molecular weight approximately 900,000&ndash;1,500,000 g/mol. The dramatically higher molecular weight versus K30 (~40,000) produces fundamentally different film properties: <strong>significantly stronger, more durable films</strong> with higher hold force per unit mass of polymer, better adhesion to hair fibres and superior resistance to humidity-induced film softening. At equivalent polymer concentration, K90 delivers substantially greater styling hold than K30.</p>
+  <p class="sh-body">The primary formulation trade-off of K90 is <strong>viscosity</strong>: at 3&ndash;6% (the K30 use range), K90 produces excessively viscous solutions incompatible with spray applications. K90 is therefore used at <strong>lower concentrations (1&ndash;3%)</strong> where it provides equivalent or superior hold to K30 at 3&ndash;6%, or it is blended with K30 to achieve an intermediate MW profile with controlled solution viscosity. Pure K90 applications are primarily <strong>gel-format styling products</strong> (hair gel, wet-look gel, pomade) where high viscosity is a desired product attribute rather than a processing limitation.</p>
+  <div class="sh-perf-grid"><div class="sh-perf-card"><span class="sh-perf-val">K90 grade</span><span class="sh-perf-lbl">MW ~900k&ndash;1.5M</span></div><div class="sh-perf-card"><span class="sh-perf-val">1&ndash;3%</span><span class="sh-perf-lbl">Typical use level</span></div><div class="sh-perf-card"><span class="sh-perf-val">Maximum hold</span><span class="sh-perf-lbl">Strongest PVP film</span></div><div class="sh-perf-card"><span class="sh-perf-val">Gel applications</span><span class="sh-perf-lbl">High viscosity format</span></div></div>
+  <p class="sh-section-h">Applications</p>
+  <div class="sh-app-tags"><span class="sh-app-tag">Hair Gel &amp; Wet-Look Gel</span><span class="sh-app-tag">Strong-Hold Styling Creams</span><span class="sh-app-tag">Hair Pomades &amp; Waxes</span><span class="sh-app-tag">Maximum Hold Mousses</span><span class="sh-app-tag">Blended K30/K90 Spray Systems</span><span class="sh-app-tag">Film-Forming Base for Colour Cosmetics</span></div>
+  <p class="sh-section-h">Synergistic Combinations</p>
+  <div class="sh-syn-list"><div class="sh-syn"><span class="sh-syn-code">+AquaFilm K30 (HYDRA) &mdash; Viscosity-controlled blended system</span><span class="sh-syn-desc">K90 (0.5&ndash;1.5%) + K30 (2&ndash;4%). K90 adds hold strength and film durability; K30 controls solution viscosity for processability. The K30:K90 ratio is the primary hold-level control variable: higher K90 fraction = stronger hold, higher viscosity; lower K90 = lighter hold, more sprayable.</span></div><div class="sh-syn"><span class="sh-syn-code">+RheoForm XG (FORM) &mdash; Structured styling gel</span><span class="sh-syn-desc">K90 (1&ndash;2%) + Xanthan Gum (0.2&ndash;0.4%). K90 provides the primary film-forming hold; Xanthan provides the gel structure and suspension stability of the product. The combination creates a clear or translucent hair gel with excellent hold, shine and humidity resistance.</span></div></div>
+</div><div class="sh-pr">
+  <p class="sh-spec-title">Technical Specifications</p>
+  <div class="sh-spec-row"><span class="sh-spec-k">INCI</span><span class="sh-spec-v">PVP</span></div><div class="sh-spec-row"><span class="sh-spec-k">Full name</span><span class="sh-spec-v">Polyvinylpyrrolidone</span></div><div class="sh-spec-row"><span class="sh-spec-k">CAS</span><span class="sh-spec-v">9003-39-8</span></div><div class="sh-spec-row"><span class="sh-spec-k">Grade</span><span class="sh-spec-v">K90 (K-value 85&ndash;95)</span></div><div class="sh-spec-row"><span class="sh-spec-k">Molecular weight</span><span class="sh-spec-v">~900,000 &ndash; 1,500,000 g/mol</span></div><div class="sh-spec-row"><span class="sh-spec-k">Appearance</span><span class="sh-spec-v">White to off-white free-flowing powder</span></div><div class="sh-spec-row"><span class="sh-spec-k">Solubility</span><span class="sh-spec-v">Water, ethanol, most polar solvents</span></div><div class="sh-spec-row"><span class="sh-spec-k">Typical use level</span><span class="sh-spec-v">1 &ndash; 3%</span></div><div class="sh-spec-row"><span class="sh-spec-k">pH stability</span><span class="sh-spec-v">3 &ndash; 7.5</span></div><div class="sh-spec-row"><span class="sh-spec-k">IECIC Listed</span><span class="sh-spec-v">Yes</span></div>
+  <div class="sh-reg-block"><p class="sh-reg-title">Regulatory Status</p><div class="sh-reg-row"><span class="sh-reg-k">EU 1223/2009</span><span class="sh-reg-v">No restriction &mdash; hair fixative</span></div><div class="sh-reg-row"><span class="sh-reg-k">ANVISA / Brazil</span><span class="sh-reg-v">No restriction</span></div><div class="sh-reg-row"><span class="sh-reg-k">Global</span><span class="sh-reg-v">Universally approved</span></div></div>
+  <button class="sh-cta-btn" onclick="window.location='hydra-dossier.html#pvpk90'">Request Full TDS + SDS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+</div></div></div>
+    </div><!-- /panels -->
+  </div><!-- /exp-layout -->
+</section>
+
+<section class="sh-reg-sec">
+  <div>
+    <p class="eyebrow">Global Compliance</p>
+    <h2 class="sec-title">Every market.<br/>Every standard.</h2>
+    <p class="sec-sub">All 7 HYDRA actives comply with EU, LATAM and global cosmetic regulatory frameworks. Glycerin, Propylene Glycol and PEG grades meet USP / BP / EP pharmacopoeial standards &mdash; the documentation expected by regulated LATAM markets.</p>
+  </div>
+  <div class="sh-reg-grid">
+    <div class="sh-reg-card"><span class="sh-rc-flag">&#127466;&#127482;</span><h4 class="sh-rc-title">EU 1223/2009</h4><p class="sh-rc-body">All 7 HYDRA actives comply with EU Cosmetics Regulation at cosmetic use concentrations. No restriction applicable to any active in the HYDRA portfolio.</p></div>
+    <div class="sh-reg-card"><span class="sh-rc-flag">&#127463;&#127479;</span><h4 class="sh-rc-title">ANVISA &mdash; Brazil &amp; LATAM</h4><p class="sh-rc-body">All actives approved under ANVISA guidelines and LATAM equivalents. Glycerin BP/USP, Propylene Glycol USP, PEG USP/NF and PVP documentation packages available for Brazil, Colombia, Argentina, Peru and Mexico.</p></div>
+    <div class="sh-reg-card"><span class="sh-rc-flag">&#127807;</span><h4 class="sh-rc-title">Natural Certification</h4><p class="sh-rc-body">HydraBase Glyc (vegetable origin) and HydraBase PDO (bio-based fermentation) are Ecocert / COSMOS-eligible. PDO from corn fermentation provides PG-replacement functionality with full natural-origin credentials.</p></div>
+    <div class="sh-reg-card"><span class="sh-rc-flag">&#127464;&#127475;</span><h4 class="sh-rc-title">China IECIC</h4><p class="sh-rc-body">All 7 HYDRA actives IECIC-listed for the Chinese cosmetics market. GHS SDS available in Chinese for all grades. USP/NF pharmacopoeial documentation provided with each supply.</p></div>
+  </div>
+</section>
+
+<section class="sh-cta-sec">
+  <div>
+    <h2>Ready to engineer<br/>moisture that<br/>performs?</h2>
+    <p>Our formulation team provides humectant blend design for specific LATAM climate profiles, PEG grade selection for any application, PVP hold-level optimisation and complete regulatory documentation across LATAM and global markets.</p>
+  </div>
+  <div class="sh-cta-btns">
+    <a href="hydra-dossier.html" class="btn-g">Technical Dossier &rarr;</a>
+    <a href="index.html#contact" class="btn-p">Request Samples &rarr;</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><span class="logo-m">VLYOR</span><br/><span class="logo-s">Science</span><p class="footer-tag">Molecular Integrity. Aesthetic Performance.</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h5>Portfolio</h5><ul>
+        <li><a href="shield.html">VLYOR SHIELD</a></li><li><a href="vital.html">VLYOR VITAL</a></li>
+        <li><a href="pure.html">VLYOR PURE</a></li><li><a href="func.html">VLYOR FUNC</a></li>
+        <li><a href="cond.html">VLYOR COND</a></li><li><a href="silk.html">VLYOR SILK</a></li>
+        <li><a href="form.html">VLYOR FORM</a></li><li><a href="hydra.html">VLYOR HYDRA</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Resources</h5><ul>
+        <li><a href="portal.html">Technical Portal</a></li>
+        <li><a href="index.html#contact">Request Sample</a></li>
+        <li><a href="index.html#standards">Compliance</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul>
+        <li><a href="mailto:science@vlyor.com">science@vlyor.com</a></li>
+        <li>Global Bioactives Hub</li><li>Suzhou, China</li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="ft-code">V3.0 &mdash; 2026</span>
+    <span>&copy; VLYOR Science. All rights reserved.</span>
+    <span class="ft-code">REACH &middot; IECIC &middot; GHS</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+const btns = document.querySelectorAll('.sh-sb-btn');
+const panels = document.querySelectorAll('.sh-panel');
+btns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btns.forEach(b => b.classList.remove('active'));
+    panels.forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('prod-' + btn.dataset.prod).classList.add('active');
+    document.getElementById('explorer').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+const bObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      e.target.querySelectorAll('.bar-fill').forEach((f,i) => {
+        setTimeout(() => { f.style.width = f.dataset.w + '%'; }, i * 120);
+      });
+      bObs.unobserve(e.target);
+    }
+  });
+},{threshold:0.3});
+const sb = document.getElementById('sbars');
+if(sb) bObs.observe(sb);
+window.addEventListener('scroll',()=>{
+  document.getElementById('mainnav').classList.toggle('scrolled', window.scrollY > 40);
+},{passive:true});
+</script>
+</body>
+</html>
