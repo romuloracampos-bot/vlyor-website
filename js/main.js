@@ -110,7 +110,110 @@ document.querySelectorAll('.sh-stat-n, .sh-in-n, .dos-metric-val').forEach(el =>
   }
 });
 
-// Contact form
+// ── Active nav state ─────────────────────────────────────────────────────────
+(function setActiveNav() {
+  const path = window.location.pathname.split('/').pop() || 'index.html';
+  // Map each filename (or prefix) to which nav link should be highlighted
+  const navMap = {
+    'portal.html'      : 'portal',
+    'shield.html'      : 'portfolio',
+    'vital.html'       : 'portfolio',
+    'pure.html'        : 'portfolio',
+    'func.html'        : 'portfolio',
+    'cond.html'        : 'portfolio',
+    'silk.html'        : 'portfolio',
+    'form.html'        : 'portfolio',
+    'hydra.html'       : 'portfolio',
+  };
+  // Dossier pages → highlight portal
+  if (path.includes('-dossier')) {
+    document.querySelector('a[href="portal.html"].nav-portal')?.classList.add('nav-active');
+    return;
+  }
+  const target = navMap[path];
+  if (target === 'portal') {
+    document.querySelector('a[href="portal.html"].nav-portal')?.classList.add('nav-active');
+  } else if (target === 'portfolio') {
+    document.querySelector('a[href="index.html#lines"]')?.classList.add('nav-active');
+  }
+})();
+
+// ── Mobile dossier navigation ─────────────────────────────────────────────────
+(function buildMobileDossierNav() {
+  const sidebar = document.querySelector('.dos-sidebar');
+  const content = document.querySelector('.dos-content, main.dos-content');
+  if (!sidebar || !content) return; // not a dossier page
+
+  // Collect all products from sidebar buttons
+  const groups = [];
+  let currentGroup = '';
+  sidebar.querySelectorAll('.dos-sb-grp-hd, .dos-sb-btn').forEach(el => {
+    if (el.classList.contains('dos-sb-grp-hd')) {
+      currentGroup = el.textContent.trim();
+    } else {
+      // Get product name (strip tag text)
+      const nameEl = el.querySelector('.dos-sb-btn-name, .dos-sb-hlb, .dos-sb-tag');
+      const name = nameEl
+        ? el.textContent.replace(nameEl.textContent, '').trim()
+        : el.textContent.trim();
+      // Get the product ID from data-dos or onclick
+      const dosId = el.getAttribute('data-dos') ||
+        (el.getAttribute('onclick') || '').replace(/.*showDos\('([^']+)'\).*/, '$1');
+      if (dosId) groups.push({ group: currentGroup, name, dosId, isActive: el.classList.contains('active') });
+    }
+  });
+
+  if (groups.length === 0) return;
+
+  // Build the mobile nav bar
+  const bar = document.createElement('div');
+  bar.id = 'mob-dos-nav';
+  bar.innerHTML = `
+    <div class="mob-dos-label">Active</div>
+    <select class="mob-dos-select" aria-label="Navigate to product">
+      ${groups.map(g =>
+        `<option value="${g.dosId}" ${g.isActive ? 'selected' : ''}>${g.group ? g.group + ' / ' : ''}${g.name}</option>`
+      ).join('')}
+    </select>
+    <div class="mob-dos-arrow">↓</div>`;
+
+  // Insert before the first panel
+  const firstPanel = content.querySelector('.dos-panel');
+  if (firstPanel) content.insertBefore(bar, firstPanel);
+
+  // Navigate on change
+  bar.querySelector('select').addEventListener('change', function() {
+    const id = this.value;
+    // Use showDos if available (newer dossiers), else the silk-style approach
+    if (typeof showDos === 'function') {
+      showDos(id);
+    } else {
+      document.querySelectorAll('.dos-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.dos-sb-btn').forEach(b => {
+        const bd = b.getAttribute('data-dos');
+        if (bd === id) { b.classList.add('active'); }
+        else { b.classList.remove('active'); }
+      });
+      const panel = document.getElementById('dos-' + id);
+      if (panel) { panel.classList.add('active'); panel.scrollIntoView({behavior:'smooth', block:'start'}); }
+    }
+    // Update select to reflect active state
+    const opt = bar.querySelector(`option[value="${id}"]`);
+    if (opt) opt.selected = true;
+  });
+
+  // Keep select in sync when sidebar buttons are clicked on desktop
+  document.querySelectorAll('.dos-sb-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-dos') ||
+        (btn.getAttribute('onclick') || '').replace(/.*showDos\('([^']+)'\).*/, '$1');
+      if (id) {
+        const sel = bar.querySelector('select');
+        if (sel) sel.value = id;
+      }
+    });
+  });
+})();
 const form = document.getElementById('contact-form');
 if (form) {
   form.addEventListener('submit', e => {

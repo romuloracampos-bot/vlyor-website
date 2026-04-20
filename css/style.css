@@ -153,9 +153,31 @@ img{max-width:100%;display:block}
 /* ── CONTACT ── */
 .contact-sec{padding:88px 40px;background:var(--dark);display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
 .contact-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:700;line-height:1.03;letter-spacing:-.02em;margin-bottom:16px}
-.contact-sub{font-size:14px;line-height:1.75;color:var(--grey-300);margin-bottom:20px}
+.contact-sub{font-size:14px;line-height:1.75;color:var(--grey-300);margin-bottom:24px}
 .contact-email{font-family:'DM Mono',monospace;font-size:13px;color:var(--white);text-decoration:underline;text-underline-offset:5px;text-decoration-color:rgba(255,255,255,.2)}
 .contact-info{font-family:'DM Mono',monospace;font-size:10px;line-height:1.9;color:var(--grey-500);letter-spacing:.05em;margin-top:12px}
+
+/* Contact trust signals */
+.contact-promises{display:flex;flex-direction:column;gap:14px;margin-bottom:28px;padding:20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07)}
+.cp-item{display:flex;align-items:flex-start;gap:14px}
+.cp-icon{font-size:16px;color:rgba(255,255,255,.25);flex-shrink:0;margin-top:1px;font-style:normal;width:18px;text-align:center}
+.cp-item div{display:flex;flex-direction:column;gap:2px}
+.cp-item strong{font-size:12px;font-weight:600;color:var(--white);letter-spacing:.01em}
+.cp-item span{font-family:'DM Mono',monospace;font-size:10px;color:#4B5563;letter-spacing:.03em}
+
+/* Cross-sell line strip */
+.line-xsell{padding:48px 40px;background:#111;border-top:1px solid rgba(255,255,255,.07)}
+.line-xsell-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#4B5563;margin-bottom:20px}
+.line-xsell-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:rgba(255,255,255,.06)}
+.lx-card{background:#0D0D0D;padding:16px 14px;display:flex;flex-direction:column;gap:6px;transition:background .25s;text-decoration:none}
+.lx-card:hover{background:#191919}
+.lx-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.lx-name{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:#6B7280;transition:color .25s}
+.lx-card:hover .lx-name{color:#fff}
+.lx-title{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:#9CA3AF;line-height:1.15;transition:color .25s}
+.lx-card:hover .lx-title{color:#fff}
+@media(max-width:900px){.line-xsell{padding:36px 20px}.line-xsell-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:500px){.line-xsell-grid{grid-template-columns:repeat(2,1fr)}}
 .contact-form{display:flex;flex-direction:column;gap:13px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
 .field{display:flex;flex-direction:column;gap:5px}
@@ -194,7 +216,20 @@ footer{border-top:1px solid rgba(255,255,255,.07);padding:56px 40px 0;background
 .dos-metric[data-reveal]{transform:translateY(12px) scale(.98)}
 .dos-metric[data-reveal].visible{transform:translateY(0) scale(1)}
 
-/* ── RESPONSIVE ── */
+/* ── Active nav state ───────────────────────────────────────────────────────── */
+.nav-links a.nav-active{color:var(--white)!important}
+.nav-links a.nav-active:not(.nav-portal){position:relative}
+.nav-links a.nav-active:not(.nav-portal)::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--white);opacity:.5}
+.nav-portal.nav-active{background:rgba(255,255,255,.08)!important;border-color:rgba(255,255,255,.4)!important}
+
+/* ── Mobile dossier nav ──────────────────────────────────────────────────────── */
+#mob-dos-nav{display:none;align-items:center;gap:10px;padding:12px 20px;background:#111;border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:60px;z-index:50}
+.mob-dos-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#4B5563;flex-shrink:0}
+.mob-dos-select{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#fff;font-family:'Barlow',sans-serif;font-size:13px;font-weight:500;padding:8px 12px;appearance:none;-webkit-appearance:none;outline:none;cursor:pointer;min-width:0}
+.mob-dos-select option{background:#1a1a1a;color:#fff}
+.mob-dos-select:focus{border-color:rgba(255,255,255,.3)}
+.mob-dos-arrow{font-size:14px;color:#4B5563;flex-shrink:0;pointer-events:none}
+@media(max-width:860px){#mob-dos-nav{display:flex}}
 @media(max-width:1100px){.lines-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){
   .nav-links{display:none}.nav-burger{display:flex}
