@@ -320,7 +320,7 @@ const I18N = {
     document.documentElement.setAttribute('lang', lang === 'es' ? 'es' : 'en');
 
     // Toggle button state
-    document.querySelectorAll('.lang-btn').forEach(btn => {
+    document.querySelectorAll('.ls-btn').forEach(btn => {
       btn.classList.toggle('lang-active', btn.getAttribute('data-lang') === lang);
     });
   },
@@ -333,7 +333,7 @@ const I18N = {
 
   init() {
     this.apply();
-    document.querySelectorAll('.lang-btn').forEach(btn => {
+    document.querySelectorAll('.ls-btn').forEach(btn => {
       btn.addEventListener('click', () => this.set(btn.getAttribute('data-lang')));
     });
   }
