@@ -244,6 +244,13 @@ footer{border-top:1px solid rgba(255,255,255,.07);padding:56px 40px 0;background
 .sp-card p{font-size:12px;line-height:1.78;color:#4B5563}
 @media(max-width:900px){.sp-grid{grid-template-columns:1fr 1fr}.social-proof-strip{padding:48px 20px}.sp-headline{font-size:clamp(28px,7vw,44px)}}
 @media(max-width:500px){.sp-grid{grid-template-columns:1fr}}
+/* ── Language toggle ────────────────────────────────────────────────────────── */
+.lang-toggle{display:flex;align-items:center;gap:2px;margin-right:16px}
+.lang-btn{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;background:none;border:1px solid rgba(255,255,255,.12);color:#4B5563;padding:4px 9px;cursor:pointer;transition:all .2s}
+.lang-btn:hover{color:#fff;border-color:rgba(255,255,255,.3)}
+.lang-btn.lang-active{color:#fff;border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.06)}
+@media(max-width:700px){.lang-toggle{margin-right:8px}.lang-btn{padding:3px 7px;font-size:9px}}
+
 .nav-links a.nav-active{color:var(--white)!important}
 .nav-links a.nav-active:not(.nav-portal){position:relative}
 .nav-links a.nav-active:not(.nav-portal)::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--white);opacity:.5}
