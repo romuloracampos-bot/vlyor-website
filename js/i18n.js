@@ -401,9 +401,11 @@ const I18N = {
       const key = el.getAttribute('data-i18n');
       const text = this.t(key);
       if (!text) return;
-      // Preserve <br/> line breaks from translation strings
+      // Use innerHTML for entries with HTML tags or line breaks
       if (text.includes('\n')) {
         el.innerHTML = text.split('\n').join('<br/>');
+      } else if (text.includes('<strong>') || text.includes('<em>') || text.includes('<br')) {
+        el.innerHTML = text;
       } else {
         el.textContent = text;
       }
