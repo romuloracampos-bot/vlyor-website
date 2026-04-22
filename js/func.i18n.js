@@ -180,9 +180,9 @@ const FUNC_TRANSLATIONS = {
   'fc.biz.t3': { en: 'Precision.', es: 'Precisión.'     },
   'fc.biz.p3': { en: 'SoluCast 40 solubilises fragrance and vitamin E into clear aqueous systems — eliminating the need for multiple co-solvents. Fewer ingredients on the declaration is a direct benefit to brands competing in clean-label segments.',
                  es: 'SoluCast 40 solubiliza fragancias y vitamina E en sistemas acuosos transparentes — eliminando la necesidad de múltiples co-solventes. Menos ingredientes en la declaración es un beneficio directo para las marcas que compiten en segmentos de etiqueta limpia.' },
-};
 
-  /* ── FUNC FORM SYSTEMS & REGULATORY ──────────────────────────────────────── */
+
+/* ── FUNC FORM SYSTEMS & REGULATORY ──────────────────────────────────────── */
   'fc.sys1.title'   : { en: 'Standard Broad-Spectrum Preservation',
                         es: 'Conservación Estándar de Amplio Espectro'                       },
   'fc.sys1.body'    : { en: 'The VLYOR reference preservation system — phenoxyethanol + EDTA. Passes ISO 11930 across all five challenge organisms at 0.8% PE + 0.2% ChelaGuard 2. Suitable for all cosmetic matrices.',
@@ -211,7 +211,7 @@ const FUNC_TRANSLATIONS = {
   'fc.rc4.title'    : { en: 'GHS / ISO 11930 Data',    es: 'Datos GHS / ISO 11930'            },
   'fc.rc4.body'     : { en: 'Every FUNC active ships with a 16-section GHS SDS and available ISO 11930 challenge test data for key preservation systems.',
                         es: 'Cada activo FUNC se entrega con una SDS GHS de 16 secciones y datos disponibles de test de desafío ISO 11930 para los sistemas de conservación clave.' },
-
+};
 if (typeof VLYOR_TRANSLATIONS !== 'undefined') {
   Object.assign(VLYOR_TRANSLATIONS, FUNC_TRANSLATIONS);
 }

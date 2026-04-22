@@ -137,31 +137,9 @@ const SILK_TRANSLATIONS = {
                  es: 'SilkDuo 503 — Sin D4/D5/D6. En portafolio hoy.' },
   'sk.biz.p3': { en: 'EU REACH 2024/1328 restricts D5 to ≤0.1% from June 2027. SilkDuo 503 — Dimethiconol in non-volatile Dimethicone carrier, D4/D5/D6-free — is in the VLYOR SILK portfolio today, available from 500 g. Reformulation before the deadline costs a development cycle. After the deadline, it costs market access.',
                  es: 'El REACH UE 2024/1328 restringe el D5 a ≤0,1% a partir de junio de 2027. SilkDuo 503 — Dimetilconol en vehículo de Dimetilcono no volátil, sin D4/D5/D6 — está en el portafolio VLYOR SILK hoy, disponible desde 500 g. Reformular antes del plazo cuesta un ciclo de desarrollo. Después del plazo, cuesta el acceso al mercado.' },
-};
 
-  /* ── PERF LABELS ──────────────────────────────────────────────────────────── */
-  'sk.lbl.visc'  : { en: 'Kinematic viscosity',     es: 'Viscosidad Cinemática'        },
-  'sk.lbl.act'   : { en: 'Active — undiluted',       es: 'Activo — sin diluir'          },
-  'sk.lbl.surf'  : { en: 'Surface tension',           es: 'Tensión Superficial'          },
-  'sk.lbl.dry'   : { en: 'Dry-touch',                es: 'Tacto Seco'                   },
-  'sk.lbl.bal'   : { en: 'Balanced',                  es: 'Equilibrado'                  },
-  'sk.lbl.detack': { en: 'De-tack',                   es: 'Des-pegamiento'               },
-  'sk.lbl.rich'  : { en: 'Rich',                      es: 'Rico'                         },
-  'sk.lbl.subs'  : { en: 'Substantivity',             es: 'Sustantividad'               },
-  'sk.lbl.struct': { en: 'Structured',                es: 'Estructurado'                 },
-  'sk.lbl.split' : { en: 'Split-end',                 es: 'Puntas Abiertas'             },
-  'sk.lbl.bp'    : { en: 'Boiling point',             es: 'Punto de Ebullición'          },
-  'sk.lbl.ksb'   : { en: 'Key sensory benefit',       es: 'Beneficio Sensorial Clave'    },
-  'sk.lbl.prim'  : { en: 'Primary delivery function', es: 'Función Principal de Entrega' },
-  'sk.lbl.nat'   : { en: 'Natural-derived backbone',  es: 'Base de Origen Natural'       },
-  'sk.lbl.film'  : { en: 'Film formation',             es: 'Formación de Film'            },
-  'sk.lbl.lo'    : { en: 'Leave-on',                  es: 'Leave-on'                     },
-  'sk.lbl.pf'    : { en: 'Primary format',             es: 'Formato Principal'            },
-  'sk.lbl.dual'  : { en: 'Dual function',              es: 'Doble función'               },
-  'sk.lbl.poly'  : { en: 'Polymer architecture',       es: 'Arquitectura del Polímero'   },
-  'sk.lbl.amph'  : { en: 'Amphoteric',                 es: 'Anfotérico'                  },
 
-  /* ── SILK FORM SYSTEMS & REGULATORY ──────────────────────────────────────── */
+/* ── SILK FORM SYSTEMS & REGULATORY ──────────────────────────────────────── */
   'sk.sys1.title'   : { en: 'Premium Hair Gloss Serum',
                         es: 'Serum de Brillo Capilar Premium'                                },
   'sk.sys1.body'    : { en: 'Maximum optical shine + conditioning + split-end smoothing. SilkFluid 12500 cSt provides structured coating; SilkLume amplifies light reflection via higher refractive index; amodimethicone (CondiVeil 949) deposits at damage sites.',
@@ -188,7 +166,7 @@ const SILK_TRANSLATIONS = {
   'sk.rc3.body'     : { en: 'EU REACH 2024/1328 restricts D5/D6 to ≤0.1% in all cosmetics from June 2027. SilkDuo 503 (D4/D5/D6-free) is available now for reformulation.',
                         es: 'El REACH UE 2024/1328 restringe el D5/D6 a ≤0,1% en todos los cosméticos a partir de junio de 2027. SilkDuo 503 (sin D4/D5/D6) está disponible ahora para reformulación.' },
   'sk.rc4.title'    : { en: 'China IECIC — All Listed', es: 'China IECIC — Todos Listados'    },
-  'sk.rc4.body'     : { en: 'All SILK actives listed in China's IECIC inventory with full documentation for Chinese cosmetic market registration and product notification.',
+  'sk.rc4.body'     : { en: 'All SILK actives listed in China\'s IECIC inventory with full documentation for Chinese cosmetic market registration and product notification.',
                         es: 'Todos los activos SILK listados en el inventario IECIC de China con documentación completa para el registro en el mercado cosmético chino y notificación de producto.' },
-
+};
 if (typeof VLYOR_TRANSLATIONS !== 'undefined') { Object.assign(VLYOR_TRANSLATIONS, SILK_TRANSLATIONS); }

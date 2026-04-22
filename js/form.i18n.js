@@ -157,8 +157,9 @@ const FORM_TRANSLATIONS = {
                  es: 'El carbómero en el grado correcto define el éxito o el fracaso de un serum en gel' },
   'fm.biz.p3': { en: 'RheoForm 980 at 0.5% produces a water-clear gel with zero measurable turbidity — the transparency standard for premium serums sold in glass packaging where clarity is a visible quality signal. That optical difference is not visible on the spec sheet. It is visible to every consumer who picks up the product.',
                  es: 'RheoForm 980 al 0,5% produce un gel transparente como el agua con turbidez cero medible — el estándar de transparencia para los serums premium vendidos en envases de vidrio donde la claridad es una señal de calidad visible. Esa diferencia óptica no es visible en la hoja de especificaciones. Es visible para cada consumidor que toma el producto.' },
-};
-  /* ── FORM SYSTEMS & REGULATORY ───────────────────────────────────────────── */
+
+
+/* ── FORM SYSTEMS & REGULATORY ───────────────────────────────────────────── */
   'fm.sys1.title'   : { en: 'Classical Skin Care Cream (O/W)',
                         es: 'Crema Clásica de Cuidado de la Piel (O/W)'                     },
   'fm.sys1.body'    : { en: 'The classical ceteareth-based O/W cream emulsifier system — CE-20 (4%) + ST-2 (1.5%) + Cetearyl Alcohol (4%) creates lamellar liquid crystal structure. The most reproduced emulsion architecture in commercial cosmetics globally.',
@@ -186,5 +187,5 @@ const FORM_TRANSLATIONS = {
   'fm.rc4.title'    : { en: 'China IECIC',             es: 'China IECIC'                      },
   'fm.rc4.body'     : { en: 'All FORM actives IECIC-listed with full documentation for Chinese cosmetic market registration and product notification.',
                         es: 'Todos los activos FORM listados en IECIC con documentación completa para registro en el mercado cosmético chino y notificación de producto.' },
-
+};
 if (typeof VLYOR_TRANSLATIONS !== 'undefined') { Object.assign(VLYOR_TRANSLATIONS, FORM_TRANSLATIONS); }

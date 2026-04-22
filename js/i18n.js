@@ -57,9 +57,7 @@ const VLYOR_TRANSLATIONS = {
 
   /* ── PORTFOLIO PRODUCT NAMES (section labels) ─────────────────────────────── */
   'port.shield.h3'  : { en: 'Photostability',             es: 'Fotoestabilidad'          },
-  'port.silk.h3'    : { en: 'Structure &
-Sensory',        es: 'Estructura y
-Sensorial'  },
+  'port.silk.h3'    : { en: 'Structure & Sensory', es: 'Estructura y Sensorial' },
 
   /* ── MANIFESTO SECTION ────────────────────────────────────────────────────── */
   'mani.h2.em1'     : { en: 'Ours begins', es: 'La nuestra comienza' },
@@ -287,7 +285,7 @@ Sensorial'  },
   },
   'std.2.title'     : { en: 'China IECIC Listed',  es: 'Registro IECIC China'          },
   'std.2.p'         : {
-    en: "All actives registered in China's Inventory of Existing Cosmetic Ingredients.",
+    en: "All actives registered in China\'s Inventory of Existing Cosmetic Ingredients.",
     es: 'Todos los activos registrados en el Inventario de Ingredientes Cosméticos Existentes de China.'
   },
   'std.3.title'     : { en: 'GHS Compliant SDS',   es: 'FDS Conformes GHS'             },
@@ -401,11 +399,11 @@ Sensorial'  },
     es: 'Trazabilidad de origen completa desde la manufactura en Suzhou hasta tu laboratorio. La cadena de suministro no es una abstracción — es una secuencia documentada y verificable.'
   },
   'sp.card.3.p'   : {
-    en: "Every inquiry receives a TDS matched to the specific application — not a general catalogue. Understanding the brief before answering it is not a differentiator. It is basic respect for the formulator's time.",
+    en: "Every inquiry receives a TDS matched to the specific application — not a general catalogue. Understanding the brief before answering it is not a differentiator. It is basic respect for the formulator\'s time.",
     es: 'Cada consulta recibe un TDS ajustado a la aplicación específica — no un catálogo general. Entender el brief antes de responder no es un diferenciador. Es respeto básico por el tiempo del formulador.'
   },
   'sp.card.4.p'   : {
-    en: "From 500 g samples to commercial volumes, the supply structure was designed around the formulator's development cycle — not the supplier's convenience. The work determines the pace.",
+    en: "From 500 g samples to commercial volumes, the supply structure was designed around the formulator\'s development cycle — not the supplier\'s convenience. The work determines the pace.",
     es: 'Desde muestras de 500 g hasta volúmenes comerciales, la estructura de suministro fue diseñada en torno al ciclo de desarrollo del formulador — no a la conveniencia del proveedor. El trabajo determina el ritmo.'
   },
 

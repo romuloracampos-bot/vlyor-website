@@ -247,9 +247,9 @@ const PURE_TRANSLATIONS = {
                  es: 'IsoPure SCI: formato sólido que transforma la fabricación' },
   'pu.biz.p3': { en: 'Sodium Cocoyl Isethionate in solid form enables waterless and solid-format cleansing bars without liquid-phase manufacturing infrastructure. One ingredient decision changes the production process, packaging requirements, shipping weight and product positioning simultaneously.',
                  es: 'El Isetionato de Sodio y Coco en forma sólida permite barras de limpieza sin agua y en formato sólido sin infraestructura de fabricación en fase líquida. Una decisión sobre el ingrediente cambia simultáneamente el proceso de producción, los requisitos de envasado, el peso de envío y el posicionamiento del producto.' },
-};
 
-  /* ── PURE FORM SYSTEMS & REGULATORY ──────────────────────────────────────── */
+
+/* ── PURE FORM SYSTEMS & REGULATORY ──────────────────────────────────────── */
   'pu.sys1.title'   : { en: 'Ultra-Mild Baby & Sensitive Skin Wash',
                         es: 'Gel de Baño Ultra-Suave para Bebés y Piel Sensible'             },
   'pu.sys1.body'    : { en: 'Zero-compromise mildness system based entirely on APG glucosides and betaine amphoteric — no sulphates, no ethoxylates with residual EO. COSMOS-organic certifiable. Passes Zein solubilisation at baby-wash concentration.',
@@ -279,7 +279,7 @@ const PURE_TRANSLATIONS = {
                         es: 'Medioambiental y Biodegradabilidad'                             },
   'pu.rc4.body'     : { en: 'All APG glucosides are readily biodegradable per OECD 301B. Full environmental safety data including aquatic toxicity and biodegradability available.',
                         es: 'Todos los glucósidos APG son fácilmente biodegradables según OECD 301B. Datos completos de seguridad medioambiental incluyendo toxicidad acuática y biodegradabilidad disponibles.' },
-
+};
 if (typeof VLYOR_TRANSLATIONS !== 'undefined') {
   Object.assign(VLYOR_TRANSLATIONS, PURE_TRANSLATIONS);
 }

@@ -280,9 +280,9 @@ const VITAL_TRANSLATIONS = {
                  es: 'BakuActiv: eficacia sin las limitaciones del retinol' },
   'vt.biz.p3': { en: 'BakuActiv provides retinol-comparable gene expression data without photosensitivity, pregnancy restriction or stability challenges. In markets where retinol communication is restricted or where consumer sensitivity limits market reach, Bakuchiol opens formulation space that retinol closes.',
                  es: 'BakuActiv proporciona datos de expresión génica comparables al retinol sin fotosensibilidad, restricción en el embarazo ni desafíos de estabilidad. En mercados donde la comunicación del retinol está restringida o donde la sensibilidad del consumidor limita el alcance de mercado, el bakuchiol abre el espacio de formulación que el retinol cierra.' },
-};
 
-  /* ── VITAL FORM SYSTEMS & REGULATORY ─────────────────────────────────────── */
+
+/* ── VITAL FORM SYSTEMS & REGULATORY ─────────────────────────────────────── */
   'vt.form.eyebrow' : { en: 'Formulation Systems',     es: 'Sistemas de Formulación'          },
   'vt.form.title'   : { en: 'Proven active combinations\nfor every efficacy brief.',
                         es: 'Combinaciones de activos probadas\npara cada brief de eficacia.' },
@@ -311,12 +311,12 @@ const VITAL_TRANSLATIONS = {
   'vt.rc2.body'     : { en: 'All VITAL actives registered under Brazilian cosmetic guidelines. Full INCI, CAS and concentration documentation available for Brazilian market registration.',
                         es: 'Todos los activos VITAL registrados bajo las directrices cosméticas brasileñas. Documentación completa de INCI, CAS y concentración disponible para el registro en el mercado brasileño.' },
   'vt.rc3.title'    : { en: 'China IECIC',             es: 'China IECIC'                      },
-  'vt.rc3.body'     : { en: 'All VITAL actives listed in China's Inventory of Existing Cosmetic Ingredients with full documentation for Chinese market notification.',
+  'vt.rc3.body'     : { en: 'All VITAL actives listed in China\'s Inventory of Existing Cosmetic Ingredients with full documentation for Chinese market notification.',
                         es: 'Todos los activos VITAL listados en el Inventario de Ingredientes Cosméticos Existentes de China con documentación completa para notificación en el mercado chino.' },
   'vt.rc4.title'    : { en: 'GHS Documentation',       es: 'Documentación GHS'                },
   'vt.rc4.body'     : { en: 'Every VITAL active ships with a 16-section GHS Safety Data Sheet and Certificate of Analysis in English, Portuguese and Spanish.',
                         es: 'Cada activo VITAL se entrega con una Ficha de Datos de Seguridad GHS de 16 secciones y Certificado de Análisis en inglés, portugués y español.' },
-
+};
 if (typeof VLYOR_TRANSLATIONS !== 'undefined') {
   Object.assign(VLYOR_TRANSLATIONS, VITAL_TRANSLATIONS);
 }

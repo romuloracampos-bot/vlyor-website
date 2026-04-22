@@ -247,10 +247,9 @@ const SHIELD_TRANSLATIONS = {
   'sh.biz.p3':       { en: 'EU REACH 2024/1328 restricts D5 to ≤0.1% in all cosmetics from June 2027. Brands currently using D5-based sun care formulations have a finite window to reformulate. SilkDuo 503 — our D5-free alternative — is available today. Reformulation support included.',
                        es: 'El Reglamento REACH UE 2024/1328 restringe el D5 a ≤0,1% en todos los cosméticos a partir de junio de 2027. Las marcas que actualmente utilizan formulaciones solares con base D5 disponen de una ventana finita para reformular. SilkDuo 503 — nuestra alternativa libre de D5 — está disponible hoy. Soporte de reformulación incluido.' },
 
-};
 
-/* ── Merge into main i18n engine ─────────────────────────────────────────────── */
-  /* ── FORMULATION SYSTEMS ─────────────────────────────────────────────────── */
+
+/* ── FORMULATION SYSTEMS ─────────────────────────────────────────────────── */
   'sh.form.eyebrow' : { en: 'Formulation Systems',  es: 'Sistemas de Formulación'          },
   'sh.form.title'   : { en: 'Proven filter architectures\nfor every SPF challenge.',
                         es: 'Arquitecturas de filtros probadas\npara cada desafío SPF.'     },
@@ -279,7 +278,7 @@ const SHIELD_TRANSLATIONS = {
                         es: 'Todos los activos Shield aplicables registrados bajo la RDC 35/2023 de Brasil. Límites de concentración completos y combinaciones aprobadas según el marco ANVISA documentados.' },
   'sh.rc3.body'     : { en: 'Colombia and Peru follow the EU Mercosur reference framework. Shield documentation package supports INVIMA and DIGEMID notification and market registration.',
                         es: 'Colombia y Perú siguen el marco de referencia Mercosur UE. El paquete de documentación Shield apoya la notificación e inscripción en el mercado ante INVIMA y DIGEMID.' },
-  'sh.rc4.body'     : { en: 'All SHIELD actives listed in China's Inventory of Existing Cosmetic Ingredients. Full documentation for Chinese market registration and product notification available.',
+  'sh.rc4.body'     : { en: 'All SHIELD actives listed in China\'s Inventory of Existing Cosmetic Ingredients. Full documentation for Chinese market registration and product notification available.',
                         es: 'Todos los activos SHIELD listados en el Inventario de Ingredientes Cosméticos Existentes de China. Documentación completa para registro en el mercado chino y notificación de producto disponible.' },
 
   /* ── CTA SECTION ─────────────────────────────────────────────────────────── */
@@ -287,7 +286,7 @@ const SHIELD_TRANSLATIONS = {
                         es: '¿Listo para diseñar\nla arquitectura UV\nque su fórmula merece?' },
   'sh.cta.p'        : { en: 'Our UV filter formulation team provides system design, photostability validation, regulatory documentation and global market support for every SHIELD active.',
                         es: 'Nuestro equipo de formulación de filtros UV ofrece diseño de sistemas, validación de fotoestabilidad, documentación regulatoria y soporte para mercados globales para cada activo SHIELD.' },
-
+};
 if (typeof VLYOR_TRANSLATIONS !== 'undefined') {
   Object.assign(VLYOR_TRANSLATIONS, SHIELD_TRANSLATIONS);
 }

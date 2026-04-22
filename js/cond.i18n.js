@@ -132,8 +132,9 @@ const COND_TRANSLATIONS = {
                  es: 'CondiVeil 949 — Sin D4/D5/D6. En portafolio hoy.' },
   'co.biz.p3': { en: 'Amodimethicone targets damaged hair sites through electrostatic affinity — it deposits preferentially at the highest-damage areas of the hair cortex. That selectivity is why amodimethicone-conditioned hair feels repaired rather than coated.',
                  es: 'El amodimetilcono tiene como objetivo los sitios de daño capilar mediante afinidad electrostática — se deposita preferentemente en las áreas de mayor daño de la corteza capilar. Esa selectividad es la razón por la que el cabello acondicionado con amodimetilcono se siente reparado en lugar de revestido.' },
-};
-  /* ── COND FORM SYSTEMS & REGULATORY ──────────────────────────────────────── */
+
+
+/* ── COND FORM SYSTEMS & REGULATORY ──────────────────────────────────────── */
   'co.sys1.title'   : { en: 'Premium Rinse-Out Conditioner',
                         es: 'Acondicionador de Enjuague Premium'                             },
   'co.sys1.body'    : { en: 'BTMS cationic emulsifier base + targeted amodimethicone deposition at damage sites + PQ-7 polymer smooth feel. The complete premium conditioning architecture — rich conditioner texture, targeted silicone repair, polymer smoothness.',
@@ -162,5 +163,5 @@ const COND_TRANSLATIONS = {
   'co.rc4.title'    : { en: 'China IECIC',             es: 'China IECIC'                      },
   'co.rc4.body'     : { en: 'All COND actives listed in China IECIC with full documentation for Chinese cosmetic market registration.',
                         es: 'Todos los activos COND listados en China IECIC con documentación completa para el registro en el mercado cosmético chino.' },
-
+};
 if (typeof VLYOR_TRANSLATIONS !== 'undefined') { Object.assign(VLYOR_TRANSLATIONS, COND_TRANSLATIONS); }
