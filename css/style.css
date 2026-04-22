@@ -291,3 +291,33 @@ footer{border-top:1px solid rgba(255,255,255,.07);padding:56px 40px 0;background
   .mani-cnt,.mani-right{padding:40px 28px}
   .about-txt{padding:40px 28px}
 }
+
+/* ── Cost-of-problem block (index.html) ─────────────────────────────────────── */
+.cost-block{background:#fff;color:#0D0D0D;padding:88px 40px}
+.cost-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start}
+.cost-eyebrow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#9CA3AF;margin-bottom:20px}
+.cost-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(32px,4vw,52px);font-weight:700;letter-spacing:-.03em;line-height:.95;color:#0D0D0D}
+.cost-title em{font-style:italic;font-weight:300;color:#6B7280}
+.cost-right{display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(0,0,0,.08)}
+.cost-item{display:grid;grid-template-columns:80px 1fr;gap:24px;align-items:baseline;padding:28px 0;border-bottom:1px solid rgba(0,0,0,.08)}
+.cost-n{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:700;letter-spacing:-.025em;color:#0D0D0D;line-height:1}
+.cost-body strong{font-size:13px;font-weight:700;color:#0D0D0D;display:block;margin-bottom:7px}
+.cost-body p{font-size:13px;line-height:1.78;color:#6B7280}
+
+/* ── sp-stat: data line inside sp-cards ─────────────────────────────────────── */
+.sp-stat{display:block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em;color:rgba(255,255,255,.25);margin-top:12px;padding-top:10px;border-top:1px solid rgba(255,255,255,.06)}
+
+/* ── Business value block (line pages) ──────────────────────────────────────── */
+.biz-value-block{padding:80px 40px;background:#0A0A0A;border-top:1px solid rgba(255,255,255,.06)}
+.biz-value-inner{max-width:1200px;margin:0 auto}
+.biz-eyebrow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#4B5563;margin-bottom:32px}
+.biz-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.06)}
+.biz-item{background:#0A0A0A;padding:32px 28px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:baseline;transition:background .25s}
+.biz-item:hover{background:#111}
+.biz-n{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:700;letter-spacing:-.02em;color:var(--acc,#fff);line-height:1;white-space:nowrap}
+.biz-item strong{font-size:12px;font-weight:600;color:#E5E7EB;display:block;margin-bottom:8px;line-height:1.35}
+.biz-item p{font-size:12px;line-height:1.78;color:#4B5563}
+
+@media(max-width:1000px){.cost-inner{grid-template-columns:1fr;gap:40px}.cost-block{padding:56px 20px}}
+@media(max-width:900px){.biz-grid{grid-template-columns:1fr}.biz-value-block{padding:56px 20px}.biz-item{grid-template-columns:1fr;gap:10px}}
+@media(max-width:700px){.cost-item{grid-template-columns:60px 1fr;gap:16px}.cost-n{font-size:24px}}

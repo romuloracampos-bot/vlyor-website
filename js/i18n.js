@@ -158,33 +158,33 @@ const VLYOR_TRANSLATIONS = {
   'about.cred.4'    : { en: 'Samples available from 500 g for qualified formulators', es: 'Muestras disponibles desde 500 g para formuladores calificados' },
 
   /* ── SOCIAL PROOF ────────────────────────────────────────────────────────── */
-  'sp.label'        : { en: 'Why formulators choose VLYOR', es: 'Por qué los formuladores eligen VLYOR' },
-  'sp.headline.1'   : { en: "The ingredient doesn't fail.", es: 'El ingrediente no falla.' },
-  'sp.headline.2'   : { en: 'The documentation does.',     es: 'La documentación, sí.' },
+  'sp.label'        : { en: 'The VLYOR way of working', es: 'La forma de trabajar de VLYOR' },
+  'sp.headline.1'   : { en: 'There is a standard', es: 'Existe un estándar' },
+  'sp.headline.2'   : { en: 'above the standard.', es: 'por encima del estándar.' },
   'sp.sub'          : {
-    en: 'We built VLYOR around the failures we observed everywhere else — incomplete dossiers, opaque supply chains, account managers who couldn\'t answer a technical question. Every decision in the VLYOR model is a direct response to one of those failures.',
-    es: 'Construimos VLYOR a partir de los fallos que observamos en todas partes — dossiers incompletos, cadenas de suministro opacas, ejecutivos comerciales incapaces de responder una pregunta técnica. Cada decisión del modelo VLYOR es una respuesta directa a uno de esos fallos.'
+    en: 'The formulator who works at the highest level needs a supplier who works at the same level. Not one who meets the minimum. One who has no concept of minimum — only of what the work requires.',
+    es: 'El formulador que trabaja al más alto nivel necesita un proveedor que trabaje al mismo nivel. No uno que cumpla el mínimo. Uno que no tenga concepto de mínimo — solo de lo que el trabajo exige.'
   },
-  'sp.card.1.title' : { en: 'Documentation that arrives\nbefore you ask for it.',
-                        es: 'Documentación que llega\nantes de que la pidas.'         },
+  'sp.card.1.title' : { en: 'Documentation as a standard,\nnot a service.',
+                        es: 'Documentación como estándar,\nno como servicio.'              },
   'sp.card.1.p'     : {
     en: 'Every active ships with TDS, GHS SDS (16-section), CoA and IECIC listing. The documentation stack demanded by ANVISA-registered manufacturers and EU-export labs — complete, on every order, regardless of size.',
     es: 'Cada activo se entrega con TDS, SDS GHS (16 secciones), CoA y listado IECIC. El paquete de documentación que exigen los fabricantes registrados ante ANVISA y los laboratorios de exportación a la UE — completo, en cada pedido, sin importar el tamaño.'
   },
-  'sp.card.2.title' : { en: 'Factory price.\nNo intermediary margin.',
-                        es: 'Precio de fábrica.\nSin márgenes de intermediario.'      },
+  'sp.card.2.title' : { en: 'Origin traceability\nfrom source to lab.',
+                        es: 'Trazabilidad de origen\ndesde la fuente hasta el laboratorio.' },
   'sp.card.2.p'     : {
     en: 'Direct Suzhou sourcing eliminates every distributor step between the manufacturer and your lab. Competitive CIF pricing with full origin traceability — you know exactly where the molecule comes from.',
     es: 'El abastecimiento directo desde Suzhou elimina cada eslabón distribuidor entre el fabricante y tu laboratorio. Precios CIF competitivos con trazabilidad de origen completa — sabes exactamente de dónde viene la molécula.'
   },
-  'sp.card.3.title' : { en: 'A chemist answers.\nNot an account manager.',
-                        es: 'Te responde un químico.\nNo un ejecutivo de ventas.'      },
+  'sp.card.3.title' : { en: 'Technical depth\non every response.',
+                        es: 'Profundidad técnica\nen cada respuesta.'                   },
   'sp.card.3.p'     : {
     en: 'Every inquiry receives a targeted TDS matched to your specific brief — not a product catalogue forwarded by someone who hasn\'t formulated anything. The support is part of the product.',
     es: 'Cada consulta recibe un TDS dirigido, ajustado a tu brief específico — no un catálogo de productos reenviado por alguien que nunca ha formulado nada. El soporte técnico es parte del producto.'
   },
-  'sp.card.4.title' : { en: 'Prototype before\nyou commit to scale.',
-                        es: 'Prototipa primero.\nEscala cuando funcione.'              },
+  'sp.card.4.title' : { en: 'The work moves\nat the formulator\'s pace.',
+                        es: 'El trabajo avanza\nal ritmo del formulador.'             },
   'sp.card.4.p'     : {
     en: '500 g minimum orders and 7–12 day global air freight were designed specifically for innovation teams who need to iterate fast. Validate the formula first. Scale when it works.',
     es: 'Pedidos mínimos desde 500 g y flete aéreo global de 7 a 14 días diseñados específicamente para equipos de innovación que necesitan iterar rápido. Valida la fórmula primero. Escala cuando funcione.'
