@@ -301,7 +301,7 @@ footer{border-top:1px solid rgba(255,255,255,.07);padding:56px 40px 0;background
 .cost-right{display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(0,0,0,.08)}
 .cost-item{display:block;padding:32px 0;border-bottom:1px solid rgba(0,0,0,.08)}
 .cost-n{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,4vw,52px);font-weight:700;letter-spacing:-.03em;color:#0D0D0D;line-height:1;display:block;margin-bottom:12px}
-.cost-body strong{font-size:12px;font-weight:600;color:#0D0D0D;display:block;margin-bottom:8px;letter-spacing:.02em;text-transform:uppercase;font-family:'DM Mono',monospace}
+.cost-body strong{font-family:'Barlow',sans-serif;font-size:15px;font-weight:600;color:#1a1a1a;display:block;margin-bottom:10px;letter-spacing:-.01em;line-height:1.3}
 .cost-body p{font-size:14px;line-height:1.78;color:#6B7280}
 
 /* ── sp-stat: data line inside sp-cards ─────────────────────────────────────── */
