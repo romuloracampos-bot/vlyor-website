@@ -7,6 +7,89 @@
 
 const VLYOR_TRANSLATIONS = {
 
+
+  /* ── ABOUT STRIP (index.html dark block) ─────────────────────────────────── */
+  'about.h3'        : { en: 'Crafted at the<br/>molecular level.<br/><em>Felt at the surface.</em>',
+                        es: 'Creado a nivel<br/>molecular.<br/><em>Percibido en la superficie.</em>' },
+  'about.p1'        : { en: 'Each ingredient in the VLYOR portfolio is developed, validated and documented to the standards every serious formulator deserves — complete traceability, full technical transparency, and the assurance of working with a partner as invested in your final product as you are.',
+                        es: 'Cada ingrediente del portafolio VLYOR se desarrolla, valida y documenta según los estándares que todo formulador serio merece — trazabilidad completa, plena transparencia técnica y la garantía de trabajar con un socio tan comprometido con su producto final como usted.' },
+  'about.p2'        : { en: 'From specification to shipment, every detail is accounted for.',
+                        es: 'Desde la especificación hasta el envío, cada detalle está contemplado.' },
+  'about.num.1.l'   : { en: 'Actives across 8 precision lines',   es: 'Activos en 8 líneas de precisión'     },
+  'about.num.2.n'   : { en: '3 continents',                       es: '3 continentes'                       },
+  'about.num.2.l'   : { en: 'EU · Asia · Americas',               es: 'UE · Asia · Américas'                },
+  'about.num.3.l'   : { en: 'Technical response commitment',      es: 'Compromiso de respuesta técnica'     },
+  'about.num.4.l'   : { en: 'Global documentation standard',      es: 'Estándar de documentación global'   },
+  'about.cred.1'    : { en: 'Suzhou-based global sourcing hub',
+                        es: 'Hub de abastecimiento global con sede en Suzhou' },
+  'about.cred.2'    : { en: 'Full TDS · SDS · COA documentation on every shipment',
+                        es: 'Documentación completa TDS · SDS · COA en cada envío' },
+  'about.cred.3'    : { en: 'Global air freight — Europe, Americas and Asia-Pacific in 5–14 business days',
+                        es: 'Flete aéreo global — Europa, Américas y Asia-Pacífico en 5–14 días hábiles' },
+  'about.cred.4'    : { en: 'Samples available from 500 g for qualified formulators',
+                        es: 'Muestras disponibles desde 500 g para formuladores cualificados' },
+
+  /* ── MANIFESTO (index.html) - missing paragraph ─────────────────────────── */
+  'mani.p3'         : { en: 'Our ingredients do not announce themselves.<br/><strong>They enable the work of those who do.</strong>',
+                        es: 'Nuestros ingredientes no se anuncian a sí mismos.<br/><strong>Hacen posible el trabajo de quienes sí lo hacen.</strong>' },
+
+
+  /* ── INDEX — HERO & SECTIONS ─────────────────────────────────────────────── */
+
+  'hero.felt'       : { en: 'Felt at the surface.',     es: 'Percibido en la superficie.' },
+  'cost.title.em'   : { en: 'They are decided.',         es: 'Se deciden.'                 },
+  'hero.h1.em2'     : { en: 'Performance.', es: 'Rendimiento.' },
+  'hero.drop'       : { en: 'Precision in every drop.', es: 'Precisión en cada gota.' },
+
+  /* ── PORTFOLIO CARD LABELS ────────────────────────────────────────────────── */
+  'card.lbl.vital'  : { en: 'Vitamins & Actives',        es: 'Vitaminas y Activos'       },
+  'card.lbl.pure'   : { en: 'Biosurfactants',             es: 'Biosurfactantes'           },
+  'card.lbl.silk'   : { en: 'Silicone Technologies',      es: 'Tecnologías de Silicona'  },
+  'card.lbl.cond'   : { en: 'Conditioning Polymers',      es: 'Polímeros Acondicionadores'},
+  'card.lbl.form'   : { en: 'Emulsifiers & Rheology',     es: 'Emulsionantes y Reología' },
+
+  /* ── STANDARDS BLOCK ──────────────────────────────────────────────────────── */
+  'std.lbl.eu'      : { en: 'EU-Aligned Documentation',   es: 'Documentación Alineada UE'},
+  'std.lbl.iecic'   : { en: 'China IECIC Listed',         es: 'Listado China IECIC'      },
+  'std.lbl.ghs'     : { en: 'GHS Certified',              es: 'Certificado GHS'          },
+  'std.lbl.ghsiecic': { en: 'GHS · IECIC',                es: 'GHS · IECIC'              },
+  'std.lbl.ghseuali': { en: 'GHS · IECIC · EU-Aligned',   es: 'GHS · IECIC · Alineado UE'},
+
+  /* ── PORTFOLIO PRODUCT NAMES (section labels) ─────────────────────────────── */
+  'port.shield.h3'  : { en: 'Photostability',             es: 'Fotoestabilidad'          },
+  'port.silk.h3'    : { en: 'Structure &
+Sensory',        es: 'Estructura y
+Sensorial'  },
+
+  /* ── MANIFESTO SECTION ────────────────────────────────────────────────────── */
+  'mani.h2.em1'     : { en: 'Ours begins', es: 'La nuestra comienza' },
+  'mani.h2.em2'     : { en: 'with precision.', es: 'con precisión.' },
+
+  /* ── SP CARDS (missing content paragraphs) ───────────────────────────────── */
+  'sp.card.1.p'     : { en: 'Every active ships with TDS, GHS SDS (16-section), CoA and IECIC listing. The documentation stack expected by ANVISA-registered manufacturers and EU-export labs — complete on every order, from the first 500 g sample to commercial volumes.',
+                        es: 'Cada activo se entrega con TDS, SDS GHS (16 secciones), CoA y listado IECIC. La documentación que esperan los fabricantes registrados en ANVISA y los laboratorios de exportación UE — completa en cada pedido, desde la primera muestra de 500 g hasta volúmenes comerciales.' },
+  'sp.card.2.p'     : { en: 'Direct Suzhou sourcing eliminates every distributor step between the manufacturer and your lab. Full origin traceability from Suzhou manufacturing to your lab. The supply chain is not an abstraction — it is a documented, verifiable sequence.',
+                        es: 'El abastecimiento directo desde Suzhou elimina cada eslabón del distribuidor entre el fabricante y su laboratorio. Trazabilidad de origen completa desde la fabricación en Suzhou hasta su laboratorio. La cadena de suministro no es una abstracción — es una secuencia documentada y verificable.' },
+
+  /* ── RESPONSE BLOCK LABELS ────────────────────────────────────────────────── */
+  'resp.24h'        : { en: 'Response within 24h',        es: 'Respuesta en 24 horas'    },
+  'resp.tds'        : { en: 'Technical reply — not a sales call.',
+                        es: 'Respuesta técnica — no una llamada comercial.'               },
+  'resp.dossier'    : { en: 'Targeted dossier included',  es: 'Dossier específico incluido'},
+  'resp.tds.brief'  : { en: 'We match the right TDS to your brief.',
+                        es: 'Adaptamos el TDS correcto a su brief.'                       },
+  'resp.samples'    : { en: 'Samples available',          es: 'Muestras disponibles'     },
+  'resp.moq'        : { en: 'For qualified formulators. MOQ from 500 g.',
+                        es: 'Para formuladores cualificados. MOQ desde 500 g.'            },
+  'resp.global'     : { en: 'Active across global markets',
+                        es: 'Activo en mercados globales'                                 },
+  'resp.markets'    : { en: 'Europe · Americas · Middle East · Asia-Pacific.',
+                        es: 'Europa · Américas · Oriente Medio · Asia-Pacífico.'          },
+
+  /* ── FOOTER ───────────────────────────────────────────────────────────────── */
+  'footer.hub.1'    : { en: 'Global Bioactives Hub',      es: 'Hub Global de Bioactivos' },
+  'footer.hub.2'    : { en: 'Suzhou, China',              es: 'Suzhou, China'            },
+
   /* ── NAV ─────────────────────────────────────────────────────────────────── */
   'nav.portfolio'   : { en: 'Portfolio',          es: 'Portafolio'          },
   'nav.philosophy'  : { en: 'Philosophy',          es: 'Filosofía'           },
@@ -19,6 +102,9 @@ const VLYOR_TRANSLATIONS = {
   'hero.h1.line1'   : { en: 'Molecular',           es: 'Integridad'          },
   'hero.h1.em1'     : { en: 'Integrity.',           es: 'Molecular.'          },
   'hero.h1.line2'   : { en: 'Aesthetic',            es: 'Desempeño'          },
+
+  'hero.felt'       : { en: 'Felt at the surface.',     es: 'Percibido en la superficie.' },
+  'cost.title.em'   : { en: 'They are decided.',         es: 'Se deciden.'                 },
   'hero.h1.em2'     : { en: 'Performance.',         es: 'Estético.'          },
   'hero.cta.explore': { en: 'Explore Portfolio',    es: 'Ver Portafolio'      },
   'hero.cta.portal' : { en: 'Technical Portal',     es: 'Portal Técnico'      },
