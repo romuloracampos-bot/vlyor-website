@@ -158,7 +158,7 @@ const VLYOR_TRANSLATIONS = {
   'about.cred.4'    : { en: 'Samples available from 500 g for qualified formulators', es: 'Muestras disponibles desde 500 g para formuladores calificados' },
 
   /* ── SOCIAL PROOF ────────────────────────────────────────────────────────── */
-  'sp.label'        : { en: 'The VLYOR way of working', es: 'La forma de trabajar de VLYOR' },
+  'sp.label'        : { en: 'The VLYOR way of working', es: 'El modo de trabajo de VLYOR' },
   'sp.headline.1'   : { en: 'There is a standard', es: 'Existe un estándar' },
   'sp.headline.2'   : { en: 'above the standard.', es: 'por encima del estándar.' },
   'sp.sub'          : {
@@ -278,6 +278,61 @@ const VLYOR_TRANSLATIONS = {
   'footer.sample'   : { en: 'Request Sample', es: 'Solicitar Muestra'  },
   'footer.copy'     : { en: '© VLYOR Science. All rights reserved.',
                         es: '© VLYOR Science. Todos los derechos reservados.' },
+
+  /* ── COST BLOCK ─────────────────────────────────────────────────────────────── */
+  'cost.eyebrow'  : { en: 'The VLYOR standard',       es: 'El estándar VLYOR'          },
+  'cost.title'    : { en: 'Some things\nare not negotiated.\nThey are decided.',
+                      es: 'Hay cosas que\nno se negocian.\nSe deciden.'               },
+  'cost.1.n'      : { en: 'Complete.',                 es: 'Completa.'                  },
+  'cost.1.title'  : { en: 'Documentation on every shipment, without exception',
+                      es: 'Documentación en cada envío, sin excepción'                  },
+  'cost.1.p'      : {
+    en: 'TDS, GHS SDS, CoA and IECIC listing accompany every order — regardless of size, destination or product. Not because it is requested. Because it is the minimum we consider acceptable.',
+    es: 'TDS, SDS GHS, CoA y listado IECIC acompañan cada pedido — sin importar tamaño, destino o producto. No porque se solicite. Porque es el mínimo que consideramos aceptable.'
+  },
+  'cost.2.n'      : { en: 'Direct.',                   es: 'Directa.'                   },
+  'cost.2.title'  : { en: 'Origin traceability from Suzhou to your lab',
+                      es: 'Trazabilidad de origen desde Suzhou hasta tu laboratorio'     },
+  'cost.2.p'      : {
+    en: 'Every molecule in the VLYOR portfolio comes from a manufacturer we know, a process we understand and a specification we have verified. The supply chain is part of the product. It always has been.',
+    es: 'Cada molécula del portafolio VLYOR proviene de un fabricante que conocemos, un proceso que comprendemos y una especificación que hemos verificado. La cadena de suministro es parte del producto. Siempre lo ha sido.'
+  },
+  'cost.3.n'      : { en: 'Considered.',               es: 'Considerada.'               },
+  'cost.3.title'  : { en: 'Technical answers, not commercial responses',
+                      es: 'Respuestas técnicas, no respuestas comerciales'               },
+  'cost.3.p'      : {
+    en: 'The formulator who contacts VLYOR receives the same rigour they apply to their own work. A brief deserves a brief-specific answer. That is the only kind we know how to give.',
+    es: 'El formulador que contacta a VLYOR recibe el mismo rigor que aplica a su propio trabajo. Un brief merece una respuesta específica para ese brief. Es el único tipo que sabemos dar.'
+  },
+
+  /* ── SP-CARD BODY ────────────────────────────────────────────────────────────── */
+  'sp.card.1.p'   : {
+    en: 'The documentation stack expected by ANVISA-registered manufacturers and EU-export labs — complete on every order, from the first 500 g sample to commercial volumes.',
+    es: 'El paquete de documentación que esperan los fabricantes registrados ante ANVISA y los laboratorios de exportación a la UE — completo en cada pedido, desde la primera muestra de 500 g hasta volúmenes comerciales.'
+  },
+  'sp.card.2.p'   : {
+    en: 'Full origin traceability from Suzhou manufacturing to your lab. The supply chain is not an abstraction — it is a documented, verifiable sequence.',
+    es: 'Trazabilidad de origen completa desde la manufactura en Suzhou hasta tu laboratorio. La cadena de suministro no es una abstracción — es una secuencia documentada y verificable.'
+  },
+  'sp.card.3.p'   : {
+    en: "Every inquiry receives a TDS matched to the specific application — not a general catalogue. Understanding the brief before answering it is not a differentiator. It is basic respect for the formulator's time.",
+    es: 'Cada consulta recibe un TDS ajustado a la aplicación específica — no un catálogo general. Entender el brief antes de responder no es un diferenciador. Es respeto básico por el tiempo del formulador.'
+  },
+  'sp.card.4.p'   : {
+    en: "From 500 g samples to commercial volumes, the supply structure was designed around the formulator's development cycle — not the supplier's convenience. The work determines the pace.",
+    es: 'Desde muestras de 500 g hasta volúmenes comerciales, la estructura de suministro fue diseñada en torno al ciclo de desarrollo del formulador — no a la conveniencia del proveedor. El trabajo determina el ritmo.'
+  },
+
+  /* ── SP-STAT ─────────────────────────────────────────────────────────────────── */
+  'sp.stat.1'     : { en: 'GHS SDS · CoA · TDS · IECIC — every shipment, every order size.',
+                      es: 'SDS GHS · CoA · TDS · IECIC — en cada envío, en cada tamaño de pedido.' },
+  'sp.stat.2'     : { en: 'Direct Suzhou sourcing · Full origin documentation · No intermediary step.',
+                      es: 'Abastecimiento directo desde Suzhou · Documentación de origen completa · Sin intermediarios.' },
+  'sp.stat.3'     : { en: 'Technical response · Application-specific · 24 hours.',
+                      es: 'Respuesta técnica · Específica para la aplicación · 24 horas.' },
+  'sp.stat.4'     : { en: '500 g minimum · Global air freight · Same documentation as commercial volumes.',
+                      es: 'Mínimo 500 g · Flete aéreo global · Misma documentación que en volúmenes comerciales.' },
+
 
 };
 
