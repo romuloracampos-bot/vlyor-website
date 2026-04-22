@@ -333,6 +333,51 @@ const VLYOR_TRANSLATIONS = {
   'sp.stat.4'     : { en: '500 g minimum · Global air freight · Same documentation as commercial volumes.',
                       es: 'Mínimo 500 g · Flete aéreo global · Misma documentación que en volúmenes comerciales.' },
 
+  /* ── COMMON GLOBAL ──────────────────────────────────────────────────────────── */
+  'hero.eyebrow.short' : { en: 'Global Bioactives Hub',      es: 'Hub Global de Bioactivos'       },
+  'footer.col.company' : { en: 'Company',                    es: 'Empresa'                        },
+  'footer.code'        : { en: 'GHS · IECIC · EU-Aligned',   es: 'GHS · IECIC · Alineado UE'     },
+  'bc.home'            : { en: 'VLYOR Science',              es: 'VLYOR Science'                  },
+  'bc.portfolio'       : { en: 'Portfolio',                  es: 'Portafolio'                     },
+
+  /* ── MOQ STRIP ──────────────────────────────────────────────────────────────── */
+  'moq.1' : { en: 'Minimum order quantity',            es: 'Cantidad mínima de pedido'            },
+  'moq.2' : { en: 'Air freight · Global delivery',     es: 'Flete aéreo · Entrega global'         },
+  'moq.3' : { en: 'Documentation with every shipment', es: 'Documentación en cada envío'          },
+  'moq.4' : { en: 'Incoterms available',               es: 'Incoterms disponibles'                },
+  'moq.5' : { en: 'For qualified formulators',         es: 'Para formuladores calificados'        },
+
+  /* ── CROSS-SELL + BIZ ───────────────────────────────────────────────────────── */
+  'xsell.label' : { en: 'Explore the full portfolio',  es: 'Explorar el portafolio completo'      },
+  'biz.eyebrow' : { en: 'In practice',                 es: 'En la práctica'                       },
+
+  /* ── GLOBAL CTAs ────────────────────────────────────────────────────────────── */
+  'cta.samples'     : { en: 'Request Samples →',          es: 'Solicitar Muestras →'              },
+  'cta.portal.full' : { en: 'Full Technical Portal →',    es: 'Portal Técnico Completo →'         },
+  'cta.dossier'     : { en: 'Technical Dossier →',        es: 'Dossier Técnico →'                 },
+  'cta.dossier.req' : { en: 'Request Technical Dossier',  es: 'Solicitar Dossier Técnico'         },
+  'footer.portal'   : { en: 'Technical Portal',           es: 'Portal Técnico'                    },
+  'footer.compliance': { en: 'Compliance',                es: 'Cumplimiento'                      },
+  'footer.sample'   : { en: 'Request Sample',             es: 'Solicitar Muestra'                 },
+
+  /* ── PHILOSOPHY PAGE ────────────────────────────────────────────────────────── */
+  'ph.eyebrow'          : { en: 'The VLYOR Philosophy',      es: 'La filosofía de VLYOR'          },
+  'ph.statement.pre'    : { en: 'What we believe',           es: 'Lo que creemos'                 },
+  'ph.origin.eyebrow'   : { en: 'Where we operate',          es: 'Dónde operamos'                 },
+  'ph.principles.label' : { en: 'Four operating principles', es: 'Cuatro principios de trabajo'   },
+  'ph.process.label'    : { en: 'How we work',               es: 'Cómo trabajamos'                },
+  'ph.cta.portfolio'    : { en: 'Explore Portfolio →',       es: 'Ver Portafolio →'               },
+  'ph.cta.portal'       : { en: 'Technical Portal →',        es: 'Portal Técnico →'               },
+  'ph.cta.contact'      : { en: 'Contact →',                 es: 'Contacto →'                     },
+
+  /* ── PORTAL PAGE ────────────────────────────────────────────────────────────── */
+  'portal.title'   : { en: 'Product Dossiers',              es: 'Dossiers de Producto'            },
+  'portal.intro'   : {
+    en: 'Complete technical documentation across 8 product lines and 100+ ingredients. Specification data, formulation guidelines and regulatory compliance status for every active.',
+    es: 'Documentación técnica completa en 8 líneas de producto y más de 100 ingredientes. Datos de especificación, directrices de formulación y estado de cumplimiento regulatorio para cada activo.'
+  },
+  'portal.sample'  : { en: 'Request Sample Kit',            es: 'Solicitar Kit de Muestras'       },
+  'portal.inquiry' : { en: 'Technical Inquiry',             es: 'Consulta Técnica'                },
 
 };
 
