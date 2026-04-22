@@ -441,4 +441,9 @@ const I18N = {
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => I18N.init());
+// Run after all scripts loaded and DOM ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => I18N.init());
+} else {
+  I18N.init();
+}
