@@ -249,6 +249,37 @@ const PURE_TRANSLATIONS = {
                  es: 'El Isetionato de Sodio y Coco en forma sólida permite barras de limpieza sin agua y en formato sólido sin infraestructura de fabricación en fase líquida. Una decisión sobre el ingrediente cambia simultáneamente el proceso de producción, los requisitos de envasado, el peso de envío y el posicionamiento del producto.' },
 };
 
+  /* ── PURE FORM SYSTEMS & REGULATORY ──────────────────────────────────────── */
+  'pu.sys1.title'   : { en: 'Ultra-Mild Baby & Sensitive Skin Wash',
+                        es: 'Gel de Baño Ultra-Suave para Bebés y Piel Sensible'             },
+  'pu.sys1.body'    : { en: 'Zero-compromise mildness system based entirely on APG glucosides and betaine amphoteric — no sulphates, no ethoxylates with residual EO. COSMOS-organic certifiable. Passes Zein solubilisation at baby-wash concentration.',
+                        es: 'Sistema de suavidad sin compromisos basado íntegramente en glucósidos APG y betaína anfotérica — sin sulfatos, sin etoxilatos con OE residual. Certificable COSMOS-orgánico. Supera la solubilización de zeína a concentración de gel de baño infantil.' },
+  'pu.sys2.title'   : { en: 'Premium Sulphate-Free Solid Shampoo Bar',
+                        es: 'Barra de Champú Sólido Premium Sin Sulfatos'                    },
+  'pu.sys2.body'    : { en: 'High-performance solid shampoo combining SCI structural matrix with Decyl Glucoside for premium foam texture and COSMOS-eligible positioning — the technical foundation for artisan and premium solid hair care.',
+                        es: 'Champú sólido de alto rendimiento que combina la matriz estructural SCI con Glucósido de Decilo para una textura de espuma premium y posicionamiento elegible COSMOS — la base técnica para el cuidado capilar sólido artesanal y premium.' },
+  'pu.sys3.title'   : { en: 'High-Foam Volume Shampoo (Mass Market)',
+                        es: 'Champú de Alto Volumen y Espuma (Mercado Masivo)'               },
+  'pu.sys3.body'    : { en: 'Maximum foam performance system for cost-efficient mass-market shampoo production. SLES primary anionic + CAPB betaine amphoteric + Lauryl Glucoside mildness booster. Scalable from 1,000 L to full industrial volume.',
+                        es: 'Sistema de máximo rendimiento de espuma para la producción de champú masivo eficiente en costes. SLES aniónico primario + betaína CAPB anfotérica + potenciador de suavidad Glucósido de Laurilo. Escalable desde 1.000 L hasta volumen industrial completo.' },
+  'pu.reg.eyebrow'  : { en: 'Global Compliance',       es: 'Cumplimiento Global'              },
+  'pu.reg.title'    : { en: 'Every market.\nEvery standard.',
+                        es: 'Cada mercado.\nCada estándar.'                                  },
+  'pu.rc1.title'    : { en: 'COSMOS Organic / Natural', es: 'COSMOS Orgánico / Natural'       },
+  'pu.rc1.body'     : { en: 'GlucoPure APG series and selected PURE actives are COSMOS-organic eligible. Full compliance documentation for natural and organic certification available.',
+                        es: 'La serie APG GlucoPure y los activos PURE seleccionados son elegibles para COSMOS-orgánico. Documentación de cumplimiento completa para certificación natural y orgánica disponible.' },
+  'pu.rc2.title'    : { en: 'EU Cosmetics Regulation 1223/2009',
+                        es: 'Reglamento Cosmético UE 1223/2009'                               },
+  'pu.rc2.body'     : { en: 'All PURE actives comply with EU Cosmetics Regulation. Full Annex compliance mapping, INCI confirmation and concentration documentation available.',
+                        es: 'Todos los activos PURE cumplen con el Reglamento Cosmético UE. Mapeo completo de cumplimiento de Anexos, confirmación INCI y documentación de concentración disponibles.' },
+  'pu.rc3.title'    : { en: 'ANVISA — Brazil & LATAM',  es: 'ANVISA — Brasil y LATAM'         },
+  'pu.rc3.body'     : { en: 'All applicable PURE actives approved under ANVISA guidelines. Full documentation for Brazilian market registration and LATAM equivalent frameworks.',
+                        es: 'Todos los activos PURE aplicables aprobados bajo las directrices ANVISA. Documentación completa para registro en el mercado brasileño y marcos equivalentes LATAM.' },
+  'pu.rc4.title'    : { en: 'Environmental & Biodegradability',
+                        es: 'Medioambiental y Biodegradabilidad'                             },
+  'pu.rc4.body'     : { en: 'All APG glucosides are readily biodegradable per OECD 301B. Full environmental safety data including aquatic toxicity and biodegradability available.',
+                        es: 'Todos los glucósidos APG son fácilmente biodegradables según OECD 301B. Datos completos de seguridad medioambiental incluyendo toxicidad acuática y biodegradabilidad disponibles.' },
+
 if (typeof VLYOR_TRANSLATIONS !== 'undefined') {
   Object.assign(VLYOR_TRANSLATIONS, PURE_TRANSLATIONS);
 }

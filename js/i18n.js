@@ -383,6 +383,59 @@ const VLYOR_TRANSLATIONS = {
 
 /* ── Engine ──────────────────────────────────────────────────────────────────── */
 
+
+/* ── DIRECT TEXT TRANSLATIONS (fallback for elements without data-i18n) ── */
+const VLYOR_TEXT_MAP = {
+  'Active Categories — VLYOR VITAL': 'Categorías de Activos — VLYOR VITAL',
+  'All APG glucoside grades and selected polysorbates are COSMOS-organic and COSMOS-natural eligible, enabling certified natural formulation without compromise.': 'Todos los grados de glucósido APG y polisorbatos seleccionados son elegibles para COSMOS-orgánico y COSMOS-natural, permitiendo formulación natural certificada sin compromisos.',
+  'All 14 PURE actives fully comply with EU Regulation 1223/2009. Complete INCI, CAS and concentration documentation available for all grades.': 'Los 14 activos PURE cumplen íntegramente con el Reglamento UE 1223/2009. Documentación completa de INCI, CAS y concentración disponible para todos los grados.',
+  'All surfactants approved for cosmetic use in Brazil and throughout the region under ANVISA guidelines. Full documentation for market registration available.': 'Todos los surfactantes aprobados para uso cosmético en Brasil y en toda la región bajo las directrices ANVISA. Documentación completa para registro en el mercado disponible.',
+  'APG glucosides, betaine and isethionate actives are readily biodegradable per OECD 301B. Complete aquatic toxicity and environmental safety data available.': 'Los glucósidos APG, la betaína y los activos isetionatos son fácilmente biodegradables según OECD 301B. Datos completos de toxicidad acuática y seguridad medioambiental disponibles.',
+  'All PreserFlex preservatives comply with EU Cosmetics Regulation Annex V. All ChelaGuard and SoluCast actives are EU-approved with defined safety data.': 'Todos los conservadores PreserFlex cumplen con el Anexo V del Reglamento Cosmético UE. Todos los activos ChelaGuard y SoluCast están aprobados en la UE con datos de seguridad definidos.',
+  'All preservatives, chelating agents and functional actives are approved under ANVISA guidelines for Brazilian and LATAM cosmetic markets.': 'Todos los conservadores, agentes quelantes y activos funcionales están aprobados bajo las directrices ANVISA para los mercados cosméticos brasileño y LATAM.',
+  'All 10 FUNC actives IECIC-listed for the Chinese cosmetics market with complete documentation.': 'Los 10 activos FUNC listados en IECIC para el mercado cosmético chino con documentación completa.',
+  'All FUNC actives supplied with 16-section GHS SDS. ISO 11930 challenge test data available for all preservation systems.': 'Todos los activos FUNC suministrados con SDS GHS de 16 secciones. Datos de test de desafío ISO 11930 disponibles para todos los sistemas de conservación.',
+  'All 5 COND actives comply with EU Cosmetics Regulation 1223/2009. PQ polymers, CTAC and CondiVeil 949 all have extensive EU safety documentation.': 'Los 5 activos COND cumplen con el Reglamento Cosmético UE 1223/2009. Los polímeros PQ, el CTAC y CondiVeil 949 tienen amplia documentación de seguridad UE.',
+  'All conditioning actives comply with EU 1223/2009, ANVISA and IECIC for Chinese market. Natural certification (COSMOS) for BTMS available on request.': 'Todos los activos acondicionadores cumplen con la UE 1223/2009, ANVISA e IECIC para el mercado chino. Certificación natural (COSMOS) para BTMS disponible a petición.',
+  'All 5 COND actives IECIC-listed for Chinese market access. Complete documentation for Chinese cosmetic market registration and product notification.': 'Los 5 activos COND listados en IECIC para acceso al mercado chino. Documentación completa para registro en el mercado cosmético chino y notificación de producto.',
+  'EU REACH 2024/1328 restricts only cyclic siloxanes (D4, D5, D6). Linear PDMS dimethicone fluids (SilkFluid grades) are not subject to these restrictions.': 'El REACH UE 2024/1328 restringe únicamente los siloxanos cíclicos (D4, D5, D6). Los fluidos de PDMS dimetilcono lineal (grados SilkFluid) no están sujetos a estas restricciones.',
+  'All 8 SILK actives including SilkVeil (D5) are unrestricted for cosmetic use under ANVISA Brazil guidelines and equivalent LATAM frameworks.': 'Los 8 activos SILK, incluido SilkVeil (D5), son de uso cosmético no restringido bajo las directrices ANVISA Brasil y marcos LATAM equivalentes.',
+  'SilkVeil (Cyclopentasiloxane D5) is restricted to ≤0.1% in EU leave-on cosmetics from June 2027. SilkDuo 503 (D4/D5/D6-free) is the EU-compliant alternative.': 'SilkVeil (Ciclopentasiloxano D5) estará restringido a ≤0,1% en los cosméticos leave-on de la UE a partir de junio de 2027. SilkDuo 503 (sin D4/D5/D6) es la alternativa conforme con la UE.',
+  'All 8 SILK actives are IECIC-listed for the Chinese cosmetics market. Complete documentation for product registration and notification available.': 'Los 8 activos SILK están listados en IECIC para el mercado cosmético chino. Documentación completa para registro de producto y notificación disponible.',
+  'All 22 FORM actives comply with EU Cosmetics Regulation 1223/2009. Sorbitan esters, PEG-based emulsifiers and all carbomers are EU-approved with full INCI documentation.': 'Los 22 activos FORM cumplen con el Reglamento Cosmético UE 1223/2009. Los ésteres de sorbitán, emulsionantes a base de PEG y todos los carbómeros están aprobados en la UE con documentación INCI completa.',
+  'All actives approved under ANVISA. Complete documentation available for all emulsifiers, carbomers and emollient esters for Brazilian and LATAM market registration.': 'Todos los activos aprobados bajo ANVISA. Documentación completa disponible para todos los emulsionantes, carbómeros y ésteres emolientes para el registro en los mercados brasileño y LATAM.',
+  'SorbEssence (all grades), FormBase SA, FormBase ST-2 and SqualEssence are COSMOS-eligible. Documentation for natural certification available on request.': 'SorbEssence (todos los grados), FormBase SA, FormBase ST-2 y SqualEssence son elegibles para COSMOS. Documentación para certificación natural disponible a petición.',
+  'All 22 FORM actives IECIC-listed for the Chinese cosmetics market. Complete documentation for product registration and notification in China available.': 'Los 22 activos FORM listados en IECIC para el mercado cosmético chino. Documentación completa para registro de producto y notificación en China disponible.',
+  'All 7 HYDRA actives comply with EU Cosmetics Regulation at current approved concentrations. Full INCI, CAS and concentration documentation available.': 'Los 7 activos HYDRA cumplen con el Reglamento Cosmético UE a las concentraciones aprobadas vigentes. Documentación completa de INCI, CAS y concentración disponible.',
+  'Application-ready surfactant combinations from the PURE portfolio — validated for the most commercially relevant cleansing formats in global markets.': 'Combinaciones de surfactantes listas para aplicar del portafolio PURE — validadas para los formatos de limpieza más relevantes comercialmente en mercados globales.',
+  'Application-ready functional chemistry combinations from the FUNC portfolio — validated for the most commercially relevant preservation and stabilisation systems.': 'Combinaciones de química funcional listas para aplicar del portafolio FUNC — validadas para los sistemas de conservación y estabilización más relevantes comercialmente.',
+  'Application-ready conditioning combinations from the COND portfolio — validated for the most commercially relevant hair conditioning formats.': 'Combinaciones de acondicionamiento listas para aplicar del portafolio COND — validadas para los formatos de acondicionamiento capilar más relevantes comercialmente.',
+  'Application-ready silicone combinations from the SILK portfolio — validated for the most commercially relevant sensory engineering applications.': 'Combinaciones de silicona listas para aplicar del portafolio SILK — validadas para las aplicaciones de ingeniería sensorial más relevantes comercialmente.',
+  'Application-ready combinations from the FORM portfolio — validated for the most commercially relevant emulsion and gel architectures.': 'Combinaciones listas para aplicar del portafolio FORM — validadas para las arquitecturas de emulsión y gel más relevantes comercialmente.',
+  'Full regulatory documentation for global market registration, EU compliance and natural certification available on request.': 'Documentación regulatoria completa para registro en mercados globales, cumplimiento UE y certificación natural disponible a petición.',
+  'Full regulatory documentation for global markets registration, EU compliance and natural certification available on request.': 'Documentación regulatoria completa para registro en mercados globales, cumplimiento UE y certificación natural disponible a petición.',
+  'Ready-to-use systems for every cleansing brief.': 'Sistemas listos para usar para cada propuesta de limpieza.',
+  'Ready-to-use systems for every conditioning brief.': 'Sistemas listos para usar para cada propuesta de acondicionamiento.',
+  'Ready-to-use systems for every silicone application.': 'Sistemas listos para usar para cada aplicación de silicona.',
+  'Ready-to-use systems for every formulation brief.': 'Sistemas listos para usar para cada propuesta de formulación.',
+  'Ready-to-use systems for every preservation challenge.': 'Sistemas listos para usar para cada desafío de conservación.'
+};
+
+function applyTextMap(lang) {
+  if (lang !== 'es') return;
+  const walker = document.createTreeWalker(
+    document.body, NodeFilter.SHOW_TEXT, null
+  );
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach(node => {
+    const trimmed = node.textContent.trim();
+    if (VLYOR_TEXT_MAP[trimmed]) {
+      node.textContent = VLYOR_TEXT_MAP[trimmed];
+    }
+  });
+}
+
 const I18N = {
 
   current: localStorage.getItem('vlyor-lang') || 'en',
@@ -420,6 +473,8 @@ const I18N = {
 
     // HTML lang attribute
     document.documentElement.setAttribute('lang', lang === 'es' ? 'es' : 'en');
+
+    applyTextMap(lang);
 
     // Toggle button state
     document.querySelectorAll('.ls-btn').forEach(btn => {

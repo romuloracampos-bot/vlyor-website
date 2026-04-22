@@ -282,6 +282,41 @@ const VITAL_TRANSLATIONS = {
                  es: 'BakuActiv proporciona datos de expresión génica comparables al retinol sin fotosensibilidad, restricción en el embarazo ni desafíos de estabilidad. En mercados donde la comunicación del retinol está restringida o donde la sensibilidad del consumidor limita el alcance de mercado, el bakuchiol abre el espacio de formulación que el retinol cierra.' },
 };
 
+  /* ── VITAL FORM SYSTEMS & REGULATORY ─────────────────────────────────────── */
+  'vt.form.eyebrow' : { en: 'Formulation Systems',     es: 'Sistemas de Formulación'          },
+  'vt.form.title'   : { en: 'Proven active combinations\nfor every efficacy brief.',
+                        es: 'Combinaciones de activos probadas\npara cada brief de eficacia.' },
+  'vt.form.sub'     : { en: 'Three ready-to-use active architectures covering the primary efficacy briefs in global premium cosmetics.',
+                        es: 'Tres arquitecturas de activos listas para usar que cubren los principales briefs de eficacia en cosmética global premium.' },
+  'vt.sys1.title'   : { en: 'Brightening & Anti-Ageing Serum',
+                        es: 'Serum Iluminador y Antiedad'                                       },
+  'vt.sys1.body'    : { en: 'Multi-mechanism approach combining niacinamide (melanosome transfer inhibition), ascorbic acid (tyrosinase inhibition) and kojic acid (copper chelation) — triple-pathway brightening with documented clinical evidence for each mechanism.',
+                        es: 'Enfoque multimecanismo que combina niacinamida (inhibición de la transferencia de melanosomas), ácido ascórbico (inhibición de la tirosinasa) y ácido kójico (quelación del cobre) — aclarado de triple vía con evidencia clínica documentada para cada mecanismo.' },
+  'vt.sys2.title'   : { en: 'Anti-Ageing Renewal Night Serum',
+                        es: 'Serum Renovador Antiedad de Noche'                                },
+  'vt.sys2.body'    : { en: 'Retinoid-equivalent gene expression (BakuActiv) combined with antioxidant defence (TocoActiv E + CoenzActiv Q10) and barrier support (PanthoActiv 98). The complete anti-ageing active stack — maximum renewal with minimum irritation.',
+                        es: 'Expresión génica equivalente al retinoide (BakuActiv) combinada con defensa antioxidante (TocoActiv E + CoenzActiv Q10) y soporte de barrera (PanthoActiv 98). La pila activa antiedad completa — máxima renovación con mínima irritación.' },
+  'vt.sys3.title'   : { en: 'Hydration & Barrier Repair',
+                        es: 'Hidratación y Reparación de Barrera'                             },
+  'vt.sys3.body'    : { en: 'HyalActiv multi-weight hyaluronic acid for layered surface hydration combined with panthenol barrier repair and allantoin soothing — the globally bestselling serum architecture for all skin types.',
+                        es: 'Ácido hialurónico multigramatural HyalActiv para hidratación superficial en capas combinado con reparación de barrera con pantenol y efecto calmante de alantoína — la arquitectura de serum más vendida globalmente para todo tipo de piel.' },
+  'vt.reg.eyebrow'  : { en: 'Global Compliance',       es: 'Cumplimiento Global'              },
+  'vt.reg.title'    : { en: 'Every market.\nEvery standard.',
+                        es: 'Cada mercado.\nCada estándar.'                                  },
+  'vt.rc1.title'    : { en: 'EU Cosmetics Regulation 1223/2009',
+                        es: 'Reglamento Cosmético UE 1223/2009'                               },
+  'vt.rc1.body'     : { en: 'All VITAL actives are approved cosmetic ingredients under EU 1223/2009. Concentration limits, approved functions and documentation available on request.',
+                        es: 'Todos los activos VITAL son ingredientes cosméticos aprobados bajo el Reglamento UE 1223/2009. Límites de concentración, funciones aprobadas y documentación disponibles a petición.' },
+  'vt.rc2.title'    : { en: 'ANVISA — Brazil',         es: 'ANVISA — Brasil'                  },
+  'vt.rc2.body'     : { en: 'All VITAL actives registered under Brazilian cosmetic guidelines. Full INCI, CAS and concentration documentation available for Brazilian market registration.',
+                        es: 'Todos los activos VITAL registrados bajo las directrices cosméticas brasileñas. Documentación completa de INCI, CAS y concentración disponible para el registro en el mercado brasileño.' },
+  'vt.rc3.title'    : { en: 'China IECIC',             es: 'China IECIC'                      },
+  'vt.rc3.body'     : { en: 'All VITAL actives listed in China's Inventory of Existing Cosmetic Ingredients with full documentation for Chinese market notification.',
+                        es: 'Todos los activos VITAL listados en el Inventario de Ingredientes Cosméticos Existentes de China con documentación completa para notificación en el mercado chino.' },
+  'vt.rc4.title'    : { en: 'GHS Documentation',       es: 'Documentación GHS'                },
+  'vt.rc4.body'     : { en: 'Every VITAL active ships with a 16-section GHS Safety Data Sheet and Certificate of Analysis in English, Portuguese and Spanish.',
+                        es: 'Cada activo VITAL se entrega con una Ficha de Datos de Seguridad GHS de 16 secciones y Certificado de Análisis en inglés, portugués y español.' },
+
 if (typeof VLYOR_TRANSLATIONS !== 'undefined') {
   Object.assign(VLYOR_TRANSLATIONS, VITAL_TRANSLATIONS);
 }

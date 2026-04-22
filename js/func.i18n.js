@@ -182,6 +182,36 @@ const FUNC_TRANSLATIONS = {
                  es: 'SoluCast 40 solubiliza fragancias y vitamina E en sistemas acuosos transparentes — eliminando la necesidad de múltiples co-solventes. Menos ingredientes en la declaración es un beneficio directo para las marcas que compiten en segmentos de etiqueta limpia.' },
 };
 
+  /* ── FUNC FORM SYSTEMS & REGULATORY ──────────────────────────────────────── */
+  'fc.sys1.title'   : { en: 'Standard Broad-Spectrum Preservation',
+                        es: 'Conservación Estándar de Amplio Espectro'                       },
+  'fc.sys1.body'    : { en: 'The VLYOR reference preservation system — phenoxyethanol + EDTA. Passes ISO 11930 across all five challenge organisms at 0.8% PE + 0.2% ChelaGuard 2. Suitable for all cosmetic matrices.',
+                        es: 'El sistema de conservación de referencia VLYOR — fenoxietanol + EDTA. Supera la ISO 11930 en los cinco organismos de desafío con 0,8% PE + 0,2% ChelaGuard 2. Adecuado para todas las matrices cosméticas.' },
+  'fc.sys2.title'   : { en: 'Clean Beauty Preservation — Paraben & DMDM Free',
+                        es: 'Conservación Clean Beauty — Sin Parabenos ni DMDM'             },
+  'fc.sys2.body'    : { en: 'Advanced preservation for premium and clean beauty positioning. PreserFlex EHG (PE + Ethylhexylglycerin) + ChelaGuard 2. ISO 11930 compliant at 0.7% total dose. Paraben-free and formaldehyde-free label claims.',
+                        es: 'Conservación avanzada para posicionamiento premium y clean beauty. PreserFlex EHG (PE + Etilhexilglicerina) + ChelaGuard 2. Conforme ISO 11930 a 0,7% de dosis total. Claims de etiqueta sin parabenos y sin formaldehído.' },
+  'fc.sys3.title'   : { en: 'Vitamin C Serum — Chelation & Preservation',
+                        es: 'Serum de Vitamina C — Quelación y Conservación'                 },
+  'fc.sys3.body'    : { en: 'Complete formula stabilisation for L-Ascorbic Acid serums. High-dose ChelaGuard 2 (0.2–0.3%) blocks Fe/Cu catalysed oxidation. PE + EDTA preservation at sub-1% total dose for low-pH aqueous systems.',
+                        es: 'Estabilización completa de fórmula para serums de ácido L-ascórbico. ChelaGuard 2 a alta dosis (0,2–0,3%) bloquea la oxidación catalizada por Fe/Cu. Conservación PE + EDTA a dosis total inferior al 1% para sistemas acuosos de bajo pH.' },
+  'fc.reg.eyebrow'  : { en: 'Global Compliance',       es: 'Cumplimiento Global'              },
+  'fc.reg.title'    : { en: 'Every market.\nEvery standard.',
+                        es: 'Cada mercado.\nCada estándar.'                                  },
+  'fc.rc1.title'    : { en: 'EU Annex V — Preservatives',
+                        es: 'Anexo V UE — Conservadores'                                     },
+  'fc.rc1.body'     : { en: 'PreserFlex PE and MP listed in EU Annex V with defined concentration limits. PreserFlex EHG and DMDM comply as combination preservative systems. Full documentation available.',
+                        es: 'PreserFlex PE y MP listados en el Anexo V UE con límites de concentración definidos. PreserFlex EHG y DMDM cumplen como sistemas conservadores combinados. Documentación completa disponible.' },
+  'fc.rc2.title'    : { en: 'ANVISA — Brazil & LATAM', es: 'ANVISA — Brasil y LATAM'          },
+  'fc.rc2.body'     : { en: 'All FUNC preservatives approved under Brazilian cosmetic guidelines. Concentration limits per ANVISA framework documented for each active.',
+                        es: 'Todos los conservadores FUNC aprobados bajo las directrices cosméticas brasileñas. Límites de concentración según el marco ANVISA documentados para cada activo.' },
+  'fc.rc3.title'    : { en: 'China IECIC',              es: 'China IECIC'                     },
+  'fc.rc3.body'     : { en: 'All FUNC actives listed in China IECIC with full documentation for Chinese market registration and product notification.',
+                        es: 'Todos los activos FUNC listados en China IECIC con documentación completa para registro en el mercado chino y notificación de producto.' },
+  'fc.rc4.title'    : { en: 'GHS / ISO 11930 Data',    es: 'Datos GHS / ISO 11930'            },
+  'fc.rc4.body'     : { en: 'Every FUNC active ships with a 16-section GHS SDS and available ISO 11930 challenge test data for key preservation systems.',
+                        es: 'Cada activo FUNC se entrega con una SDS GHS de 16 secciones y datos disponibles de test de desafío ISO 11930 para los sistemas de conservación clave.' },
+
 if (typeof VLYOR_TRANSLATIONS !== 'undefined') {
   Object.assign(VLYOR_TRANSLATIONS, FUNC_TRANSLATIONS);
 }

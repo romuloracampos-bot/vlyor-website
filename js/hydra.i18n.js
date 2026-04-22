@@ -135,4 +135,18 @@ const HYDRA_TRANSLATIONS = {
   'hy.biz.p3': { en: 'AquaFilm K90 at 1% delivers 2–3× the styling hold force of AquaFilm K30 at 3–5%. The K90 formula uses less polymer, has lower ingredient cost per unit, and delivers a stronger consumer-perceptible result. The grade choice is not technical preference — it is the product architecture decision that determines what you can claim on the packaging.',
                  es: 'AquaFilm K90 al 1% entrega 2–3 veces la fuerza de fijación de AquaFilm K30 al 3–5%. La fórmula con K90 utiliza menos polímero, tiene menor coste de ingrediente por unidad y entrega un resultado más fuerte perceptible por el consumidor. La elección del grado no es preferencia técnica — es la decisión de arquitectura del producto que determina lo que puede declarar en el envase.' },
 };
+  /* ── HYDRA REGULATORY ────────────────────────────────────────────────────── */
+  'hy.rc1.title'    : { en: 'EU 1223/2009',            es: 'UE 1223/2009'                    },
+  'hy.rc1.body'     : { en: 'All 7 HYDRA actives comply with EU Cosmetics Regulation at current approved concentrations. Glycerin, PEG and PVP grades have extensive EU safety data.',
+                        es: 'Los 7 activos HYDRA cumplen con el Reglamento Cosmético UE a las concentraciones aprobadas vigentes. La glicerina, los grados PEG y PVP tienen amplia documentación de seguridad UE.' },
+  'hy.rc2.title'    : { en: 'ANVISA — Brazil & LATAM', es: 'ANVISA — Brasil y LATAM'          },
+  'hy.rc2.body'     : { en: 'All actives approved under ANVISA guidelines and LATAM equivalent frameworks. Full documentation available for Brazilian market registration.',
+                        es: 'Todos los activos aprobados bajo las directrices ANVISA y marcos equivalentes LATAM. Documentación completa disponible para el registro en el mercado brasileño.' },
+  'hy.rc3.title'    : { en: 'Natural Certification',   es: 'Certificación Natural'            },
+  'hy.rc3.body'     : { en: 'HydraBase Glyc (vegetable origin) and HydraBase PDO (bio-based from corn fermentation) are COSMOS-eligible. Full natural certification documentation available.',
+                        es: 'HydraBase Glycol (origen vegetal) y HydraBase PDO (de origen biológico de fermentación de maíz) son elegibles para COSMOS. Documentación completa de certificación natural disponible.' },
+  'hy.rc4.title'    : { en: 'China IECIC',             es: 'China IECIC'                      },
+  'hy.rc4.body'     : { en: 'All 7 HYDRA actives IECIC-listed for the Chinese cosmetics market with full documentation for market registration and product notification.',
+                        es: 'Los 7 activos HYDRA listados en IECIC para el mercado cosmético chino con documentación completa para registro en el mercado y notificación de producto.' },
+
 if (typeof VLYOR_TRANSLATIONS !== 'undefined') { Object.assign(VLYOR_TRANSLATIONS, HYDRA_TRANSLATIONS); }

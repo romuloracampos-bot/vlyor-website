@@ -250,6 +250,46 @@ const SHIELD_TRANSLATIONS = {
 };
 
 /* ── Merge into main i18n engine ─────────────────────────────────────────────── */
+  /* ── FORMULATION SYSTEMS ─────────────────────────────────────────────────── */
+  'sh.form.eyebrow' : { en: 'Formulation Systems',  es: 'Sistemas de Formulación'          },
+  'sh.form.title'   : { en: 'Proven filter architectures\nfor every SPF challenge.',
+                        es: 'Arquitecturas de filtros probadas\npara cada desafío SPF.'     },
+  'sh.form.sub'     : { en: 'Three ready-to-use filter combinations covering the primary formulation briefs in the global sun care market.',
+                        es: 'Tres combinaciones de filtros listas para usar que cubren los principales briefs de formulación del mercado solar global.' },
+  'sh.sys1.title'   : { en: 'Classic High-SPF\nGlobal Standard',
+                        es: 'Estándar Global\nde Alto SPF Clásico'                         },
+  'sh.sys1.body'    : { en: 'The most widely used sun care architecture across Brazil, Colombia, Peru and Ecuador. Combines the highest-volume UVB filter with photostabilised UVA coverage — the formula profile behind most regional mass-market products.',
+                        es: 'La arquitectura de cuidado solar más utilizada en Brasil, Colombia, Perú y Ecuador. Combina el filtro UVB de mayor volumen con cobertura UVA fotoestabilizada — el perfil de fórmula detrás de la mayoría de los productos masivos regionales.' },
+  'sh.sys2.title'   : { en: 'Next-Generation\nPremium SPF 50+',
+                        es: 'Nueva Generación\nSPF 50+ Premium'                            },
+  'sh.sys2.body'    : { en: 'Achieves SPF 50+ with superior photostability and an elegant, lightweight skin feel. Designed for premium facial sunscreens, tinted SPF bases and clinical anti-photoageing products targeting the professional and prestige segment.',
+                        es: 'Alcanza SPF 50+ con superior fotoestabilidad y una sensación cutánea elegante y ligera. Diseñado para protectores solares faciales premium, bases SPF tintadas y productos clínicos anti-fotoenvejecimiento dirigidos al segmento profesional y de prestigio.' },
+  'sh.sys3.title'   : { en: 'Minimalist Aqueous\nDaily UV Protection',
+                        es: 'Protección UV Diaria\nAcuosa Minimalista'                     },
+  'sh.sys3.body'    : { en: 'For transparent gels, SPF toners and ultra-lightweight moisturisers where total filter load must remain below 10%. Water-soluble filters deliver the SPF without affecting clarity or the skin feel of the aqueous base.',
+                        es: 'Para geles transparentes, tónicos SPF e hidratantes ultraligeros donde la carga total de filtros debe permanecer por debajo del 10%. Los filtros hidrosolubles proporcionan el SPF sin afectar la claridad ni la sensación cutánea de la base acuosa.' },
+
+  /* ── REGULATORY SECTION ──────────────────────────────────────────────────── */
+  'sh.reg.eyebrow'  : { en: 'Global Regulatory Compliance', es: 'Cumplimiento Regulatorio Global' },
+  'sh.reg.title'    : { en: 'Every market.\nEvery standard.',
+                        es: 'Cada mercado.\nCada estándar.'                                },
+  'sh.rc1.body'     : { en: 'All Shield actives comply with EU Cosmetics Regulation 1223/2009 Annex VI. Concentration limits, approved use conditions and documentation available on request.',
+                        es: 'Todos los activos Shield cumplen el Reglamento Cosmético UE 1223/2009 Anexo VI. Límites de concentración, condiciones de uso aprobadas y documentación disponibles a petición.' },
+  'sh.rc2.body'     : { en: 'All applicable Shield actives registered under Brazilian RDC 35/2023. Full concentration limits and approved combinations per ANVISA framework documented.',
+                        es: 'Todos los activos Shield aplicables registrados bajo la RDC 35/2023 de Brasil. Límites de concentración completos y combinaciones aprobadas según el marco ANVISA documentados.' },
+  'sh.rc3.body'     : { en: 'Colombia and Peru follow the EU Mercosur reference framework. Shield documentation package supports INVIMA and DIGEMID notification and market registration.',
+                        es: 'Colombia y Perú siguen el marco de referencia Mercosur UE. El paquete de documentación Shield apoya la notificación e inscripción en el mercado ante INVIMA y DIGEMID.' },
+  'sh.rc4.body'     : { en: 'All SHIELD actives listed in China's Inventory of Existing Cosmetic Ingredients. Full documentation for Chinese market registration and product notification available.',
+                        es: 'Todos los activos SHIELD listados en el Inventario de Ingredientes Cosméticos Existentes de China. Documentación completa para registro en el mercado chino y notificación de producto disponible.' },
+
+  /* ── CTA SECTION ─────────────────────────────────────────────────────────── */
+  'sh.cta.h2'       : { en: 'Ready to engineer\nthe UV architecture\nyour formula deserves?',
+                        es: '¿Listo para diseñar\nla arquitectura UV\nque su fórmula merece?' },
+  'sh.cta.p'        : { en: 'Our UV filter formulation team provides system design, photostability validation, regulatory documentation and global market support for every SHIELD active.',
+                        es: 'Nuestro equipo de formulación de filtros UV ofrece diseño de sistemas, validación de fotoestabilidad, documentación regulatoria y soporte para mercados globales para cada activo SHIELD.' },
+
 if (typeof VLYOR_TRANSLATIONS !== 'undefined') {
   Object.assign(VLYOR_TRANSLATIONS, SHIELD_TRANSLATIONS);
 }
+
+/* ── SHIELD LATE ADDITIONS (already in file from previous session but verify) ── */
