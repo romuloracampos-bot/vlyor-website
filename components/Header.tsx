@@ -67,12 +67,14 @@ export default function Header({ minimal = false }: HeaderProps) {
 
         {/* CTA + Menu hamburguer */}
         <div className="flex items-center gap-2 md:gap-3 flex-shrink-0">
-          <Link
-            href="/produtos/mapa-de-destino"
+          <a
+            href="https://wa.me/5511987955101?text=Ol%C3%A1.%20Gostaria%20de%20agendar%20uma%20consulta%20com%20Pai%20M%C3%A1rcio."
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden sm:inline-block bg-gold text-ink px-3 md:px-5 py-2 rounded font-medium hover:bg-gold-dark transition-colors text-xs md:text-sm whitespace-nowrap"
           >
             Agendar consulta
-          </Link>
+          </a>
 
           {/* Hamburguer aparece APENAS abaixo de 900px */}
           <button
@@ -167,13 +169,15 @@ export default function Header({ minimal = false }: HeaderProps) {
               Dúvidas frequentes
             </Link>
 
-            <Link
-              href="/produtos/mapa-de-destino"
+            <a
+              href="https://wa.me/5511987955101?text=Ol%C3%A1.%20Gostaria%20de%20agendar%20uma%20consulta%20com%20Pai%20M%C3%A1rcio."
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
               className="bg-gold text-ink px-5 py-3 rounded font-medium text-center mt-6"
             >
               Agendar minha consulta →
-            </Link>
+            </a>
 
             <a
               href="https://wa.me/5511987955101"
